@@ -4,14 +4,139 @@
 
     
   <url>
-    <loc>https://blog.majiameng.com/2016/03/20/first/</loc>
-    <lastmod>2017-09-12T09:56:32.000Z</lastmod>
+    <loc>https://blog.majiameng.com/2017/05/22/mysql_proxy/</loc>
+    <lastmod>2017-09-20T11:18:33.000Z</lastmod>
     <data>
         <display>
-        <title>用markdown写下你的第一个md文档</title>
-        <pubTime>2016-03-20T01:32:00.000Z</pubTime>
+        <title>mysql-proxy实现读写分离</title>
+        <pubTime>2017-05-22T12:12:44.000Z</pubTime>
         
-        <tag>markdown</tag>
+        <tag>Mysql</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.majiameng.com/2017/05/21/mysql_principal/</loc>
+    <lastmod>2017-09-20T11:18:33.000Z</lastmod>
+    <data>
+        <display>
+        <title>mysql主从复制</title>
+        <pubTime>2017-05-21T02:55:14.000Z</pubTime>
+        
+        <tag>Mysql</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.majiameng.com/2017/03/11/php_interview_2017/</loc>
+    <lastmod>2017-09-20T10:58:39.000Z</lastmod>
+    <data>
+        <display>
+        <title>2017最新PHP经典面试题总结</title>
+        <pubTime>2017-03-11T12:33:00.000Z</pubTime>
+        
+        <tag>PHP</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.majiameng.com/2017/03/06/redis/</loc>
+    <lastmod>2017-09-18T11:02:31.000Z</lastmod>
+    <data>
+        <display>
+        <title>redis 使用</title>
+        <pubTime>2017-03-06T11:18:28.000Z</pubTime>
+        
+        <tag>PHP</tag>
+         
+        <tag>Redis</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.majiameng.com/2016/04/22/mysql_1/</loc>
+    <lastmod>2017-09-18T11:02:31.000Z</lastmod>
+    <data>
+        <display>
+        <title>Mysql基本操作命令</title>
+        <pubTime>2016-04-22T07:25:15.000Z</pubTime>
+        
+        <tag>PHP</tag>
+         
+        <tag>Mysql</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.majiameng.com/2016/04/20/curl/</loc>
+    <lastmod>2017-09-18T11:01:22.000Z</lastmod>
+    <data>
+        <display>
+        <title>Curl 的简单使用</title>
+        <pubTime>2016-04-20T10:22:00.000Z</pubTime>
+        
+        <tag>PHP</tag>
+         
+        <tag>Curl</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.majiameng.com/2017/06/20/zhanzhang/</loc>
+    <lastmod>2017-09-18T11:00:15.000Z</lastmod>
+    <data>
+        <display>
+        <title>各大网站收录、搜索引擎的提交入口</title>
+        <pubTime>2017-06-20T01:15:18.000Z</pubTime>
+        
+        <tag>收录</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.majiameng.com/2017/04/17/vpn.sh/</loc>
+    <lastmod>2017-09-18T10:59:57.000Z</lastmod>
+    <data>
+        <display>
+        <title>Liunx搭建VPN shell 脚本</title>
+        <pubTime>2017-04-17T12:11:55.000Z</pubTime>
+        
+        <tag>Liunx</tag>
          
          
            
@@ -22,11 +147,47 @@
     
   <url>
     <loc>https://blog.majiameng.com/2016/03/14/hexo_zhanzhang/</loc>
-    <lastmod>2017-09-12T08:59:26.000Z</lastmod>
+    <lastmod>2017-09-18T01:17:53.000Z</lastmod>
     <data>
         <display>
         <title>Hexo博客收录百度和谷歌!</title>
         <pubTime>2016-03-14T14:38:00.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+        <tag>收录</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.majiameng.com/2017/04/17/vpn/</loc>
+    <lastmod>2017-09-15T12:05:15.000Z</lastmod>
+    <data>
+        <display>
+        <title>Liunx搭建VPN</title>
+        <pubTime>2017-04-17T07:22:23.000Z</pubTime>
+        
+        <tag>Liunx</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.majiameng.com/2016/02/14/hexo_github/</loc>
+    <lastmod>2017-09-13T07:40:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo安装和配置到GitHub</title>
+        <pubTime>2016-02-14T02:40:00.000Z</pubTime>
         
         <tag>Hexo</tag>
          
@@ -39,7 +200,7 @@
     
   <url>
     <loc>https://blog.majiameng.com/2016/02/10/nodejs/</loc>
-    <lastmod>2017-09-12T08:53:38.000Z</lastmod>
+    <lastmod>2017-09-13T03:49:47.000Z</lastmod>
     <data>
         <display>
         <title>Node 的安装</title>
@@ -55,14 +216,14 @@
 
     
   <url>
-    <loc>https://blog.majiameng.com/2016/02/14/hexo_github/</loc>
-    <lastmod>2017-09-12T08:39:05.000Z</lastmod>
+    <loc>https://blog.majiameng.com/2016/03/20/first/</loc>
+    <lastmod>2017-09-12T09:56:32.000Z</lastmod>
     <data>
         <display>
-        <title>Hexo安装和配置到GitHub</title>
-        <pubTime>2016-02-14T02:40:00.000Z</pubTime>
+        <title>用markdown写下你的第一个md文档</title>
+        <pubTime>2016-03-20T01:32:00.000Z</pubTime>
         
-        <tag>Hexo</tag>
+        <tag>markdown</tag>
          
          
            

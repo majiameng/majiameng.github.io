@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="佳萌博客">
 <meta property="og:description" content="Hexo安装和配置到GitHub1. Git安装和设置git123brew install git          #Mac电脑使用brew安装 sudo apt-get install git  #Ubuntu系统使用apt-get命令安装yum install git           #Liunx系统使用yum命令安装 然后设置好git账户 使用Github Page搭建博客, 需要在G">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-12T08:39:05.000Z">
+<meta property="og:updated_time" content="2017-09-13T07:40:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo安装和配置到GitHub">
 <meta name="twitter:description" content="Hexo安装和配置到GitHub1. Git安装和设置git123brew install git          #Mac电脑使用brew安装 sudo apt-get install git  #Ubuntu系统使用apt-get命令安装yum install git           #Liunx系统使用yum命令安装 然后设置好git账户 使用Github Page搭建博客, 需要在G">
@@ -169,7 +169,7 @@
 <p>然后设置好git账户</p>
 <p>使用Github Page搭建博客, 需要在GitHub建立仓库,仓库名为username.github.io,以后使用…</p>
 <h3 id="1-先到https-github-com-new页面注册一个新的项目，项目名需要与你的用户名相同，项目主页也是相同的-https-username-github-io"><a href="#1-先到https-github-com-new页面注册一个新的项目，项目名需要与你的用户名相同，项目主页也是相同的-https-username-github-io" class="headerlink" title="1) 先到https://github.com/new页面注册一个新的项目，项目名需要与你的用户名相同，项目主页也是相同的 https://username.github.io"></a>1) 先到<a href="https://github.com/new页面注册一个新的项目，项目名需要与你的用户名相同，项目主页也是相同的" target="_blank" rel="external">https://github.com/new页面注册一个新的项目，项目名需要与你的用户名相同，项目主页也是相同的</a> <a href="https://username.github.io" target="_blank" rel="external">https://username.github.io</a></h3><a id="more"></a>
-<h4 id="Liunx-添加密钥"><a href="#Liunx-添加密钥" class="headerlink" title="Liunx 添加密钥"></a>Liunx 添加密钥</h4><h5 id="1-检查现有的SSH密钥"><a href="#1-检查现有的SSH密钥" class="headerlink" title="1.检查现有的SSH密钥"></a>1.检查现有的SSH密钥</h5><p>打开终端<br>输入 ls -al ~/.ssh 以查看现有的SSH密钥是否存在：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ls -al ~/.ssh</div></pre></td></tr></table></figure></p>
+<h4 id="Windows-Liunx-Mac-添加密钥"><a href="#Windows-Liunx-Mac-添加密钥" class="headerlink" title="Windows/Liunx/Mac 添加密钥"></a>Windows/Liunx/Mac 添加密钥</h4><h5 id="1-检查现有的SSH密钥"><a href="#1-检查现有的SSH密钥" class="headerlink" title="1.检查现有的SSH密钥"></a>1.检查现有的SSH密钥</h5><p>打开终端<br>输入 ls -al ~/.ssh 以查看现有的SSH密钥是否存在：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ls -al ~/.ssh</div></pre></td></tr></table></figure></p>
 <p>＃列出.ssh目录中的文件（如果存在）<br>检查目录列表，看看你是否已经有一个公共SSH密钥。</p>
 <h5 id="2-生成一个新的SSH密钥"><a href="#2-生成一个新的SSH密钥" class="headerlink" title="2.生成一个新的SSH密钥"></a>2.生成一个新的SSH密钥</h5><p>粘贴下面的文字，替换你的GitHub电子邮件地址。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">"666@majiameng.com"</span></div></pre></td></tr></table></figure></p>
 <p>这将创建一个新的ssh密钥，使用提供的电子邮件作为标签。</p>
@@ -194,23 +194,23 @@
 <h2 id="4-添加博文"><a href="#4-添加博文" class="headerlink" title="4. 添加博文"></a>4. 添加博文</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new <span class="string">"postName"</span>  <span class="comment">#新建博文,其中postName是博文题目</span></div></pre></td></tr></table></figure>
 <p>博文会自动生成在博客目录下source/_posts/postName.md</p>
 <p>文件自动生成格式:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">title: <span class="string">"It Starts with iGaze: Visual Attention Driven Networkingwith Smart Glasses"</span>  <span class="comment">#博文题目</span></div><div class="line">date: 2014-11-21 11:25:38      <span class="comment">#生成时间</span></div><div class="line">tags:                    <span class="comment">#标签, 多个标签也可以使用格式[tag1, tag2, tag3,...]</span></div><div class="line">- tag1</div><div class="line">- tag2</div><div class="line">- tag3</div><div class="line">categories: [cat1,cat2,cat3]</div><div class="line">---</div><div class="line">正文, 使用 Markdown 语法书写</div></pre></td></tr></table></figure></p>
+<p>也可以直接写一个<code> **.md </code>文件放入<code>source/_posts/ </code>文件夹下面</p>
+<p>诶?你还不会md文件的语法 ? out了 <a href="https://blog.majiameng.com/2016/03/20/first/">用markdown写下你的第一个md文档</a></p>
 <p>如果不想博文在首页全部显示, 并能出现阅读全文按钮效果, 需要在你想在首页显示的部分下添加</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;!--more--&gt;</div></pre></td></tr></table></figure>
-<h2 id="5-主题更改"><a href="#5-主题更改" class="headerlink" title="5. 主题更改"></a>5. 主题更改</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /git/hexo</div><div class="line">git <span class="built_in">clone</span> git@github.com:iissnan/hexo-theme-next.git  themes/next</div></pre></td></tr></table></figure>
-<p>在./_config.yml，修改主题为next</p>
+<h2 id="5-主题更改"><a href="#5-主题更改" class="headerlink" title="5. 主题更改"></a>5. 主题更改</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /git/hexo/themes <span class="comment">#进入主题目录</span></div><div class="line"></div><div class="line"><span class="comment">#git clone git克隆的地址                                 克隆后保存在本地的文件名</span></div><div class="line">git <span class="built_in">clone</span> git@github.com:iissnan/hexo-theme-next.git    next</div></pre></td></tr></table></figure>
+<p>在<code>./_config.yml</code>，修改主题为next</p>
 <p><code>theme: next</code></p>
 <p>每个主题有每个主题的审美以及功能,可以安装之后随时更换哦!</p>
 <p>Hexo<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">主题列表</a></p>
 <p>另外推荐几个主题:</p>
-<p>iissnan/hexo-theme-next</p>
-<p>TryGhost/Casper</p>
-<p>kywk/hexo-theme-casper #基于Casper</p>
-<p>daleanthony/uno</p>
-<p>A-limon/pacman</p>
-<p>AlxMedia/hueman</p>
-<p>ppoffice/hexo-theme-hueman #基于Hueman</p>
-<p>xiangming/landscape-plus #基于官方</p>
-<p>hexojs/hexo-theme-landscape</p>
+<p><a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">iissnan/hexo-theme-next</a></p>
+<p><a href="https://github.com/kywk/hexo-theme-casper" target="_blank" rel="external">TryGhost/Casper</a></p>
+<p><a href="https://github.com/kywk/hexo-theme-casper" target="_blank" rel="external">kywk/hexo-theme-casper</a> #基于Casper</p>
+<p><a href="https://github.com/letiantian/huno" target="_blank" rel="external">daleanthony/uno</a></p>
+<p><a href="https://github.com/A-limon/pacman" target="_blank" rel="external">A-limon/pacman</a></p>
+<p><a href="https://github.com/ppoffice/hexo-theme-hueman" target="_blank" rel="external">AlxMedia/hueman</a></p>
+<p><a href="https://github.com/xiangming/landscape-plus" target="_blank" rel="external">xiangming/landscape-plus</a> #基于官方</p>
 <p>查看本地效果<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g  <span class="comment">#生成页面</span></div><div class="line">hexo s  <span class="comment">#启动服务</span></div></pre></td></tr></table></figure></p>
 <h2 id="6-部署到Git"><a href="#6-部署到Git" class="headerlink" title="6. 部署到Git"></a>6. 部署到Git</h2><p>以上内容都是在本地进行查看, 现在将博客部署到github或gitcafe上</p>
 <p>Github<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repo: https://github.com/lmintlcx/lmintlcx.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
@@ -225,6 +225,7 @@
 <p>完整配置信息如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Site #站点信息</span></div><div class="line">title: blog Name <span class="comment">#标题</span></div><div class="line">subtitle: Subtitle <span class="comment">#副标题</span></div><div class="line">description: my blog desc <span class="comment">#描述</span></div><div class="line">author: me <span class="comment">#作者</span></div><div class="line">language: zh-CN <span class="comment">#语言</span></div><div class="line">timezone: Asia/Shanghai <span class="comment">#时区</span></div><div class="line"></div><div class="line"><span class="comment"># URL</span></div><div class="line">url: http://yoururl.com   <span class="comment">#用于绑定域名, 其他的不需要配置</span></div><div class="line">root: /</div><div class="line"><span class="comment">#permalink: :year/:month/:day/:title/</span></div><div class="line">permalink: posts/title.html</div><div class="line">permalink_defaults:</div><div class="line"></div><div class="line"><span class="comment"># Directory #目录</span></div><div class="line">source_dir: <span class="built_in">source</span> <span class="comment">#源文件</span></div><div class="line">public_dir: public <span class="comment">#生成的网页文件</span></div><div class="line">tag_dir: tags <span class="comment">#标签</span></div><div class="line">archive_dir: archives <span class="comment">#归档</span></div><div class="line">category_dir: categories <span class="comment">#分类</span></div><div class="line">code_dir: downloads/code</div><div class="line">i18n_dir: :lang <span class="comment">#国际化</span></div><div class="line">skip_render:</div><div class="line"></div><div class="line"><span class="comment"># Writing #写作</span></div><div class="line">new_post_name: :title.md <span class="comment">#新文章标题</span></div><div class="line">default_layout: post <span class="comment">#默认模板(post page photo draft)</span></div><div class="line">titlecase: <span class="literal">false</span> <span class="comment">#标题转换成大写</span></div><div class="line">external_link: <span class="literal">true</span> <span class="comment">#新标签页里打开连接</span></div><div class="line">filename_case: 0</div><div class="line">render_drafts: <span class="literal">false</span></div><div class="line">post_asset_folder: <span class="literal">false</span></div><div class="line">relative_link: <span class="literal">false</span></div><div class="line">future: <span class="literal">true</span></div><div class="line">highlight: <span class="comment">#语法高亮</span></div><div class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></div><div class="line">  line_number: <span class="literal">true</span> <span class="comment">#显示行号</span></div><div class="line">  auto_detect: <span class="literal">true</span></div><div class="line">  tab_replace:</div><div class="line"></div><div class="line"><span class="comment"># Category &amp; Tag #分类和标签</span></div><div class="line">default_category: uncategorized <span class="comment">#默认分类</span></div><div class="line">category_map:</div><div class="line">tag_map:</div><div class="line"></div><div class="line"><span class="comment"># Date / Time format #日期时间格式</span></div><div class="line"><span class="comment">## http://momentjs.com/docs/#/displaying/format/</span></div><div class="line">date_format: YYYY-MM-DD</div><div class="line">time_format: HH:mm:ss</div><div class="line"></div><div class="line"><span class="comment"># Pagination #分页</span></div><div class="line">per_page: 10 <span class="comment">#每页文章数, 设置成 0 禁用分页</span></div><div class="line">pagination_dir: page</div><div class="line"></div><div class="line"><span class="comment"># Extensions #插件和主题</span></div><div class="line"><span class="comment">## 插件: http://hexo.io/plugins/</span></div><div class="line"><span class="comment">## 主题: http://hexo.io/themes/</span></div><div class="line">theme: next</div><div class="line"></div><div class="line"><span class="comment"># Deployment #部署, 同时发布在 GitHub 和 GitCafe 上面</span></div><div class="line">deploy:</div><div class="line">- <span class="built_in">type</span>: git</div><div class="line">  repo: git@github.com:username/username.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
 <p>保存之后，便可以使用<code>hexo d</code>上传到GitHub。<br>部署成功,使用username.github.io进行访问, 或者设置个性域名，参考官方Wiki。</p>
 <p>如有报错,可能是第一次安装git还没有设置git email和name<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.email &quot;666@majiameng.com&quot;</div><div class="line">git config --global user.name &quot;majiameng&quot;</div></pre></td></tr></table></figure></p>
+<p>写好 md文章  放在<code>source/_posts/ </code>文件夹下面  后<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo d</div></pre></td></tr></table></figure></p>
 <h2 id="7-域名"><a href="#7-域名" class="headerlink" title="7.域名"></a>7.域名</h2><p>绑定域名<br>不绑定域名的话只能通过 your_user_name.github.io 访问<br>申请域名推荐 GoDaddy或者阿里云, 域名解析推荐 DNSPod</p>
 <p>绑定顶级域名<br>新建文件 CNAME, 无后缀, 纯文本文件, 内容为要绑定的域名 blogname.com<br>如果要使用 www.blogname.com 的形式, 文件内容改为 www.blogname.com</p>
 <p>DNS设置<br>记录值获取<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">ping your_user_name.github.io</div><div class="line"></div><div class="line">正在 Ping sni.github.map.fastly.net [151.101.73.147] 具有 32 字节的数据:</div><div class="line">来自 151.101.73.147 的回复: 字节=32 时间=139ms TTL=51</div><div class="line">来自 151.101.73.147 的回复: 字节=32 时间=147ms TTL=51</div><div class="line">来自 151.101.73.147 的回复: 字节=32 时间=128ms TTL=51</div><div class="line">来自 151.101.73.147 的回复: 字节=32 时间=155ms TTL=51</div><div class="line"></div><div class="line">151.101.73.147 的 Ping 统计信息:</div><div class="line">    数据包: 已发送 = 4，已接收 = 4，丢失 = 0 (0% 丢失)，</div><div class="line">往返行程的估计时间(以毫秒为单位):</div><div class="line">    最短 = 128ms，最长 = 155ms，平均 = 142ms</div></pre></td></tr></table></figure></p>
@@ -523,6 +524,14 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">PHP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Curl</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
              
@@ -531,7 +540,23 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">收录</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Node</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Redis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Liunx</a>
               </li>
             
             <div class="clearfix"></div>

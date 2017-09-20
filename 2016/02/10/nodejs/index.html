@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="佳萌博客">
 <meta property="og:description" content="Windows 下安装 Node.js1.打开网址 nodejs.org选择适合自己电脑位数的安装包 windows 32位 https://nodejs.org/dist/v6.11.3/node-v6.11.3-x86.msi windows 64位 https://nodejs.org/dist/v6.11.3/node-v6.11.3-x64.msi 2.下载完毕,安装…next,next">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-12T08:53:38.000Z">
+<meta property="og:updated_time" content="2017-09-13T03:49:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node 的安装">
 <meta name="twitter:description" content="Windows 下安装 Node.js1.打开网址 nodejs.org选择适合自己电脑位数的安装包 windows 32位 https://nodejs.org/dist/v6.11.3/node-v6.11.3-x86.msi windows 64位 https://nodejs.org/dist/v6.11.3/node-v6.11.3-x64.msi 2.下载完毕,安装…next,next">
@@ -171,22 +171,27 @@
 <p>windows 64位</p>
 <p><a href="https://nodejs.org/dist/v6.11.3/node-v6.11.3-x64.msi" target="_blank" rel="external">https://nodejs.org/dist/v6.11.3/node-v6.11.3-x64.msi</a></p>
 <h4 id="2-下载完毕-安装…next-next-next-install"><a href="#2-下载完毕-安装…next-next-next-install" class="headerlink" title="2.下载完毕,安装…next,next,next,install!"></a>2.下载完毕,安装…next,next,next,install!</h4><p>node安装在  C:\Program Files\nodejs 路径下</p>
-<h4 id="3-配置环境变量"><a href="#3-配置环境变量" class="headerlink" title="3.配置环境变量"></a>3.配置环境变量</h4><p>右击我的电脑 -&gt; 属性 -&gt; 高级系统设置 -&gt; 环境变量(N)…</p>
+<h4 id="3-配置环境变量"><a href="#3-配置环境变量" class="headerlink" title="3.配置环境变量"></a>3.配置环境变量</h4><blockquote>
+<p>右击我的电脑 -&gt; 属性 -&gt; 高级系统设置 -&gt; 环境变量(N)…</p>
 <p>系统变量里边 Path 新建一个变量 C:\Program Files\nodejs 确定</p>
-<h2 id="Liunx-下安装-Node-js"><a href="#Liunx-下安装-Node-js" class="headerlink" title="Liunx 下安装 Node.js"></a>Liunx 下安装 Node.js</h2><h4 id="1、下载源码，你需要在https-nodejs-org-en-download-下载最新的Nodejs版本，本文以v0-10-24为例"><a href="#1、下载源码，你需要在https-nodejs-org-en-download-下载最新的Nodejs版本，本文以v0-10-24为例" class="headerlink" title="1、下载源码，你需要在https://nodejs.org/en/download/下载最新的Nodejs版本，本文以v0.10.24为例:"></a>1、下载源码，你需要在<a href="https://nodejs.org/en/download/下载最新的Nodejs版本，本文以v0.10.24为例" target="_blank" rel="external">https://nodejs.org/en/download/下载最新的Nodejs版本，本文以v0.10.24为例</a>:</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/src/</div><div class="line">wget https://nodejs.org/dist/v6.11.3/node-v6.11.3.tar.gz</div></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="Liunx-下安装-Node-js"><a href="#Liunx-下安装-Node-js" class="headerlink" title="Liunx 下安装 Node.js"></a>Liunx 下安装 Node.js</h2><h4 id="1、下载源码，你需要在https-nodejs-org-en-download-下载最新的Nodejs版本，本文以v6-11-3为例"><a href="#1、下载源码，你需要在https-nodejs-org-en-download-下载最新的Nodejs版本，本文以v6-11-3为例" class="headerlink" title="1、下载源码，你需要在https://nodejs.org/en/download/下载最新的Nodejs版本，本文以v6.11.3为例:"></a>1、下载源码，你需要在<a href="https://nodejs.org/en/download/下载最新的Nodejs版本，本文以v6.11.3为例" target="_blank" rel="external">https://nodejs.org/en/download/下载最新的Nodejs版本，本文以v6.11.3为例</a>:</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/src/</div><div class="line">wget https://nodejs.org/dist/v6.11.3/node-v6.11.3.tar.gz</div></pre></td></tr></table></figure>
 <a id="more"></a>
 <h4 id="2、解压源码"><a href="#2、解压源码" class="headerlink" title="2、解压源码"></a>2、解压源码</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar zxvf node-v6.11.3.tar.gz</div></pre></td></tr></table></figure>
-<h4 id="3、-编译安装"><a href="#3、-编译安装" class="headerlink" title="3、 编译安装"></a>3、 编译安装</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> node-v6.11.3</div><div class="line">./configure --prefix=/usr/<span class="built_in">local</span>/node/v6.11.3</div><div class="line">make</div><div class="line">make install</div></pre></td></tr></table></figure>
+<h4 id="3、-编译安装"><a href="#3、-编译安装" class="headerlink" title="3、 编译安装"></a>3、 编译安装</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> node-v6.11.3</div><div class="line">$ ./configure --prefix=/usr/<span class="built_in">local</span>/node/v6.11.3</div><div class="line">$ make</div><div class="line">$ make install</div></pre></td></tr></table></figure>
 <h4 id="4、-配置NODE-HOME，进入profile编辑环境变量"><a href="#4、-配置NODE-HOME，进入profile编辑环境变量" class="headerlink" title="4、 配置NODE_HOME，进入profile编辑环境变量"></a>4、 配置NODE_HOME，进入profile编辑环境变量</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim /etc/profile</div></pre></td></tr></table></figure>
-<p>设置nodejs环境变量，在<br>code&gt;export PATH USER LOGNAME MAIL HOSTNAME HISTSIZE HISTCONTROL<br> 一行的上面添加如下内容:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#set for nodejs</span></div><div class="line"><span class="built_in">export</span> NODE_HOME=/usr/<span class="built_in">local</span>/node/0.10.24</div><div class="line"><span class="built_in">export</span> PATH=<span class="variable">$NODE_HOME</span>/bin:<span class="variable">$PATH</span></div></pre></td></tr></table></figure></p>
-<p>:wq保存并退出，编译<code>/etc/profile</code> 使配置生效<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">source</span> /etc/profile</div></pre></td></tr></table></figure></p>
-<p>验证是否安装配置成功<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">node -v</div></pre></td></tr></table></figure></p>
-<p>输出 v0.10.24 表示配置成功<br>npm模块安装路径<br>/usr/local/node/0.10.24/lib/node_modules/</p>
+<p>设置nodejs环境变量，在 </p>
+<p><code>export PATH USER LOGNAME MAIL HOSTNAME HISTSIZE HISTCONTROL</code></p>
+<p> 一行的上面添加如下内容:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#set for nodejs</span></div><div class="line"><span class="built_in">export</span> NODE_HOME=/usr/<span class="built_in">local</span>/node/v6.11.3</div><div class="line"><span class="built_in">export</span> PATH=<span class="variable">$NODE_HOME</span>/bin:<span class="variable">$PATH</span></div></pre></td></tr></table></figure>
+<p>:wq保存并退出，编译<code>/etc/profile</code> 使配置生效<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  <span class="built_in">source</span> /etc/profile</div></pre></td></tr></table></figure></p>
+<p>验证是否安装配置成功<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ node -v</div></pre></td></tr></table></figure></p>
+<p>输出 v6.11.3 表示配置成功<br>npm模块安装路径<br>/usr/local/node/v6.11.3/lib/node_modules/</p>
 <p><code>注：Nodejs 官网提供了编译好的Linux二进制包，你也可以下载下来直接应用。</code></p>
 <h1 id="npm的使用"><a href="#npm的使用" class="headerlink" title="npm的使用"></a>npm的使用</h1><p>由于新版的nodejs已经集成了npm，所以之前npm也一并安装好了。同样可以通过输入 “npm -v” 来测试是否成功安装。命令如下，出现版本提示表示安装成功:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ npm -v</div><div class="line">2.3.0</div></pre></td></tr></table></figure></p>
-<p>如果你安装的是旧版本的 npm，可以很容易得通过 npm 命令来升级，命令如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ sudo npm install npm -g</div><div class="line">/usr/<span class="built_in">local</span>/bin/npm -&gt; /usr/<span class="built_in">local</span>/lib/node_modules/npm/bin/npm-cli.js</div><div class="line">npm@2.14.2 /usr/<span class="built_in">local</span>/lib/node_modules/npm</div></pre></td></tr></table></figure></p>
-<p>如果是 Window 系统使用以下命令即可：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install npm -g</div></pre></td></tr></table></figure></p>
-<p>使用淘宝镜像的命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cnpm install npm -g</div></pre></td></tr></table></figure></p>
+<p>如果你安装的是旧版本的 npm，可以很容易得通过 npm 命令来升级，命令如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install npm -g</div></pre></td></tr></table></figure></p>
+<p>如果是 Window 系统使用以下命令即可：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install npm -g</div></pre></td></tr></table></figure></p>
+<p>使用淘宝镜像的命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cnpm install npm -g</div></pre></td></tr></table></figure></p>
 <h4 id="如果你还没有安装淘宝镜像"><a href="#如果你还没有安装淘宝镜像" class="headerlink" title="如果你还没有安装淘宝镜像"></a>如果你还没有安装淘宝镜像</h4><h5 id="大家都知道国内直接使用-npm-的官方镜像是非常慢的，这里推荐使用淘宝-NPM-镜像。"><a href="#大家都知道国内直接使用-npm-的官方镜像是非常慢的，这里推荐使用淘宝-NPM-镜像。" class="headerlink" title="大家都知道国内直接使用 npm 的官方镜像是非常慢的，这里推荐使用淘宝 NPM 镜像。"></a>大家都知道国内直接使用 npm 的官方镜像是非常慢的，这里推荐使用淘宝 NPM 镜像。</h5><p>淘宝 NPM 镜像是一个完整 npmjs.org 镜像，你可以用此代替官方版本(只读)，同步频率目前为 10分钟 一次以保证尽量与官方服务同步。<br>你可以使用淘宝定制的 cnpm (gzip 压缩支持) 命令行工具代替默认的 npm:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g cnpm --registry=https://registry.npm.taobao.org</div></pre></td></tr></table></figure></p>
 <p>这样就可以使用 cnpm 命令来安装模块了：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cnpm install [name]</div></pre></td></tr></table></figure></p>
 
@@ -449,6 +454,14 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">PHP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Curl</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
              
@@ -457,7 +470,23 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">收录</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Node</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Redis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Liunx</a>
               </li>
             
             <div class="clearfix"></div>

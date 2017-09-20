@@ -145,6 +145,731 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-zhanzhang" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/20/zhanzhang/">各大网站收录、搜索引擎的提交入口</a>
+    </h1>
+  
+
+        
+        <a href="/2017/06/20/zhanzhang/" class="archive-article-date">
+  	<time datetime="2017-06-20T01:15:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<blockquote>
+<p>搜索引擎网站收录地址大全 【点此提交您的搜索引擎】</p>
+</blockquote>
+</blockquote>
+<p>360搜索引擎登录入口：<a href="http://info.so.360.cn/site_submit.html" target="_blank" rel="external">http://info.so.360.cn/site_submit.html</a></p>
+<p>即刻搜索网站提交入口：<a href="http://zz.jike.com/submit/genUrlForm" target="_blank" rel="external">http://zz.jike.com/submit/genUrlForm</a></p>
+<p>盘古数据开放平台：<a href="http://open.panguso.com/data/resource/url/new" target="_blank" rel="external">http://open.panguso.com/data/resource/url/new</a></p>
+<p>百度搜索网站登录口：<a href="http://zhanzhang.baidu.com/sitesubmit" target="_blank" rel="external">http://zhanzhang.baidu.com/sitesubmit</a></p>
+<p>Google网站登录口：<a href="https://www.google.com/webmasters/tools/submit-url" target="_blank" rel="external">https://www.google.com/webmasters/tools/submit-url</a></p>
+<p>Google新闻网站内容：<a href="http://www.google.com/support/news_pub/bin/request.py?contact_type=suggest_content&amp;hl=cn" target="_blank" rel="external">http://www.google.com/support/news_pub/bin/request.py?contact_type=suggest_content&amp;hl=cn</a></p>
+        
+          <a class="article-more-a" href="/2017/06/20/zhanzhang/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">收录</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/06/20/zhanzhang/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-mysql_proxy" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/22/mysql_proxy/">mysql-proxy实现读写分离</a>
+    </h1>
+  
+
+        
+        <a href="/2017/05/22/mysql_proxy/" class="archive-article-date">
+  	<time datetime="2017-05-22T12:12:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><span style="color: rgb(0, 0, 0); font-size: 13px;">其中Amoeba for MySQL也是实现读写分离</span></p>
+<p>环境描述:<br>操作系统：CentOS6.5 32位<br>主服务器Master：192.168.179.146<br>从服务器Slave：192.168.179.147<br>调度服务器MySQL-Proxy：192.168.179.142<br>由于电脑配置不行，安装了三台虚拟机，就卡死了，只能将就一下,由于是一主<br>一从，所以，导致读写都在master上，有机会，再弄两台slave来测试<br>一.mysql主从复制，参考：<a href="http://www.cnblogs.com/lin3615/p/5679828.html" target="_blank" rel="external">http://www.cnblogs.com/lin3615/p/5679828.html</a></p>
+<p>二、mysql-proxy实现读写分离<br>1、安装mysql-proxy<br>实现读写分离是有lua脚本实现的，现在mysql-proxy里面已经集成，无需再安装</p>
+<p>下载：<a href="http://dev.mysql.com/downloads/mysql-proxy/" target="_blank" rel="external">http://dev.mysql.com/downloads/mysql-proxy/</a> 一定要下载对应的版本</p>
+        
+          <a class="article-more-a" href="/2017/05/22/mysql_proxy/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Mysql</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/05/22/mysql_proxy/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-mysql_principal" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/21/mysql_principal/">mysql主从复制</a>
+    </h1>
+  
+
+        
+        <a href="/2017/05/21/mysql_principal/" class="archive-article-date">
+  	<time datetime="2017-05-21T02:55:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>卸载mysql服务相关</p>
+<p>yum -y remove mysql*</p>
+<p>1. 安装mysql 服务器端：</p>
+<p>yum install mysql-server</p>
+<p>yum install mysql-devel</p>
+<p>2. 安装mysql客户端：</p>
+<p>yum install mysql</p>
+        
+          <a class="article-more-a" href="/2017/05/21/mysql_principal/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Mysql</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/05/21/mysql_principal/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-vpn.sh" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/17/vpn.sh/">Liunx搭建VPN shell 脚本</a>
+    </h1>
+  
+
+        
+        <a href="/2017/04/17/vpn.sh/" class="archive-article-date">
+  	<time datetime="2017-04-17T12:11:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="我总结了一个sell脚本"><a href="#我总结了一个sell脚本" class="headerlink" title="我总结了一个sell脚本"></a>我总结了一个sell脚本</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">#!/bin/bash</div><div class="line">#############################################################</div><div class="line">#                                                           #</div><div class="line"># This is a PPTP and L2TP VPN installation for CentOS 7     #</div><div class="line"># Version: 1.1.1 20160507                                   #</div><div class="line"># Author: Bon Hoo                                           #</div><div class="line"># Website: http://www.ccwebsite.com                         #</div><div class="line">#                                                           #</div><div class="line">#############################################################</div></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2017/04/17/vpn.sh/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Liunx</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/04/17/vpn.sh/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-vpn" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/17/vpn/">Liunx搭建VPN</a>
+    </h1>
+  
+
+        
+        <a href="/2017/04/17/vpn/" class="archive-article-date">
+  	<time datetime="2017-04-17T07:22:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://www.xiukee.com/show_530564.html" target="_blank" rel="external">http://www.xiukee.com/show_530564.html</a></p>
+<p>接下来怎么办？不懂Linux会不会死？不会滴。<br>命令都在这里了。<br>先安装pptpd服务，就是VPN连接的软件模块。<br>输入：yum install ppp iptables pptpd</p>
+        
+          <a class="article-more-a" href="/2017/04/17/vpn/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Liunx</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/04/17/vpn/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-php_interview_2017" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/11/php_interview_2017/">2017最新PHP经典面试题总结</a>
+    </h1>
+  
+
+        
+        <a href="/2017/03/11/php_interview_2017/" class="archive-article-date">
+  	<time datetime="2017-03-11T12:33:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="2017最新PHP经典面试题总结"><a href="#2017最新PHP经典面试题总结" class="headerlink" title="2017最新PHP经典面试题总结"></a><a href="http://#" target="_blank" rel="external">2017最新PHP经典面试题总结</a></h1><h4 id="1、双引号和单引号的区别"><a href="#1、双引号和单引号的区别" class="headerlink" title="1、双引号和单引号的区别"></a>1、双引号和单引号的区别</h4><ul>
+<li>双引号解释变量，单引号不解释变量</li>
+<li>双引号里插入单引号，其中单引号里如果有变量的话，变量解释</li>
+<li>双引号的变量名后面必须要有一个非数字、字母、下划线的特殊字符，或者用{}讲变量括起来，否则会将变量名后面的部分当做一个整体，引起语法错误</li>
+<li>双引号解释转义字符，单引号不解释转义字符，但是解释’\和\</li>
+<li><p>能使单引号字符尽量使用单引号，单引号的效率比双引号要高（因为双引号要先遍历一遍，判断里面有没有变量，然后再进行操作，而单引号则不需要判断）</p>
+        
+          <a class="article-more-a" href="/2017/03/11/php_interview_2017/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/11/php_interview_2017/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-redis" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/06/redis/">redis 使用</a>
+    </h1>
+  
+
+        
+        <a href="/2017/03/06/redis/" class="archive-article-date">
+  	<time datetime="2017-03-06T11:18:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="redis是什么"><a href="#redis是什么" class="headerlink" title="redis是什么:"></a>redis是什么:</h4><p>Redis is an open source, BSD licensed, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.<br>redis是开源,BSD许可,高级的key-value存储系统.<br>可以用来存储字符串,哈希结构,链表,集合,因此,常用来提供数据结构服务.</p>
+        
+          <a class="article-more-a" href="/2017/03/06/redis/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Redis</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/06/redis/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-mysql_1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/22/mysql_1/">Mysql基本操作命令</a>
+    </h1>
+  
+
+        
+        <a href="/2016/04/22/mysql_1/" class="archive-article-date">
+  	<time datetime="2016-04-22T07:25:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-04-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="登陆数据库"><a href="#登陆数据库" class="headerlink" title="登陆数据库"></a>登陆数据库</h4><pre><code>登陆数据库命令:Mysql  -uroot-p123
+</code></pre><h4 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h4><pre><code>新建数据库命令：Create database 数据库
+</code></pre><h4 id="查看所有数据库"><a href="#查看所有数据库" class="headerlink" title="查看所有数据库"></a>查看所有数据库</h4><pre><code>命令：Show databases
+</code></pre>
+        
+          <a class="article-more-a" href="/2016/04/22/mysql_1/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Mysql</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/04/22/mysql_1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-curl" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/20/curl/">Curl 的简单使用</a>
+    </h1>
+  
+
+        
+        <a href="/2016/04/20/curl/" class="archive-article-date">
+  	<time datetime="2016-04-20T10:22:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-04-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Curl是利用URL语法在命令行方式下工作的开源文件传输工具。它被广泛应用在Unix、多种Linux发行版中，并且有DOS和Win32、Win64下的移植版本。"><a href="#Curl是利用URL语法在命令行方式下工作的开源文件传输工具。它被广泛应用在Unix、多种Linux发行版中，并且有DOS和Win32、Win64下的移植版本。" class="headerlink" title="Curl是利用URL语法在命令行方式下工作的开源文件传输工具。它被广泛应用在Unix、多种Linux发行版中，并且有DOS和Win32、Win64下的移植版本。"></a>Curl是利用URL语法在命令行方式下工作的开源文件传输工具。它被广泛应用在Unix、多种Linux发行版中，并且有DOS和Win32、Win64下的移植版本。</h2><p>中国气象台 <a href="http://www.nmc.gov.cn/publish/forecast/china.html" target="_blank" rel="external">http://www.nmc.gov.cn/publish/forecast/china.html</a></p>
+<p>简单抓取一个网页</p>
+        
+          <a class="article-more-a" href="/2016/04/20/curl/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Curl</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/04/20/curl/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-first" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -224,325 +949,10 @@
 
 
   
-    <article id="post-hexo_zhanzhang" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/14/hexo_zhanzhang/">Hexo博客收录百度和谷歌!</a>
-    </h1>
-  
-
-        
-        <a href="/2016/03/14/hexo_zhanzhang/" class="archive-article-date">
-  	<time datetime="2016-03-14T14:38:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-03-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>##Hexo博客收录百度和谷歌-基于Next主题（应该是比较全面的一篇教程）</p>
-<p>我们的博客做出来当然是希望别人来访问，但是Github和Coding都做了防爬虫处理，这样子我们博客可能就无法被搜索引擎收录，需要我们手动提交！</p>
-<p>本教程基于Hexo博客框架，使用Next主题（其他主题举一反三），博主本人已绑定自己的域名（在下文会点明区别，没有太大影响）；很多过程使用了Flow.ci进行自动构建！<br>
-        
-          <a class="article-more-a" href="/2016/03/14/hexo_zhanzhang/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/03/14/hexo_zhanzhang/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hexo_github" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/14/hexo_github/">Hexo安装和配置到GitHub</a>
-    </h1>
-  
-
-        
-        <a href="/2016/02/14/hexo_github/" class="archive-article-date">
-  	<time datetime="2016-02-14T02:40:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-02-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Hexo安装和配置到GitHub"><a href="#Hexo安装和配置到GitHub" class="headerlink" title="Hexo安装和配置到GitHub"></a>Hexo安装和配置到GitHub</h1><h2 id="1-Git安装和设置"><a href="#1-Git安装和设置" class="headerlink" title="1. Git安装和设置"></a>1. Git安装和设置</h2><p>git<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">brew install git          <span class="comment">#Mac电脑使用brew安装 </span></div><div class="line">sudo apt-get install git  <span class="comment">#Ubuntu系统使用apt-get命令安装</span></div><div class="line">yum install git           <span class="comment">#Liunx系统使用yum命令安装</span></div></pre></td></tr></table></figure></p>
-<p>然后设置好git账户</p>
-<p>使用Github Page搭建博客, 需要在GitHub建立仓库,仓库名为username.github.io,以后使用…</p>
-<h3 id="1-先到https-github-com-new页面注册一个新的项目，项目名需要与你的用户名相同，项目主页也是相同的-https-username-github-io"><a href="#1-先到https-github-com-new页面注册一个新的项目，项目名需要与你的用户名相同，项目主页也是相同的-https-username-github-io" class="headerlink" title="1) 先到https://github.com/new页面注册一个新的项目，项目名需要与你的用户名相同，项目主页也是相同的 https://username.github.io"></a>1) 先到<a href="https://github.com/new页面注册一个新的项目，项目名需要与你的用户名相同，项目主页也是相同的" target="_blank" rel="external">https://github.com/new页面注册一个新的项目，项目名需要与你的用户名相同，项目主页也是相同的</a> <a href="https://username.github.io" target="_blank" rel="external">https://username.github.io</a></h3>
-        
-          <a class="article-more-a" href="/2016/02/14/hexo_github/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/02/14/hexo_github/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hexo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/14/hexo/">教你怎么用 Hexo!</a>
-    </h1>
-  
-
-        
-        <a href="/2016/02/14/hexo/" class="archive-article-date">
-  	<time datetime="2016-02-14T00:40:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-02-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>欢迎来到 <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a> ！如果在使用Hexo时遇到任何问题，您可以在<a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">故障排除</a>中找到答案，或者在<a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>上询问。</p>
-<h1 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h1><h3 id="创建一个新的帖子"><a href="#创建一个新的帖子" class="headerlink" title="创建一个新的帖子"></a>创建一个新的帖子</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>更多信息： <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">写作</a></p>
-        
-          <a class="article-more-a" href="/2016/02/14/hexo/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/02/14/hexo/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-nodejs" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/10/nodejs/">Node 的安装</a>
-    </h1>
-  
-
-        
-        <a href="/2016/02/10/nodejs/" class="archive-article-date">
-  	<time datetime="2016-02-10T12:33:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-02-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Windows-下安装-Node-js"><a href="#Windows-下安装-Node-js" class="headerlink" title="Windows 下安装 Node.js"></a>Windows 下安装 Node.js</h2><h4 id="1-打开网址-nodejs-org"><a href="#1-打开网址-nodejs-org" class="headerlink" title="1.打开网址 nodejs.org"></a>1.打开网址 <a href="https://nodejs.org/en/download" target="_blank" rel="external">nodejs.org</a></h4><p>选择适合自己电脑位数的安装包</p>
-<p>windows 32位</p>
-<p><a href="https://nodejs.org/dist/v6.11.3/node-v6.11.3-x86.msi" target="_blank" rel="external">https://nodejs.org/dist/v6.11.3/node-v6.11.3-x86.msi</a></p>
-<p>windows 64位</p>
-<p><a href="https://nodejs.org/dist/v6.11.3/node-v6.11.3-x64.msi" target="_blank" rel="external">https://nodejs.org/dist/v6.11.3/node-v6.11.3-x64.msi</a></p>
-<h4 id="2-下载完毕-安装…next-next-next-install"><a href="#2-下载完毕-安装…next-next-next-install" class="headerlink" title="2.下载完毕,安装…next,next,next,install!"></a>2.下载完毕,安装…next,next,next,install!</h4><p>node安装在  C:\Program Files\nodejs 路径下</p>
-<h4 id="3-配置环境变量"><a href="#3-配置环境变量" class="headerlink" title="3.配置环境变量"></a>3.配置环境变量</h4><p>右击我的电脑 -&gt; 属性 -&gt; 高级系统设置 -&gt; 环境变量(N)…</p>
-<p>系统变量里边 Path 新建一个变量 C:\Program Files\nodejs 确定</p>
-<h2 id="Liunx-下安装-Node-js"><a href="#Liunx-下安装-Node-js" class="headerlink" title="Liunx 下安装 Node.js"></a>Liunx 下安装 Node.js</h2><h4 id="1、下载源码，你需要在https-nodejs-org-en-download-下载最新的Nodejs版本，本文以v0-10-24为例"><a href="#1、下载源码，你需要在https-nodejs-org-en-download-下载最新的Nodejs版本，本文以v0-10-24为例" class="headerlink" title="1、下载源码，你需要在https://nodejs.org/en/download/下载最新的Nodejs版本，本文以v0.10.24为例:"></a>1、下载源码，你需要在<a href="https://nodejs.org/en/download/下载最新的Nodejs版本，本文以v0.10.24为例" target="_blank" rel="external">https://nodejs.org/en/download/下载最新的Nodejs版本，本文以v0.10.24为例</a>:</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/src/</div><div class="line">wget https://nodejs.org/dist/v6.11.3/node-v6.11.3.tar.gz</div></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2016/02/10/nodejs/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Node</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/02/10/nodejs/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 
 
@@ -636,6 +1046,14 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">PHP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Curl</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
              
@@ -644,7 +1062,23 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">收录</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Node</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Redis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Liunx</a>
               </li>
             
             <div class="clearfix"></div>

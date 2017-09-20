@@ -1,5 +1,5 @@
-https://blog.majiameng.com/2016/03/20/first/
-https://blog.majiameng.com/2016/03/14/hexo_zhanzhang/
-https://blog.majiameng.com/2016/02/14/hexo_github/
-https://blog.majiameng.com/2016/02/14/hexo/
-https://blog.majiameng.com/2016/02/10/nodejs/
+https://blog.majiameng.com/2017/06/20/zhanzhang/
+https://blog.majiameng.com/2017/05/22/mysql_proxy/
+https://blog.majiameng.com/2017/05/21/mysql_principal/
+https://blog.majiameng.com/2017/04/17/vpn.sh/
+https://blog.majiameng.com/2017/04/17/vpn/
