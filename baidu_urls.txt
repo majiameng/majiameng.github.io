@@ -3,3 +3,12 @@ https://blog.majiameng.com/mysql_proxy.html
 https://blog.majiameng.com/mysql_principal.html
 https://blog.majiameng.com/vpn.sh.html
 https://blog.majiameng.com/vpn.html
+https://blog.majiameng.com/php_interview_2017.html
+https://blog.majiameng.com/redis.html
+https://blog.majiameng.com/mysql_1.html
+https://blog.majiameng.com/curl.html
+https://blog.majiameng.com/first.html
+https://blog.majiameng.com/hexo_zhanzhang.html
+https://blog.majiameng.com/hexo_github.html
+https://blog.majiameng.com/hexo.html
+https://blog.majiameng.com/nodejs.html
