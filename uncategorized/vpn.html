@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://blog.majiameng.com">
-  <title>Node 的安装 | 佳萌博客</title>
+  <title>Liunx搭建VPN | 佳萌博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Windows 下安装 Node.js1.打开网址 nodejs.org选择适合自己电脑位数的安装包 windows 32位 https://nodejs.org/dist/v6.11.3/node-v6.11.3-x86.msi windows 64位 https://nodejs.org/dist/v6.11.3/node-v6.11.3-x64.msi 2.下载完毕,安装…next,next">
-<meta name="keywords" content="Node">
+  <meta name="description" content="http://www.xiukee.com/show_530564.html 接下来怎么办？不懂Linux会不会死？不会滴。命令都在这里了。先安装pptpd服务，就是VPN连接的软件模块。输入：yum install ppp iptables pptpd">
+<meta name="keywords" content="Liunx">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Node 的安装">
-<meta property="og:url" content="https://blog.majiameng.com/2016/02/10/nodejs/index.html">
+<meta property="og:title" content="Liunx搭建VPN">
+<meta property="og:url" content="https://blog.majiameng.com/uncategorized/vpn.html">
 <meta property="og:site_name" content="佳萌博客">
-<meta property="og:description" content="Windows 下安装 Node.js1.打开网址 nodejs.org选择适合自己电脑位数的安装包 windows 32位 https://nodejs.org/dist/v6.11.3/node-v6.11.3-x86.msi windows 64位 https://nodejs.org/dist/v6.11.3/node-v6.11.3-x64.msi 2.下载完毕,安装…next,next">
+<meta property="og:description" content="http://www.xiukee.com/show_530564.html 接下来怎么办？不懂Linux会不会死？不会滴。命令都在这里了。先安装pptpd服务，就是VPN连接的软件模块。输入：yum install ppp iptables pptpd">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-13T03:49:47.000Z">
+<meta property="og:updated_time" content="2017-09-15T12:05:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Node 的安装">
-<meta name="twitter:description" content="Windows 下安装 Node.js1.打开网址 nodejs.org选择适合自己电脑位数的安装包 windows 32位 https://nodejs.org/dist/v6.11.3/node-v6.11.3-x86.msi windows 64位 https://nodejs.org/dist/v6.11.3/node-v6.11.3-x64.msi 2.下载完毕,安装…next,next">
+<meta name="twitter:title" content="Liunx搭建VPN">
+<meta name="twitter:description" content="http://www.xiukee.com/show_530564.html 接下来怎么办？不懂Linux会不会死？不会滴。命令都在这里了。先安装pptpd服务，就是VPN连接的软件模块。输入：yum install ppp iptables pptpd">
   
     <link rel="alternative" href="/atom.xml" title="佳萌博客" type="application/atom+xml">
   
@@ -172,55 +172,32 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-nodejs" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-vpn" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Node 的安装
+      Liunx搭建VPN
     </h1>
   
 
         
-        <a href="/2016/02/10/nodejs/" class="archive-article-date">
-  	<time datetime="2016-02-10T12:33:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-02-10</time>
+        <a href="/uncategorized/vpn.html" class="archive-article-date">
+  	<time datetime="2017-04-17T07:22:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Windows-下安装-Node-js"><a href="#Windows-下安装-Node-js" class="headerlink" title="Windows 下安装 Node.js"></a>Windows 下安装 Node.js</h2><h4 id="1-打开网址-nodejs-org"><a href="#1-打开网址-nodejs-org" class="headerlink" title="1.打开网址 nodejs.org"></a>1.打开网址 <a href="https://nodejs.org/en/download" target="_blank" rel="external">nodejs.org</a></h4><p>选择适合自己电脑位数的安装包</p>
-<p>windows 32位</p>
-<p><a href="https://nodejs.org/dist/v6.11.3/node-v6.11.3-x86.msi" target="_blank" rel="external">https://nodejs.org/dist/v6.11.3/node-v6.11.3-x86.msi</a></p>
-<p>windows 64位</p>
-<p><a href="https://nodejs.org/dist/v6.11.3/node-v6.11.3-x64.msi" target="_blank" rel="external">https://nodejs.org/dist/v6.11.3/node-v6.11.3-x64.msi</a></p>
-<h4 id="2-下载完毕-安装…next-next-next-install"><a href="#2-下载完毕-安装…next-next-next-install" class="headerlink" title="2.下载完毕,安装…next,next,next,install!"></a>2.下载完毕,安装…next,next,next,install!</h4><p>node安装在  C:\Program Files\nodejs 路径下</p>
-<h4 id="3-配置环境变量"><a href="#3-配置环境变量" class="headerlink" title="3.配置环境变量"></a>3.配置环境变量</h4><blockquote>
-<p>右击我的电脑 -&gt; 属性 -&gt; 高级系统设置 -&gt; 环境变量(N)…</p>
-<p>系统变量里边 Path 新建一个变量 C:\Program Files\nodejs 确定</p>
-</blockquote>
-<h2 id="Liunx-下安装-Node-js"><a href="#Liunx-下安装-Node-js" class="headerlink" title="Liunx 下安装 Node.js"></a>Liunx 下安装 Node.js</h2><h4 id="1、下载源码，你需要在https-nodejs-org-en-download-下载最新的Nodejs版本，本文以v6-11-3为例"><a href="#1、下载源码，你需要在https-nodejs-org-en-download-下载最新的Nodejs版本，本文以v6-11-3为例" class="headerlink" title="1、下载源码，你需要在https://nodejs.org/en/download/下载最新的Nodejs版本，本文以v6.11.3为例:"></a>1、下载源码，你需要在<a href="https://nodejs.org/en/download/下载最新的Nodejs版本，本文以v6.11.3为例" target="_blank" rel="external">https://nodejs.org/en/download/下载最新的Nodejs版本，本文以v6.11.3为例</a>:</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/src/</div><div class="line">wget https://nodejs.org/dist/v6.11.3/node-v6.11.3.tar.gz</div></pre></td></tr></table></figure>
-<a id="more"></a>
-<h4 id="2、解压源码"><a href="#2、解压源码" class="headerlink" title="2、解压源码"></a>2、解压源码</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar zxvf node-v6.11.3.tar.gz</div></pre></td></tr></table></figure>
-<h4 id="3、-编译安装"><a href="#3、-编译安装" class="headerlink" title="3、 编译安装"></a>3、 编译安装</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> node-v6.11.3</div><div class="line">$ ./configure --prefix=/usr/<span class="built_in">local</span>/node/v6.11.3</div><div class="line">$ make</div><div class="line">$ make install</div></pre></td></tr></table></figure>
-<h4 id="4、-配置NODE-HOME，进入profile编辑环境变量"><a href="#4、-配置NODE-HOME，进入profile编辑环境变量" class="headerlink" title="4、 配置NODE_HOME，进入profile编辑环境变量"></a>4、 配置NODE_HOME，进入profile编辑环境变量</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim /etc/profile</div></pre></td></tr></table></figure>
-<p>设置nodejs环境变量，在 </p>
-<p><code>export PATH USER LOGNAME MAIL HOSTNAME HISTSIZE HISTCONTROL</code></p>
-<p> 一行的上面添加如下内容:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#set for nodejs</span></div><div class="line"><span class="built_in">export</span> NODE_HOME=/usr/<span class="built_in">local</span>/node/v6.11.3</div><div class="line"><span class="built_in">export</span> PATH=<span class="variable">$NODE_HOME</span>/bin:<span class="variable">$PATH</span></div></pre></td></tr></table></figure>
-<p>:wq保存并退出，编译<code>/etc/profile</code> 使配置生效<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  <span class="built_in">source</span> /etc/profile</div></pre></td></tr></table></figure></p>
-<p>验证是否安装配置成功<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ node -v</div></pre></td></tr></table></figure></p>
-<p>输出 v6.11.3 表示配置成功<br>npm模块安装路径<br>/usr/local/node/v6.11.3/lib/node_modules/</p>
-<p><code>注：Nodejs 官网提供了编译好的Linux二进制包，你也可以下载下来直接应用。</code></p>
-<h1 id="npm的使用"><a href="#npm的使用" class="headerlink" title="npm的使用"></a>npm的使用</h1><p>由于新版的nodejs已经集成了npm，所以之前npm也一并安装好了。同样可以通过输入 “npm -v” 来测试是否成功安装。命令如下，出现版本提示表示安装成功:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ npm -v</div><div class="line">2.3.0</div></pre></td></tr></table></figure></p>
-<p>如果你安装的是旧版本的 npm，可以很容易得通过 npm 命令来升级，命令如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install npm -g</div></pre></td></tr></table></figure></p>
-<p>如果是 Window 系统使用以下命令即可：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install npm -g</div></pre></td></tr></table></figure></p>
-<p>使用淘宝镜像的命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cnpm install npm -g</div></pre></td></tr></table></figure></p>
-<h4 id="如果你还没有安装淘宝镜像"><a href="#如果你还没有安装淘宝镜像" class="headerlink" title="如果你还没有安装淘宝镜像"></a>如果你还没有安装淘宝镜像</h4><h5 id="大家都知道国内直接使用-npm-的官方镜像是非常慢的，这里推荐使用淘宝-NPM-镜像。"><a href="#大家都知道国内直接使用-npm-的官方镜像是非常慢的，这里推荐使用淘宝-NPM-镜像。" class="headerlink" title="大家都知道国内直接使用 npm 的官方镜像是非常慢的，这里推荐使用淘宝 NPM 镜像。"></a>大家都知道国内直接使用 npm 的官方镜像是非常慢的，这里推荐使用淘宝 NPM 镜像。</h5><p>淘宝 NPM 镜像是一个完整 npmjs.org 镜像，你可以用此代替官方版本(只读)，同步频率目前为 10分钟 一次以保证尽量与官方服务同步。<br>你可以使用淘宝定制的 cnpm (gzip 压缩支持) 命令行工具代替默认的 npm:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g cnpm --registry=https://registry.npm.taobao.org</div></pre></td></tr></table></figure></p>
-<p>这样就可以使用 cnpm 命令来安装模块了：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cnpm install [name]</div></pre></td></tr></table></figure></p>
+        <p><a href="http://www.xiukee.com/show_530564.html" target="_blank" rel="external">http://www.xiukee.com/show_530564.html</a></p>
+<p>接下来怎么办？不懂Linux会不会死？不会滴。<br>命令都在这里了。<br>先安装pptpd服务，就是VPN连接的软件模块。<br>输入：yum install ppp iptables pptpd</p>
+ <a id="more"></a>
+<p>安装完成之后，你就得开始好好干活了：<br>A：编辑pptpd.conf：<br>输入：vi /etc/pptpd.conf<br>找到localip，去掉下面字段前面的#，然后保存退出。<br>localip 192.168.0.1<br>remoteip 192.168.0.234-238,192.168.0.245<br>Tips：<br>不会用vi编辑器怎么办？用上下键移动光标到需要修的那一行，按“i”键进入插入编辑状态，修改完成之后，按“esc”键退出编辑，直接在键盘上输入“:wq”即可保存退出。<br>编辑options.pptpd<br>vi /etc/ppp/options.pptpd<br>搜索ms-dns，去掉搜索到的两行ms-dns前面的#，并修改为下面的字段<br>ms-dns 8.8.8.8<br>ms-dns 8.8.4.4<br>然后是加入VPN的帐号密码，需要编辑/etc/ppp/chap-secrets设置：<br>vi /etc/ppp/chap-secrets<br>添加一行，按照下面格式输入：<br>用户名 pptpd 密码 *<br>保存退出，配置内核。<br>vi /etc/sysctl.conf<br>在这个文件里面加入一行：net.ipv4.ip_forward=1，然后保存退出。<br>输入：sysctl -p 让刚才的设置生效。<br>输入：<br>iptables -t nat -A POSTROUTING -s 192.168.0.0/24 -j SNAT –to-source 47.93.56.87</p>
+<p>作者：依思恋雨<br>链接：<a href="https://www.zhihu.com/question/54342110/answer/138901791" target="_blank" rel="external">https://www.zhihu.com/question/54342110/answer/138901791</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>请注意最后的参数并不是那一段中文哦，而是你的服务器的IP地址。去阿里云的管理平台看。<br>然后输入：chmod +x /etc/rc.d/rc.local<br>编辑系统配置：vi /etc/rc.d/rc.local<br>把刚才那个iptables的命令加入进去。保存退出。<br>启动vpn链接的服务：systemctl start pptpd<br>让它开机自启动：<br>chkconfig pptpd on<br>万事大吉，整个过程大概30分钟就能搞定。<br>之后的VPN设置也很容易，你有了IP地址和用户名密码，直接设置好了就行。<br>更多海淘攻略 请关注极客海淘<br>欢迎关注极客海淘官方微信、微博<br>文章来自极客海淘官方网站，均为原创，欢迎分享，如需转载请注明出处。</p>
 
       
 
@@ -265,7 +242,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Node</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Liunx</a>
         		</li>
       		
 		</ul>
@@ -321,7 +298,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://blog.majiameng.com/2016/02/10/nodejs/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://blog.majiameng.com/uncategorized/vpn.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -335,15 +312,20 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2016/02/14/hexo/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/uncategorized/vpn.sh.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          教你怎么用 Hexo!
+          Liunx搭建VPN shell 脚本
         
       </div>
     </a>
   
+  
+    <a href="/uncategorized/php_interview_2017.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">2017最新PHP经典面试题总结</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -368,7 +350,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Windows-下安装-Node-js"><span class="toc-number">1.</span> <span class="toc-text">Windows 下安装 Node.js</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-打开网址-nodejs-org"><span class="toc-number">1.0.1.</span> <span class="toc-text">1.打开网址 nodejs.org</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-下载完毕-安装…next-next-next-install"><span class="toc-number">1.0.2.</span> <span class="toc-text">2.下载完毕,安装…next,next,next,install!</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-配置环境变量"><span class="toc-number">1.0.3.</span> <span class="toc-text">3.配置环境变量</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Liunx-下安装-Node-js"><span class="toc-number">2.</span> <span class="toc-text">Liunx 下安装 Node.js</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、下载源码，你需要在https-nodejs-org-en-download-下载最新的Nodejs版本，本文以v6-11-3为例"><span class="toc-number">2.0.1.</span> <span class="toc-text">1、下载源码，你需要在https://nodejs.org/en/download/下载最新的Nodejs版本，本文以v6.11.3为例:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、解压源码"><span class="toc-number">2.0.2.</span> <span class="toc-text">2、解压源码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、-编译安装"><span class="toc-number">2.0.3.</span> <span class="toc-text">3、 编译安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4、-配置NODE-HOME，进入profile编辑环境变量"><span class="toc-number">2.0.4.</span> <span class="toc-text">4、 配置NODE_HOME，进入profile编辑环境变量</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#npm的使用"><span class="toc-number"></span> <span class="toc-text">npm的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#如果你还没有安装淘宝镜像"><span class="toc-number">0.0.1.</span> <span class="toc-text">如果你还没有安装淘宝镜像</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#大家都知道国内直接使用-npm-的官方镜像是非常慢的，这里推荐使用淘宝-NPM-镜像。"><span class="toc-number">0.0.1.1.</span> <span class="toc-text">大家都知道国内直接使用 npm 的官方镜像是非常慢的，这里推荐使用淘宝 NPM 镜像。</span></a></li></ol></li></ol></li></ol></li></ol>
+                    目录，不存在的…
                     </div>
                 </span>
             </div>
@@ -385,11 +367,11 @@ var _hmt = _hmt || [];
 
   
   <!--表情-->
-<div style="margin-left: 40px;"><div id="cyEmoji" role="cylabs" data-use="emoji" sid="nodejs"></div></div>
+<div style="margin-left: 40px;"><div id="cyEmoji" role="cylabs" data-use="emoji" sid="vpn"></div></div>
 <script type="text/javascript" charset="utf-8" src="https://changyan.itc.cn/js/lib/jquery.js"></script>
 <script type="text/javascript" charset="utf-8" src="https://changyan.sohu.com/js/changyan.labs.https.js?appid=cytd8GjEU"></script>
 <!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="nodejs" ></div>
+<div id="SOHUCS" sid="vpn" ></div>
 <script type="text/javascript">
     (function(){
         var appid = 'cytd8GjEU';

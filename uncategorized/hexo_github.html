@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://blog.majiameng.com">
-  <title>redis 使用 | 佳萌博客</title>
+  <title>Hexo安装和配置到GitHub | 佳萌博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="redis是什么:Redis is an open source, BSD licensed, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.redis是开">
-<meta name="keywords" content="PHP,Redis">
+  <meta name="description" content="Hexo安装和配置到GitHub1. Git安装和设置git123brew install git          #Mac电脑使用brew安装 sudo apt-get install git  #Ubuntu系统使用apt-get命令安装yum install git           #Liunx系统使用yum命令安装 然后设置好git账户 使用Github Page搭建博客, 需要在G">
+<meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="redis 使用">
-<meta property="og:url" content="https://blog.majiameng.com/2017/03/06/redis/index.html">
+<meta property="og:title" content="Hexo安装和配置到GitHub">
+<meta property="og:url" content="https://blog.majiameng.com/uncategorized/hexo_github.html">
 <meta property="og:site_name" content="佳萌博客">
-<meta property="og:description" content="redis是什么:Redis is an open source, BSD licensed, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.redis是开">
+<meta property="og:description" content="Hexo安装和配置到GitHub1. Git安装和设置git123brew install git          #Mac电脑使用brew安装 sudo apt-get install git  #Ubuntu系统使用apt-get命令安装yum install git           #Liunx系统使用yum命令安装 然后设置好git账户 使用Github Page搭建博客, 需要在G">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-18T11:02:31.000Z">
+<meta property="og:updated_time" content="2017-09-13T07:40:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="redis 使用">
-<meta name="twitter:description" content="redis是什么:Redis is an open source, BSD licensed, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.redis是开">
+<meta name="twitter:title" content="Hexo安装和配置到GitHub">
+<meta name="twitter:description" content="Hexo安装和配置到GitHub1. Git安装和设置git123brew install git          #Mac电脑使用brew安装 sudo apt-get install git  #Ubuntu系统使用apt-get命令安装yum install git           #Liunx系统使用yum命令安装 然后设置好git账户 使用Github Page搭建博客, 需要在G">
   
     <link rel="alternative" href="/atom.xml" title="佳萌博客" type="application/atom+xml">
   
@@ -172,258 +172,120 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-redis" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-hexo_github" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      redis 使用
+      Hexo安装和配置到GitHub
     </h1>
   
 
         
-        <a href="/2017/03/06/redis/" class="archive-article-date">
-  	<time datetime="2017-03-06T11:18:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-06</time>
+        <a href="/uncategorized/hexo_github.html" class="archive-article-date">
+  	<time datetime="2016-02-14T02:40:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-02-14</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="redis是什么"><a href="#redis是什么" class="headerlink" title="redis是什么:"></a>redis是什么:</h4><p>Redis is an open source, BSD licensed, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.<br>redis是开源,BSD许可,高级的key-value存储系统.<br>可以用来存储字符串,哈希结构,链表,集合,因此,常用来提供数据结构服务.</p>
- <a id="more"></a>
-<h4 id="redis和memcached相比-的独特之处"><a href="#redis和memcached相比-的独特之处" class="headerlink" title="redis和memcached相比,的独特之处:"></a>redis和memcached相比,的独特之处:</h4><p>1: redis可以用来做存储(storge), 而memccached是用来做缓存(cache)<br>  这个特点主要因为其有”持久化”的功能.<br>2: 存储的数据有”结构”,对于memcached来说,存储的数据,只有1种类型–”字符串”,<br>  而redis则可以存储字符串,链表,哈希结构,集合,有序集合.</p>
-<h4 id="Redis下载安装"><a href="#Redis下载安装" class="headerlink" title="Redis下载安装"></a>Redis下载安装</h4><p>1:官方站点: redis.io 下载最新版或者最新stable版<br>2:解压源码并进入目录<br>3: 不用configure<br>4: 直接make<br>(如果是32位机器 make 32bit)</p>
-<p>注:易碰到的问题,时间错误.<br>原因: 源码是官方configure过的,但官方configure时,生成的文件有时间戳信息,<br>Make只能发生在configure之后,<br>如果你的虚拟机的时间不对,比如说是2012年<br>解决: date -s ‘yyyy-mm-dd hh:mm:ss’   重写时间<br>    再 clock -w  写入cmos</p>
-<p>5: 可选步骤: make test  测试编译情况<br>(可能出现: need tcl  &gt;8.4这种情况, yum install tcl)</p>
-<p>6: 安装到指定的目录,比如 /usr/local/redis<br>make  PREFIX=/usr/local/redis install<br>注: PREFIX要大写</p>
-<p>7: make install之后,得到如下几个文件<br>redis-benchmark  性能测试工具<br>redis-check-aof  日志文件检测工(比如断电造成日志损坏,可以检测并修复)<br>redis-check-dump  快照文件检测工具,效果类上<br>redis-cli  客户端<br>redis-server 服务端</p>
-<p>8: 复制配置文件<br>Cp /path/redis.conf /usr/local/redis</p>
-<p>9: 启动与连接<br>/path/to/redis/bin/redis-server  ./path/to/conf-file<br>例:[root@localhost redis]# ./bin/redis-server ./redis.conf</p>
-<p>连接: 用redis-cli</p>
-<p>#/path/to/redis/bin/redis-cli [-h localhost -p 6379 ]</p>
-<p>10: 让redis以后台进程的形式运行<br>编辑conf配置文件,修改如下内容;<br>daemonize yes</p>
-<p>Redis对于key的操作命令</p>
-<p>del key1 key2 … Keyn<br>作用: 删除1个或多个键<br>返回值: 不存在的key忽略掉,返回真正删除的key的数量</p>
-<p>rename key newkey<br>作用: 给key赋一个新的key名<br>注:如果newkey已存在,则newkey的原值被覆盖</p>
-<p>renamenx key newkey<br>作用: 把key改名为newkey<br>返回: 发生修改返回1,未发生修改返回0<br>注: nx–&gt; not exists, 即, newkey不存在时,作改名动作</p>
-<p>move key db<br>redis 127.0.0.1:6379[1]&gt; select 2<br>OK<br>redis 127.0.0.1:6379[2]&gt; keys <em><br>(empty list or set)<br>redis 127.0.0.1:6379[2]&gt; select 0<br>OK<br>redis 127.0.0.1:6379&gt; keys </em><br>1) “name”<br>2) “cc”<br>3) “a”<br>4) “b”<br>redis 127.0.0.1:6379&gt; move cc 2<br>(integer) 1<br>redis 127.0.0.1:6379&gt; select 2<br>OK<br>redis 127.0.0.1:6379[2]&gt; keys *<br>1) “cc”<br>redis 127.0.0.1:6379[2]&gt; get cc<br>“3”</p>
-<p>(注意: 一个redis进程,打开了不止一个数据库, 默认打开16个数据库,从0到15编号,<br>如果想打开更多数据库,可以从配置文件修改)</p>
-<p>keys pattern 查询相应的key<br>在redis里,允许模糊查询key<br>有3个通配符 <em>, ? ,[]
-</em>: 通配任意多个字符<br>?: 通配单个字符<br>[]: 通配括号内的某1个字符<br>redis 127.0.0.1:6379&gt; flushdb<br>OK<br>redis 127.0.0.1:6379&gt; keys <em><br>(empty list or set)<br>redis 127.0.0.1:6379&gt; mset one 1 two 2 three 3 four 4<br>OK<br>redis 127.0.0.1:6379&gt; keys o</em><br>1) “one”<br>redis 127.0.0.1:6379&gt; key <em>o<br>(error) ERR unknown command ‘key’<br>redis 127.0.0.1:6379&gt; keys </em>o<br>1) “two”<br>redis 127.0.0.1:6379&gt; keys ???<br>1) “one”<br>2) “two”<br>redis 127.0.0.1:6379&gt; keys on?</p>
-<p>1) “one”<br>redis 127.0.0.1:6379&gt; set ons yes</p>
-<p>OK<br>redis 127.0.0.1:6379&gt; keys on[eaw]<br>1) “one”</p>
-<p>randomkey 返回随机key</p>
-<p>exists key<br>判断key是否存在,返回1/0</p>
-<p>type key<br>返回key存储的值的类型<br>有string,link,set,order set, hash</p>
-<p>ttl key<br>作用: 查询key的生命周期<br>返回: 秒数</p>
-<p>注:对于不存在的key或已过期的key/不过期的key,都返回-1<br>Redis2.8中,对于不存在的key,返回-2</p>
-<p>expire key 整型值<br>作用: 设置key的生命周期,以秒为单位</p>
-<p>同理:<br>pexpire key 毫秒数, 设置生命周期<br>pttl  key, 以毫秒返回生命周期</p>
-<p>persist key<br>作用: 把指定key置为永久有效</p>
-<p>Redis字符串类型的操作</p>
-<p>set key value [ex 秒数] / [px 毫秒数]  [nx] /[xx]</p>
-<p>如: set a 1 ex 10 , 10秒有效<br>Set a 1 px 9000  , 9秒有效<br>注: 如果ex,px同时写,以后面的有效期为准<br>如 set a 1 ex 100 px 9000, 实际有效期是9000毫秒</p>
-<p>nx: 表示key不存在时,执行操作<br>xx: 表示key存在时,执行操作</p>
-<p>mset  multi set , 一次性设置多个键值<br>例: mset key1 v1 key2 v2 ….</p>
-<p>get key<br>作用:获取key的值</p>
-<p>mget key1 key2 ..keyn<br>作用:获取多个key的值</p>
-<p>setrange key offset value<br>作用:把字符串的offset偏移字节,改成value<br>redis 127.0.0.1:6379&gt; set greet hello<br>OK<br>redis 127.0.0.1:6379&gt; setrange greet 2 x<br>(integer) 5<br>redis 127.0.0.1:6379&gt; get greet<br>“hexlo”</p>
-<p>注意: 如果偏移量&gt;字符长度, 该字符自动补0x00</p>
-<p>redis 127.0.0.1:6379&gt; setrange greet 6 !<br>(integer) 7<br>redis 127.0.0.1:6379&gt; get greet<br>“heyyo\x00!”</p>
-<p>append key value<br>作用: 把value追加到key的原值上</p>
-<p>getrange key start stop<br>作用: 是获取字符串中 [start, stop]范围的值<br>注意: 对于字符串的下标,左数从0开始,右数从-1开始<br>redis 127.0.0.1:6379&gt; set title ‘chinese’<br>OK<br>redis 127.0.0.1:6379&gt; getrange title 0 3<br>“chin”<br>redis 127.0.0.1:6379&gt; getrange title 1 -2<br>“hines”</p>
-<p>注意:<br>1: start&gt;=length, 则返回空字符串<br>2: stop&gt;=length,则截取至字符结尾<br>3: 如果start 所处位置在stop右边, 返回空字符串</p>
-<p>getset key newvalue<br>作用: 获取并返回旧值,设置新值<br>redis 127.0.0.1:6379&gt; set cnt 0<br>OK<br>redis 127.0.0.1:6379&gt; getset cnt 1<br>“0”<br>redis 127.0.0.1:6379&gt; getset cnt 2<br>“1”</p>
-<p>incr key<br>作用: 指定的key的值加1,并返回加1后的值</p>
-<p>注意:<br>1:不存在的key当成0,再incr操作<br>2: 范围为64有符号<br>incrby key number (整型)<br>redis 127.0.0.1:6379&gt; incrby age  90 (每次递增的数字)<br>(integer) 92</p>
-<p>incrbyfloat key floatnumber (浮点型)<br>redis 127.0.0.1:6379&gt; incrbyfloat age 3.5<br>“95.5”</p>
-<p>decr key<br>redis 127.0.0.1:6379&gt; set age 20<br>OK<br>redis 127.0.0.1:6379&gt; decr age<br>(integer) 19</p>
-<p>decrby key number<br>redis 127.0.0.1:6379&gt; decrby age 3<br>(integer) 16</p>
-<p>getbit key offset<br>作用:获取值的二进制表示,对应位上的值(从左,从0编号)<br>redis 127.0.0.1:6379&gt; set char A<br>OK<br>redis 127.0.0.1:6379&gt; getbit char 1<br>(integer) 1<br>redis 127.0.0.1:6379&gt; getbit char 2<br>(integer) 0<br>redis 127.0.0.1:6379&gt; getbit char 7<br>(integer) 1</p>
-<p>setbit  key offset value<br>设置offset对应二进制位上的值<br>返回: 该位上的旧值</p>
-<p>注意:<br>1:如果offset过大,则会在中间填充0,<br>2: offset最大大到多少<br>3:offset最大2^32-1,可推出最大的的字符串为512M</p>
-<p>bitop operation destkey key1 [key2 …]</p>
-<p>对key1,key2..keyN作operation,并将结果保存到 destkey 上。<br>operation 可以是 AND 、 OR 、 NOT 、 XOR</p>
-<p>redis 127.0.0.1:6379&gt; setbit lower 7 0<br>(integer) 0<br>redis 127.0.0.1:6379&gt; setbit lower 2 1<br>(integer) 0<br>redis 127.0.0.1:6379&gt; get lower<br>“ “<br>redis 127.0.0.1:6379&gt; set char Q<br>OK<br>redis 127.0.0.1:6379&gt; get char<br>“Q”<br>redis 127.0.0.1:6379&gt; bitop or char char lower<br>(integer) 1<br>redis 127.0.0.1:6379&gt; get char<br>“q”</p>
-<p>注意: 对于NOT操作, key不能多个</p>
-<p>link 链表结构</p>
-<p>lpush key value<br>作用: 把值插入到链接头部</p>
-<p>rpop key<br>作用: 返回并删除链表尾元素</p>
-<p>rpush,lpop: 不解释</p>
-<p>lrange key start  stop<br>作用: 返回链表中[start ,stop]中的元素<br>规律: 左数从0开始,右数从-1开始</p>
-<p>lrem key count value<br>作用: 从key链表中删除 value值<br>注: 删除count的绝对值个value后结束<br>Count&gt;0 从表头删除<br>Count&lt;0 从表尾删除</p>
-<p>ltrim key start stop<br>作用: 剪切key对应的链接,切[start,stop]一段,并把该段重新赋给key</p>
-<p>lindex key index<br>作用: 返回index索引上的值,<br>如  lindex key 2</p>
-<p>llen key<br>作用:计算链接表的元素个数<br>redis 127.0.0.1:6379&gt; llen task<br>(integer) 3<br>redis 127.0.0.1:6379&gt;</p>
-<p>linsert  key after|before search value<br>作用: 在key链表中寻找’search’,并在search值之前|之后,.插入value<br>注: 一旦找到一个search后,命令就结束了,因此不会插入多个value</p>
-<p>rpoplpush source dest<br>作用: 把source的尾部拿出,放在dest的头部,<br>并返回 该单元值</p>
-<p>场景: task + bak 双链表完成安全队列<br>Task列表                             bak列表</p>
-<p>业务逻辑:<br>1:Rpoplpush task bak<br>2:接收返回值,并做业务处理<br>3:如果成功,rpop bak 清除任务. 如不成功,下次从bak表里取任务</p>
-<p>brpop ,blpop  key timeout<br>作用:等待弹出key的尾/头元素,<br>Timeout为等待超时时间<br>如果timeout为0,则一直等待</p>
-<p>场景: 长轮询Ajax,在线聊天时,能够用到</p>
-<p>Setbit 的实际应用</p>
-<p>场景: 1亿个用户, 每个用户 登陆/做任意操作  ,记为 今天活跃,否则记为不活跃</p>
-<p>每周评出: 有奖活跃用户: 连续7天活动<br>每月评,等等…</p>
-<p>思路:</p>
-<p>Userid   dt  active<br>1        2013-07-27  1<br>1       2013-0726   1</p>
-<p>如果是放在表中, 1:表急剧增大,2:要用group ,sum运算,计算较慢</p>
-<p>用: 位图法 bit-map<br>Log0721:  ‘011001……………0’</p>
-<p>……<br>log0726 :   ‘011001……………0’<br>Log0727 :  ‘0110000………….1’</p>
-<p>1: 记录用户登陆:<br>每天按日期生成一个位图, 用户登陆后,把user_id位上的bit值置为1</p>
-<p>2: 把1周的位图  and 计算,<br>位上为1的,即是连续登陆的用户</p>
-<p>redis 127.0.0.1:6379&gt; setbit mon 100000000 0<br>(integer) 0<br>redis 127.0.0.1:6379&gt; setbit mon 3 1<br>(integer) 0<br>redis 127.0.0.1:6379&gt; setbit mon 5 1<br>(integer) 0<br>redis 127.0.0.1:6379&gt; setbit mon 7 1<br>(integer) 0<br>redis 127.0.0.1:6379&gt; setbit thur 100000000 0<br>(integer) 0<br>redis 127.0.0.1:6379&gt; setbit thur 3 1<br>(integer) 0<br>redis 127.0.0.1:6379&gt; setbit thur 5 1<br>(integer) 0<br>redis 127.0.0.1:6379&gt; setbit thur 8 1<br>(integer) 0<br>redis 127.0.0.1:6379&gt; setbit wen 100000000 0<br>(integer) 0<br>redis 127.0.0.1:6379&gt; setbit wen 3 1<br>(integer) 0<br>redis 127.0.0.1:6379&gt; setbit wen 4 1<br>(integer) 0<br>redis 127.0.0.1:6379&gt; setbit wen 6 1<br>(integer) 0<br>redis 127.0.0.1:6379&gt; bitop and  res mon feb wen<br>(integer) 12500001</p>
-<p>如上例,优点:<br>1: 节约空间, 1亿人每天的登陆情况,用1亿bit,约1200WByte,约10M 的字符就能表示<br>2: 计算方便</p>
-<p>集合 set 相关命令</p>
-<p>集合的性质: 唯一性,无序性,确定性</p>
-<p>注: 在string和link的命令中,可以通过range 来访问string中的某几个字符或某几个元素<br>但,因为集合的无序性,无法通过下标或范围来访问部分元素.</p>
-<p>因此想看元素,要么随机先一个,要么全选</p>
-<p>sadd key  value1 value2<br>作用: 往集合key中增加元素</p>
-<p>srem value1 value2<br>作用: 删除集合中集为 value1 value2的元素<br>返回值: 忽略不存在的元素后,真正删除掉的元素的个数</p>
-<p>spop key<br>作用: 返回并删除集合中key中1个随机元素</p>
-<p>随机–体现了无序性</p>
-<p>srandmember key<br>作用: 返回集合key中,随机的1个元素.</p>
-<p>sismember key  value<br>作用: 判断value是否在key集合中<br>是返回1,否返回0</p>
-<p>smembers key<br>作用: 返回集中中所有的元素</p>
-<p>scard key<br>作用: 返回集合中元素的个数</p>
-<p>smove source dest value<br>作用:把source中的value删除,并添加到dest集合中</p>
-<p>sinter  key1 key2 key3<br>作用: 求出key1 key2 key3 三个集合中的交集,并返回<br>redis 127.0.0.1:6379&gt; sadd s1 0 2 4 6<br>(integer) 4<br>redis 127.0.0.1:6379&gt; sadd s2 1 2 3 4<br>(integer) 4<br>redis 127.0.0.1:6379&gt; sadd s3 4 8 9 12<br>(integer) 4<br>redis 127.0.0.1:6379&gt; sinter s1 s2 s3<br>1) “4”<br>redis 127.0.0.1:6379&gt; sinter s3 s1 s2<br>1) “4”</p>
-<p>sinterstore dest key1 key2 key3<br>作用: 求出key1 key2 key3 三个集合中的交集,并赋给dest</p>
-<p>suion key1 key2.. Keyn<br>作用: 求出key1 key2 keyn的并集,并返回</p>
-<p>sdiff key1 key2 key3<br>作用: 求出key1与key2 key3的差集<br>即key1-key2-key3</p>
-<p>order set 有序集合<br>zadd key score1 value1 score2 value2 ..<br>添加元素<br>redis 127.0.0.1:6379&gt; zadd stu 18 lily 19 hmm 20 lilei 21 lilei<br>(integer) 3</p>
-<p>zrem key value1 value2 ..<br>作用: 删除集合中的元素</p>
-<p>zremrangebyscore key min max<br>作用: 按照socre来删除元素,删除score在[min,max]之间的<br>redis 127.0.0.1:6379&gt; zremrangebyscore stu 4 10<br>(integer) 2<br>redis 127.0.0.1:6379&gt; zrange stu 0 -1<br>1) “f”</p>
-<p>zremrangebyrank key start end<br>作用: 按排名删除元素,删除名次在[start,end]之间的<br>redis 127.0.0.1:6379&gt; zremrangebyrank stu 0 1<br>(integer) 2<br>redis 127.0.0.1:6379&gt; zrange stu 0 -1<br>1) “c”<br>2) “e”<br>3) “f”<br>4) “g”</p>
-<p>zrank key member<br>查询member的排名(升续 0名开始)</p>
-<p>zrevrank key memeber<br>查询 member的排名(降续 0名开始)</p>
-<p>ZRANGE key start stop [WITHSCORES]<br>把集合排序后,返回名次[start,stop]的元素<br>默认是升续排列<br>Withscores 是把score也打印出来</p>
-<p>zrevrange key start stop<br>作用:把集合降序排列,取名字[start,stop]之间的元素</p>
-<p>zrangebyscore  key min max [withscores] limit offset N<br>作用: 集合(升续)排序后,取score在[min,max]内的元素,<br>并跳过 offset个, 取出N个<br>redis 127.0.0.1:6379&gt; zadd stu 1 a 3 b 4 c 9 e 12 f 15 g<br>(integer) 6<br>redis 127.0.0.1:6379&gt; zrangebyscore stu 3 12 limit 1 2 withscores<br>1) “c”<br>2) “4”<br>3) “e”<br>4) “9”</p>
-<p>zcard key<br>返回元素个数</p>
-<p>zcount key min max<br>返回[min,max] 区间内元素的数量</p>
-<p>zinterstore destination numkeys key1 [key2 …]<br>[WEIGHTS weight [weight …]]<br>[AGGREGATE SUM|MIN|MAX]<br>求key1,key2的交集,key1,key2的权重分别是 weight1,weight2<br>聚合方法用: sum |min|max<br>聚合的结果,保存在dest集合内</p>
-<p>注意: weights ,aggregate如何理解?<br>答: 如果有交集, 交集元素又有socre,score怎么处理?<br> Aggregate sum-&gt;score相加   , min 求最小score, max 最大score</p>
-<p>另: 可以通过weigth设置不同key的权重, 交集时,socre * weights</p>
-<p>详见下例<br>redis 127.0.0.1:6379&gt; zadd z1 2 a 3 b 4 c<br>(integer) 3<br>redis 127.0.0.1:6379&gt; zadd z2 2.5 a 1 b 8 d<br>(integer) 3<br>redis 127.0.0.1:6379&gt; zinterstore tmp 2 z1 z2<br>(integer) 2<br>redis 127.0.0.1:6379&gt; zrange tmp 0 -1<br>1) “b”<br>2) “a”<br>redis 127.0.0.1:6379&gt; zrange tmp 0 -1 withscores<br>1) “b”<br>2) “4”<br>3) “a”<br>4) “4.5”<br>redis 127.0.0.1:6379&gt; zinterstore tmp 2 z1 z2 aggregate sum<br>(integer) 2<br>redis 127.0.0.1:6379&gt; zrange tmp 0 -1 withscores<br>1) “b”<br>2) “4”<br>3) “a”<br>4) “4.5”<br>redis 127.0.0.1:6379&gt; zinterstore tmp 2 z1 z2 aggregate min<br>(integer) 2<br>redis 127.0.0.1:6379&gt; zrange tmp 0 -1 withscores<br>1) “b”<br>2) “1”<br>3) “a”<br>4) “2”<br>redis 127.0.0.1:6379&gt; zinterstore tmp 2 z1 z2 weights 1 2<br>(integer) 2<br>redis 127.0.0.1:6379&gt; zrange tmp 0 -1 withscores<br>1) “b”<br>2) “5”<br>3) “a”<br>4) “7”</p>
-<p>Hash 哈希数据类型相关命令</p>
-<p>hset key field value<br>作用: 把key中 filed域的值设为value<br>注:如果没有field域,直接添加,如果有,则覆盖原field域的值</p>
-<p>hmset key field1 value1 [field2 value2 field3 value3 ……fieldn valuen]<br>作用: 设置field1-&gt;N 个域, 对应的值是value1-&gt;N<br>(对应PHP理解为  $key = array(file1=&gt;value1, field2=&gt;value2 ….fieldN=&gt;valueN))</p>
-<p>hget key field<br>作用: 返回key中field域的值</p>
-<p>hmget key field1 field2 fieldN<br>作用: 返回key中field1 field2 fieldN域的值</p>
-<p>hgetall key<br>作用:返回key中,所有域与其值</p>
-<p>hdel key field<br>作用: 删除key中 field域</p>
-<p>hlen key<br>作用: 返回key中元素的数量</p>
-<p>hexists key field<br>作用: 判断key中有没有field域</p>
-<p>hinrby key field value<br>作用: 是把key中的field域的值增长整型值value</p>
-<p>hinrby float  key field value<br>作用: 是把key中的field域的值增长浮点值value</p>
-<p>hkeys key<br>作用: 返回key中所有的field</p>
-<p>kvals key<br>作用: 返回key中所有的value</p>
-<p>Redis 中的事务</p>
-<p>Redis支持简单的事务</p>
-<p>Redis与 mysql事务的对比</p>
-<p>MysqlRedis开启start transactionmuitl语句普通sql普通命令失败rollback 回滚discard 取消成功commitexec</p>
-<p>注: rollback与discard 的区别<br>如果已经成功执行了2条语句, 第3条语句出错.<br>Rollback后,前2条的语句影响消失.<br>Discard只是结束本次事务,前2条语句造成的影响仍然还在</p>
-<p>注:<br>在mutil后面的语句中, 语句出错可能有2种情况<br>1: 语法就有问题,<br>这种,exec时,报错, 所有语句得不到执行</p>
-<p>2: 语法本身没错,但适用对象有问题. 比如 zadd 操作list对象<br>Exec之后,会执行正确的语句,并跳过有不适当的语句.</p>
-<p>(如果zadd操作list这种事怎么避免? 这一点,由程序员负责)</p>
-<p>思考:<br>我正在买票<br>Ticket -1 , money -100<br>而票只有1张, 如果在我multi之后,和exec之前, 票被别人买了—即ticket变成0了.<br>我该如何观察这种情景,并不再提交</p>
-<p>悲观的想法:<br>世界充满危险,肯定有人和我抢, 给 ticket上锁, 只有我能操作. [悲观锁]</p>
-<p>乐观的想法:<br>没有那么人和我抢,因此,我只需要注意,<br>–有没有人更改ticket的值就可以了 [乐观锁]</p>
-<p>Redis的事务中,启用的是乐观锁,只负责监测key没有被改动.</p>
-<p>具体的命令—-  watch命令<br>例:<br>redis 127.0.0.1:6379&gt; watch ticket<br>OK<br>redis 127.0.0.1:6379&gt; multi<br>OK<br>redis 127.0.0.1:6379&gt; decr ticket<br>QUEUED<br>redis 127.0.0.1:6379&gt; decrby money 100<br>QUEUED<br>redis 127.0.0.1:6379&gt; exec<br>(nil)   // 返回nil,说明监视的ticket已经改变了,事务就取消了.<br>redis 127.0.0.1:6379&gt; get ticket<br>“0”<br>redis 127.0.0.1:6379&gt; get money<br>“200”</p>
-<p>watch key1 key2  … keyN<br>作用:监听key1 key2..keyN有没有变化,如果有变, 则事务取消</p>
-<p>unwatch<br>作用: 取消所有watch监听</p>
-<p>消息订阅</p>
-<p>使用办法:<br>订阅端: Subscribe 频道名称<br>发布端: publish 频道名称 发布内容</p>
-<p>客户端例子:<br>redis 127.0.0.1:6379&gt; subscribe news<br>Reading messages… (press Ctrl-C to quit)<br>1) “subscribe”<br>2) “news”<br>3) (integer) 1<br>1) “message”<br>2) “news”<br>3) “good good study”<br>1) “message”<br>2) “news”<br>3) “day day up”</p>
-<p>服务端例子:<br>redis 127.0.0.1:6379&gt; publish news ‘good good study’<br>(integer) 1<br>redis 127.0.0.1:6379&gt; publish news ‘day day up’<br>(integer) 1</p>
-<p>Redis持久化配置</p>
-<p>Redis的持久化有2种方式   1快照  2是日志</p>
-<p>Rdb快照的配置选项</p>
-<p>save 900 1      // 900内,有1条写入,则产生快照<br>save 300 1000   // 如果300秒内有1000次写入,则产生快照<br>save 60 10000  // 如果60秒内有10000次写入,则产生快照<br>(这3个选项都屏蔽,则rdb禁用)</p>
-<p>stop-writes-on-bgsave-error yes  // 后台备份进程出错时,主进程停不停止写入?<br>rdbcompression yes    // 导出的rdb文件是否压缩<br>Rdbchecksum   yes //  导入rbd恢复时数据时,要不要检验rdb的完整性<br>dbfilename dump.rdb  //导出来的rdb文件名<br>dir ./  //rdb的放置路径</p>
-<p>Aof 的配置<br>appendonly no # 是否打开 aof日志功能</p>
-<p>appendfsync always   # 每1个命令,都立即同步到aof. 安全,速度慢<br>appendfsync everysec # 折衷方案,每秒写1次<br>appendfsync no      # 写入工作交给操作系统,由操作系统判断缓冲区大小,统一写入到aof. 同步频率低,速度快,</p>
-<p>no-appendfsync-on-rewrite  yes: # 正在导出rdb快照的过程中,要不要停止同步aof<br>auto-aof-rewrite-percentage 100 #aof文件大小比起上次重写时的大小,增长率100%时,重写<br>auto-aof-rewrite-min-size 64mb #aof文件,至少超过64M时,重写</p>
-<p>注: 在dump rdb过程中,aof如果停止同步,会不会丢失?<br>答: 不会,所有的操作缓存在内存的队列里, dump完成后,统一操作.</p>
-<p>注: aof重写是指什么?<br>答: aof重写是指把内存中的数据,逆化成命令,写入到.aof日志里.<br>以解决 aof日志过大的问题.</p>
-<p>问: 如果rdb文件,和aof文件都存在,优先用谁来恢复数据?<br>答: aof</p>
-<p>问: 2种是否可以同时用?<br>答: 可以,而且推荐这么做</p>
-<p>问: 恢复时rdb和aof哪个恢复的快<br>答: rdb快,因为其是数据的内存映射,直接载入到内存,而aof是命令,需要逐条执行<br>redis 服务器端命令<br>redis 127.0.0.1:6380&gt; time  ,显示服务器时间 , 时间戳(秒), 微秒数<br>1) “1375270361”<br>2) “504511”</p>
-<p>redis 127.0.0.1:6380&gt; dbsize  // 当前数据库的key的数量<br>(integer) 2<br>redis 127.0.0.1:6380&gt; select 2<br>OK<br>redis 127.0.0.1:6380[2]&gt; dbsize<br>(integer) 0<br>redis 127.0.0.1:6380[2]&gt;</p>
-<p>BGREWRITEAOF 后台进程重写AOF<br>BGSAVE       后台保存rdb快照<br>SAVE         保存rdb快照<br>LASTSAVE     上次保存时间</p>
-<p>Slaveof master-Host port  , 把当前实例设为master的slave</p>
-<p>Flushall  清空所有库所有键<br>Flushdb  清空当前库所有键<br>Showdown [save/nosave]</p>
-<p>注: 如果不小心运行了flushall, 立即 shutdown nosave ,关闭服务器<br>然后 手工编辑aof文件, 去掉文件中的 “flushall ”相关行, 然后开启服务器,就可以导入回原来数据.</p>
-<p>如果,flushall之后,系统恰好bgrewriteaof了,那么aof就清空了,数据丢失.</p>
-<p>Slowlog 显示慢查询<br>注:多慢才叫慢?<br>答: 由slowlog-log-slower-than 10000 ,来指定,(单位是微秒)</p>
-<p>服务器储存多少条慢查询的记录?<br>答: 由 slowlog-max-len 128 ,来做限制</p>
-<p>Info [Replication/CPU/Memory..]<br>查看redis服务器的信息</p>
-<p>Config get 配置项<br>Config set 配置项 值 (特殊的选项,不允许用此命令设置,如slave-of, 需要用单独的slaveof命令来设置)</p>
-<p>Redis运维时需要注意的参数<br>1: 内存</p>
-<h1 id="Memory"><a href="#Memory" class="headerlink" title="Memory"></a>Memory</h1><p>used_memory:859192 数据结构的空间<br>used_memory_rss:7634944 实占空间<br>mem_fragmentation_ratio:8.89 前2者的比例,1.N为佳,如果此值过大,说明redis的内存的碎片化严重,可以导出再导入一次.<br>2: 主从复制</p>
-<h1 id="Replication"><a href="#Replication" class="headerlink" title="Replication"></a>Replication</h1><p>role:slave<br>master_host:192.168.1.128<br>master_port:6379<br>master_link_status:up</p>
-<p>3:持久化</p>
-<h1 id="Persistence"><a href="#Persistence" class="headerlink" title="Persistence"></a>Persistence</h1><p>rdb_changes_since_last_save:0<br>rdb_last_save_time:1375224063</p>
-<p>4: fork耗时</p>
-<p>#Status<br>latest_fork_usec:936  上次导出rdb快照,持久化花费微秒<br>注意: 如果某实例有10G内容,导出需要2分钟,<br>每分钟写入10000次,导致不断的rdb导出,磁盘始处于高IO状态.</p>
-<p>5: 慢日志<br>config get/set slowlog-log-slower-than<br>CONFIG get/SET slowlog-max-len<br>slowlog get N 获取慢日志</p>
-<p>运行时更改master-slave<br>修改一台slave(设为A)为new master<br>1) 命令该服务不做其他redis服务的slave<br>   命令: slaveof no one<br>2) 修改其readonly为yes</p>
-<p>其他的slave再指向new master A<br>1) 命令该服务为new master A的slave<br>   命令格式 slaveof IP port<br>监控工具 sentinel</p>
-<p>Sentinel不断与master通信,获取master的slave信息.<br>监听master与slave的状态<br>如果某slave失效,直接通知master去除该slave.</p>
-<p>如果master失效,,是按照slave优先级(可配置), 选取1个slave做 new master<br>,把其他slave–&gt; new master</p>
-<p>疑问: sentinel与master通信,如果某次因为master IO操作频繁,导致超时,<br>此时,认为master失效,很武断.<br>解决: sentnel允许多个实例看守1个master, 当N台(N可设置)sentinel都认为master失效,才正式失效.</p>
-<p>Sentinel选项配置<br>port 26379 # 端口<br>sentinel monitor mymaster 127.0.0.1 6379 2 ,<br>给主机起的名字(不重即可),<br>当2个sentinel实例都认为master失效时,正式失效</p>
-<p>sentinel down-after-milliseconds mymaster 30000  多少毫秒后连接不到master认为断开<br>sentinel can-failover mymaster yes #是否允许sentinel修改slave-&gt;master. 如为no,则只能监控,无权修改./<br>sentinel parallel-syncs mymaster 1 , 一次性修改几个slave指向新的new master.<br>sentinel client-reconfig-script mymaster /var/redis/reconfig.sh ,# 在重新配置new master,new slave过程,可以触发的脚本<br>redis 与关系型数据库的适合场景</p>
-<p>书签系统<br>create table book (<br>bookid int,<br>title char(20)<br>)engine myisam charset utf8;</p>
-<p>insert into book values<br>(5 , ‘PHP圣经’),<br>(6 , ‘ruby实战’),<br>(7 , ‘mysql运维’)<br>(8, ‘ruby服务端编程’);</p>
-<p>create table tags (<br>tid int,<br>bookid int,<br>content char(20)<br>)engine myisam charset utf8;</p>
-<p>insert into tags values<br>(10 , 5 , ‘PHP’),<br>(11 , 5 , ‘WEB’),<br>(12 , 6 , ‘WEB’),<br>(13 , 6 , ‘ruby’),<br>(14 , 7 , ‘database’),<br>(15 , 8 , ‘ruby’),<br>(16 , 8 , ‘server’);</p>
-<p>＃ 既有web标签,又有PHP,同时还标签的书,要用连接查询</p>
-<p>select * from tags inner join tags as t on tags.bookid=t.bookid<br>where tags.content=’PHP’ and t.content=’WEB’;</p>
-<p>换成key-value存储<br>用kv 来存储<br>set book:5:title ‘PHP圣经’<br>set book:6:title ‘ruby实战’<br>set book:7:title ‘mysql运难’<br>set book:8:title ‘ruby server’</p>
-<p>sadd tag:PHP 5<br>sadd tag:WEB 5 6<br>sadd tag:database 7<br>sadd tag:ruby 6 8<br>sadd tag:SERVER 8</p>
-<p>查: 既有PHP,又有WEB的书<br>Sinter tag:PHP tag:WEB  #查集合的交集</p>
-<p>查: 有PHP或有WEB标签的书<br>Sunin tag:PHP tag:WEB</p>
-<p>查:含有ruby,不含WEB标签的书<br>Sdiff tag:ruby tag:WEB #求差集</p>
-<h4 id="Redis-key-设计技巧"><a href="#Redis-key-设计技巧" class="headerlink" title="Redis key 设计技巧"></a>Redis key 设计技巧</h4><p>1: 把表名转换为key前缀 如, tag:<br>2: 第2段放置用于区分区key的字段–对应mysql中的主键的列名,如userid<br>3: 第3段放置主键值,如2,3,4…., a , b ,c<br>4: 第4段,写要存储的列名</p>
-<p>用户表 user , 转换为key-value存储useridusernamepasswordeemail9Lisi1111111lisi@163.com</p>
-<p>set  user:userid:9:username lisi<br>set  user:userid:9:password 111111<br>set  user:userid:9:email   lisi@163.com</p>
-<p>keys user:userid:9*</p>
-<p>2 注意:<br>在关系型数据中,除主键外,还有可能其他列也步骤查询,<br>如上表中, username 也是极频繁查询的,往往这种列也是加了索引的.</p>
-<p>转换到k-v数据中,则也要相应的生成一条按照该列为主的key-value<br>Set  user:username:lisi:uid  9  </p>
-<p>这样,我们可以根据username:lisi:uid ,查出userid=9,<br>再查user:9:password/email …</p>
-<p>完成了根据用户名来查询用户信息<br>php-redis扩展编译</p>
-<p>1: 到pecl.php.net  搜索redis<br>2: 下载stable版(稳定版)扩展<br>3: 解压,<br>4: 执行/php/path/bin/phpize (作用是检测PHP的内核版本,并为扩展生成相应的编译配置)<br>5: configure –with-php-config=/php/path/bin/php-config<br>6: make &amp;&amp; make install</p>
-<p>引入编译出的redis.so插件<br>1: 编辑php.ini<br>2: 添加</p>
-<p>redis插件的使用<br>// get instance<br>$redis = new Redis();</p>
-<p>// connect to redis server<br>$redis-&gt;open(‘localhost’,6380);<br>$redis-&gt;set(‘user:userid:9:username’,’wangwu’);<br>var_dump($redis-&gt;get(‘user:userid:9:username’));</p>
-<p>微博项目的key设计<br>全局相关的key:<br>表名global列名操作备注Global:useridincr产生全局的useridGlobal:postidIncr产生全局的postid</p>
-<p>用户相关的key(表)<br>表名userUseridUsernamePasswordAuthsecret3Test31111111#U*Q(%_</p>
-<p>在redis中,变成以下几个key<br>Key前缀userUser:Userid:<em>User:userid:</em>UsernameUser:userid:<em>PasswordUser:userid:</em>:AuthsecretUser:userid:3User:userid:3:Test3User:userid:3:1111111User:userid:3:#U*Q(%_</p>
-<p>微博相关的表设计<br>表名postPostidUseridUsernameTimeContent42Lisi1370987654f测试内容</p>
-<p>微博在redis中,与表设计对应的key设计<br>Key前缀postPost:Postid:<em>Post:postid:</em>UseridPost:postid:<em>:UsernamePost:postid:</em>:TimePost:postid:*:Content42Lisi1370987654f测试内容</p>
-<p>关注表: following<br>Following:$userid –&gt;</p>
-<p>粉丝表<br>Follower:$userid —&gt;</p>
-<p>推送表:revicepost</p>
-<p>347</p>
-<p>=================拉模型,改进=====================</p>
-<p>拉取表</p>
-<p>347</p>
-<p>问: 上次我拉取了 A-&gt;5,67,三条微博, 下次刷新home.php, 从&gt;7的微博开始拉取<br>解决: 拉取时,设定一个lastpull时间点, 下次拉取时,取&gt;lastpull的微博</p>
-<p>问: 有很多关注人,如何取?<br>解决: 循环自己的关注列表,逐个取他们的新微博</p>
-<p>问: 取出来之后放在哪儿?<br>答: pull:$userid的链接里</p>
-<p>问: 如果个人中心,只有前1000条<br>答: ltrim,只取前1000条</p>
-<p>问: 如果我关注 A,B两人, 从2人中,各取3条最新信息<br>,这3+3条信息, 从时间上,是交错的, 如何按时间排序?<br>答: 我们发布时, 是发布的hash结构, 不能按时间来排序.</p>
-<p>解决:  同步时,取微博后,记录本次取的微博的最大id,<br>下次同步时,只取比最大id更大的微博</p>
-<p>Time taken for tests:   32.690 seconds<br>Complete requests:      20000<br>Failed requests:        0<br>Write errors:           0<br>Non-2xx responses:      20000<br>Total transferred:      13520000 bytes<br>Total POSTed:           5340000<br>HTML transferred:       9300000 bytes<br>Requests per second:    611.80 [#/sec] (mean)<br>Time per request:       81.726 [ms] (mean)<br>Time per request:       1.635 [ms] (mean, across all concurrent requests)<br>Transfer rate:          403.88 [Kbytes/sec] received<br>                        159.52 kb/s sent<br>                        563.41 kb/s total</p>
-<p>Connection Times (ms)<br>              min  mean[+/-sd] median   max<br>Connect:        0    0   0.9      0      19<br>Processing:    14   82   8.4     81     153<br>Waiting:        4   82   8.4     80     153<br>Total:         20   82   8.2     81     153</p>
-<p>Percentage of the requests served within a certain time (ms)<br>  50%     81<br>  66%     84<br>  75%     86<br>  80%     88<br>  90%     93<br>  95%     96<br>  98%    100<br>  99%    103<br> 100%    153 (longest request)</p>
-<p>测试结果:<br>50个并发, 20000次请求, 虚拟下,未做特殊优化<br>每次请求redis写操作6次.<br>30+秒左右完成.</p>
-<p>平均每秒发布700条微博, 4000次redis写入.<br>后台定时任务,回归冷数据入mysql<br>Redis配置文件<br> daemonize yes  # redis是否以后台进程运行<br> Requirepass  密码 # 配置redis连接的密码<br>注:配置密码后,客户端连上服务器,需要先执行授权命令<br> auth 密码</p>
+        <h1 id="Hexo安装和配置到GitHub"><a href="#Hexo安装和配置到GitHub" class="headerlink" title="Hexo安装和配置到GitHub"></a>Hexo安装和配置到GitHub</h1><h2 id="1-Git安装和设置"><a href="#1-Git安装和设置" class="headerlink" title="1. Git安装和设置"></a>1. Git安装和设置</h2><p>git<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">brew install git          <span class="comment">#Mac电脑使用brew安装 </span></div><div class="line">sudo apt-get install git  <span class="comment">#Ubuntu系统使用apt-get命令安装</span></div><div class="line">yum install git           <span class="comment">#Liunx系统使用yum命令安装</span></div></pre></td></tr></table></figure></p>
+<p>然后设置好git账户</p>
+<p>使用Github Page搭建博客, 需要在GitHub建立仓库,仓库名为username.github.io,以后使用…</p>
+<h3 id="1-先到https-github-com-new页面注册一个新的项目，项目名需要与你的用户名相同，项目主页也是相同的-https-username-github-io"><a href="#1-先到https-github-com-new页面注册一个新的项目，项目名需要与你的用户名相同，项目主页也是相同的-https-username-github-io" class="headerlink" title="1) 先到https://github.com/new页面注册一个新的项目，项目名需要与你的用户名相同，项目主页也是相同的 https://username.github.io"></a>1) 先到<a href="https://github.com/new页面注册一个新的项目，项目名需要与你的用户名相同，项目主页也是相同的" target="_blank" rel="external">https://github.com/new页面注册一个新的项目，项目名需要与你的用户名相同，项目主页也是相同的</a> <a href="https://username.github.io" target="_blank" rel="external">https://username.github.io</a></h3><a id="more"></a>
+<h4 id="Windows-Liunx-Mac-添加密钥"><a href="#Windows-Liunx-Mac-添加密钥" class="headerlink" title="Windows/Liunx/Mac 添加密钥"></a>Windows/Liunx/Mac 添加密钥</h4><h5 id="1-检查现有的SSH密钥"><a href="#1-检查现有的SSH密钥" class="headerlink" title="1.检查现有的SSH密钥"></a>1.检查现有的SSH密钥</h5><p>打开终端<br>输入 ls -al ~/.ssh 以查看现有的SSH密钥是否存在：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ls -al ~/.ssh</div></pre></td></tr></table></figure></p>
+<p>＃列出.ssh目录中的文件（如果存在）<br>检查目录列表，看看你是否已经有一个公共SSH密钥。</p>
+<h5 id="2-生成一个新的SSH密钥"><a href="#2-生成一个新的SSH密钥" class="headerlink" title="2.生成一个新的SSH密钥"></a>2.生成一个新的SSH密钥</h5><p>粘贴下面的文字，替换你的GitHub电子邮件地址。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">"666@majiameng.com"</span></div></pre></td></tr></table></figure></p>
+<p>这将创建一个新的ssh密钥，使用提供的电子邮件作为标签。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">生成公共/私有rsa密钥对。</div></pre></td></tr></table></figure>
+<p>当系统提示您输入要保存密钥的文件时，按Enter键。这接受默认的文件位置。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">输入保存密钥的文件（/ c / Users / you /.ssh/id_rsa）：[按回车]</div></pre></td></tr></table></figure>
+<p>在提示符下，键入安全密码。有关详细信息，请参阅“使用SSH密钥密码”。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Enter passphrase (empty <span class="keyword">for</span> no passphrase):         <span class="comment"># 输入密码（无密码为空）：[输入密码]</span></div><div class="line">Enter same passphrase again:                        <span class="comment">#再次输入相同的密码：[再次输入密码]</span></div></pre></td></tr></table></figure></p>
+<h5 id="3-将SSH密钥添加到ssh代理"><a href="#3-将SSH密钥添加到ssh代理" class="headerlink" title="3.将SSH密钥添加到ssh代理"></a>3.将SSH密钥添加到ssh代理</h5><p>在向ssh-agent添加新的SSH密钥以管理密钥之前，应该检查现有的SSH密钥并生成一个新的SSH密钥。</p>
+<p>确保ssh代理正在运行：</p>
+<p>在后台启动ssh-agent<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">eval</span> <span class="string">"<span class="variable">$(ssh-agent -s)</span>"</span></div><div class="line">Agent pid 20938</div></pre></td></tr></table></figure></p>
+<p>将SSH私钥添加到ssh代理。如果您使用不同的名称创建密钥，或者如果要添加具有不同名称的现有密钥，请将命令中的id_rsa替换为私钥文件的名称。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-add ~/.ssh/id_rsa</div></pre></td></tr></table></figure></p>
+<p>打开复制 粘贴在你的github账户<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim ~/.ssh/id_rsa.pub</div></pre></td></tr></table></figure></p>
+<h4 id="3-登录网站，将SSH文件夹下的-id-rsa-pub-中的内容复制到公钥框中即可。"><a href="#3-登录网站，将SSH文件夹下的-id-rsa-pub-中的内容复制到公钥框中即可。" class="headerlink" title="3) 登录网站，将SSH文件夹下的 id_rsa.pub 中的内容复制到公钥框中即可。"></a>3) 登录网站，将SSH文件夹下的 id_rsa.pub 中的内容复制到公钥框中即可。</h4><p><a href="https://github.com/settings/keys" target="_blank" rel="external">将SSH密钥添加到您的GitHub帐户。</a></p>
+<h2 id="2-Node-js安装"><a href="#2-Node-js安装" class="headerlink" title="2. Node.js安装"></a>2. Node.js安装</h2><p>请看文章<a href="https://blog.majiameng.com/2016/02/10/nodejs">node 的安装</a></p>
+<h2 id="3-Hexo安装与设置"><a href="#3-Hexo安装与设置" class="headerlink" title="3. Hexo安装与设置"></a>3. Hexo安装与设置</h2><p>Node, npm和Git都安装成功, 开始安装hexo<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cnpm install hexo -g  <span class="comment">#-g表示全局安装, npm默认为当前项目安装</span></div><div class="line">hexo version</div></pre></td></tr></table></figure></p>
+<p>如果遇到报错<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123; [Error: Cannot find module <span class="string">'./build/Release/DTraceProviderBindings'</span>] code: <span class="string">'MODULE_NOT_FOUND'</span> &#125;</div><div class="line">&#123; [Error: Cannot find module <span class="string">'./build/default/DTraceProviderBindings'</span>] code: <span class="string">'MODULE_NOT_FOUND'</span> &#125;</div><div class="line">&#123; [Error: Cannot find module <span class="string">'./build/Debug/DTraceProviderBindings'</span>] code: <span class="string">'MODULE_NOT_FOUND'</span> &#125;</div></pre></td></tr></table></figure></p>
+<p>则用下列语句安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cnpm install hexo --no-optional</div></pre></td></tr></table></figure></p>
+<p>Hexo使用命令:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span>  /git</div><div class="line">hexo init hexo  <span class="comment">#执行init命令初始化到你指定的hexo目录</span></div><div class="line"><span class="built_in">cd</span> hexo</div><div class="line">cnpm install    <span class="comment">#install before start blogging</span></div><div class="line">hexo generate       <span class="comment">#自动根据当前目录下文件,生成静态网页</span></div><div class="line">hexo server         <span class="comment">#运行本地服务</span></div></pre></td></tr></table></figure></p>
+<p>浏览器输入<a href="http://localhost:4000就可以看到效果。" target="_blank" rel="external">http://localhost:4000就可以看到效果。</a></p>
+<p>目录结构<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── .deploy       <span class="comment">#需要部署的文件</span></div><div class="line">├── node_modules  <span class="comment">#Hexo插件</span></div><div class="line">├── public        <span class="comment">#生成的静态网页文件</span></div><div class="line">├── scaffolds     <span class="comment">#模板</span></div><div class="line">├── <span class="built_in">source</span>        <span class="comment">#博客正文和其他源文件, 404 favicon CNAME 等都应该放在这里</span></div><div class="line">|   ├── _drafts   <span class="comment">#草稿</span></div><div class="line">|   └── _posts    <span class="comment">#文章</span></div><div class="line">├── themes        <span class="comment">#主题</span></div><div class="line">├── _config.yml   <span class="comment">#全局配置文件</span></div><div class="line">└── package.json</div></pre></td></tr></table></figure></p>
+<p><a href="https://blog.majiameng.com/2016/02/14/hexo/">教你怎么用 Hexo!</a></p>
+<h2 id="4-添加博文"><a href="#4-添加博文" class="headerlink" title="4. 添加博文"></a>4. 添加博文</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new <span class="string">"postName"</span>  <span class="comment">#新建博文,其中postName是博文题目</span></div></pre></td></tr></table></figure>
+<p>博文会自动生成在博客目录下source/_posts/postName.md</p>
+<p>文件自动生成格式:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">title: <span class="string">"It Starts with iGaze: Visual Attention Driven Networkingwith Smart Glasses"</span>  <span class="comment">#博文题目</span></div><div class="line">date: 2014-11-21 11:25:38      <span class="comment">#生成时间</span></div><div class="line">tags:                    <span class="comment">#标签, 多个标签也可以使用格式[tag1, tag2, tag3,...]</span></div><div class="line">- tag1</div><div class="line">- tag2</div><div class="line">- tag3</div><div class="line">categories: [cat1,cat2,cat3]</div><div class="line">---</div><div class="line">正文, 使用 Markdown 语法书写</div></pre></td></tr></table></figure></p>
+<p>也可以直接写一个<code> **.md </code>文件放入<code>source/_posts/ </code>文件夹下面</p>
+<p>诶?你还不会md文件的语法 ? out了 <a href="https://blog.majiameng.com/2016/03/20/first/">用markdown写下你的第一个md文档</a></p>
+<p>如果不想博文在首页全部显示, 并能出现阅读全文按钮效果, 需要在你想在首页显示的部分下添加</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;!--more--&gt;</div></pre></td></tr></table></figure>
+<h2 id="5-主题更改"><a href="#5-主题更改" class="headerlink" title="5. 主题更改"></a>5. 主题更改</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /git/hexo/themes <span class="comment">#进入主题目录</span></div><div class="line"></div><div class="line"><span class="comment">#git clone git克隆的地址                                 克隆后保存在本地的文件名</span></div><div class="line">git <span class="built_in">clone</span> git@github.com:iissnan/hexo-theme-next.git    next</div></pre></td></tr></table></figure>
+<p>在<code>./_config.yml</code>，修改主题为next</p>
+<p><code>theme: next</code></p>
+<p>每个主题有每个主题的审美以及功能,可以安装之后随时更换哦!</p>
+<p>Hexo<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">主题列表</a></p>
+<p>另外推荐几个主题:</p>
+<p><a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">iissnan/hexo-theme-next</a></p>
+<p><a href="https://github.com/kywk/hexo-theme-casper" target="_blank" rel="external">TryGhost/Casper</a></p>
+<p><a href="https://github.com/kywk/hexo-theme-casper" target="_blank" rel="external">kywk/hexo-theme-casper</a> #基于Casper</p>
+<p><a href="https://github.com/letiantian/huno" target="_blank" rel="external">daleanthony/uno</a></p>
+<p><a href="https://github.com/A-limon/pacman" target="_blank" rel="external">A-limon/pacman</a></p>
+<p><a href="https://github.com/ppoffice/hexo-theme-hueman" target="_blank" rel="external">AlxMedia/hueman</a></p>
+<p><a href="https://github.com/xiangming/landscape-plus" target="_blank" rel="external">xiangming/landscape-plus</a> #基于官方</p>
+<p>查看本地效果<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g  <span class="comment">#生成页面</span></div><div class="line">hexo s  <span class="comment">#启动服务</span></div></pre></td></tr></table></figure></p>
+<h2 id="6-部署到Git"><a href="#6-部署到Git" class="headerlink" title="6. 部署到Git"></a>6. 部署到Git</h2><p>以上内容都是在本地进行查看, 现在将博客部署到github或gitcafe上</p>
+<p>Github<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repo: https://github.com/lmintlcx/lmintlcx.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
+<p>GitHub项目主页需要把 branch 设置为 master</p>
+<p>注意事项</p>
+<ul>
+<li>所有键的冒号后面留一个空格，如<code>language: zh-CN</code></li>
+<li>url不能为空,否则报错</li>
+<li>type: github报错<code>hexo ERROR Deployer not found: github</code>的解决方法：</li>
+</ul>
+<p>先运行<code> cnpm install hexo-deployer-git –save</code></p>
+<p>完整配置信息如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Site #站点信息</span></div><div class="line">title: blog Name <span class="comment">#标题</span></div><div class="line">subtitle: Subtitle <span class="comment">#副标题</span></div><div class="line">description: my blog desc <span class="comment">#描述</span></div><div class="line">author: me <span class="comment">#作者</span></div><div class="line">language: zh-CN <span class="comment">#语言</span></div><div class="line">timezone: Asia/Shanghai <span class="comment">#时区</span></div><div class="line"></div><div class="line"><span class="comment"># URL</span></div><div class="line">url: http://yoururl.com   <span class="comment">#用于绑定域名, 其他的不需要配置</span></div><div class="line">root: /</div><div class="line"><span class="comment">#permalink: :year/:month/:day/:title/</span></div><div class="line">permalink: posts/title.html</div><div class="line">permalink_defaults:</div><div class="line"></div><div class="line"><span class="comment"># Directory #目录</span></div><div class="line">source_dir: <span class="built_in">source</span> <span class="comment">#源文件</span></div><div class="line">public_dir: public <span class="comment">#生成的网页文件</span></div><div class="line">tag_dir: tags <span class="comment">#标签</span></div><div class="line">archive_dir: archives <span class="comment">#归档</span></div><div class="line">category_dir: categories <span class="comment">#分类</span></div><div class="line">code_dir: downloads/code</div><div class="line">i18n_dir: :lang <span class="comment">#国际化</span></div><div class="line">skip_render:</div><div class="line"></div><div class="line"><span class="comment"># Writing #写作</span></div><div class="line">new_post_name: :title.md <span class="comment">#新文章标题</span></div><div class="line">default_layout: post <span class="comment">#默认模板(post page photo draft)</span></div><div class="line">titlecase: <span class="literal">false</span> <span class="comment">#标题转换成大写</span></div><div class="line">external_link: <span class="literal">true</span> <span class="comment">#新标签页里打开连接</span></div><div class="line">filename_case: 0</div><div class="line">render_drafts: <span class="literal">false</span></div><div class="line">post_asset_folder: <span class="literal">false</span></div><div class="line">relative_link: <span class="literal">false</span></div><div class="line">future: <span class="literal">true</span></div><div class="line">highlight: <span class="comment">#语法高亮</span></div><div class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></div><div class="line">  line_number: <span class="literal">true</span> <span class="comment">#显示行号</span></div><div class="line">  auto_detect: <span class="literal">true</span></div><div class="line">  tab_replace:</div><div class="line"></div><div class="line"><span class="comment"># Category &amp; Tag #分类和标签</span></div><div class="line">default_category: uncategorized <span class="comment">#默认分类</span></div><div class="line">category_map:</div><div class="line">tag_map:</div><div class="line"></div><div class="line"><span class="comment"># Date / Time format #日期时间格式</span></div><div class="line"><span class="comment">## http://momentjs.com/docs/#/displaying/format/</span></div><div class="line">date_format: YYYY-MM-DD</div><div class="line">time_format: HH:mm:ss</div><div class="line"></div><div class="line"><span class="comment"># Pagination #分页</span></div><div class="line">per_page: 10 <span class="comment">#每页文章数, 设置成 0 禁用分页</span></div><div class="line">pagination_dir: page</div><div class="line"></div><div class="line"><span class="comment"># Extensions #插件和主题</span></div><div class="line"><span class="comment">## 插件: http://hexo.io/plugins/</span></div><div class="line"><span class="comment">## 主题: http://hexo.io/themes/</span></div><div class="line">theme: next</div><div class="line"></div><div class="line"><span class="comment"># Deployment #部署, 同时发布在 GitHub 和 GitCafe 上面</span></div><div class="line">deploy:</div><div class="line">- <span class="built_in">type</span>: git</div><div class="line">  repo: git@github.com:username/username.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
+<p>保存之后，便可以使用<code>hexo d</code>上传到GitHub。<br>部署成功,使用username.github.io进行访问, 或者设置个性域名，参考官方Wiki。</p>
+<p>如有报错,可能是第一次安装git还没有设置git email和name<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.email &quot;666@majiameng.com&quot;</div><div class="line">git config --global user.name &quot;majiameng&quot;</div></pre></td></tr></table></figure></p>
+<p>写好 md文章  放在<code>source/_posts/ </code>文件夹下面  后<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo d</div></pre></td></tr></table></figure></p>
+<h2 id="7-域名"><a href="#7-域名" class="headerlink" title="7.域名"></a>7.域名</h2><p>绑定域名<br>不绑定域名的话只能通过 your_user_name.github.io 访问<br>申请域名推荐 GoDaddy或者阿里云, 域名解析推荐 DNSPod</p>
+<p>绑定顶级域名<br>新建文件 CNAME, 无后缀, 纯文本文件, 内容为要绑定的域名 blogname.com<br>如果要使用 www.blogname.com 的形式, 文件内容改为 www.blogname.com</p>
+<p>DNS设置<br>记录值获取<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">ping your_user_name.github.io</div><div class="line"></div><div class="line">正在 Ping sni.github.map.fastly.net [151.101.73.147] 具有 32 字节的数据:</div><div class="line">来自 151.101.73.147 的回复: 字节=32 时间=139ms TTL=51</div><div class="line">来自 151.101.73.147 的回复: 字节=32 时间=147ms TTL=51</div><div class="line">来自 151.101.73.147 的回复: 字节=32 时间=128ms TTL=51</div><div class="line">来自 151.101.73.147 的回复: 字节=32 时间=155ms TTL=51</div><div class="line"></div><div class="line">151.101.73.147 的 Ping 统计信息:</div><div class="line">    数据包: 已发送 = 4，已接收 = 4，丢失 = 0 (0% 丢失)，</div><div class="line">往返行程的估计时间(以毫秒为单位):</div><div class="line">    最短 = 128ms，最长 = 155ms，平均 = 142ms</div></pre></td></tr></table></figure></p>
+<p>主机记录@, 类型A, 记录值151.101.73.147<br>主机记录www, 类型A, 记录值151.101.73.147<br>参考 Tips for configuring an A record with your DNS provider</p>
+<p>绑定子域名</p>
+<p>比如使用域名blogname.com的子域名blog.blogname.com<br>CNAME文件内容为blog.blogname.com</p>
+<p>DNS设置<br>主机记录blog, 类型CNAME, 记录值blogname.github.io<br>参考 Tips for configuring a CNAME record with your DNS provider</p>
+<p>GitHub 绑定域名</p>
+<p>项目管理界面,<a href="https://github.com/username/username.github.io/settings" target="_blank" rel="external">https://github.com/username/username.github.io/settings</a></p>
+<h2 id="8-其他配置"><a href="#8-其他配置" class="headerlink" title="8.其他配置"></a>8.其他配置</h2><p>头像设置<br>编辑站点配置文件, 新增字段 avatar, 头像的链接地址可以是:</p>
+<p>网络地址<br><a href="https://avatars2.githubusercontent.com/u/4962914?v=3&amp;s=460" target="_blank" rel="external">https://avatars2.githubusercontent.com/u/4962914?v=3&amp;s=460</a></p>
+<p>站点内的地址<br>/images/avatar.jpg #头像图片放置在主题的 source/images/<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">avatar: /images/avatar.png</div></pre></td></tr></table></figure></p>
+<p>菜单设置<br>编辑主题配置文件的 menu<br>若站点运行在子目录中, 将链接前缀的 / 去掉<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">menu:</div><div class="line">  home: /</div><div class="line">  archives: /archives</div><div class="line">  categories: /categories</div><div class="line">  tags: /tags</div><div class="line">  commonweal: /404.html</div><div class="line">  about: /about</div></pre></td></tr></table></figure></p>
+<p>标签云页面<br>添加一个标签云页面, 并在菜单中显示页面链接</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">在菜单中添加链接。 编辑主题配置文件, 添加 tags 到 menu 中</div><div class="line">``` bash</div><div class="line">menu:</div><div class="line">  tags: /tags</div></pre></td></tr></table></figure>
+<p>分类页面<br>添加一个分类页面, 并在菜单中显示页面链接</p>
+<p>新建 categories 页面<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new page categories</div></pre></td></tr></table></figure></p>
+<p>将页面的类型设置为categories<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">title: categories</div><div class="line">date: 2015-09-19 22:38:00</div><div class="line"><span class="built_in">type</span>: <span class="string">"categories"</span></div><div class="line">---</div></pre></td></tr></table></figure></p>
+<p>关闭评论<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">title: categories</div><div class="line">date: 2015-09-19 22:38:00</div><div class="line"><span class="built_in">type</span>: <span class="string">"categories"</span></div><div class="line">comments: <span class="literal">false</span></div><div class="line">---</div></pre></td></tr></table></figure></p>
+<p>在菜单中添加链接. 编辑主题配置文件, 添加 categories 到 menu 中<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">menu:</div><div class="line">  categories: /categories</div></pre></td></tr></table></figure></p>
+<p>RSS 链接<br>编辑主题配置文件 rss 字段<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rss: <span class="literal">false</span></div></pre></td></tr></table></figure></p>
+<p>禁用Feed链接</p>
+<p>rss:<br>默认使用站点的 Feed 链接, 需要安装 hexo-generator-feed 插件<br>浏览<a href="http://localhost:4000/atom.xml查看是否生效" target="_blank" rel="external">http://localhost:4000/atom.xml查看是否生效</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rss: http://your-feed-url</div></pre></td></tr></table></figure></p>
+<p>指定特定的链接地址, 适用于已经烧制过 Feed 的情形</p>
+<p>自定义页面<br>以关于页面为例<br>新建一个 about 页面<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new page <span class="string">"about"</span></div></pre></td></tr></table></figure></p>
+<p>编辑 source/about/index.md：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">title: About</div><div class="line">date: 2014-11-1 11:11:11</div><div class="line">---</div><div class="line">About Me</div></pre></td></tr></table></figure></p>
+<p>菜单显示 about 链接, 主题配置文件中将 menu 中 about 前面的注释去掉<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">menu:</div><div class="line">  about: /about</div></pre></td></tr></table></figure></p>
+<h2 id="9-网站代码上传"><a href="#9-网站代码上传" class="headerlink" title="9.网站代码上传"></a>9.网站代码上传</h2><p>设置完毕，为避免本地代码丢失，可以将hexo下的所有文件提交一份到服务器。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#create project on gitcafe.com</span></div><div class="line">mkdir hexo-source</div><div class="line"><span class="built_in">cd</span> hexo-source</div><div class="line">git init</div><div class="line"><span class="comment"># copy all files in 'hexo' folder here</span></div><div class="line">git add ..</div><div class="line">git commit -m <span class="string">'first commit'</span></div><div class="line">git remote add origin <span class="string">'git@gitcafe.com:username/hexo-source.git'</span></div><div class="line">git push -u origin master</div></pre></td></tr></table></figure></p>
+<h2 id="10-安装优化文件插件"><a href="#10-安装优化文件插件" class="headerlink" title="10.安装优化文件插件"></a>10.安装优化文件插件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cnpm install hexo-all-minifier --save</div></pre></td></tr></table></figure>
+<p>配置下<br>打开配置文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">_config.yml</div></pre></td></tr></table></figure></p>
+<p>加入下面的配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">html_minifier:</div><div class="line">  enable: true</div><div class="line">  exclude: </div><div class="line"></div><div class="line">css_minifier:</div><div class="line">  enable: true</div><div class="line">  exclude: </div><div class="line">    - &apos;*.min.css&apos;</div><div class="line"></div><div class="line">js_minifier:</div><div class="line">  enable: true</div><div class="line">  mangle: true</div><div class="line">  output:</div><div class="line">  compress:</div><div class="line">  exclude: </div><div class="line">    - &apos;*.min.js&apos;</div></pre></td></tr></table></figure></p>
+<p>完事了，这样子就能够对 html css js 进行压缩了，其实他还支持图片压缩。</p>
+<p><a href="http://www.jianshu.com/p/b7886271e21a" target="_blank" rel="external">参考文章</a></p>
 
       
 
@@ -468,11 +330,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Redis</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
         		</li>
       		
 		</ul>
@@ -528,7 +386,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://blog.majiameng.com/2017/03/06/redis/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://blog.majiameng.com/uncategorized/hexo_github.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -542,18 +400,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2017/03/11/php_interview_2017/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/uncategorized/hexo_zhanzhang.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          2017最新PHP经典面试题总结
+          Hexo博客收录百度和谷歌!
         
       </div>
     </a>
   
   
-    <a href="/2016/04/22/mysql_1/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Mysql基本操作命令</div>
+    <a href="/uncategorized/hexo.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">教你怎么用 Hexo!</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -580,7 +438,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#redis是什么"><span class="toc-number">1.</span> <span class="toc-text">redis是什么:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#redis和memcached相比-的独特之处"><span class="toc-number">2.</span> <span class="toc-text">redis和memcached相比,的独特之处:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Redis下载安装"><span class="toc-number">3.</span> <span class="toc-text">Redis下载安装</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Memory"><span class="toc-number"></span> <span class="toc-text">Memory</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Replication"><span class="toc-number"></span> <span class="toc-text">Replication</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Persistence"><span class="toc-number"></span> <span class="toc-text">Persistence</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Redis-key-设计技巧"><span class="toc-number">1.</span> <span class="toc-text">Redis key 设计技巧</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Hexo安装和配置到GitHub"><span class="toc-number">1.</span> <span class="toc-text">Hexo安装和配置到GitHub</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Git安装和设置"><span class="toc-number">1.1.</span> <span class="toc-text">1. Git安装和设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-先到https-github-com-new页面注册一个新的项目，项目名需要与你的用户名相同，项目主页也是相同的-https-username-github-io"><span class="toc-number">1.1.1.</span> <span class="toc-text">1) 先到https://github.com/new页面注册一个新的项目，项目名需要与你的用户名相同，项目主页也是相同的 https://username.github.io</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Windows-Liunx-Mac-添加密钥"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">Windows/Liunx/Mac 添加密钥</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-检查现有的SSH密钥"><span class="toc-number">1.1.1.1.1.</span> <span class="toc-text">1.检查现有的SSH密钥</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-生成一个新的SSH密钥"><span class="toc-number">1.1.1.1.2.</span> <span class="toc-text">2.生成一个新的SSH密钥</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-将SSH密钥添加到ssh代理"><span class="toc-number">1.1.1.1.3.</span> <span class="toc-text">3.将SSH密钥添加到ssh代理</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-登录网站，将SSH文件夹下的-id-rsa-pub-中的内容复制到公钥框中即可。"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">3) 登录网站，将SSH文件夹下的 id_rsa.pub 中的内容复制到公钥框中即可。</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Node-js安装"><span class="toc-number">1.2.</span> <span class="toc-text">2. Node.js安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Hexo安装与设置"><span class="toc-number">1.3.</span> <span class="toc-text">3. Hexo安装与设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-添加博文"><span class="toc-number">1.4.</span> <span class="toc-text">4. 添加博文</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-主题更改"><span class="toc-number">1.5.</span> <span class="toc-text">5. 主题更改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-部署到Git"><span class="toc-number">1.6.</span> <span class="toc-text">6. 部署到Git</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-域名"><span class="toc-number">1.7.</span> <span class="toc-text">7.域名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-其他配置"><span class="toc-number">1.8.</span> <span class="toc-text">8.其他配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-网站代码上传"><span class="toc-number">1.9.</span> <span class="toc-text">9.网站代码上传</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-安装优化文件插件"><span class="toc-number">1.10.</span> <span class="toc-text">10.安装优化文件插件</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -597,11 +455,11 @@ var _hmt = _hmt || [];
 
   
   <!--表情-->
-<div style="margin-left: 40px;"><div id="cyEmoji" role="cylabs" data-use="emoji" sid="redis"></div></div>
+<div style="margin-left: 40px;"><div id="cyEmoji" role="cylabs" data-use="emoji" sid="hexo_github"></div></div>
 <script type="text/javascript" charset="utf-8" src="https://changyan.itc.cn/js/lib/jquery.js"></script>
 <script type="text/javascript" charset="utf-8" src="https://changyan.sohu.com/js/changyan.labs.https.js?appid=cytd8GjEU"></script>
 <!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="redis" ></div>
+<div id="SOHUCS" sid="hexo_github" ></div>
 <script type="text/javascript">
     (function(){
         var appid = 'cytd8GjEU';

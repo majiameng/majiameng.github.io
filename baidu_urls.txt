@@ -1,5 +1,5 @@
-https://blog.majiameng.com/2017/06/20/zhanzhang/
-https://blog.majiameng.com/2017/05/22/mysql_proxy/
-https://blog.majiameng.com/2017/05/21/mysql_principal/
-https://blog.majiameng.com/2017/04/17/vpn.sh/
-https://blog.majiameng.com/2017/04/17/vpn/
+https://blog.majiameng.com/uncategorized/zhanzhang.html
+https://blog.majiameng.com/uncategorized/mysql_proxy.html
+https://blog.majiameng.com/uncategorized/mysql_principal.html
+https://blog.majiameng.com/uncategorized/vpn.sh.html
+https://blog.majiameng.com/uncategorized/vpn.html
