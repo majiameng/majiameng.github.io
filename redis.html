@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://blog.majiameng.com">
-  <title>2017最新PHP经典面试题总结 | 佳萌博客</title>
+  <title>redis 使用 | 佳萌博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="2017最新PHP经典面试题总结1、双引号和单引号的区别 双引号解释变量，单引号不解释变量 双引号里插入单引号，其中单引号里如果有变量的话，变量解释 双引号的变量名后面必须要有一个非数字、字母、下划线的特殊字符，或者用{}讲变量括起来，否则会将变量名后面的部分当做一个整体，引起语法错误 双引号解释转义字符，单引号不解释转义字符，但是解释’\和\ 能使单引号字符尽量使用单引号，单引号的效率比双引号要">
-<meta name="keywords" content="PHP">
+  <meta name="description" content="redis是什么:Redis is an open source, BSD licensed, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.redis是开">
+<meta name="keywords" content="PHP,Redis">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2017最新PHP经典面试题总结">
-<meta property="og:url" content="https://blog.majiameng.com/uncategorized/php_interview_2017.html">
+<meta property="og:title" content="redis 使用">
+<meta property="og:url" content="https://blog.majiameng.com/redis.html">
 <meta property="og:site_name" content="佳萌博客">
-<meta property="og:description" content="2017最新PHP经典面试题总结1、双引号和单引号的区别 双引号解释变量，单引号不解释变量 双引号里插入单引号，其中单引号里如果有变量的话，变量解释 双引号的变量名后面必须要有一个非数字、字母、下划线的特殊字符，或者用{}讲变量括起来，否则会将变量名后面的部分当做一个整体，引起语法错误 双引号解释转义字符，单引号不解释转义字符，但是解释’\和\ 能使单引号字符尽量使用单引号，单引号的效率比双引号要">
+<meta property="og:description" content="redis是什么:Redis is an open source, BSD licensed, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.redis是开">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-20T10:58:39.000Z">
+<meta property="og:updated_time" content="2017-09-18T11:02:31.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2017最新PHP经典面试题总结">
-<meta name="twitter:description" content="2017最新PHP经典面试题总结1、双引号和单引号的区别 双引号解释变量，单引号不解释变量 双引号里插入单引号，其中单引号里如果有变量的话，变量解释 双引号的变量名后面必须要有一个非数字、字母、下划线的特殊字符，或者用{}讲变量括起来，否则会将变量名后面的部分当做一个整体，引起语法错误 双引号解释转义字符，单引号不解释转义字符，但是解释’\和\ 能使单引号字符尽量使用单引号，单引号的效率比双引号要">
+<meta name="twitter:title" content="redis 使用">
+<meta name="twitter:description" content="redis是什么:Redis is an open source, BSD licensed, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.redis是开">
   
     <link rel="alternative" href="/atom.xml" title="佳萌博客" type="application/atom+xml">
   
@@ -172,272 +172,258 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-php_interview_2017" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-redis" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      2017最新PHP经典面试题总结
+      redis 使用
     </h1>
   
 
         
-        <a href="/uncategorized/php_interview_2017.html" class="archive-article-date">
-  	<time datetime="2017-03-11T12:33:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-11</time>
+        <a href="/redis.html" class="archive-article-date">
+  	<time datetime="2017-03-06T11:18:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-06</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="2017最新PHP经典面试题总结"><a href="#2017最新PHP经典面试题总结" class="headerlink" title="2017最新PHP经典面试题总结"></a><a href="http://#" target="_blank" rel="external">2017最新PHP经典面试题总结</a></h1><h4 id="1、双引号和单引号的区别"><a href="#1、双引号和单引号的区别" class="headerlink" title="1、双引号和单引号的区别"></a>1、双引号和单引号的区别</h4><ul>
-<li>双引号解释变量，单引号不解释变量</li>
-<li>双引号里插入单引号，其中单引号里如果有变量的话，变量解释</li>
-<li>双引号的变量名后面必须要有一个非数字、字母、下划线的特殊字符，或者用{}讲变量括起来，否则会将变量名后面的部分当做一个整体，引起语法错误</li>
-<li>双引号解释转义字符，单引号不解释转义字符，但是解释’\和\</li>
-<li><p>能使单引号字符尽量使用单引号，单引号的效率比双引号要高（因为双引号要先遍历一遍，判断里面有没有变量，然后再进行操作，而单引号则不需要判断）</p>
-<a id="more"></a>
-<h4 id="2、常用的超全局变量-8个"><a href="#2、常用的超全局变量-8个" class="headerlink" title="2、常用的超全局变量(8个)"></a>2、常用的超全局变量(8个)</h4></li>
-<li><p>$_GET —–&gt;get传送方式</p>
-</li>
-<li>$POST —–&gt;post传送方式</li>
-<li>$REQUEST —–&gt;可以接收到get和post两种方式的值<hr>
-</li>
-<li>$GLOBALS —–&gt;所有的变量都放在里面</li>
-<li>$FILE —–&gt;上传文件使用</li>
-<li><p>$SERVER —–&gt;系统环境变量</p>
-<hr>
-</li>
-<li><p>$SESSION —–&gt;会话控制的时候会用到</p>
-</li>
-<li>$COOKIE —–&gt;会话控制的时候会用到</li>
-</ul>
-<h4 id="3、HTTP中POST、GET、PUT、DELETE方式的区别"><a href="#3、HTTP中POST、GET、PUT、DELETE方式的区别" class="headerlink" title="3、HTTP中POST、GET、PUT、DELETE方式的区别"></a>3、HTTP中POST、GET、PUT、DELETE方式的区别</h4><blockquote>
-<p>HTTP定义了与服务器交互的不同的方法，最基本的是POST、GET、PUT、DELETE，与其比不可少的URL的全称是资源描述符，我们可以这样理解：url描述了一个网络上资源，而post、get、put、delegate就是对这个资源进行增、删、改、查的操作！</p>
-</blockquote>
-<h5 id="3-1表单中get和post提交方式的区别"><a href="#3-1表单中get和post提交方式的区别" class="headerlink" title="3.1表单中get和post提交方式的区别"></a>3.1表单中get和post提交方式的区别</h5><ul>
-<li>get是把参数数据队列加到提交表单的action属性所指的url中，值和表单内各个字段一一对应，从url中可以看到；post是通过HTTPPOST机制，将表单内各个字段与其内容防止在HTML的head中一起传送到action属性所指的url地址，用户看不到这个过程</li>
-<li>对于get方式，服务器端用Request.QueryString获取变量的值，对于post方式，服务器端用Request.Form获取提交的数据</li>
-<li>get传送的数据量较小，post传送的数据量较大，一般被默认不受限制，但在理论上，IIS4中最大量为80kb，IIS5中为1000k，get安全性非常低，post安全性较高</li>
-</ul>
-<h5 id="3-2"><a href="#3-2" class="headerlink" title="3.2"></a>3.2</h5><ul>
-<li><p>GET请求会向数据库发索取数据的请求，从而来获取信息，该请求就像数据库的select操作一样，只是用来查询一下数据，不会修改、增加数据，不会影响资源的内容，即该请求不会产生副作用。无论进行多少次操作，结果都是一样的。</p>
-</li>
-<li><p>与GET不同的是，PUT请求是向服务器端发送数据的，从而改变信息，该请求就像数据库的update操作一样，用来修改数据的内容，但是不会增加数据的种类等，也就是说无论进行多少次PUT操作，其结果并没有不同。</p>
-</li>
-<li><p>POST请求同PUT请求类似，都是向服务器端发送数据的，但是该请求会改变数据的种类等资源，就像数据库的insert操作一样，会创建新的内容。几乎目前所有的提交操作都是用POST请求的。</p>
-</li>
-<li><p>DELETE请求顾名思义，就是用来删除某一个资源的，该请求就像数据库的delete操作。</p>
-</li>
-</ul>
-<h4 id="4、PHP介绍"><a href="#4、PHP介绍" class="headerlink" title="4、PHP介绍"></a>4、PHP介绍</h4><p>Hypertext Preprocessor—-超文本预处理器</p>
-<p>Personal Home Page 原始名称</p>
-<p>目标用途: 允许web开发人员快速编写动态生成的web页面，与其他页面相比，PHP是将程序嵌入到HTML文档中去执行，效率比完全生成HTML编辑的CGI高很多</p>
-<p>HTML: Hypertext Markup Language</p>
-<p>创始人: 拉姆斯勒·勒多夫Rasmus Lerdorf，1968年生，加拿大滑铁卢大学</p>
-<p>勒多夫最开始是为了维护个人网页，用prel语言写了维护程序，之后又用c进行了重写，最终衍生出php/fi</p>
-<p>时间轴:</p>
-<ul>
-<li>1995.06.08将PHP/FI公开释出</li>
-<li>1995 php2.0，加入了对MySQL的支持</li>
-<li>1997 php3.0</li>
-<li>2000 php4.0</li>
-<li>2008 php5.0</li>
-<li>由于php6.0没有完全解决Unicode编码，所以基本没有生产线上的应用，基本只是一款概念产品，很多功能已经在php5.3.3和php5.3.4上实现</li>
-</ul>
-<p>常见的IDE(Intergrated Development Environment): 集成开发环境</p>
-<ul>
-<li><a href="http://panic.com/coda/" target="_blank" rel="external">Coda（mac）</a></li>
-<li><a href="http://www.jetbrains.com/phpstorm/" target="_blank" rel="external">PHPStrom</a></li>
-<li><a href="http://www.adobe.com/" target="_blank" rel="external">Adobe Dreamweaver</a></li>
-<li><a href="http://netbeans.org/" target="_blank" rel="external">NetBeans</a></li>
-</ul>
-<p>常见文本编辑器，具备代码高亮：</p>
-<ul>
-<li><a href="https://notepad-plus-plus.org/" target="_blank" rel="external">NodePad++</a></li>
-<li><a href="http://www.sublimetext.com/" target="_blank" rel="external">SublimeText</a></li>
-</ul>
-<h4 id="PHP优势"><a href="#PHP优势" class="headerlink" title="PHP优势"></a>PHP优势</h4><p>PHP特性:</p>
-<ul>
-<li>php独特混合了C,Java,Prel以及PHP自创的语法</li>
-<li>可以比CGI或者Prel更快速去执行动态网页，与其他变成语言相比，PHP是讲程序嵌入到HTML文档中去执行，执行效率比完全生成HTML编辑的CGI要高很多，所有的CGI都能实现</li>
-<li>支持几乎所有流行的数据库以及操作系统</li>
-<li>PHP可以使用C,C++进行程序的扩展</li>
-</ul>
-<p>PHP优势:</p>
-<ul>
-<li>开放源代码</li>
-<li>免费性</li>
-<li>快捷性</li>
-<li>跨平台强</li>
-<li>效率高</li>
-<li>图形处理</li>
-<li>面向对象</li>
-<li>专业专注</li>
-</ul>
-<p>PHP技术应用:</p>
-<ul>
-<li>静态页面生成</li>
-<li>数据库缓存</li>
-<li>过程缓存</li>
-<li>div+css w3c标准</li>
-<li>大负荷</li>
-<li>分布式</li>
-<li>flex</li>
-<li>支持MVC</li>
-<li>Smarty模块引擎</li>
-</ul>
-<h4 id="PHP认证级别"><a href="#PHP认证级别" class="headerlink" title="PHP认证级别"></a>PHP认证级别</h4><ul>
-<li>初级 IFE:Index Front Engineer 前端工程师</li>
-<li>中级 IPE:Index PHP Engineer PHP工程师</li>
-<li>高级 IAE:Index Architecture Engineer 架构工程师</li>
-</ul>
-<h4 id="6、echo、print-r、print、var-dump之间的区别"><a href="#6、echo、print-r、print、var-dump之间的区别" class="headerlink" title="6、echo、print_r、print、var_dump之间的区别"></a>6、echo、print_r、print、var_dump之间的区别</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">* echo、print是php语句，var_dump和print_r是函数</div><div class="line">* echo 输出一个或多个字符串，中间以逗号隔开，没有返回值是语言结构而不是真正的函数，因此不能作为表达式的一部分使用</div><div class="line">* print也是php的一个关键字，有返回值 只能打印出简单类型变量的值(如int，string)，如果字符串显示成功则返回true，否则返回false</div><div class="line">* print_r 可以打印出复杂类型变量的值(如数组、对象）以列表的形式显示，并以array、object开头，但print_r输出布尔值和NULL的结果没有意义，因为都是打印&quot;\n&quot;，因此var_dump()函数更适合调试</div><div class="line">* var_dump() 判断一个变量的类型和长度，并输出变量的数值</div></pre></td></tr></table></figure>
-<h4 id="7、HTTP状态码"><a href="#7、HTTP状态码" class="headerlink" title="7、HTTP状态码"></a>7、HTTP状态码</h4><p><a href="http://www.jianshu.com/p/9ecfda409eeb" target="_blank" rel="external">点击这儿查看HTTP状态码详解</a></p>
-<p>常见的HTTP状态码：</p>
-<ul>
-<li>200 – 请求成功</li>
-<li>301 – 资源(网页等)被永久转义到其他URL</li>
-<li>404 – 请求的资源(网页等)不存在</li>
-<li>505 – 内部服务器错误</li>
-</ul>
-<p>HTTP状态码分类:</p>
-<ul>
-<li>1** – 信息，服务器收到的请求，需要请求者继续执行操作</li>
-<li>2** – 成功，操作被成功接收并处理</li>
-<li>3** – 重定向，需要进一步的操作以完成请求</li>
-<li>4** – 客户端错误，请求包含语法错误或者无法完成请求</li>
-<li>5** 服务器错误，服务器在处理请求的过程<br>中发生了错误</li>
-</ul>
-<h4 id="8、什么是魔术引号"><a href="#8、什么是魔术引号" class="headerlink" title="8、什么是魔术引号"></a>8、什么是魔术引号</h4><p>魔术引号是一个将自动将进入PHP脚本的数据进行转义的过程，最好在编码时不要转义而在运行时根据需要而转义</p>
-<h4 id="9、如何获取客户端的ip-要求取得一个int-和服务器ip的代码"><a href="#9、如何获取客户端的ip-要求取得一个int-和服务器ip的代码" class="headerlink" title="9、如何获取客户端的ip(要求取得一个int)和服务器ip的代码"></a>9、如何获取客户端的ip(要求取得一个int)和服务器ip的代码</h4><p>客户端：<code>$_SERVER[&quot;REMOTE_ADDR&quot;];或者getenv(&#39;REMOTE_ADDR&#39;)</code><br><code>ip2long进行转换</code><br>服务器端：<code>gethostbyname(&#39;[www.baidu.com](http://www.baidu.com)&#39;)</code></p>
-<h5 id="10、使用那些工具进行版本控制"><a href="#10、使用那些工具进行版本控制" class="headerlink" title="10、使用那些工具进行版本控制"></a>10、使用那些工具进行版本控制</h5><p>cvs、svn、vss、git</p>
-<h4 id="11、优化数据库的方法"><a href="#11、优化数据库的方法" class="headerlink" title="11、优化数据库的方法"></a>11、优化数据库的方法</h4><p><a href="http://www.jianshu.com/p/dac715a88b44" target="_blank" rel="external">MySQL数据库优化的八大方式（经典必看）点击获取</a></p>
-<ul>
-<li>选取最适用的字段属性，尽可能减少定义字段宽度，尽量把字段设置NOTNULL，例如’省份’、’性别’最好适用ENUM</li>
-<li>使用连接(JOIN)来代替子查询</li>
-<li>适用联合(UNION)来代替手动创建的临时表</li>
-<li>事务处理</li>
-<li>锁定表、优化事务处理</li>
-<li>适用外键，优化锁定表</li>
-<li>建立索引</li>
-<li>优化查询语句</li>
-</ul>
-<h4 id="12、是否使用过模板引擎？使用的模板引擎的名字是？"><a href="#12、是否使用过模板引擎？使用的模板引擎的名字是？" class="headerlink" title="12、是否使用过模板引擎？使用的模板引擎的名字是？"></a>12、是否使用过模板引擎？使用的模板引擎的名字是？</h4><p><a href="http://www.smarty.net/" target="_blank" rel="external">Smarty:</a>Smarty算是一种很老的PHP模板引擎了，它曾是我使用这门语言模板的最初选择。虽然它的更新已经不算频繁了，并且缺少新一代模板引擎所具有的部分特性，但是它仍然值得一看。</p>
-<h4 id="13、对于大流量网站，采用什么方法来解决访问量的问题"><a href="#13、对于大流量网站，采用什么方法来解决访问量的问题" class="headerlink" title="13、对于大流量网站，采用什么方法来解决访问量的问题"></a>13、对于大流量网站，采用什么方法来解决访问量的问题</h4><ul>
-<li>确认服务器硬件是否能够支持当前的流量</li>
-<li>数据库读写分离，优化数据表</li>
-<li>程序功能规则，禁止外部的盗链</li>
-<li>控制大文件的下载</li>
-<li>使用不同主机分流主要流量</li>
-</ul>
-<h4 id="14、语句include和require的区别是什么？为避免多次包含同一文件，可以用-语句代替他们"><a href="#14、语句include和require的区别是什么？为避免多次包含同一文件，可以用-语句代替他们" class="headerlink" title="14、语句include和require的区别是什么？为避免多次包含同一文件，可以用(?)语句代替他们"></a>14、语句include和require的区别是什么？为避免多次包含同一文件，可以用(?)语句代替他们</h4><ul>
-<li><p>require是无条件包含，也就是如果一个流程里加入require，无论条件成立与否都会先执行require，当文件不存在或者无法打开的时候，会提示错误，并且会终止程序执行</p>
-</li>
-<li><p>include有返回值，而require没有(可能因为如此require的速度比include快)，如果被包含的文件不存在的化，那么会提示一个错误，但是程序会继续执行下去</p>
-</li>
-</ul>
-<p>注意:包含文件不存在或者语法错误的时候require是致命的，而include不是</p>
-<ul>
-<li>require_once表示了只包含一次，避免了重复包含</li>
-</ul>
-<h4 id="15、谈谈mvc的认识"><a href="#15、谈谈mvc的认识" class="headerlink" title="15、谈谈mvc的认识"></a>15、谈谈mvc的认识</h4><p>由模型、视图、控制器完成的应用程序，由模型发出要实现的功能到控制器，控制器接收组织功能传递给视图</p>
-<h4 id="16、-说明php中传值与传引用的区别，并说明传值什么时候传引用？"><a href="#16、-说明php中传值与传引用的区别，并说明传值什么时候传引用？" class="headerlink" title="16、 说明php中传值与传引用的区别，并说明传值什么时候传引用？"></a>16、 说明php中传值与传引用的区别，并说明传值什么时候传引用？</h4><p>变量默认总是传值赋值，那也就是说，当将一个表达式的值赋予一个变量时，整个表达式的值被赋值到目标变量，这意味着：当一个变量的赋予另外一个变量时，改变其中一个变量的值，将不会影响到另外一个变量</p>
-<p>php也提供了另外一种方式给变量赋值：引用赋值。这意味着新的变量简单的<strong>引用</strong>(换言之，成为了其别名或者指向)了原始变量。改动的新的变量将影响到原始变量，反之亦然。使用引用赋值，简单地将一个&amp;符号加到将要赋值的变量前(源变量)</p>
-<p>对象默认是传引用<br>对于较大是的数据，传引用比较好，这样可以节省内存的开销</p>
-<h4 id="17、isset、empty、is-null的区别"><a href="#17、isset、empty、is-null的区别" class="headerlink" title="17、isset、empty、is_null的区别"></a>17、isset、empty、is_null的区别</h4><p>isset 判断变量是否定义或者是否为空</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">变量存在返回ture，否则返回false</div><div class="line">变量定义不赋值返回false</div><div class="line">unset一个变量，返回false</div><div class="line">变量赋值为null，返回false</div></pre></td></tr></table></figure>
-<p>empty：判断变量的值是否为空，能转换为false的都是空，为空返回true，反之返回false。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&quot;&quot;,0,&quot;0&quot;,NULL，FALSE都认为为空，返回true</div><div class="line">没有任何属性的对象都认为是空</div></pre></td></tr></table></figure>
-<p>is_null：检测传入的值(值、变量、表达式)是否为null</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">定义了，但是赋值为Null</div><div class="line">定义了，但是没有赋值</div><div class="line">unset一个变量</div></pre></td></tr></table></figure>
-<h4 id="18、前端调试的工具"><a href="#18、前端调试的工具" class="headerlink" title="18、前端调试的工具"></a>18、前端调试的工具</h4><ul>
-<li>Firefox的firebug</li>
-<li>Chrome的开发工具</li>
-<li>Emmet</li>
-<li>JSON格式校验工具</li>
-</ul>
-<h4 id="19-简单描述mysql中，索引，主键，唯一索引，联合索引的区别，对数据库的性能有什么影响（从读写两方面）（新浪网技术部）"><a href="#19-简单描述mysql中，索引，主键，唯一索引，联合索引的区别，对数据库的性能有什么影响（从读写两方面）（新浪网技术部）" class="headerlink" title="19. 简单描述mysql中，索引，主键，唯一索引，联合索引的区别，对数据库的性能有什么影响（从读写两方面）（新浪网技术部）"></a>19. 简单描述mysql中，索引，主键，唯一索引，联合索引的区别，对数据库的性能有什么影响（从读写两方面）（新浪网技术部）</h4><p>索引是一种特殊的文件(InnoDB数据表上的索引是表空间的一个组成部分)，它们包含着对数据表里所有记录的引用指针。<br>普通索引(由关键字KEY或INDEX定义的索引)的唯一任务是加快对数据的访问速度。<br>普通索引允许被索引的数据列包含重复的值。如果能确定某个数据列将只包含彼此各不相同的值，在为这个数据列创建索引的时候就应该用关键字UNIQUE把它定义为一个唯一索引。也就是说，唯一索引可以保证数据记录的唯一性。<br>主键，是一种特殊的唯一索引，在一张表中只能定义一个主键索引，主键用于唯一标识一条记录，使用关键字 PRIMARY KEY 来创建。<br>索引可以覆盖多个数据列，如像INDEX(columnA, columnB)索引，这就是联合索引。<br>索引可以极大的提高数据的查询速度，但是会降低插入、删除、更新表的速度，因为在执行这些写操作时，还要操作索引文件。</p>
-<h4 id="20-数据库中的事务是什么"><a href="#20-数据库中的事务是什么" class="headerlink" title="20.数据库中的事务是什么?"></a>20.数据库中的事务是什么?</h4><p>事务（transaction）是作为一个单元的一组有序的数据库操作。如果组中的所有操作都成功，则认为事务成功，即使只有一个操作失败，事务也不成功。如果所有操作完成，事务则提交，其修改将作用于所有其他数据库进程。如果一个操作失败，则事务将回滚，该事务所有操作的影响都将取消。ACID 四大特性,原子性、隔离性、一致性、持久性。</p>
-<h4 id="21-了解XSS攻击吗？如何防止？"><a href="#21-了解XSS攻击吗？如何防止？" class="headerlink" title="21.了解XSS攻击吗？如何防止？"></a>21.了解XSS攻击吗？如何防止？</h4><p>XSS是跨站脚本攻击，首先是利用跨站脚本漏洞以一个特权模式去执行攻击者构造的脚本，然后利用不安全的Activex控件执行恶意的行为。<br>使用htmlspecialchars()函数对提交的内容进行过滤，使字符串里面的特殊符号实体化。</p>
-<h4 id="22-SQL注入漏洞产生的原因？如何防止？"><a href="#22-SQL注入漏洞产生的原因？如何防止？" class="headerlink" title="22.SQL注入漏洞产生的原因？如何防止？"></a>22.SQL注入漏洞产生的原因？如何防止？</h4><p>SQL注入产生的原因：程序开发过程中不注意规范书写sql语句和对特殊字符进行过滤，导致客户端可以通过全局变量POST和GET提交一些sql语句正常执行。</p>
-<h5 id="防止SQL注入的方式："><a href="#防止SQL注入的方式：" class="headerlink" title="防止SQL注入的方式："></a>防止SQL注入的方式：</h5><ol>
-<li>开启配置文件中的magic_quotes_gpc 和 magic_quotes_runtime设置</li>
-<li>执行sql语句时使用addslashes进行sql语句转换</li>
-<li>Sql语句书写尽量不要省略双引号和单引号。</li>
-<li>过滤掉sql语句中的一些关键词：update、insert、delete、select、 * 。</li>
-<li>提高数据库表和字段的命名技巧，对一些重要的字段根据程序的特点命名，取不易被猜到的。</li>
-<li>Php配置文件中设置register_globals为off,关闭全局变量注册</li>
-<li>控制错误信息，不要在浏览器上输出错误信息，将错误信息写到日志文件中。</li>
-</ol>
-<h4 id="23-PHP网站的主要攻击方式有哪些？"><a href="#23-PHP网站的主要攻击方式有哪些？" class="headerlink" title="23.PHP网站的主要攻击方式有哪些？"></a>23.PHP网站的主要攻击方式有哪些？</h4><ol>
-<li>命令注入(Command Injection)</li>
-<li>eval 注入(Eval Injection)</li>
-<li>客户端脚本攻击(Script Insertion)</li>
-<li>跨网站脚本攻击(Cross Site Scripting, XSS)</li>
-<li>SQL 注入攻击(SQL injection)</li>
-<li>跨网站请求伪造攻击(Cross Site Request<br>Forgeries, CSRF)</li>
-<li>Session 会话劫持(Session Hijacking)</li>
-<li>Session 固定攻击(Session Fixation)</li>
-<li>HTTP 响应拆分攻击(HTTP Response Splitting)</li>
-<li>文件上传漏洞(File Upload Attack)</li>
-<li>目录穿越漏洞(Directory Traversal)</li>
-<li>远程文件包含攻击(Remote Inclusion)</li>
-<li>动态函数注入攻击(Dynamic Variable<br>Evaluation)</li>
-<li>URL 攻击(URL attack)</li>
-<li>表单提交欺骗攻击(Spoofed Form<br>Submissions)</li>
-<li>HTTP 请求欺骗攻击(Spoofed HTTP Requests)</li>
-</ol>
-<h4 id="24、框架中什么是单一入口和多入口-，-单一入口的优缺点？"><a href="#24、框架中什么是单一入口和多入口-，-单一入口的优缺点？" class="headerlink" title="24、框架中什么是单一入口和多入口 ， 单一入口的优缺点？"></a>24、框架中什么是单一入口和多入口 ， 单一入口的优缺点？</h4><ol>
-<li>多口就是通过访问不同的文件来完成用户请求。单一入口只 web 程序所有的请求都指向一个脚本文件的。</li>
-<li>单一入口更容易控制权限，方便对 http 请求可以进行安全性检查。<br>缺点：URL 看起来不那么美观，特别是对搜索引擎来说不友好。</li>
-</ol>
-<h4 id="25、-对于关系型数据库而言，索引是相当重要的概念，请回答有关索引的几个问题："><a href="#25、-对于关系型数据库而言，索引是相当重要的概念，请回答有关索引的几个问题：" class="headerlink" title="25、 对于关系型数据库而言，索引是相当重要的概念，请回答有关索引的几个问题："></a>25、 对于关系型数据库而言，索引是相当重要的概念，请回答有关索引的几个问题：</h4><h5 id="a-、索引的目的是什么？"><a href="#a-、索引的目的是什么？" class="headerlink" title="a)、索引的目的是什么？"></a>a)、索引的目的是什么？</h5><ol>
-<li>快速访问数据表中的特定信息，提高检索速度</li>
-<li>创建唯一性索引，保证数据库表中每一行数据的唯一性。</li>
-<li>加速表和表之间的连接</li>
-<li>使用分组和排序子句进行数据检索时，可以显著减少查询中分组和排序的时间</li>
-</ol>
-<h5 id="b-、索引对数据库系统的负面影响是什么？"><a href="#b-、索引对数据库系统的负面影响是什么？" class="headerlink" title="b)、索引对数据库系统的负面影响是什么？"></a>b)、索引对数据库系统的负面影响是什么？</h5><p>负面影响：<br>创建索引和维护索引需要耗费时间，这个时间随着数据量的增加而增加；索引需要占用物理空间，不光是表需要占用数据空间，每个索引也需要占用物理空间；当对表进行增、删、改、的时候索引也要动态维护，这样就降低了数据的维护速度。</p>
-<h5 id="c-、为数据表建立索引的原则有哪些？"><a href="#c-、为数据表建立索引的原则有哪些？" class="headerlink" title="c)、为数据表建立索引的原则有哪些？"></a>c)、为数据表建立索引的原则有哪些？</h5><ol>
-<li>在最频繁使用的、用以缩小查询范围的字段上建立索引。</li>
-<li>在频繁使用的、需要排序的字段上建立索引</li>
-</ol>
-<h5 id="d-、-什么情况下不宜建立索引？"><a href="#d-、-什么情况下不宜建立索引？" class="headerlink" title="d)、 什么情况下不宜建立索引？"></a>d)、 什么情况下不宜建立索引？</h5><ol>
-<li>对于查询中很少涉及的列或者重复值比较多的列，不宜建立索引。</li>
-<li>对于一些特殊的数据类型，不宜建立索引，比如文本字段（text）等。</li>
-</ol>
-<h4 id="26、-简述在MySQL数据库中MyISAM和InnoDB的区别"><a href="#26、-简述在MySQL数据库中MyISAM和InnoDB的区别" class="headerlink" title="26、 简述在MySQL数据库中MyISAM和InnoDB的区别"></a>26、 简述在MySQL数据库中MyISAM和InnoDB的区别</h4><p>区别于其他数据库的最重要的特点就是其插件式的表存储引擎。切记：存储引擎是基于表的，而不是数据库。</p>
-<p>InnoDB与MyISAM的区别：</p>
-<p>InnoDB存储引擎: 主要面向OLTP(Online Transaction Processing，在线事务处理)方面的应用，是第一个完整支持ACID事务的存储引擎(BDB第一个支持事务的存储引擎，已经停止开发)。</p>
-<p>特点：</p>
-<ul>
-<li>行锁设计、支持外键；</li>
-<li>支持类似于Oracle风格的一致性非锁定读(即：默认情况下读取操作不会产生锁)；</li>
-<li>InnoDB将数据放在一个逻辑的表空间中，由InnoDB自身进行管理。从MySQL4.1版本开始，可以将每个InnoDB存储引擎的表单独存放到一个独立的ibd文件中；</li>
-<li>InnoDB通过使用MVCC(多版本并发控制：读不会阻塞写，写也不会阻塞读)来获得高并发性，并且实现了SQL标准的4种隔离级别(默认为REPEATABLE级别)；</li>
-<li>InnoDB还提供了插入缓冲(insert buffer)、二次写(double write)、自适应哈希索引(adaptive hash index)、预读(read ahead)等高性能和高可用的功能；</li>
-<li>InnoDB采用了聚集(clustered)的方式来存储表中的数据，每张标的存储都按主键的顺序存放(如果没有显式的在建表时指定主键，InnoDB会为每一行生成一个6字节的ROWID，并以此作为主键)；</li>
-<li>InnoDB表会有三个隐藏字段：除了上面提到了6字节的DB_ROW_ID外，还有6字节的DB_TX_ID(事务ID)和7字节的DB_ROLL_PTR(指向对应回滚段的地址)。这个可以通过innodb monitor看到；</li>
-</ul>
-<p>MyISAM存储引擎: 是MySQL官方提供的存储引擎，主要面向OLAP(Online Analytical Processing,在线分析处理)方面的应用。<br>特点：</p>
-<ul>
-<li>不支持事务，支持表所和全文索引。操作速度快；</li>
-<li>MyISAM存储引擎表由MYD和MYI组成，MYD用来存放数据文件，MYI用来存放索引文件。MySQL数据库只缓存其索引文件，数据文件的缓存交给操作系统本身来完成；<br>MySQL5.0版本开始，MyISAM默认支持256T的单表数据；</li>
-</ul>
-<h4 id="27、-解释MySQL外连接、内连接与自连接的区别"><a href="#27、-解释MySQL外连接、内连接与自连接的区别" class="headerlink" title="27、 解释MySQL外连接、内连接与自连接的区别"></a>27、 解释MySQL外连接、内连接与自连接的区别</h4><p>先说什么是交叉连接: 交叉连接又叫笛卡尔积，它是指不使用任何条件，直接将一个表的所有记录和另一个表中的所有记录一一匹配。</p>
-<p>内连接 则是只有条件的交叉连接，根据某个条件筛选出符合条件的记录，不符合条件的记录不会出现在结果集中，即内连接只连接匹配的行。<br>外连接 其结果集中不仅包含符合连接条件的行，而且还会包括左表、右表或两个表中<br>的所有数据行，这三种情况依次称之为左外连接，右外连接，和全外连接。</p>
-<p>左外连接，也称左连接，左表为主表，左表中的所有记录都会出现在结果集中，对于那些在右表中并没有匹配的记录，仍然要显示，右边对应的那些字段值以NULL来填充。右外连接，也称右连接，右表为主表，右表中的所有记录都会出现在结果集中。左连接和右连接可以互换，MySQL目前还不支持全外连接。</p>
-<h4 id="28、-写出三种以上MySQL数据库存储引擎的名称（提示：不区分大小写）"><a href="#28、-写出三种以上MySQL数据库存储引擎的名称（提示：不区分大小写）" class="headerlink" title="28、 写出三种以上MySQL数据库存储引擎的名称（提示：不区分大小写）"></a>28、 写出三种以上MySQL数据库存储引擎的名称（提示：不区分大小写）</h4><p>MyISAM、InnoDB、BDB（BerkeleyDB）、Merge、Memory（Heap）、Example、Federated、<br>Archive、CSV、Blackhole、MaxDB 等等十几个引擎</p>
-<h4 id="29、-什么是面向对象？主要特征是什么？几大原则是什么？"><a href="#29、-什么是面向对象？主要特征是什么？几大原则是什么？" class="headerlink" title="29、 什么是面向对象？主要特征是什么？几大原则是什么？"></a>29、 什么是面向对象？主要特征是什么？几大原则是什么？</h4><p>面向对象是程序的一种设计模式，它利于提高程序的重用性，使程序机构更加清晰。 主要特征是：封装、继承、多态。<br>五大基本原则： 单一职责原则；开放封闭原则；替换原则； 依赖原则； 接口分离原则。</p>
-<h4 id="30、什么是静态路由，其特点是什么-什么是动态路由，其特点是什么"><a href="#30、什么是静态路由，其特点是什么-什么是动态路由，其特点是什么" class="headerlink" title="30、什么是静态路由，其特点是什么?什么是动态路由，其特点是什么?"></a>30、什么是静态路由，其特点是什么?什么是动态路由，其特点是什么?</h4><p>　参考答案：<br>　　静态路由是由系统管理员设计与构建的路由表规定的路由。适用于网关数量有限的场 合，且网络拓朴结构不经常变化的网络。其缺点是不能动态地适用网络状况的变化，当 网络状况变化后必须由网络管理员修改路由表。<br>动态路由是由路由选择协议而动态构建的，路由协议之间通过交换各自所拥有的路由信 息实时更新路由表的内容。动态路由可以自动学习网络的拓朴结构，并更新路由表。其 缺点是路由广播更新信息将占据大量的网络带宽。</p>
-<h4 id="31、使用过-Memcache-缓存吗，如果使用过，能够简单的描述一下它的工作原理吗？"><a href="#31、使用过-Memcache-缓存吗，如果使用过，能够简单的描述一下它的工作原理吗？" class="headerlink" title="31、使用过 Memcache 缓存吗，如果使用过，能够简单的描述一下它的工作原理吗？"></a>31、使用过 Memcache 缓存吗，如果使用过，能够简单的描述一下它的工作原理吗？</h4><p>Memcahce 是把所有的数据保存在内存当中，采用 hash 表的方式，每条数据由 key 和 value 组成，每个 key 是独一无二的，当要访问某个值的时候先按照找到值，然后返回结果。<br>Memcahce 采用 LRU 算法来逐渐把过期数据清除掉。</p>
-<h4 id="32-列举流行的-Ajax-框架？说明-Ajax-实现原理是什么及-json-在-Ajax-中起什么作用？"><a href="#32-列举流行的-Ajax-框架？说明-Ajax-实现原理是什么及-json-在-Ajax-中起什么作用？" class="headerlink" title="32. 列举流行的 Ajax 框架？说明 Ajax 实现原理是什么及 json 在 Ajax 中起什么作用？"></a>32. 列举流行的 Ajax 框架？说明 Ajax 实现原理是什么及 json 在 Ajax 中起什么作用？</h4><p>流行的 Ajax 框架有 jQuery，Prototype，Dojo，MooTools。</p>
-<p>Ajax 的工作原理是一个页面的指定位置可以加载另一个页面所有的输出内容，这样就实现了一个静态页面也能获取到数据库中的返回数据信息了。所以 Ajax 技术实现了一个静态网页在不刷新整个页面的情况下与服务器通信，减少了用户等待时间，同时也从而降低了网络流量，增强了客户体验的友好程度。<br>在使用 Ajax 时，涉及到数据传输，即将数据从服务器返回到客户端，服务器端和客户端分别使用不同的脚步语言来处理数据，这就需要一种通用的数据格式，XML 和 json 就是最常用的两种，而 json 比 XML 更简单。</p>
-<h4 id="33、Myql中的事务回滚机制概述"><a href="#33、Myql中的事务回滚机制概述" class="headerlink" title="33、Myql中的事务回滚机制概述"></a>33、Myql中的事务回滚机制概述</h4><p>事务是用户定义的一个数据库操作序列，这些操作要么全做要么全不做，是一个不可分割的工作单位，事务回滚是指将该事务已经完成的对数据库的更新操作撤销。</p>
-<p>　　要同时修改数据库中两个不同表时，如果它们不是一个事务的话，当第一个表修改完，可能第二个表修改过程中出现了异常而没能修改，此时就只有第二个表依旧是未修改之前的状态，而第一个表已经被修改完毕。而当你把它们设定为一个事务的时候，当第一个表修改完，第二表修改出现异常而没能修改，第一个表和第二个表都要回到未修改的状态，这就是所谓的事务回滚。</p>
+        <h4 id="redis是什么"><a href="#redis是什么" class="headerlink" title="redis是什么:"></a>redis是什么:</h4><p>Redis is an open source, BSD licensed, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.<br>redis是开源,BSD许可,高级的key-value存储系统.<br>可以用来存储字符串,哈希结构,链表,集合,因此,常用来提供数据结构服务.</p>
+ <a id="more"></a>
+<h4 id="redis和memcached相比-的独特之处"><a href="#redis和memcached相比-的独特之处" class="headerlink" title="redis和memcached相比,的独特之处:"></a>redis和memcached相比,的独特之处:</h4><p>1: redis可以用来做存储(storge), 而memccached是用来做缓存(cache)<br>  这个特点主要因为其有”持久化”的功能.<br>2: 存储的数据有”结构”,对于memcached来说,存储的数据,只有1种类型–”字符串”,<br>  而redis则可以存储字符串,链表,哈希结构,集合,有序集合.</p>
+<h4 id="Redis下载安装"><a href="#Redis下载安装" class="headerlink" title="Redis下载安装"></a>Redis下载安装</h4><p>1:官方站点: redis.io 下载最新版或者最新stable版<br>2:解压源码并进入目录<br>3: 不用configure<br>4: 直接make<br>(如果是32位机器 make 32bit)</p>
+<p>注:易碰到的问题,时间错误.<br>原因: 源码是官方configure过的,但官方configure时,生成的文件有时间戳信息,<br>Make只能发生在configure之后,<br>如果你的虚拟机的时间不对,比如说是2012年<br>解决: date -s ‘yyyy-mm-dd hh:mm:ss’   重写时间<br>    再 clock -w  写入cmos</p>
+<p>5: 可选步骤: make test  测试编译情况<br>(可能出现: need tcl  &gt;8.4这种情况, yum install tcl)</p>
+<p>6: 安装到指定的目录,比如 /usr/local/redis<br>make  PREFIX=/usr/local/redis install<br>注: PREFIX要大写</p>
+<p>7: make install之后,得到如下几个文件<br>redis-benchmark  性能测试工具<br>redis-check-aof  日志文件检测工(比如断电造成日志损坏,可以检测并修复)<br>redis-check-dump  快照文件检测工具,效果类上<br>redis-cli  客户端<br>redis-server 服务端</p>
+<p>8: 复制配置文件<br>Cp /path/redis.conf /usr/local/redis</p>
+<p>9: 启动与连接<br>/path/to/redis/bin/redis-server  ./path/to/conf-file<br>例:[root@localhost redis]# ./bin/redis-server ./redis.conf</p>
+<p>连接: 用redis-cli</p>
+<p>#/path/to/redis/bin/redis-cli [-h localhost -p 6379 ]</p>
+<p>10: 让redis以后台进程的形式运行<br>编辑conf配置文件,修改如下内容;<br>daemonize yes</p>
+<p>Redis对于key的操作命令</p>
+<p>del key1 key2 … Keyn<br>作用: 删除1个或多个键<br>返回值: 不存在的key忽略掉,返回真正删除的key的数量</p>
+<p>rename key newkey<br>作用: 给key赋一个新的key名<br>注:如果newkey已存在,则newkey的原值被覆盖</p>
+<p>renamenx key newkey<br>作用: 把key改名为newkey<br>返回: 发生修改返回1,未发生修改返回0<br>注: nx–&gt; not exists, 即, newkey不存在时,作改名动作</p>
+<p>move key db<br>redis 127.0.0.1:6379[1]&gt; select 2<br>OK<br>redis 127.0.0.1:6379[2]&gt; keys <em><br>(empty list or set)<br>redis 127.0.0.1:6379[2]&gt; select 0<br>OK<br>redis 127.0.0.1:6379&gt; keys </em><br>1) “name”<br>2) “cc”<br>3) “a”<br>4) “b”<br>redis 127.0.0.1:6379&gt; move cc 2<br>(integer) 1<br>redis 127.0.0.1:6379&gt; select 2<br>OK<br>redis 127.0.0.1:6379[2]&gt; keys *<br>1) “cc”<br>redis 127.0.0.1:6379[2]&gt; get cc<br>“3”</p>
+<p>(注意: 一个redis进程,打开了不止一个数据库, 默认打开16个数据库,从0到15编号,<br>如果想打开更多数据库,可以从配置文件修改)</p>
+<p>keys pattern 查询相应的key<br>在redis里,允许模糊查询key<br>有3个通配符 <em>, ? ,[]
+</em>: 通配任意多个字符<br>?: 通配单个字符<br>[]: 通配括号内的某1个字符<br>redis 127.0.0.1:6379&gt; flushdb<br>OK<br>redis 127.0.0.1:6379&gt; keys <em><br>(empty list or set)<br>redis 127.0.0.1:6379&gt; mset one 1 two 2 three 3 four 4<br>OK<br>redis 127.0.0.1:6379&gt; keys o</em><br>1) “one”<br>redis 127.0.0.1:6379&gt; key <em>o<br>(error) ERR unknown command ‘key’<br>redis 127.0.0.1:6379&gt; keys </em>o<br>1) “two”<br>redis 127.0.0.1:6379&gt; keys ???<br>1) “one”<br>2) “two”<br>redis 127.0.0.1:6379&gt; keys on?</p>
+<p>1) “one”<br>redis 127.0.0.1:6379&gt; set ons yes</p>
+<p>OK<br>redis 127.0.0.1:6379&gt; keys on[eaw]<br>1) “one”</p>
+<p>randomkey 返回随机key</p>
+<p>exists key<br>判断key是否存在,返回1/0</p>
+<p>type key<br>返回key存储的值的类型<br>有string,link,set,order set, hash</p>
+<p>ttl key<br>作用: 查询key的生命周期<br>返回: 秒数</p>
+<p>注:对于不存在的key或已过期的key/不过期的key,都返回-1<br>Redis2.8中,对于不存在的key,返回-2</p>
+<p>expire key 整型值<br>作用: 设置key的生命周期,以秒为单位</p>
+<p>同理:<br>pexpire key 毫秒数, 设置生命周期<br>pttl  key, 以毫秒返回生命周期</p>
+<p>persist key<br>作用: 把指定key置为永久有效</p>
+<p>Redis字符串类型的操作</p>
+<p>set key value [ex 秒数] / [px 毫秒数]  [nx] /[xx]</p>
+<p>如: set a 1 ex 10 , 10秒有效<br>Set a 1 px 9000  , 9秒有效<br>注: 如果ex,px同时写,以后面的有效期为准<br>如 set a 1 ex 100 px 9000, 实际有效期是9000毫秒</p>
+<p>nx: 表示key不存在时,执行操作<br>xx: 表示key存在时,执行操作</p>
+<p>mset  multi set , 一次性设置多个键值<br>例: mset key1 v1 key2 v2 ….</p>
+<p>get key<br>作用:获取key的值</p>
+<p>mget key1 key2 ..keyn<br>作用:获取多个key的值</p>
+<p>setrange key offset value<br>作用:把字符串的offset偏移字节,改成value<br>redis 127.0.0.1:6379&gt; set greet hello<br>OK<br>redis 127.0.0.1:6379&gt; setrange greet 2 x<br>(integer) 5<br>redis 127.0.0.1:6379&gt; get greet<br>“hexlo”</p>
+<p>注意: 如果偏移量&gt;字符长度, 该字符自动补0x00</p>
+<p>redis 127.0.0.1:6379&gt; setrange greet 6 !<br>(integer) 7<br>redis 127.0.0.1:6379&gt; get greet<br>“heyyo\x00!”</p>
+<p>append key value<br>作用: 把value追加到key的原值上</p>
+<p>getrange key start stop<br>作用: 是获取字符串中 [start, stop]范围的值<br>注意: 对于字符串的下标,左数从0开始,右数从-1开始<br>redis 127.0.0.1:6379&gt; set title ‘chinese’<br>OK<br>redis 127.0.0.1:6379&gt; getrange title 0 3<br>“chin”<br>redis 127.0.0.1:6379&gt; getrange title 1 -2<br>“hines”</p>
+<p>注意:<br>1: start&gt;=length, 则返回空字符串<br>2: stop&gt;=length,则截取至字符结尾<br>3: 如果start 所处位置在stop右边, 返回空字符串</p>
+<p>getset key newvalue<br>作用: 获取并返回旧值,设置新值<br>redis 127.0.0.1:6379&gt; set cnt 0<br>OK<br>redis 127.0.0.1:6379&gt; getset cnt 1<br>“0”<br>redis 127.0.0.1:6379&gt; getset cnt 2<br>“1”</p>
+<p>incr key<br>作用: 指定的key的值加1,并返回加1后的值</p>
+<p>注意:<br>1:不存在的key当成0,再incr操作<br>2: 范围为64有符号<br>incrby key number (整型)<br>redis 127.0.0.1:6379&gt; incrby age  90 (每次递增的数字)<br>(integer) 92</p>
+<p>incrbyfloat key floatnumber (浮点型)<br>redis 127.0.0.1:6379&gt; incrbyfloat age 3.5<br>“95.5”</p>
+<p>decr key<br>redis 127.0.0.1:6379&gt; set age 20<br>OK<br>redis 127.0.0.1:6379&gt; decr age<br>(integer) 19</p>
+<p>decrby key number<br>redis 127.0.0.1:6379&gt; decrby age 3<br>(integer) 16</p>
+<p>getbit key offset<br>作用:获取值的二进制表示,对应位上的值(从左,从0编号)<br>redis 127.0.0.1:6379&gt; set char A<br>OK<br>redis 127.0.0.1:6379&gt; getbit char 1<br>(integer) 1<br>redis 127.0.0.1:6379&gt; getbit char 2<br>(integer) 0<br>redis 127.0.0.1:6379&gt; getbit char 7<br>(integer) 1</p>
+<p>setbit  key offset value<br>设置offset对应二进制位上的值<br>返回: 该位上的旧值</p>
+<p>注意:<br>1:如果offset过大,则会在中间填充0,<br>2: offset最大大到多少<br>3:offset最大2^32-1,可推出最大的的字符串为512M</p>
+<p>bitop operation destkey key1 [key2 …]</p>
+<p>对key1,key2..keyN作operation,并将结果保存到 destkey 上。<br>operation 可以是 AND 、 OR 、 NOT 、 XOR</p>
+<p>redis 127.0.0.1:6379&gt; setbit lower 7 0<br>(integer) 0<br>redis 127.0.0.1:6379&gt; setbit lower 2 1<br>(integer) 0<br>redis 127.0.0.1:6379&gt; get lower<br>“ “<br>redis 127.0.0.1:6379&gt; set char Q<br>OK<br>redis 127.0.0.1:6379&gt; get char<br>“Q”<br>redis 127.0.0.1:6379&gt; bitop or char char lower<br>(integer) 1<br>redis 127.0.0.1:6379&gt; get char<br>“q”</p>
+<p>注意: 对于NOT操作, key不能多个</p>
+<p>link 链表结构</p>
+<p>lpush key value<br>作用: 把值插入到链接头部</p>
+<p>rpop key<br>作用: 返回并删除链表尾元素</p>
+<p>rpush,lpop: 不解释</p>
+<p>lrange key start  stop<br>作用: 返回链表中[start ,stop]中的元素<br>规律: 左数从0开始,右数从-1开始</p>
+<p>lrem key count value<br>作用: 从key链表中删除 value值<br>注: 删除count的绝对值个value后结束<br>Count&gt;0 从表头删除<br>Count&lt;0 从表尾删除</p>
+<p>ltrim key start stop<br>作用: 剪切key对应的链接,切[start,stop]一段,并把该段重新赋给key</p>
+<p>lindex key index<br>作用: 返回index索引上的值,<br>如  lindex key 2</p>
+<p>llen key<br>作用:计算链接表的元素个数<br>redis 127.0.0.1:6379&gt; llen task<br>(integer) 3<br>redis 127.0.0.1:6379&gt;</p>
+<p>linsert  key after|before search value<br>作用: 在key链表中寻找’search’,并在search值之前|之后,.插入value<br>注: 一旦找到一个search后,命令就结束了,因此不会插入多个value</p>
+<p>rpoplpush source dest<br>作用: 把source的尾部拿出,放在dest的头部,<br>并返回 该单元值</p>
+<p>场景: task + bak 双链表完成安全队列<br>Task列表                             bak列表</p>
+<p>业务逻辑:<br>1:Rpoplpush task bak<br>2:接收返回值,并做业务处理<br>3:如果成功,rpop bak 清除任务. 如不成功,下次从bak表里取任务</p>
+<p>brpop ,blpop  key timeout<br>作用:等待弹出key的尾/头元素,<br>Timeout为等待超时时间<br>如果timeout为0,则一直等待</p>
+<p>场景: 长轮询Ajax,在线聊天时,能够用到</p>
+<p>Setbit 的实际应用</p>
+<p>场景: 1亿个用户, 每个用户 登陆/做任意操作  ,记为 今天活跃,否则记为不活跃</p>
+<p>每周评出: 有奖活跃用户: 连续7天活动<br>每月评,等等…</p>
+<p>思路:</p>
+<p>Userid   dt  active<br>1        2013-07-27  1<br>1       2013-0726   1</p>
+<p>如果是放在表中, 1:表急剧增大,2:要用group ,sum运算,计算较慢</p>
+<p>用: 位图法 bit-map<br>Log0721:  ‘011001……………0’</p>
+<p>……<br>log0726 :   ‘011001……………0’<br>Log0727 :  ‘0110000………….1’</p>
+<p>1: 记录用户登陆:<br>每天按日期生成一个位图, 用户登陆后,把user_id位上的bit值置为1</p>
+<p>2: 把1周的位图  and 计算,<br>位上为1的,即是连续登陆的用户</p>
+<p>redis 127.0.0.1:6379&gt; setbit mon 100000000 0<br>(integer) 0<br>redis 127.0.0.1:6379&gt; setbit mon 3 1<br>(integer) 0<br>redis 127.0.0.1:6379&gt; setbit mon 5 1<br>(integer) 0<br>redis 127.0.0.1:6379&gt; setbit mon 7 1<br>(integer) 0<br>redis 127.0.0.1:6379&gt; setbit thur 100000000 0<br>(integer) 0<br>redis 127.0.0.1:6379&gt; setbit thur 3 1<br>(integer) 0<br>redis 127.0.0.1:6379&gt; setbit thur 5 1<br>(integer) 0<br>redis 127.0.0.1:6379&gt; setbit thur 8 1<br>(integer) 0<br>redis 127.0.0.1:6379&gt; setbit wen 100000000 0<br>(integer) 0<br>redis 127.0.0.1:6379&gt; setbit wen 3 1<br>(integer) 0<br>redis 127.0.0.1:6379&gt; setbit wen 4 1<br>(integer) 0<br>redis 127.0.0.1:6379&gt; setbit wen 6 1<br>(integer) 0<br>redis 127.0.0.1:6379&gt; bitop and  res mon feb wen<br>(integer) 12500001</p>
+<p>如上例,优点:<br>1: 节约空间, 1亿人每天的登陆情况,用1亿bit,约1200WByte,约10M 的字符就能表示<br>2: 计算方便</p>
+<p>集合 set 相关命令</p>
+<p>集合的性质: 唯一性,无序性,确定性</p>
+<p>注: 在string和link的命令中,可以通过range 来访问string中的某几个字符或某几个元素<br>但,因为集合的无序性,无法通过下标或范围来访问部分元素.</p>
+<p>因此想看元素,要么随机先一个,要么全选</p>
+<p>sadd key  value1 value2<br>作用: 往集合key中增加元素</p>
+<p>srem value1 value2<br>作用: 删除集合中集为 value1 value2的元素<br>返回值: 忽略不存在的元素后,真正删除掉的元素的个数</p>
+<p>spop key<br>作用: 返回并删除集合中key中1个随机元素</p>
+<p>随机–体现了无序性</p>
+<p>srandmember key<br>作用: 返回集合key中,随机的1个元素.</p>
+<p>sismember key  value<br>作用: 判断value是否在key集合中<br>是返回1,否返回0</p>
+<p>smembers key<br>作用: 返回集中中所有的元素</p>
+<p>scard key<br>作用: 返回集合中元素的个数</p>
+<p>smove source dest value<br>作用:把source中的value删除,并添加到dest集合中</p>
+<p>sinter  key1 key2 key3<br>作用: 求出key1 key2 key3 三个集合中的交集,并返回<br>redis 127.0.0.1:6379&gt; sadd s1 0 2 4 6<br>(integer) 4<br>redis 127.0.0.1:6379&gt; sadd s2 1 2 3 4<br>(integer) 4<br>redis 127.0.0.1:6379&gt; sadd s3 4 8 9 12<br>(integer) 4<br>redis 127.0.0.1:6379&gt; sinter s1 s2 s3<br>1) “4”<br>redis 127.0.0.1:6379&gt; sinter s3 s1 s2<br>1) “4”</p>
+<p>sinterstore dest key1 key2 key3<br>作用: 求出key1 key2 key3 三个集合中的交集,并赋给dest</p>
+<p>suion key1 key2.. Keyn<br>作用: 求出key1 key2 keyn的并集,并返回</p>
+<p>sdiff key1 key2 key3<br>作用: 求出key1与key2 key3的差集<br>即key1-key2-key3</p>
+<p>order set 有序集合<br>zadd key score1 value1 score2 value2 ..<br>添加元素<br>redis 127.0.0.1:6379&gt; zadd stu 18 lily 19 hmm 20 lilei 21 lilei<br>(integer) 3</p>
+<p>zrem key value1 value2 ..<br>作用: 删除集合中的元素</p>
+<p>zremrangebyscore key min max<br>作用: 按照socre来删除元素,删除score在[min,max]之间的<br>redis 127.0.0.1:6379&gt; zremrangebyscore stu 4 10<br>(integer) 2<br>redis 127.0.0.1:6379&gt; zrange stu 0 -1<br>1) “f”</p>
+<p>zremrangebyrank key start end<br>作用: 按排名删除元素,删除名次在[start,end]之间的<br>redis 127.0.0.1:6379&gt; zremrangebyrank stu 0 1<br>(integer) 2<br>redis 127.0.0.1:6379&gt; zrange stu 0 -1<br>1) “c”<br>2) “e”<br>3) “f”<br>4) “g”</p>
+<p>zrank key member<br>查询member的排名(升续 0名开始)</p>
+<p>zrevrank key memeber<br>查询 member的排名(降续 0名开始)</p>
+<p>ZRANGE key start stop [WITHSCORES]<br>把集合排序后,返回名次[start,stop]的元素<br>默认是升续排列<br>Withscores 是把score也打印出来</p>
+<p>zrevrange key start stop<br>作用:把集合降序排列,取名字[start,stop]之间的元素</p>
+<p>zrangebyscore  key min max [withscores] limit offset N<br>作用: 集合(升续)排序后,取score在[min,max]内的元素,<br>并跳过 offset个, 取出N个<br>redis 127.0.0.1:6379&gt; zadd stu 1 a 3 b 4 c 9 e 12 f 15 g<br>(integer) 6<br>redis 127.0.0.1:6379&gt; zrangebyscore stu 3 12 limit 1 2 withscores<br>1) “c”<br>2) “4”<br>3) “e”<br>4) “9”</p>
+<p>zcard key<br>返回元素个数</p>
+<p>zcount key min max<br>返回[min,max] 区间内元素的数量</p>
+<p>zinterstore destination numkeys key1 [key2 …]<br>[WEIGHTS weight [weight …]]<br>[AGGREGATE SUM|MIN|MAX]<br>求key1,key2的交集,key1,key2的权重分别是 weight1,weight2<br>聚合方法用: sum |min|max<br>聚合的结果,保存在dest集合内</p>
+<p>注意: weights ,aggregate如何理解?<br>答: 如果有交集, 交集元素又有socre,score怎么处理?<br> Aggregate sum-&gt;score相加   , min 求最小score, max 最大score</p>
+<p>另: 可以通过weigth设置不同key的权重, 交集时,socre * weights</p>
+<p>详见下例<br>redis 127.0.0.1:6379&gt; zadd z1 2 a 3 b 4 c<br>(integer) 3<br>redis 127.0.0.1:6379&gt; zadd z2 2.5 a 1 b 8 d<br>(integer) 3<br>redis 127.0.0.1:6379&gt; zinterstore tmp 2 z1 z2<br>(integer) 2<br>redis 127.0.0.1:6379&gt; zrange tmp 0 -1<br>1) “b”<br>2) “a”<br>redis 127.0.0.1:6379&gt; zrange tmp 0 -1 withscores<br>1) “b”<br>2) “4”<br>3) “a”<br>4) “4.5”<br>redis 127.0.0.1:6379&gt; zinterstore tmp 2 z1 z2 aggregate sum<br>(integer) 2<br>redis 127.0.0.1:6379&gt; zrange tmp 0 -1 withscores<br>1) “b”<br>2) “4”<br>3) “a”<br>4) “4.5”<br>redis 127.0.0.1:6379&gt; zinterstore tmp 2 z1 z2 aggregate min<br>(integer) 2<br>redis 127.0.0.1:6379&gt; zrange tmp 0 -1 withscores<br>1) “b”<br>2) “1”<br>3) “a”<br>4) “2”<br>redis 127.0.0.1:6379&gt; zinterstore tmp 2 z1 z2 weights 1 2<br>(integer) 2<br>redis 127.0.0.1:6379&gt; zrange tmp 0 -1 withscores<br>1) “b”<br>2) “5”<br>3) “a”<br>4) “7”</p>
+<p>Hash 哈希数据类型相关命令</p>
+<p>hset key field value<br>作用: 把key中 filed域的值设为value<br>注:如果没有field域,直接添加,如果有,则覆盖原field域的值</p>
+<p>hmset key field1 value1 [field2 value2 field3 value3 ……fieldn valuen]<br>作用: 设置field1-&gt;N 个域, 对应的值是value1-&gt;N<br>(对应PHP理解为  $key = array(file1=&gt;value1, field2=&gt;value2 ….fieldN=&gt;valueN))</p>
+<p>hget key field<br>作用: 返回key中field域的值</p>
+<p>hmget key field1 field2 fieldN<br>作用: 返回key中field1 field2 fieldN域的值</p>
+<p>hgetall key<br>作用:返回key中,所有域与其值</p>
+<p>hdel key field<br>作用: 删除key中 field域</p>
+<p>hlen key<br>作用: 返回key中元素的数量</p>
+<p>hexists key field<br>作用: 判断key中有没有field域</p>
+<p>hinrby key field value<br>作用: 是把key中的field域的值增长整型值value</p>
+<p>hinrby float  key field value<br>作用: 是把key中的field域的值增长浮点值value</p>
+<p>hkeys key<br>作用: 返回key中所有的field</p>
+<p>kvals key<br>作用: 返回key中所有的value</p>
+<p>Redis 中的事务</p>
+<p>Redis支持简单的事务</p>
+<p>Redis与 mysql事务的对比</p>
+<p>MysqlRedis开启start transactionmuitl语句普通sql普通命令失败rollback 回滚discard 取消成功commitexec</p>
+<p>注: rollback与discard 的区别<br>如果已经成功执行了2条语句, 第3条语句出错.<br>Rollback后,前2条的语句影响消失.<br>Discard只是结束本次事务,前2条语句造成的影响仍然还在</p>
+<p>注:<br>在mutil后面的语句中, 语句出错可能有2种情况<br>1: 语法就有问题,<br>这种,exec时,报错, 所有语句得不到执行</p>
+<p>2: 语法本身没错,但适用对象有问题. 比如 zadd 操作list对象<br>Exec之后,会执行正确的语句,并跳过有不适当的语句.</p>
+<p>(如果zadd操作list这种事怎么避免? 这一点,由程序员负责)</p>
+<p>思考:<br>我正在买票<br>Ticket -1 , money -100<br>而票只有1张, 如果在我multi之后,和exec之前, 票被别人买了—即ticket变成0了.<br>我该如何观察这种情景,并不再提交</p>
+<p>悲观的想法:<br>世界充满危险,肯定有人和我抢, 给 ticket上锁, 只有我能操作. [悲观锁]</p>
+<p>乐观的想法:<br>没有那么人和我抢,因此,我只需要注意,<br>–有没有人更改ticket的值就可以了 [乐观锁]</p>
+<p>Redis的事务中,启用的是乐观锁,只负责监测key没有被改动.</p>
+<p>具体的命令—-  watch命令<br>例:<br>redis 127.0.0.1:6379&gt; watch ticket<br>OK<br>redis 127.0.0.1:6379&gt; multi<br>OK<br>redis 127.0.0.1:6379&gt; decr ticket<br>QUEUED<br>redis 127.0.0.1:6379&gt; decrby money 100<br>QUEUED<br>redis 127.0.0.1:6379&gt; exec<br>(nil)   // 返回nil,说明监视的ticket已经改变了,事务就取消了.<br>redis 127.0.0.1:6379&gt; get ticket<br>“0”<br>redis 127.0.0.1:6379&gt; get money<br>“200”</p>
+<p>watch key1 key2  … keyN<br>作用:监听key1 key2..keyN有没有变化,如果有变, 则事务取消</p>
+<p>unwatch<br>作用: 取消所有watch监听</p>
+<p>消息订阅</p>
+<p>使用办法:<br>订阅端: Subscribe 频道名称<br>发布端: publish 频道名称 发布内容</p>
+<p>客户端例子:<br>redis 127.0.0.1:6379&gt; subscribe news<br>Reading messages… (press Ctrl-C to quit)<br>1) “subscribe”<br>2) “news”<br>3) (integer) 1<br>1) “message”<br>2) “news”<br>3) “good good study”<br>1) “message”<br>2) “news”<br>3) “day day up”</p>
+<p>服务端例子:<br>redis 127.0.0.1:6379&gt; publish news ‘good good study’<br>(integer) 1<br>redis 127.0.0.1:6379&gt; publish news ‘day day up’<br>(integer) 1</p>
+<p>Redis持久化配置</p>
+<p>Redis的持久化有2种方式   1快照  2是日志</p>
+<p>Rdb快照的配置选项</p>
+<p>save 900 1      // 900内,有1条写入,则产生快照<br>save 300 1000   // 如果300秒内有1000次写入,则产生快照<br>save 60 10000  // 如果60秒内有10000次写入,则产生快照<br>(这3个选项都屏蔽,则rdb禁用)</p>
+<p>stop-writes-on-bgsave-error yes  // 后台备份进程出错时,主进程停不停止写入?<br>rdbcompression yes    // 导出的rdb文件是否压缩<br>Rdbchecksum   yes //  导入rbd恢复时数据时,要不要检验rdb的完整性<br>dbfilename dump.rdb  //导出来的rdb文件名<br>dir ./  //rdb的放置路径</p>
+<p>Aof 的配置<br>appendonly no # 是否打开 aof日志功能</p>
+<p>appendfsync always   # 每1个命令,都立即同步到aof. 安全,速度慢<br>appendfsync everysec # 折衷方案,每秒写1次<br>appendfsync no      # 写入工作交给操作系统,由操作系统判断缓冲区大小,统一写入到aof. 同步频率低,速度快,</p>
+<p>no-appendfsync-on-rewrite  yes: # 正在导出rdb快照的过程中,要不要停止同步aof<br>auto-aof-rewrite-percentage 100 #aof文件大小比起上次重写时的大小,增长率100%时,重写<br>auto-aof-rewrite-min-size 64mb #aof文件,至少超过64M时,重写</p>
+<p>注: 在dump rdb过程中,aof如果停止同步,会不会丢失?<br>答: 不会,所有的操作缓存在内存的队列里, dump完成后,统一操作.</p>
+<p>注: aof重写是指什么?<br>答: aof重写是指把内存中的数据,逆化成命令,写入到.aof日志里.<br>以解决 aof日志过大的问题.</p>
+<p>问: 如果rdb文件,和aof文件都存在,优先用谁来恢复数据?<br>答: aof</p>
+<p>问: 2种是否可以同时用?<br>答: 可以,而且推荐这么做</p>
+<p>问: 恢复时rdb和aof哪个恢复的快<br>答: rdb快,因为其是数据的内存映射,直接载入到内存,而aof是命令,需要逐条执行<br>redis 服务器端命令<br>redis 127.0.0.1:6380&gt; time  ,显示服务器时间 , 时间戳(秒), 微秒数<br>1) “1375270361”<br>2) “504511”</p>
+<p>redis 127.0.0.1:6380&gt; dbsize  // 当前数据库的key的数量<br>(integer) 2<br>redis 127.0.0.1:6380&gt; select 2<br>OK<br>redis 127.0.0.1:6380[2]&gt; dbsize<br>(integer) 0<br>redis 127.0.0.1:6380[2]&gt;</p>
+<p>BGREWRITEAOF 后台进程重写AOF<br>BGSAVE       后台保存rdb快照<br>SAVE         保存rdb快照<br>LASTSAVE     上次保存时间</p>
+<p>Slaveof master-Host port  , 把当前实例设为master的slave</p>
+<p>Flushall  清空所有库所有键<br>Flushdb  清空当前库所有键<br>Showdown [save/nosave]</p>
+<p>注: 如果不小心运行了flushall, 立即 shutdown nosave ,关闭服务器<br>然后 手工编辑aof文件, 去掉文件中的 “flushall ”相关行, 然后开启服务器,就可以导入回原来数据.</p>
+<p>如果,flushall之后,系统恰好bgrewriteaof了,那么aof就清空了,数据丢失.</p>
+<p>Slowlog 显示慢查询<br>注:多慢才叫慢?<br>答: 由slowlog-log-slower-than 10000 ,来指定,(单位是微秒)</p>
+<p>服务器储存多少条慢查询的记录?<br>答: 由 slowlog-max-len 128 ,来做限制</p>
+<p>Info [Replication/CPU/Memory..]<br>查看redis服务器的信息</p>
+<p>Config get 配置项<br>Config set 配置项 值 (特殊的选项,不允许用此命令设置,如slave-of, 需要用单独的slaveof命令来设置)</p>
+<p>Redis运维时需要注意的参数<br>1: 内存</p>
+<h1 id="Memory"><a href="#Memory" class="headerlink" title="Memory"></a>Memory</h1><p>used_memory:859192 数据结构的空间<br>used_memory_rss:7634944 实占空间<br>mem_fragmentation_ratio:8.89 前2者的比例,1.N为佳,如果此值过大,说明redis的内存的碎片化严重,可以导出再导入一次.<br>2: 主从复制</p>
+<h1 id="Replication"><a href="#Replication" class="headerlink" title="Replication"></a>Replication</h1><p>role:slave<br>master_host:192.168.1.128<br>master_port:6379<br>master_link_status:up</p>
+<p>3:持久化</p>
+<h1 id="Persistence"><a href="#Persistence" class="headerlink" title="Persistence"></a>Persistence</h1><p>rdb_changes_since_last_save:0<br>rdb_last_save_time:1375224063</p>
+<p>4: fork耗时</p>
+<p>#Status<br>latest_fork_usec:936  上次导出rdb快照,持久化花费微秒<br>注意: 如果某实例有10G内容,导出需要2分钟,<br>每分钟写入10000次,导致不断的rdb导出,磁盘始处于高IO状态.</p>
+<p>5: 慢日志<br>config get/set slowlog-log-slower-than<br>CONFIG get/SET slowlog-max-len<br>slowlog get N 获取慢日志</p>
+<p>运行时更改master-slave<br>修改一台slave(设为A)为new master<br>1) 命令该服务不做其他redis服务的slave<br>   命令: slaveof no one<br>2) 修改其readonly为yes</p>
+<p>其他的slave再指向new master A<br>1) 命令该服务为new master A的slave<br>   命令格式 slaveof IP port<br>监控工具 sentinel</p>
+<p>Sentinel不断与master通信,获取master的slave信息.<br>监听master与slave的状态<br>如果某slave失效,直接通知master去除该slave.</p>
+<p>如果master失效,,是按照slave优先级(可配置), 选取1个slave做 new master<br>,把其他slave–&gt; new master</p>
+<p>疑问: sentinel与master通信,如果某次因为master IO操作频繁,导致超时,<br>此时,认为master失效,很武断.<br>解决: sentnel允许多个实例看守1个master, 当N台(N可设置)sentinel都认为master失效,才正式失效.</p>
+<p>Sentinel选项配置<br>port 26379 # 端口<br>sentinel monitor mymaster 127.0.0.1 6379 2 ,<br>给主机起的名字(不重即可),<br>当2个sentinel实例都认为master失效时,正式失效</p>
+<p>sentinel down-after-milliseconds mymaster 30000  多少毫秒后连接不到master认为断开<br>sentinel can-failover mymaster yes #是否允许sentinel修改slave-&gt;master. 如为no,则只能监控,无权修改./<br>sentinel parallel-syncs mymaster 1 , 一次性修改几个slave指向新的new master.<br>sentinel client-reconfig-script mymaster /var/redis/reconfig.sh ,# 在重新配置new master,new slave过程,可以触发的脚本<br>redis 与关系型数据库的适合场景</p>
+<p>书签系统<br>create table book (<br>bookid int,<br>title char(20)<br>)engine myisam charset utf8;</p>
+<p>insert into book values<br>(5 , ‘PHP圣经’),<br>(6 , ‘ruby实战’),<br>(7 , ‘mysql运维’)<br>(8, ‘ruby服务端编程’);</p>
+<p>create table tags (<br>tid int,<br>bookid int,<br>content char(20)<br>)engine myisam charset utf8;</p>
+<p>insert into tags values<br>(10 , 5 , ‘PHP’),<br>(11 , 5 , ‘WEB’),<br>(12 , 6 , ‘WEB’),<br>(13 , 6 , ‘ruby’),<br>(14 , 7 , ‘database’),<br>(15 , 8 , ‘ruby’),<br>(16 , 8 , ‘server’);</p>
+<p>＃ 既有web标签,又有PHP,同时还标签的书,要用连接查询</p>
+<p>select * from tags inner join tags as t on tags.bookid=t.bookid<br>where tags.content=’PHP’ and t.content=’WEB’;</p>
+<p>换成key-value存储<br>用kv 来存储<br>set book:5:title ‘PHP圣经’<br>set book:6:title ‘ruby实战’<br>set book:7:title ‘mysql运难’<br>set book:8:title ‘ruby server’</p>
+<p>sadd tag:PHP 5<br>sadd tag:WEB 5 6<br>sadd tag:database 7<br>sadd tag:ruby 6 8<br>sadd tag:SERVER 8</p>
+<p>查: 既有PHP,又有WEB的书<br>Sinter tag:PHP tag:WEB  #查集合的交集</p>
+<p>查: 有PHP或有WEB标签的书<br>Sunin tag:PHP tag:WEB</p>
+<p>查:含有ruby,不含WEB标签的书<br>Sdiff tag:ruby tag:WEB #求差集</p>
+<h4 id="Redis-key-设计技巧"><a href="#Redis-key-设计技巧" class="headerlink" title="Redis key 设计技巧"></a>Redis key 设计技巧</h4><p>1: 把表名转换为key前缀 如, tag:<br>2: 第2段放置用于区分区key的字段–对应mysql中的主键的列名,如userid<br>3: 第3段放置主键值,如2,3,4…., a , b ,c<br>4: 第4段,写要存储的列名</p>
+<p>用户表 user , 转换为key-value存储useridusernamepasswordeemail9Lisi1111111lisi@163.com</p>
+<p>set  user:userid:9:username lisi<br>set  user:userid:9:password 111111<br>set  user:userid:9:email   lisi@163.com</p>
+<p>keys user:userid:9*</p>
+<p>2 注意:<br>在关系型数据中,除主键外,还有可能其他列也步骤查询,<br>如上表中, username 也是极频繁查询的,往往这种列也是加了索引的.</p>
+<p>转换到k-v数据中,则也要相应的生成一条按照该列为主的key-value<br>Set  user:username:lisi:uid  9  </p>
+<p>这样,我们可以根据username:lisi:uid ,查出userid=9,<br>再查user:9:password/email …</p>
+<p>完成了根据用户名来查询用户信息<br>php-redis扩展编译</p>
+<p>1: 到pecl.php.net  搜索redis<br>2: 下载stable版(稳定版)扩展<br>3: 解压,<br>4: 执行/php/path/bin/phpize (作用是检测PHP的内核版本,并为扩展生成相应的编译配置)<br>5: configure –with-php-config=/php/path/bin/php-config<br>6: make &amp;&amp; make install</p>
+<p>引入编译出的redis.so插件<br>1: 编辑php.ini<br>2: 添加</p>
+<p>redis插件的使用<br>// get instance<br>$redis = new Redis();</p>
+<p>// connect to redis server<br>$redis-&gt;open(‘localhost’,6380);<br>$redis-&gt;set(‘user:userid:9:username’,’wangwu’);<br>var_dump($redis-&gt;get(‘user:userid:9:username’));</p>
+<p>微博项目的key设计<br>全局相关的key:<br>表名global列名操作备注Global:useridincr产生全局的useridGlobal:postidIncr产生全局的postid</p>
+<p>用户相关的key(表)<br>表名userUseridUsernamePasswordAuthsecret3Test31111111#U*Q(%_</p>
+<p>在redis中,变成以下几个key<br>Key前缀userUser:Userid:<em>User:userid:</em>UsernameUser:userid:<em>PasswordUser:userid:</em>:AuthsecretUser:userid:3User:userid:3:Test3User:userid:3:1111111User:userid:3:#U*Q(%_</p>
+<p>微博相关的表设计<br>表名postPostidUseridUsernameTimeContent42Lisi1370987654f测试内容</p>
+<p>微博在redis中,与表设计对应的key设计<br>Key前缀postPost:Postid:<em>Post:postid:</em>UseridPost:postid:<em>:UsernamePost:postid:</em>:TimePost:postid:*:Content42Lisi1370987654f测试内容</p>
+<p>关注表: following<br>Following:$userid –&gt;</p>
+<p>粉丝表<br>Follower:$userid —&gt;</p>
+<p>推送表:revicepost</p>
+<p>347</p>
+<p>=================拉模型,改进=====================</p>
+<p>拉取表</p>
+<p>347</p>
+<p>问: 上次我拉取了 A-&gt;5,67,三条微博, 下次刷新home.php, 从&gt;7的微博开始拉取<br>解决: 拉取时,设定一个lastpull时间点, 下次拉取时,取&gt;lastpull的微博</p>
+<p>问: 有很多关注人,如何取?<br>解决: 循环自己的关注列表,逐个取他们的新微博</p>
+<p>问: 取出来之后放在哪儿?<br>答: pull:$userid的链接里</p>
+<p>问: 如果个人中心,只有前1000条<br>答: ltrim,只取前1000条</p>
+<p>问: 如果我关注 A,B两人, 从2人中,各取3条最新信息<br>,这3+3条信息, 从时间上,是交错的, 如何按时间排序?<br>答: 我们发布时, 是发布的hash结构, 不能按时间来排序.</p>
+<p>解决:  同步时,取微博后,记录本次取的微博的最大id,<br>下次同步时,只取比最大id更大的微博</p>
+<p>Time taken for tests:   32.690 seconds<br>Complete requests:      20000<br>Failed requests:        0<br>Write errors:           0<br>Non-2xx responses:      20000<br>Total transferred:      13520000 bytes<br>Total POSTed:           5340000<br>HTML transferred:       9300000 bytes<br>Requests per second:    611.80 [#/sec] (mean)<br>Time per request:       81.726 [ms] (mean)<br>Time per request:       1.635 [ms] (mean, across all concurrent requests)<br>Transfer rate:          403.88 [Kbytes/sec] received<br>                        159.52 kb/s sent<br>                        563.41 kb/s total</p>
+<p>Connection Times (ms)<br>              min  mean[+/-sd] median   max<br>Connect:        0    0   0.9      0      19<br>Processing:    14   82   8.4     81     153<br>Waiting:        4   82   8.4     80     153<br>Total:         20   82   8.2     81     153</p>
+<p>Percentage of the requests served within a certain time (ms)<br>  50%     81<br>  66%     84<br>  75%     86<br>  80%     88<br>  90%     93<br>  95%     96<br>  98%    100<br>  99%    103<br> 100%    153 (longest request)</p>
+<p>测试结果:<br>50个并发, 20000次请求, 虚拟下,未做特殊优化<br>每次请求redis写操作6次.<br>30+秒左右完成.</p>
+<p>平均每秒发布700条微博, 4000次redis写入.<br>后台定时任务,回归冷数据入mysql<br>Redis配置文件<br> daemonize yes  # redis是否以后台进程运行<br> Requirepass  密码 # 配置redis连接的密码<br>注:配置密码后,客户端连上服务器,需要先执行授权命令<br> auth 密码</p>
 
       
 
@@ -483,6 +469,10 @@ var _hmt = _hmt || [];
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Redis</a>
         		</li>
       		
 		</ul>
@@ -538,7 +528,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://blog.majiameng.com/uncategorized/php_interview_2017.html" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://blog.majiameng.com/redis.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -552,18 +542,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/uncategorized/vpn.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/php_interview_2017.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Liunx搭建VPN
+          2017最新PHP经典面试题总结
         
       </div>
     </a>
   
   
-    <a href="/uncategorized/redis.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">redis 使用</div>
+    <a href="/mysql_1.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Mysql基本操作命令</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -590,7 +580,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#2017最新PHP经典面试题总结"><span class="toc-number">1.</span> <span class="toc-text">2017最新PHP经典面试题总结</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、双引号和单引号的区别"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">1、双引号和单引号的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、常用的超全局变量-8个"><span class="toc-number">1.0.0.2.</span> <span class="toc-text">2、常用的超全局变量(8个)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、HTTP中POST、GET、PUT、DELETE方式的区别"><span class="toc-number">1.0.0.3.</span> <span class="toc-text">3、HTTP中POST、GET、PUT、DELETE方式的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#3-1表单中get和post提交方式的区别"><span class="toc-number">1.0.0.3.1.</span> <span class="toc-text">3.1表单中get和post提交方式的区别</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-2"><span class="toc-number">1.0.0.3.2.</span> <span class="toc-text">3.2</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4、PHP介绍"><span class="toc-number">1.0.0.4.</span> <span class="toc-text">4、PHP介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#PHP优势"><span class="toc-number">1.0.0.5.</span> <span class="toc-text">PHP优势</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#PHP认证级别"><span class="toc-number">1.0.0.6.</span> <span class="toc-text">PHP认证级别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6、echo、print-r、print、var-dump之间的区别"><span class="toc-number">1.0.0.7.</span> <span class="toc-text">6、echo、print_r、print、var_dump之间的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7、HTTP状态码"><span class="toc-number">1.0.0.8.</span> <span class="toc-text">7、HTTP状态码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8、什么是魔术引号"><span class="toc-number">1.0.0.9.</span> <span class="toc-text">8、什么是魔术引号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9、如何获取客户端的ip-要求取得一个int-和服务器ip的代码"><span class="toc-number">1.0.0.10.</span> <span class="toc-text">9、如何获取客户端的ip(要求取得一个int)和服务器ip的代码</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#10、使用那些工具进行版本控制"><span class="toc-number">1.0.0.10.1.</span> <span class="toc-text">10、使用那些工具进行版本控制</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#11、优化数据库的方法"><span class="toc-number">1.0.0.11.</span> <span class="toc-text">11、优化数据库的方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#12、是否使用过模板引擎？使用的模板引擎的名字是？"><span class="toc-number">1.0.0.12.</span> <span class="toc-text">12、是否使用过模板引擎？使用的模板引擎的名字是？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#13、对于大流量网站，采用什么方法来解决访问量的问题"><span class="toc-number">1.0.0.13.</span> <span class="toc-text">13、对于大流量网站，采用什么方法来解决访问量的问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#14、语句include和require的区别是什么？为避免多次包含同一文件，可以用-语句代替他们"><span class="toc-number">1.0.0.14.</span> <span class="toc-text">14、语句include和require的区别是什么？为避免多次包含同一文件，可以用(?)语句代替他们</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#15、谈谈mvc的认识"><span class="toc-number">1.0.0.15.</span> <span class="toc-text">15、谈谈mvc的认识</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#16、-说明php中传值与传引用的区别，并说明传值什么时候传引用？"><span class="toc-number">1.0.0.16.</span> <span class="toc-text">16、 说明php中传值与传引用的区别，并说明传值什么时候传引用？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#17、isset、empty、is-null的区别"><span class="toc-number">1.0.0.17.</span> <span class="toc-text">17、isset、empty、is_null的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#18、前端调试的工具"><span class="toc-number">1.0.0.18.</span> <span class="toc-text">18、前端调试的工具</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#19-简单描述mysql中，索引，主键，唯一索引，联合索引的区别，对数据库的性能有什么影响（从读写两方面）（新浪网技术部）"><span class="toc-number">1.0.0.19.</span> <span class="toc-text">19. 简单描述mysql中，索引，主键，唯一索引，联合索引的区别，对数据库的性能有什么影响（从读写两方面）（新浪网技术部）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#20-数据库中的事务是什么"><span class="toc-number">1.0.0.20.</span> <span class="toc-text">20.数据库中的事务是什么?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#21-了解XSS攻击吗？如何防止？"><span class="toc-number">1.0.0.21.</span> <span class="toc-text">21.了解XSS攻击吗？如何防止？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#22-SQL注入漏洞产生的原因？如何防止？"><span class="toc-number">1.0.0.22.</span> <span class="toc-text">22.SQL注入漏洞产生的原因？如何防止？</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#防止SQL注入的方式："><span class="toc-number">1.0.0.22.1.</span> <span class="toc-text">防止SQL注入的方式：</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#23-PHP网站的主要攻击方式有哪些？"><span class="toc-number">1.0.0.23.</span> <span class="toc-text">23.PHP网站的主要攻击方式有哪些？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#24、框架中什么是单一入口和多入口-，-单一入口的优缺点？"><span class="toc-number">1.0.0.24.</span> <span class="toc-text">24、框架中什么是单一入口和多入口 ， 单一入口的优缺点？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#25、-对于关系型数据库而言，索引是相当重要的概念，请回答有关索引的几个问题："><span class="toc-number">1.0.0.25.</span> <span class="toc-text">25、 对于关系型数据库而言，索引是相当重要的概念，请回答有关索引的几个问题：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#a-、索引的目的是什么？"><span class="toc-number">1.0.0.25.1.</span> <span class="toc-text">a)、索引的目的是什么？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#b-、索引对数据库系统的负面影响是什么？"><span class="toc-number">1.0.0.25.2.</span> <span class="toc-text">b)、索引对数据库系统的负面影响是什么？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#c-、为数据表建立索引的原则有哪些？"><span class="toc-number">1.0.0.25.3.</span> <span class="toc-text">c)、为数据表建立索引的原则有哪些？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#d-、-什么情况下不宜建立索引？"><span class="toc-number">1.0.0.25.4.</span> <span class="toc-text">d)、 什么情况下不宜建立索引？</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#26、-简述在MySQL数据库中MyISAM和InnoDB的区别"><span class="toc-number">1.0.0.26.</span> <span class="toc-text">26、 简述在MySQL数据库中MyISAM和InnoDB的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#27、-解释MySQL外连接、内连接与自连接的区别"><span class="toc-number">1.0.0.27.</span> <span class="toc-text">27、 解释MySQL外连接、内连接与自连接的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#28、-写出三种以上MySQL数据库存储引擎的名称（提示：不区分大小写）"><span class="toc-number">1.0.0.28.</span> <span class="toc-text">28、 写出三种以上MySQL数据库存储引擎的名称（提示：不区分大小写）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#29、-什么是面向对象？主要特征是什么？几大原则是什么？"><span class="toc-number">1.0.0.29.</span> <span class="toc-text">29、 什么是面向对象？主要特征是什么？几大原则是什么？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#30、什么是静态路由，其特点是什么-什么是动态路由，其特点是什么"><span class="toc-number">1.0.0.30.</span> <span class="toc-text">30、什么是静态路由，其特点是什么?什么是动态路由，其特点是什么?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#31、使用过-Memcache-缓存吗，如果使用过，能够简单的描述一下它的工作原理吗？"><span class="toc-number">1.0.0.31.</span> <span class="toc-text">31、使用过 Memcache 缓存吗，如果使用过，能够简单的描述一下它的工作原理吗？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#32-列举流行的-Ajax-框架？说明-Ajax-实现原理是什么及-json-在-Ajax-中起什么作用？"><span class="toc-number">1.0.0.32.</span> <span class="toc-text">32. 列举流行的 Ajax 框架？说明 Ajax 实现原理是什么及 json 在 Ajax 中起什么作用？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#33、Myql中的事务回滚机制概述"><span class="toc-number">1.0.0.33.</span> <span class="toc-text">33、Myql中的事务回滚机制概述</span></a></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#redis是什么"><span class="toc-number">1.</span> <span class="toc-text">redis是什么:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#redis和memcached相比-的独特之处"><span class="toc-number">2.</span> <span class="toc-text">redis和memcached相比,的独特之处:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Redis下载安装"><span class="toc-number">3.</span> <span class="toc-text">Redis下载安装</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Memory"><span class="toc-number"></span> <span class="toc-text">Memory</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Replication"><span class="toc-number"></span> <span class="toc-text">Replication</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Persistence"><span class="toc-number"></span> <span class="toc-text">Persistence</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Redis-key-设计技巧"><span class="toc-number">1.</span> <span class="toc-text">Redis key 设计技巧</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -607,11 +597,11 @@ var _hmt = _hmt || [];
 
   
   <!--表情-->
-<div style="margin-left: 40px;"><div id="cyEmoji" role="cylabs" data-use="emoji" sid="php_interview_2017"></div></div>
+<div style="margin-left: 40px;"><div id="cyEmoji" role="cylabs" data-use="emoji" sid="redis"></div></div>
 <script type="text/javascript" charset="utf-8" src="https://changyan.itc.cn/js/lib/jquery.js"></script>
 <script type="text/javascript" charset="utf-8" src="https://changyan.sohu.com/js/changyan.labs.https.js?appid=cytd8GjEU"></script>
 <!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="php_interview_2017" ></div>
+<div id="SOHUCS" sid="redis" ></div>
 <script type="text/javascript">
     (function(){
         var appid = 'cytd8GjEU';

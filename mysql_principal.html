@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://blog.majiameng.com">
-  <title>Hexo博客收录百度和谷歌! | 佳萌博客</title>
+  <title>mysql主从复制 | 佳萌博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="##Hexo博客收录百度和谷歌-基于Next主题（应该是比较全面的一篇教程） 我们的博客做出来当然是希望别人来访问，但是Github和Coding都做了防爬虫处理，这样子我们博客可能就无法被搜索引擎收录，需要我们手动提交！ 本教程基于Hexo博客框架，使用Next主题（其他主题举一反三），博主本人已绑定自己的域名（在下文会点明区别，没有太大影响）；很多过程使用了Flow.ci进行自动构建！">
-<meta name="keywords" content="Hexo,收录">
+  <meta name="description" content="卸载mysql服务相关 yum -y remove mysql* 1. 安装mysql 服务器端： yum install mysql-server yum install mysql-devel 2. 安装mysql客户端： yum install mysql">
+<meta name="keywords" content="Mysql">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo博客收录百度和谷歌!">
-<meta property="og:url" content="https://blog.majiameng.com/uncategorized/hexo_zhanzhang.html">
+<meta property="og:title" content="mysql主从复制">
+<meta property="og:url" content="https://blog.majiameng.com/mysql_principal.html">
 <meta property="og:site_name" content="佳萌博客">
-<meta property="og:description" content="##Hexo博客收录百度和谷歌-基于Next主题（应该是比较全面的一篇教程） 我们的博客做出来当然是希望别人来访问，但是Github和Coding都做了防爬虫处理，这样子我们博客可能就无法被搜索引擎收录，需要我们手动提交！ 本教程基于Hexo博客框架，使用Next主题（其他主题举一反三），博主本人已绑定自己的域名（在下文会点明区别，没有太大影响）；很多过程使用了Flow.ci进行自动构建！">
+<meta property="og:description" content="卸载mysql服务相关 yum -y remove mysql* 1. 安装mysql 服务器端： yum install mysql-server yum install mysql-devel 2. 安装mysql客户端： yum install mysql">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-18T01:17:53.000Z">
+<meta property="og:updated_time" content="2017-09-20T11:18:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo博客收录百度和谷歌!">
-<meta name="twitter:description" content="##Hexo博客收录百度和谷歌-基于Next主题（应该是比较全面的一篇教程） 我们的博客做出来当然是希望别人来访问，但是Github和Coding都做了防爬虫处理，这样子我们博客可能就无法被搜索引擎收录，需要我们手动提交！ 本教程基于Hexo博客框架，使用Next主题（其他主题举一反三），博主本人已绑定自己的域名（在下文会点明区别，没有太大影响）；很多过程使用了Flow.ci进行自动构建！">
+<meta name="twitter:title" content="mysql主从复制">
+<meta name="twitter:description" content="卸载mysql服务相关 yum -y remove mysql* 1. 安装mysql 服务器端： yum install mysql-server yum install mysql-devel 2. 安装mysql客户端： yum install mysql">
   
     <link rel="alternative" href="/atom.xml" title="佳萌博客" type="application/atom+xml">
   
@@ -172,109 +172,86 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hexo_zhanzhang" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-mysql_principal" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hexo博客收录百度和谷歌!
+      mysql主从复制
     </h1>
   
 
         
-        <a href="/uncategorized/hexo_zhanzhang.html" class="archive-article-date">
-  	<time datetime="2016-03-14T14:38:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-03-14</time>
+        <a href="/mysql_principal.html" class="archive-article-date">
+  	<time datetime="2017-05-21T02:55:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##Hexo博客收录百度和谷歌-基于Next主题（应该是比较全面的一篇教程）</p>
-<p>我们的博客做出来当然是希望别人来访问，但是Github和Coding都做了防爬虫处理，这样子我们博客可能就无法被搜索引擎收录，需要我们手动提交！</p>
-<p>本教程基于Hexo博客框架，使用Next主题（其他主题举一反三），博主本人已绑定自己的域名（在下文会点明区别，没有太大影响）；很多过程使用了Flow.ci进行自动构建！<br><a id="more"></a></p>
-<p>原创文章，转载请注明出处<br>你需要准备的</p>
-<p>1.百度站长账号；</p>
-<p>没有的申请，很简单，跟百度分析一起使用挺好，不过分析的话还是推荐CNZZ，不过都挂上没有坏处！</p>
-<p>2.谷歌账号：</p>
-<p>谷歌账号能够享受所有的谷歌服务，当然也包括网站搜索分析服务！不过需要提前准备梯子！</p>
-<p>3.Flow.ci用于自动构建网站地图（推荐，非必须）：</p>
-<p>可参考这篇文章&gt;&gt;配置自动构建，本文会在这基础之上进行提高！</p>
-<p>4.最重要的是你有自己的博客！</p>
-<p>验证你的站点是否被收录：</p>
-<p>一般情况下你的站点是不能被搜到的！你可以用site验证：</p>
-<p>验证百度：</p>
-<p>site:www.oneonecity.xyz域名换成你自己的，百度还支持site搜索么？如果没有找到你的博客说明没有被收录！</p>
-<p>验证谷歌：</p>
-<p>site:www.oneonecity.xyz域名换成你自己的，谷歌是一定支持的，不过你需要梯子！如果没有找到你的博客说明没有被收录！</p>
-<p>收录百度</p>
-<p>措辞是不是有问题？就是你的网站被百度搜索收录！</p>
-<p>1.手动提交：</p>
-<p>你可以手动提交你的站点到百度搜索，点这里&gt;&gt;，当然这种方法很麻烦，因为如果想让每一篇文章都能被搜索到就需要把所有的页面链接进行提交！</p>
-<p>2.验证网站所有权：</p>
-<p>通过验证之后百度会认为你是网站所有者，然后能做诸如自动推送、手动推送的高级功能！<br>点这里&gt;&gt;，输入你的博客首页地址（可以是自己的域名也可以是Coding或者Github的Pages页面地址！），然后点击下一步！</p>
-<p>3.进行验证：</p>
-<p>这里有三种方法：文件验证、HTML标签验证和CNAME验证。下面分别说一下方法和适用范围！</p>
-<p>（1）文件验证：</p>
-<p>百度文件验证</p>
-<p>a.你需要做的是下载验证文件：是一个html文件，里面存放着你的token信息！<br>b.然后将这个文件放在你的主题的根目录下，之所以不放在source是因为Next主题在构建过程中会在验证文件中加入很多东西影响验证！<br>c.接下来就是编译部署你的博客hexo g -d，如果你已经实现自动化部署的话只需要push你的原文件：</p>
-<p>git add .</p>
-<p>git commit -am “添加验证文件”</p>
-<p>git push origin master<br>关于自动部署，请移步这里&gt;&gt;<br>d.点击点击这里进行验证，其实是你的博客首页加了验证文件路径；<br>e.最后点击完成验证如果顺利的话，是能够完成！这种方法比较麻烦，不是很推荐！</p>
-<p>(2)HTML标签验证：</p>
-<p>这种方法需要根据不同的主题进行配置，博主使用的Next主题，其他主题可以自己摸索，原理一样：都是将HTML验证标签加入到博客每个页面的head里面！注意是红框中完整的标签，而不是一部分！</p>
-<p>百度文件验证</p>
-<p>第一步：将该标签（红框中完整的，并非只是后面的token）；<br>第二步：在Next主题配置文件（不是博客配置文件）开启提交百度的选项：</p>
-<p>百度文件验证</p>
-<h1 id="此处设置成true之后，将themes-next-layout-partials-head-swig"><a href="#此处设置成true之后，将themes-next-layout-partials-head-swig" class="headerlink" title="此处设置成true之后，将themes/next/layout/_partials/head.swig"></a>此处设置成true之后，将themes/next/layout/_partials/head.swig</h1><h1 id="下把默认的百度和-google-验证值替换为搜索引擎为你提供的完整HTML标签即可"><a href="#下把默认的百度和-google-验证值替换为搜索引擎为你提供的完整HTML标签即可" class="headerlink" title="下把默认的百度和 google 验证值替换为搜索引擎为你提供的完整HTML标签即可"></a>下把默认的百度和 google 验证值替换为搜索引擎为你提供的完整HTML标签即可</h1><p>google_site_verification: true<br>baidu_site_verification: true<br>这里的名字google_site_verification:可以随便起，不过需要与后面的themes/next/layout/_partials/head.swig中相对应，默认都是下划线！<br>第三步：修改themes/next/layout/_partials/head.swig，添加从百度获取的完整的HTML验证标签，注意名字的对应！</p>
-
-<p>第四步：同文件验证的c.步骤：编译部署你的博客！进入你的博客首页或者任意文章，按F12，如果再head标签中看到了验证标签，就可以了！</p>
-<p>百度文件验证</p>
-<p>第五步：点击验证按钮！，如果过程没问题则会验证成功！</p>
-<p>（3）CNAME验证，如果你绑定了自己的域名，这种方式是最简单的！</p>
-<p>第一步：你要有自己的域名并使用CNAME解析，如果没有请移步这里&gt;&gt;<br>第二步：如图添加一条新的CNAME解析：记录类型是CNAME，主机记录是你的token，，记录值是zz.baidu.com，其他默认：</p>
-<p>百度文件验证</p>
-<p>第三步：点击验证！这一种方法最简单，推荐！</p>
-<p>收录谷歌：</p>
-<p>HTML 标签验证，参考百度验证！</p>
-
-<p>生成站点地图：</p>
-<p>这一步很重要，通过构建网站地图能够让搜索引擎更好的抓取你的网站内容！</p>
-<p>1.安装sitmap插件：</p>
-<p>cnpm install hexo-generator-sitemap –save<br>cnpm install hexo-generator-baidu-sitemap –save<br>如果你搭建了基于Flow.ci的自动构建，请修改Flow.ci的自定义脚本：</p>
-<p>2.修改博客配置文件：</p>
-<p>a.修改URL为你博客首页，这样是为了保证生成的sitemap.xml文件中地址正确：</p>
-<p>百度文件验证</p>
-<p>b.指定生成文件名及路径，在配置文件最后添加一下代码：</p>
-<h1 id="自动生成sitemap"><a href="#自动生成sitemap" class="headerlink" title="自动生成sitemap"></a>自动生成sitemap</h1><p>sitemap:<br>  path: sitemap.xml<br>baidusitemap:<br>  path: baidusitemap.xml</p>
-<p>c.执行构建hexo g，正常情况下会在source文件夹下看到多出两个文件：sitemap.xml和baidusitemap.xml，这就是sitemap文件。</p>
-<h4 id="1-如有报错"><a href="#1-如有报错" class="headerlink" title="(1.如有报错"></a>(1.如有报错</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ERROR Plugin load failed: hexo-generator-baidu-sitemap</div><div class="line">SyntaxError: Unexpected token : while compiling ejs</div></pre></td></tr></table></figure>
-<p>请执行一下命令</p>
-<p>Node.js：SyntaxError：意外的令牌：编译ejs时</p>
-<p>我已经使用包管理器安装了ejs，它正在使用带有过滤器（:)的普通脚本。下载的EJS版本是最新版本 - 2.3.3，节点版本为0.12.4。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cnpm  install ejs</div></pre></td></tr></table></figure></p>
-<p>当前版本的ejs（v2.3.3）不支持从版本2中删除的过滤器。如果要使用过滤器，则需要安装1.x版本：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cnpm  install ejs@1.x</div></pre></td></tr></table></figure></p>
-<h4 id="2-如有报错"><a href="#2-如有报错" class="headerlink" title="(2.如有报错"></a>(2.如有报错</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ERROR Plugin load failed: hexo-generator-json-content</div><div class="line">Error: Cannot find module &apos;underscore&apos;</div></pre></td></tr></table></figure>
-<p>执行以下命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cnpm i hexo-generator-json-content --save</div></pre></td></tr></table></figure></p>
-<p>此后等待搜索引擎抓取或者配置自动推送或者主动推送！</p>
-<h2 id="自动推送"><a href="#自动推送" class="headerlink" title="自动推送"></a>自动推送</h2><p>自动推送sitemap到百度：</p>
-<p>基于Next主题，其他主题原理一样：</p>
-<p>修改主题配置文件</p>
-<p>将baidu_push状态改成true：</p>
-<p>＃ Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO<br>baidu_push: true<br>修改baidu_push.swig:</p>
-<p>位置是themes\next\layout_scripts\baidu_push.swig，添加以下代码（代码来自百度自动推送）：</p>
-
-<p>这样子的话每次访问博客中的页面会自动向百度提交。</p>
-<p>提交Google站点地图：</p>
-<p>添加/测试站点地图</p>
-<p>点此&gt;&gt;进入Google Search Console控制台，需要翻墙。<br>点击你的站点，如果没有请先添加站点；<br>然后点击控制台–&gt;抓取–&gt;站点地图，点击右上角添加/测试站点地图按钮，将你的sitemap.xml提交测试，测试成功之后重复该步骤进行添加！</p>
-<h2 id="手动推送"><a href="#手动推送" class="headerlink" title="手动推送"></a>手动推送</h2><p>hexo-baidu-url-submit</p>
-<p>首先，在Hexo根目录下，安装本插件：<br>cnpm install hexo-baidu-url-submit –save</p>
-<p>谷歌sitemap</p>
-<p>帮助文档&gt;&gt;</p>
-<p>主动推送到百度：</p>
-<p>该过程配合Flow.ci实现起来很方便，单独开篇，点此跳转&gt;&gt;<br>任何问题，欢迎讨论！</p>
+        <p>卸载mysql服务相关</p>
+<p>yum -y remove mysql*</p>
+<p>1. 安装mysql 服务器端：</p>
+<p>yum install mysql-server</p>
+<p>yum install mysql-devel</p>
+<p>2. 安装mysql客户端：</p>
+<p>yum install mysql</p>
+<a id="more"></a>
+<p>3. 启动mysql服务：</p>
+<p>service mysqld start或者/etc/init.d/mysqld start</p>
+<p>停止：</p>
+<p>service mysqld stop</p>
+<p>重启：</p>
+<p>service mysqld restart</p>
+<p>4. 创建root管理员：</p>
+<p>mysql -u root password 123456</p>
+<p>5.登陆</p>
+<p>mysql -u root -p123456</p>
+<p>mysql服务器的主从配置，这样可以实现读写分离，也可以在主库挂掉后从备用库中恢复</p>
+<p>需要两台机器，安装mysql，两台机器要在相通的局域网内</p>
+<p>主机A: 192.168.1.100</p>
+<p>从机B:192.168.1.101</p>
+<p>可以有多台从机</p>
+<p>1、先登录主机 A</p>
+<p>mysql&gt;GRANT REPLICATION SLAVE ON <em>.</em> TO ‘backup’@’192.168.1.101‘ IDENTIFIED BY ‘123456’;</p>
+<p>赋予从机权限，有多台丛机，就执行多次</p>
+<p>2、 打开主机A的my.cnf，输入</p>
+<p>server-id = 1 #主机标示，整数</p>
+<p>log_bin = /var/log/mysql/mysql-bin.log #确保此文件可写</p>
+<p>read-only =0 #主机，读写都可以</p>
+<p>binlog-do-db =test #需要备份数据，多个写多行</p>
+<p>binlog-ignore-db =mysql #不需要备份的数据库，多个写多行</p>
+<p>3、打开从机B的my.cnf，输入</p>
+<p>server-id = 2</p>
+<p>log_bin = /var/log/mysql/mysql-bin.log</p>
+<p>master-host =192.168.1.100</p>
+<p>master-user =backup</p>
+<p>master-pass =123456</p>
+<p>master-port =3306</p>
+<p>master-connect-retry=60 #如果从服务器发现主服务器断掉，重新连接的时间差(秒)</p>
+<p>replicate-do-db =test #只复制某个库</p>
+<p>replicate-ignore-db=mysql #不复制某个库</p>
+<p>4、同步数据库</p>
+<p>不用太费事，只把主从库都启动即可自动同步，如果不嫌麻烦的话可以把主库的内容导出成SQL，然后在从库中运行一遍</p>
+<p>5、先重启主机A的mysql，再重启从机B的mysql</p>
+<p>6、验证</p>
+<p>在主机A中，mysql&gt;show master status\G;</p>
+<p>在从机B中，mysql&gt;show slave status\G;</p>
+<p>能看到大致这些内容</p>
+<p>File: mysql-bin.000001</p>
+<p>Position: 1374</p>
+<p>Binlog_Do_DB: test</p>
+<p>Binlog_Ignore_DB: mysql</p>
+<p>可以在主机A中，做一些INSERT, UPDATE, DELETE 操作，看看主机B中，是否已经被修改</p>
+<p>GRANT REPLICATION SLAVE,RELOAD,SUPER ON <em>.</em> TO mysql_backup@’*’ IDENTIFIED BY ‘123456’;</p>
+<p>CHANGE MASTER TO master_host = ‘127.0.0.1’,</p>
+<p>master_user = ‘mysql_backup’,</p>
+<p>master_password = ‘123456’,</p>
+<p>master_log_file = ‘mysql-bin.000001’,</p>
+<p>master_log_pos = 343;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line"></div><div class="line">    listen 80;</div><div class="line">    </div><div class="line">    server_name _;</div><div class="line">    </div><div class="line">    access_log logs/likang.default.access.log main;</div><div class="line">    </div><div class="line">    error_log logs/error.log error;</div><div class="line">    </div><div class="line">    root /var/www/html/likang/default;</div><div class="line">    </div><div class="line">    location / &#123;</div><div class="line">    </div><div class="line">        index index.html index.htm index.php;</div><div class="line">        </div><div class="line">        if (!-e $request_filename) &#123;</div><div class="line">        </div><div class="line">            #rewrite . /index.php last;</div><div class="line">        </div><div class="line">        &#125;</div><div class="line">    </div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    location ~ \.php$ &#123;</div><div class="line">    </div><div class="line">        include fastcgi_params;</div><div class="line">        </div><div class="line">        fastcgi_param SCRIPT_FILENAME /var/www/html/likang/default/$fastcgi_script_name;</div><div class="line">        </div><div class="line">        fastcgi_pass 127.0.0.1:9000;</div><div class="line">        </div><div class="line">        fastcgi_index index.php;</div><div class="line">    </div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
       
 
@@ -319,11 +296,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">收录</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Mysql</a>
         		</li>
       		
 		</ul>
@@ -379,7 +352,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://blog.majiameng.com/uncategorized/hexo_zhanzhang.html" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://blog.majiameng.com/mysql_principal.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -393,18 +366,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/uncategorized/first.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/mysql_proxy.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          用markdown写下你的第一个md文档
+          mysql-proxy实现读写分离
         
       </div>
     </a>
   
   
-    <a href="/uncategorized/hexo_github.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hexo安装和配置到GitHub</div>
+    <a href="/vpn.sh.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Liunx搭建VPN shell 脚本</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -431,7 +404,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#此处设置成true之后，将themes-next-layout-partials-head-swig"><span class="toc-number">1.</span> <span class="toc-text">此处设置成true之后，将themes/next/layout/_partials/head.swig</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#下把默认的百度和-google-验证值替换为搜索引擎为你提供的完整HTML标签即可"><span class="toc-number">2.</span> <span class="toc-text">下把默认的百度和 google 验证值替换为搜索引擎为你提供的完整HTML标签即可</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#自动生成sitemap"><span class="toc-number">3.</span> <span class="toc-text">自动生成sitemap</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-如有报错"><span class="toc-number">3.0.0.1.</span> <span class="toc-text">(1.如有报错</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-如有报错"><span class="toc-number">3.0.0.2.</span> <span class="toc-text">(2.如有报错</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#自动推送"><span class="toc-number">3.1.</span> <span class="toc-text">自动推送</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#手动推送"><span class="toc-number">3.2.</span> <span class="toc-text">手动推送</span></a></li></ol></li></ol>
+                    目录，不存在的…
                     </div>
                 </span>
             </div>
@@ -448,11 +421,11 @@ var _hmt = _hmt || [];
 
   
   <!--表情-->
-<div style="margin-left: 40px;"><div id="cyEmoji" role="cylabs" data-use="emoji" sid="hexo_zhanzhang"></div></div>
+<div style="margin-left: 40px;"><div id="cyEmoji" role="cylabs" data-use="emoji" sid="mysql_principal"></div></div>
 <script type="text/javascript" charset="utf-8" src="https://changyan.itc.cn/js/lib/jquery.js"></script>
 <script type="text/javascript" charset="utf-8" src="https://changyan.sohu.com/js/changyan.labs.https.js?appid=cytd8GjEU"></script>
 <!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="hexo_zhanzhang" ></div>
+<div id="SOHUCS" sid="mysql_principal" ></div>
 <script type="text/javascript">
     (function(){
         var appid = 'cytd8GjEU';
