@@ -4,25 +4,8 @@
 
     
   <url>
-    <loc>https://blog.majiameng.com/hexo_github.html</loc>
-    <lastmod>2017-09-29T01:45:14.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hexo安装和配置到GitHub</title>
-        <pubTime>2016-02-14T02:40:00.000Z</pubTime>
-        
-        <tag>Hexo</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://blog.majiameng.com/hexo.html</loc>
-    <lastmod>2017-09-29T01:38:48.000Z</lastmod>
+    <lastmod>2017-09-29T01:48:10.000Z</lastmod>
     <data>
         <display>
         <title>教你怎么用 Hexo!</title>
@@ -38,8 +21,25 @@
 
     
   <url>
+    <loc>https://blog.majiameng.com/hexo_github.html</loc>
+    <lastmod>2017-09-29T01:48:10.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo安装和配置到GitHub</title>
+        <pubTime>2016-02-14T02:40:00.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://blog.majiameng.com/ffmpeg.html</loc>
-    <lastmod>2017-09-27T01:56:26.000Z</lastmod>
+    <lastmod>2017-09-29T01:46:03.000Z</lastmod>
     <data>
         <display>
         <title>ffmpeg-php扩展</title>
