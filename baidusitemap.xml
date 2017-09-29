@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>https://blog.majiameng.com/hexo.html</loc>
-    <lastmod>2017-09-29T01:48:10.000Z</lastmod>
+    <loc>https://blog.majiameng.com/hexo_github.html</loc>
+    <lastmod>2017-09-29T01:50:51.000Z</lastmod>
     <data>
         <display>
-        <title>教你怎么用 Hexo!</title>
-        <pubTime>2016-02-14T00:40:00.000Z</pubTime>
+        <title>Hexo安装和配置到GitHub</title>
+        <pubTime>2016-02-14T02:40:00.000Z</pubTime>
         
         <tag>Hexo</tag>
          
@@ -21,12 +21,12 @@
 
     
   <url>
-    <loc>https://blog.majiameng.com/hexo_github.html</loc>
+    <loc>https://blog.majiameng.com/hexo.html</loc>
     <lastmod>2017-09-29T01:48:10.000Z</lastmod>
     <data>
         <display>
-        <title>Hexo安装和配置到GitHub</title>
-        <pubTime>2016-02-14T02:40:00.000Z</pubTime>
+        <title>教你怎么用 Hexo!</title>
+        <pubTime>2016-02-14T00:40:00.000Z</pubTime>
         
         <tag>Hexo</tag>
          
