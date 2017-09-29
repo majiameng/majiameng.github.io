@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="佳萌博客">
 <meta property="og:description" content="Windows 下安装 Node.js1.打开网址 nodejs.org选择适合自己电脑位数的安装包 windows 32位 https://nodejs.org/dist/v6.11.3/node-v6.11.3-x86.msi windows 64位 https://nodejs.org/dist/v6.11.3/node-v6.11.3-x64.msi 2.下载完毕,安装…next,next">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-13T03:49:47.000Z">
+<meta property="og:updated_time" content="2017-09-29T01:58:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node 的安装">
 <meta name="twitter:description" content="Windows 下安装 Node.js1.打开网址 nodejs.org选择适合自己电脑位数的安装包 windows 32位 https://nodejs.org/dist/v6.11.3/node-v6.11.3-x86.msi windows 64位 https://nodejs.org/dist/v6.11.3/node-v6.11.3-x64.msi 2.下载完毕,安装…next,next">
@@ -209,7 +209,7 @@ var _hmt = _hmt || [];
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#set for nodejs</span></div><div class="line"><span class="built_in">export</span> NODE_HOME=/usr/<span class="built_in">local</span>/node/v6.11.3</div><div class="line"><span class="built_in">export</span> PATH=<span class="variable">$NODE_HOME</span>/bin:<span class="variable">$PATH</span></div></pre></td></tr></table></figure>
 <p>:wq保存并退出，编译<code>/etc/profile</code> 使配置生效<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  <span class="built_in">source</span> /etc/profile</div></pre></td></tr></table></figure></p>
 <p>验证是否安装配置成功<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ node -v</div></pre></td></tr></table></figure></p>
-<p>输出 v6.11.3 表示配置成功<br>npm模块安装路径<br>/usr/local/node/v6.11.3/lib/node_modules/</p>
+<p>输出 v6.11.3 表示配置成功<br>npm模块安装路径<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/local/node/v6.11.3/lib/node_modules/</div></pre></td></tr></table></figure></p>
 <p><code>注：Nodejs 官网提供了编译好的Linux二进制包，你也可以下载下来直接应用。</code></p>
 <h1 id="npm的使用"><a href="#npm的使用" class="headerlink" title="npm的使用"></a>npm的使用</h1><p>由于新版的nodejs已经集成了npm，所以之前npm也一并安装好了。同样可以通过输入 “npm -v” 来测试是否成功安装。命令如下，出现版本提示表示安装成功:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ npm -v</div><div class="line">2.3.0</div></pre></td></tr></table></figure></p>
 <p>如果你安装的是旧版本的 npm，可以很容易得通过 npm 命令来升级，命令如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install npm -g</div></pre></td></tr></table></figure></p>
