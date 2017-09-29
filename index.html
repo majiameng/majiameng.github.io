@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="https://blog.majiameng.com">
   <title>佳萌博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="佳萌日常整理的博文，希望对你们有用！">
+  <meta name="description" content="听说股市有人拿五万变成100万，亲眼见自己把10万变成五千.踏踏实实干事,成功离你不远了!佳萌日常整理的博文，希望对你们有用!">
 <meta property="og:type" content="website">
 <meta property="og:title" content="佳萌博客">
 <meta property="og:url" content="https://blog.majiameng.com/index.html">
 <meta property="og:site_name" content="佳萌博客">
-<meta property="og:description" content="佳萌日常整理的博文，希望对你们有用！">
+<meta property="og:description" content="听说股市有人拿五万变成100万，亲眼见自己把10万变成五千.踏踏实实干事,成功离你不远了!佳萌日常整理的博文，希望对你们有用!">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="佳萌博客">
-<meta name="twitter:description" content="佳萌日常整理的博文，希望对你们有用！">
+<meta name="twitter:description" content="听说股市有人拿五万变成100万，亲眼见自己把10万变成五千.踏踏实实干事,成功离你不远了!佳萌日常整理的博文，希望对你们有用!">
   
     <link rel="alternative" href="/atom.xml" title="佳萌博客" type="application/atom+xml">
   
@@ -75,7 +75,7 @@ var _hmt = _hmt || [];
 		  <h1 class="header-author"><a href="">马佳萌</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">佳萌博客</p>
+		<p class="header-subtitle">佳萌,博客</p>
 		
 
 		<nav class="header-menu">
@@ -129,7 +129,7 @@ var _hmt = _hmt || [];
 			  <h1 class="header-author js-header-author">马佳萌</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>佳萌博客<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>佳萌,博客<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -386,6 +386,111 @@ var _hmt = _hmt || [];
       
         <p class="article-more-link">
           <a class="article-more-a" href="/mysql_principal.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-ffmpeg" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/ffmpeg.html">ffmpeg-php扩展</a>
+    </h1>
+  
+
+        
+        <a href="/ffmpeg.html" class="archive-article-date">
+  	<time datetime="2017-05-16T15:11:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>php视频缩略图，较常用的是ffmpeg-php</p>
+<p>1： 安装 ffmpeg</p>
+<p>ffmpeg的下载链接  <a href="http://ffmpeg.org/download.html" target="_blank" rel="external">http://ffmpeg.org/download.html</a></p>
+<p>解压安装包</p>
+<p>tar -jxvf ffmpeg-x.x.tar.bz2</p>
+<p>进入目录</p>
+<p>cd ffmpeg-x.x</p>
+<p>编译安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./configure --enable-shared --disable-yasm  --prefix=/usr/local/ffmpeg  &amp;&amp; make &amp;&amp; make install</div></pre></td></tr></table></figure>
+<p>安装完成之后 执行 ffmpeg -version</p>
+<p>2 安装ffmpeg-php</p>
+<p>官方的下载链接</p>
+<p><a href="https://sourceforge.net/projects/ffmpeg-php/files/ffmpeg-php/" target="_blank" rel="external">https://sourceforge.net/projects/ffmpeg-php/files/ffmpeg-php/</a></p>
+<p>官方版本已经很久很久不更新了，我在centos 7 + php5.6&amp;php7.1   centos6.5+php5  试了都不行。在configure完 make的时候会报错。</p>
+<p>后来在github上找了一个版本。在centos7.2+php5.5.6 上编译安装成功 （centos7 + php7.1还是不行）</p>
+<p>地址：    git clone <a href="https://github.com/tony2001/ffmpeg-php.git" target="_blank" rel="external">https://github.com/tony2001/ffmpeg-php.git</a> </p>
+<p>也可以访问我的百度云盘进行下载</p>
+<p><a href="https://pan.baidu.com/s/1skQTVlj" target="_blank" rel="external">https://pan.baidu.com/s/1skQTVlj</a></p>
+<p>进入 ffmpeg-php目录 进行编译扩展</p>
+<p>/usr/local/php/bin/phpize   </p>
+<p>./configure –with-php-config=/usr/local/php/bin/php-config</p>
+<p>make &amp;&amp; make install</p>
+<p>注意（如果make之后出现错误，那就是ffmpeg-php版本的问题，别再折腾了，换版本吧（或者降低php版本试试））。</p>
+<p>在php的配置文件 php.ini中 添加  </p>
+<p>1<br>extension=ffmpeg.so<br>重启php。在 phpinfo()中查看有无ffmpeg信息。</p>
+<p>有的话就OK</p>
+<p>或者执行 </p>
+<p>1<br>/usr/local/php/bin/php -i |grep ffmpeg<br>　要是有输出的话OK</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Liunx</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/ffmpeg.html">展开全文 >></a>
         </p>
       
 
@@ -893,85 +998,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-first" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/first.html">用markdown写下你的第一个md文档</a>
-    </h1>
-  
-
-        
-        <a href="/first.html" class="archive-article-date">
-  	<time datetime="2016-03-20T01:32:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-03-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>markdown 这个词的来源难道是为了对应编写网页所用HTML（超文本标记语言，Hyper Text Markup Language）中的markup？^_^</p>
-</blockquote>
-<h2 id="markdown-是什么？"><a href="#markdown-是什么？" class="headerlink" title="markdown 是什么？"></a>markdown 是什么？</h2><p>同样是标记语言，但它相比HTML更加简单！一是体现在标记符的数量上，二是体现在标记符的书写上。HTML标记符号非常多，并且需要标记内容的开始和结束位置，而markdown只有四个基本的标记符号，只要在开始位置标记即可。</p>
-        
-          <a class="article-more-a" href="/first.html#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">markdown</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/first.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1103,6 +1129,10 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Liunx</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
              
@@ -1124,10 +1154,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Redis</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Liunx</a>
               </li>
             
             <div class="clearfix"></div>

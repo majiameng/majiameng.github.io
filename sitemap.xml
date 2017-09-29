@@ -2,14 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.majiameng.com/mysql_proxy.html</loc>
+    <loc>https://blog.majiameng.com/hexo_github.html</loc>
+    
+    <lastmod>2017-09-29T01:45:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.majiameng.com/hexo.html</loc>
+    
+    <lastmod>2017-09-29T01:38:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.majiameng.com/ffmpeg.html</loc>
+    
+    <lastmod>2017-09-27T01:56:26.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.majiameng.com/mysql_principal.html</loc>
     
     <lastmod>2017-09-20T11:18:33.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.majiameng.com/mysql_principal.html</loc>
+    <loc>https://blog.majiameng.com/mysql_proxy.html</loc>
     
     <lastmod>2017-09-20T11:18:33.000Z</lastmod>
     
@@ -72,13 +93,6 @@
   </url>
   
   <url>
-    <loc>https://blog.majiameng.com/hexo_github.html</loc>
-    
-    <lastmod>2017-09-13T07:40:20.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://blog.majiameng.com/nodejs.html</loc>
     
     <lastmod>2017-09-13T03:49:47.000Z</lastmod>
@@ -89,13 +103,6 @@
     <loc>https://blog.majiameng.com/first.html</loc>
     
     <lastmod>2017-09-12T09:56:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.majiameng.com/hexo.html</loc>
-    
-    <lastmod>2017-09-11T11:25:19.000Z</lastmod>
     
   </url>
   

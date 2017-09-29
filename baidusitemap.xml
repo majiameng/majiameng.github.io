@@ -4,14 +4,50 @@
 
     
   <url>
-    <loc>https://blog.majiameng.com/mysql_proxy.html</loc>
-    <lastmod>2017-09-20T11:18:33.000Z</lastmod>
+    <loc>https://blog.majiameng.com/hexo_github.html</loc>
+    <lastmod>2017-09-29T01:45:14.000Z</lastmod>
     <data>
         <display>
-        <title>mysql-proxy实现读写分离</title>
-        <pubTime>2017-05-22T12:12:44.000Z</pubTime>
+        <title>Hexo安装和配置到GitHub</title>
+        <pubTime>2016-02-14T02:40:00.000Z</pubTime>
         
-        <tag>Mysql</tag>
+        <tag>Hexo</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.majiameng.com/hexo.html</loc>
+    <lastmod>2017-09-29T01:38:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>教你怎么用 Hexo!</title>
+        <pubTime>2016-02-14T00:40:00.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.majiameng.com/ffmpeg.html</loc>
+    <lastmod>2017-09-27T01:56:26.000Z</lastmod>
+    <data>
+        <display>
+        <title>ffmpeg-php扩展</title>
+        <pubTime>2017-05-16T15:11:11.000Z</pubTime>
+        
+        <tag>PHP</tag>
+         
+        <tag>Liunx</tag>
          
          
            
@@ -27,6 +63,23 @@
         <display>
         <title>mysql主从复制</title>
         <pubTime>2017-05-21T02:55:14.000Z</pubTime>
+        
+        <tag>Mysql</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.majiameng.com/mysql_proxy.html</loc>
+    <lastmod>2017-09-20T11:18:33.000Z</lastmod>
+    <data>
+        <display>
+        <title>mysql-proxy实现读写分离</title>
+        <pubTime>2017-05-22T12:12:44.000Z</pubTime>
         
         <tag>Mysql</tag>
          
@@ -182,23 +235,6 @@
 
     
   <url>
-    <loc>https://blog.majiameng.com/hexo_github.html</loc>
-    <lastmod>2017-09-13T07:40:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hexo安装和配置到GitHub</title>
-        <pubTime>2016-02-14T02:40:00.000Z</pubTime>
-        
-        <tag>Hexo</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://blog.majiameng.com/nodejs.html</loc>
     <lastmod>2017-09-13T03:49:47.000Z</lastmod>
     <data>
@@ -224,23 +260,6 @@
         <pubTime>2016-03-20T01:32:00.000Z</pubTime>
         
         <tag>markdown</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.majiameng.com/hexo.html</loc>
-    <lastmod>2017-09-11T11:25:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>教你怎么用 Hexo!</title>
-        <pubTime>2016-02-14T00:40:00.000Z</pubTime>
-        
-        <tag>Hexo</tag>
          
          
            
