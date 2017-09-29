@@ -7,20 +7,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://blog.majiameng.com">
-  <title>ffmpeg-php扩展 | 佳萌博客</title>
+  <title>Composer 一步一步构建自己的 PHP 框架（一）——基础准备 | 佳萌博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="php视频缩略图，较常用的是ffmpeg-php1： 安装 ffmpeg ffmpeg的下载链接  http://ffmpeg.org/download.html 解压安装包 tar -jxvf ffmpeg-x.x.tar.bz2 进入目录 cd ffmpeg-x.x 编译安装 1./configure --enable-shared --disable-yasm  --prefix=/usr/">
-<meta name="keywords" content="Liunx,PHP">
+  <meta name="description" content="『Composer 一统天下的时代已经到来！』——白岩松  “一个时代结束了，另一个时代开始了。” Framework Interoperability Group（框架可互用性小组），简称 FIG，成立于 2009 年。FIG 最初由几位知名 PHP 框架开发者发起，在吸纳了许多优秀的大脑和强健的体魄后，提出了 PSR-0 到 PSR-4 五套 PHP 非官方规范：">
+<meta name="keywords" content="PHP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ffmpeg-php扩展">
-<meta property="og:url" content="https://blog.majiameng.com/ffmpeg.html">
+<meta property="og:title" content="Composer 一步一步构建自己的 PHP 框架（一）——基础准备">
+<meta property="og:url" content="https://blog.majiameng.com/meng1.html">
 <meta property="og:site_name" content="佳萌博客">
-<meta property="og:description" content="php视频缩略图，较常用的是ffmpeg-php1： 安装 ffmpeg ffmpeg的下载链接  http://ffmpeg.org/download.html 解压安装包 tar -jxvf ffmpeg-x.x.tar.bz2 进入目录 cd ffmpeg-x.x 编译安装 1./configure --enable-shared --disable-yasm  --prefix=/usr/">
+<meta property="og:description" content="『Composer 一统天下的时代已经到来！』——白岩松  “一个时代结束了，另一个时代开始了。” Framework Interoperability Group（框架可互用性小组），简称 FIG，成立于 2009 年。FIG 最初由几位知名 PHP 框架开发者发起，在吸纳了许多优秀的大脑和强健的体魄后，提出了 PSR-0 到 PSR-4 五套 PHP 非官方规范：">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-29T01:46:03.000Z">
+<meta property="og:image" content="http://jiamengimg.oss-cn-shanghai.aliyuncs.com/blog/meng1.png">
+<meta property="og:updated_time" content="2017-09-29T12:02:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ffmpeg-php扩展">
-<meta name="twitter:description" content="php视频缩略图，较常用的是ffmpeg-php1： 安装 ffmpeg ffmpeg的下载链接  http://ffmpeg.org/download.html 解压安装包 tar -jxvf ffmpeg-x.x.tar.bz2 进入目录 cd ffmpeg-x.x 编译安装 1./configure --enable-shared --disable-yasm  --prefix=/usr/">
+<meta name="twitter:title" content="Composer 一步一步构建自己的 PHP 框架（一）——基础准备">
+<meta name="twitter:description" content="『Composer 一统天下的时代已经到来！』——白岩松  “一个时代结束了，另一个时代开始了。” Framework Interoperability Group（框架可互用性小组），简称 FIG，成立于 2009 年。FIG 最初由几位知名 PHP 框架开发者发起，在吸纳了许多优秀的大脑和强健的体魄后，提出了 PSR-0 到 PSR-4 五套 PHP 非官方规范：">
+<meta name="twitter:image" content="http://jiamengimg.oss-cn-shanghai.aliyuncs.com/blog/meng1.png">
   
     <link rel="alternative" href="/atom.xml" title="佳萌博客" type="application/atom+xml">
   
@@ -169,53 +171,54 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-ffmpeg" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-meng1" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      ffmpeg-php扩展
+      Composer 一步一步构建自己的 PHP 框架（一）——基础准备
     </h1>
   
 
         
-        <a href="/ffmpeg.html" class="archive-article-date">
-  	<time datetime="2017-05-16T15:11:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-16</time>
+        <a href="/meng1.html" class="archive-article-date">
+  	<time datetime="2017-09-21T11:35:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="php视频缩略图，较常用的是ffmpeg-php"><a href="#php视频缩略图，较常用的是ffmpeg-php" class="headerlink" title="php视频缩略图，较常用的是ffmpeg-php"></a>php视频缩略图，较常用的是ffmpeg-php</h3><p>1： 安装 ffmpeg</p>
-<p>ffmpeg的下载链接  <a href="http://ffmpeg.org/download.html" target="_blank" rel="external">http://ffmpeg.org/download.html</a></p>
-<p>解压安装包</p>
-<p>tar -jxvf ffmpeg-x.x.tar.bz2</p>
-<p>进入目录</p>
-<p>cd ffmpeg-x.x</p>
-<p>编译安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./configure --enable-shared --disable-yasm  --prefix=/usr/local/ffmpeg  &amp;&amp; make &amp;&amp; make install</div></pre></td></tr></table></figure>
-<p>安装完成之后 执行 ffmpeg -version</p>
-<p>2 安装ffmpeg-php</p>
-<p>官方的下载链接</p>
-<p><a href="https://sourceforge.net/projects/ffmpeg-php/files/ffmpeg-php/" target="_blank" rel="external">https://sourceforge.net/projects/ffmpeg-php/files/ffmpeg-php/</a></p>
-<p>官方版本已经很久很久不更新了，我在centos 7 + php5.6&amp;php7.1   centos6.5+php5  试了都不行。在configure完 make的时候会报错。</p>
-<p>后来在github上找了一个版本。在centos7.2+php5.5.6 上编译安装成功 （centos7 + php7.1还是不行）</p>
-<p>地址：    git clone <a href="https://github.com/tony2001/ffmpeg-php.git" target="_blank" rel="external">https://github.com/tony2001/ffmpeg-php.git</a> </p>
-<p>也可以访问我的百度云盘进行下载</p>
-<p><a href="https://pan.baidu.com/s/1skQTVlj" target="_blank" rel="external">https://pan.baidu.com/s/1skQTVlj</a></p>
-<p>进入 ffmpeg-php目录 进行编译扩展</p>
-<p>/usr/local/php/bin/phpize   </p>
-<p>./configure –with-php-config=/usr/local/php/bin/php-config</p>
-<p>make &amp;&amp; make install</p>
-<p>注意（如果make之后出现错误，那就是ffmpeg-php版本的问题，别再折腾了，换版本吧（或者降低php版本试试））。</p>
-<p>在php的配置文件 php.ini中 添加  </p>
-<p>1<br>extension=ffmpeg.so<br>重启php。在 phpinfo()中查看有无ffmpeg信息。</p>
-<p>有的话就OK</p>
-<p>或者执行 </p>
-<p>1<br>/usr/local/php/bin/php -i |grep ffmpeg<br>　要是有输出的话OK</p>
+        <blockquote>
+<p>『Composer 一统天下的时代已经到来！』——白岩松</p>
+</blockquote>
+<p>“一个时代结束了，另一个时代开始了。”</p>
+<p>Framework Interoperability Group（框架可互用性小组），简称 FIG，成立于 2009 年。FIG 最初由几位知名 PHP 框架开发者发起，在吸纳了许多优秀的大脑和强健的体魄后，提出了 PSR-0 到 PSR-4 五套 PHP 非官方规范：</p>
+<a id="more"></a>
+<ol>
+<li><p>PSR-0 (Autoloading Standard) 自动加载标准</p>
+</li>
+<li><p>PSR-1 (Basic Coding Standard) 基础编码标准</p>
+</li>
+<li><p>PSR-2 (Coding Style Guide) 编码风格向导</p>
+</li>
+<li><p>PSR-3 (Logger Interface) 日志接口</p>
+</li>
+<li><p>PSR-4 (Improved Autoloading) 自动加载优化标准</p>
+</li>
+</ol>
+<p>之后，在此标准之上，Composer 横空出世！Composer 利用 PSR-0 和 PSR-4 以及 PHP5.3 的命名空间构造了一个繁荣的 PHP 生态系统。Composer 类似著名的 npm 和 RubyGems，给海量 PHP 包提供了一个异常方便的协作通道，Composer Hub 地址：<a href="https://packagist.org/。Composer" target="_blank" rel="external">https://packagist.org/。Composer</a> 中文网站：<a href="http://www.phpcomposer.com/。" target="_blank" rel="external">http://www.phpcomposer.com/。</a></p>
+<p>目前 PHP 界风头正劲的 Laravel 和 Symfony 均直接基于 Composer，大家耳熟能详著名框架 CI 和 Yii 的正开发版本 CodeIgniter 3 和 Yii 2 也都基于 Composer（更新：北京时间2014年10月13日 Yii 2 已经发布）。Composer 就是 PHP 框架的未来，有了它，让 CI 的路由和 Laravel 的 Eloquent ORM 协作就会变的非常简单。</p>
+<p>PHP 语言本身就带有强大的网络功能、文件管理功能和丰富的系统 API，Composer 也只是一段 PHP 脚本而已。可以使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">php composer.phar update</div></pre></td></tr></table></figure></p>
+<p>直接调用。</p>
+<p>在合适的地方新建一个文件夹，命名为 Meng（My First Framework based on Composer），在文件夹下新建文件 composer.json：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  &quot;require&quot;: &#123;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>命令行切换到 Meng 目录下，运行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">composer update</div></pre></td></tr></table></figure></p>
+<p>稍等片刻，会出现如下文件及文件夹：</p>
+<p><img src="http://jiamengimg.oss-cn-shanghai.aliyuncs.com/blog/meng1.png" alt="https://www.majiameng.com"></p>
+<p>如果以上内容成功出现，恭喜你，Composer 初始化成功！</p>
+<p>下一步：利用 Composer 一步一步构建自己的 PHP 框架（二）——构建路由</p>
 
       
 
@@ -259,10 +262,6 @@ var _hmt = _hmt || [];
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Liunx</a>
-        		</li>
-      		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
         		</li>
@@ -320,7 +319,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://blog.majiameng.com/ffmpeg.html" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://blog.majiameng.com/meng1.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -334,18 +333,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/mysql_principal.html" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          mysql主从复制
-        
-      </div>
-    </a>
   
-  
-    <a href="/vpn.sh.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Liunx搭建VPN shell 脚本</div>
+    <a href="/meng2.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">利用 Composer 一步一步构建自己的 PHP 框架（二）——构建路由</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -372,7 +362,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#php视频缩略图，较常用的是ffmpeg-php"><span class="toc-number">1.</span> <span class="toc-text">php视频缩略图，较常用的是ffmpeg-php</span></a></li></ol>
+                    目录，不存在的…
                     </div>
                 </span>
             </div>
@@ -389,11 +379,11 @@ var _hmt = _hmt || [];
 
   
   <!--表情-->
-<div style="margin-left: 40px;"><div id="cyEmoji" role="cylabs" data-use="emoji" sid="ffmpeg"></div></div>
+<div style="margin-left: 40px;"><div id="cyEmoji" role="cylabs" data-use="emoji" sid="meng1"></div></div>
 <script type="text/javascript" charset="utf-8" src="https://changyan.itc.cn/js/lib/jquery.js"></script>
 <script type="text/javascript" charset="utf-8" src="https://changyan.sohu.com/js/changyan.labs.https.js?appid=cytd8GjEU"></script>
 <!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="ffmpeg" ></div>
+<div id="SOHUCS" sid="meng1" ></div>
 <script type="text/javascript">
     (function(){
         var appid = 'cytd8GjEU';

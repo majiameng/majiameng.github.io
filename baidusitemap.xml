@@ -4,6 +4,40 @@
 
     
   <url>
+    <loc>https://blog.majiameng.com/meng2.html</loc>
+    <lastmod>2017-09-29T12:06:30.000Z</lastmod>
+    <data>
+        <display>
+        <title>利用 Composer 一步一步构建自己的 PHP 框架（二）——构建路由</title>
+        <pubTime>2017-09-21T11:35:24.000Z</pubTime>
+        
+        <tag>PHP</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.majiameng.com/meng1.html</loc>
+    <lastmod>2017-09-29T12:02:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>Composer 一步一步构建自己的 PHP 框架（一）——基础准备</title>
+        <pubTime>2017-09-21T11:35:24.000Z</pubTime>
+        
+        <tag>PHP</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://blog.majiameng.com/hexo_github.html</loc>
     <lastmod>2017-09-29T09:07:44.000Z</lastmod>
     <data>
@@ -81,26 +115,9 @@
         <title>ffmpeg-php扩展</title>
         <pubTime>2017-05-16T15:11:11.000Z</pubTime>
         
-        <tag>PHP</tag>
-         
         <tag>Liunx</tag>
          
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.majiameng.com/mysql_principal.html</loc>
-    <lastmod>2017-09-20T11:18:33.000Z</lastmod>
-    <data>
-        <display>
-        <title>mysql主从复制</title>
-        <pubTime>2017-05-21T02:55:14.000Z</pubTime>
-        
-        <tag>Mysql</tag>
+        <tag>PHP</tag>
          
          
            
@@ -116,6 +133,23 @@
         <display>
         <title>mysql-proxy实现读写分离</title>
         <pubTime>2017-05-22T12:12:44.000Z</pubTime>
+        
+        <tag>Mysql</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.majiameng.com/mysql_principal.html</loc>
+    <lastmod>2017-09-20T11:18:33.000Z</lastmod>
+    <data>
+        <display>
+        <title>mysql主从复制</title>
+        <pubTime>2017-05-21T02:55:14.000Z</pubTime>
         
         <tag>Mysql</tag>
          
