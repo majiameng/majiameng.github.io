@@ -115,26 +115,9 @@
         <title>ffmpeg-php扩展</title>
         <pubTime>2017-05-16T15:11:11.000Z</pubTime>
         
-        <tag>Liunx</tag>
-         
         <tag>PHP</tag>
          
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.majiameng.com/mysql_proxy.html</loc>
-    <lastmod>2017-09-20T11:18:33.000Z</lastmod>
-    <data>
-        <display>
-        <title>mysql-proxy实现读写分离</title>
-        <pubTime>2017-05-22T12:12:44.000Z</pubTime>
-        
-        <tag>Mysql</tag>
+        <tag>Liunx</tag>
          
          
            
@@ -150,6 +133,23 @@
         <display>
         <title>mysql主从复制</title>
         <pubTime>2017-05-21T02:55:14.000Z</pubTime>
+        
+        <tag>Mysql</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.majiameng.com/mysql_proxy.html</loc>
+    <lastmod>2017-09-20T11:18:33.000Z</lastmod>
+    <data>
+        <display>
+        <title>mysql-proxy实现读写分离</title>
+        <pubTime>2017-05-22T12:12:44.000Z</pubTime>
         
         <tag>Mysql</tag>
          
