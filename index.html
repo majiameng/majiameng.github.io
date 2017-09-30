@@ -520,6 +520,191 @@ var _hmt = _hmt || [];
 
 
   
+    <article id="post-meng4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/meng4.html">利用 Composer 一步一步构建自己的 PHP 框架（四）——构建路由</a>
+    </h1>
+  
+
+        
+        <a href="/meng4.html" class="archive-article-date">
+  	<time datetime="2017-04-22T15:31:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>未完,待续….</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/meng4.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-meng3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/meng3.html">利用 Composer 一步一步构建自己的 PHP 框架（二）——构建路由</a>
+    </h1>
+  
+
+        
+        <a href="/meng3.html" class="archive-article-date">
+  	<time datetime="2017-04-22T14:43:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="回顾"><a href="#回顾" class="headerlink" title="回顾"></a>回顾</h2><blockquote>
+<p>在上一篇教程中，我们使用 codingbean/macaw 这个 Composer 包构建了两条简单路由，第一条是响应 GET ‘/fuck’ 的，另一条会 hold 住所有请求。其实对 PHP 框架来说，有了路由就有了一切。所以接下来我们要做的事情就是让 meng 框架更加规范，更加丰满。<br>这就牵扯到了 PHP 框架另外的价值：确立开发规范以便于多人协作，使用 ORM、模板引擎 等工具以提高开发效率。</p>
+</blockquote>
+<h2 id="正式开始"><a href="#正式开始" class="headerlink" title="正式开始"></a>正式开始</h2><h3 id="规划文件夹"><a href="#规划文件夹" class="headerlink" title="规划文件夹"></a>规划文件夹</h3><p>新建 meng/app 文件夹，在 app 中创建 controllers、models、views 三个文件夹，开始正式开始踏上 MVC 的征程。</p>
+<p>（谁说我抄 Laravel 了，我抄的明明是 Rails :-D）</p>
+<h3 id="使用命名空间"><a href="#使用命名空间" class="headerlink" title="使用命名空间"></a>使用命名空间</h3><p>新建 controllers/BaseController.php 文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">/**</div><div class="line">* BaseController</div><div class="line">*/</div><div class="line">class BaseController</div><div class="line">&#123;</div><div class="line">  </div><div class="line">  public function __construct()</div><div class="line">  &#123;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>新建 controllers/IndexController.php 文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line"></div><div class="line">/**</div><div class="line">* IndexController</div><div class="line">*/</div><div class="line">class IndexController extends BaseController</div><div class="line">&#123;</div><div class="line">    public function index()</div><div class="line">    &#123;</div><div class="line">        echo &quot;&lt;h2&gt;Hello Word!!!! &lt;/h2&gt;&lt;br/&gt;&lt;h1&gt;Welcome to the meng framework! &lt;/h1&gt;&quot;;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>增加一条路由：<code> Macaw::get(‘’, ‘IndexController@index’);</code>，打开浏览器直接访问 <a href="http://127.0.0.1:81/，出现以下提示：" target="_blank" rel="external">http://127.0.0.1:81/，出现以下提示：</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Fatal error: Class &apos;IndexController&apos; not found in /Library/WebServer/Documents/wwwroot/meng/vendor/codingbean/macaw/Macaw.php on line 93</div></pre></td></tr></table></figure></p>
+<p>为什么没找到 IndexController 类？因为我们没有让他自动加载，修改 composer.json 为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  &quot;require&quot;: &#123;</div><div class="line">    &quot;codingbean/macaw&quot;: &quot;dev-master&quot;</div><div class="line">  &#125;,</div><div class="line">  &quot;autoload&quot;: &#123;</div><div class="line">    &quot;classmap&quot;: [</div><div class="line">      &quot;app/controllers&quot;,</div><div class="line">      &quot;app/models&quot;</div><div class="line">    ]</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>运行 composer dump-autoload，稍等片刻，刷新，你将看到以下内容（别忘了调节编码哦~）：</p>
+<p><img src="http://jiamengimg.oss-cn-shanghai.aliyuncs.com/blog/meng4.png" alt="https://www.majiameng.com"></p>
+<p>恭喜你，命名空间使用成功！</p>
+<p>连接数据库</p>
+<p>新建 models/Article.php 文件，内容为（数据库密码请自行更改）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">/**</div><div class="line">* Article Model</div><div class="line">*/</div><div class="line">class Article</div><div class="line">&#123;</div><div class="line">  public static function first()</div><div class="line">  &#123;</div><div class="line">    $connection = mysql_connect(&quot;localhost&quot;,&quot;root&quot;,&quot;password&quot;);</div><div class="line">    if (!$connection) &#123;</div><div class="line">      die(&apos;Could not connect: &apos; . mysql_error());</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    mysql_set_charset(&quot;UTF8&quot;, $connection);</div><div class="line"></div><div class="line">    mysql_select_db(&quot;meng&quot;, $connection);</div><div class="line"></div><div class="line">    $result = mysql_query(&quot;SELECT * FROM articles limit 0,1&quot;);</div><div class="line"></div><div class="line">    if ($row = mysql_fetch_array($result)) &#123;</div><div class="line">      echo &apos;&lt;h1&gt;&apos;.$row[&quot;title&quot;].&apos;&lt;/h1&gt;&apos;;</div><div class="line">      echo &apos;&lt;p&gt;&apos;.$row[&quot;content&quot;].&apos;&lt;/p&gt;&apos;;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    mysql_close($connection);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>修改 controllers/IndexController.php 文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line"></div><div class="line">/**</div><div class="line">* \IndexController</div><div class="line">*/</div><div class="line">class IndexController extends BaseController</div><div class="line">&#123;</div><div class="line">  </div><div class="line">  public function index()</div><div class="line">  &#123;</div><div class="line">    Article::first();</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>刷新，这时候会得到 Article 类未找到的信息，因为我们没有更新自动加载配置：</p>
+<p>composer dump-autoload<br>在等待的时间里，我们去建立数据库 meng，在里面建立表 articles，设计两个字段 title、content 用于记录信息，并填充进至少一条数据。你也可以在建立完成 meng 数据库以后运行以下 SQL 语句：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">DROP TABLE IF EXISTS `articles`;</div><div class="line"></div><div class="line">CREATE TABLE `articles` (</div><div class="line">  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,</div><div class="line">  `title` varchar(255) DEFAULT NULL,</div><div class="line">  `content` longtext,</div><div class="line">  PRIMARY KEY (`id`)</div><div class="line">) ENGINE=InnoDB DEFAULT CHARSET=utf8;</div><div class="line"></div><div class="line">LOCK TABLES `articles` WRITE;</div><div class="line">/*!40000 ALTER TABLE `articles` DISABLE KEYS */;</div><div class="line"></div><div class="line">INSERT INTO `articles` (`id`, `title`, `content`)</div><div class="line">VALUES</div><div class="line">	(1,&apos;我是标题&apos;,&apos;&lt;h3&gt;我是内容呀~~&lt;/h3&gt;&lt;p&gt;我真的是内容，不信算了，哼~ O(∩_∩)O&lt;/p&gt;&apos;),</div><div class="line">	(2,&apos;我是标题&apos;,&apos;&lt;h3&gt;我是内容呀~~&lt;/h3&gt;&lt;p&gt;我真的是内容，不信算了，哼~ O(∩_∩)O&lt;/p&gt;&apos;);</div><div class="line"></div><div class="line">/*!40000 ALTER TABLE `articles` ENABLE KEYS */;</div><div class="line">UNLOCK TABLES;</div></pre></td></tr></table></figure></p>
+<p>然后，刷新！你将看到以下页面：</p>
+<p>Image</p>
+<p>恭喜你！MVC 中的 M 和 C 都已经实现！接下来我们开始调用 V (视图)。</p>
+<p>调用视图</p>
+<p>修改 models/Article.php 为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">/**</div><div class="line">* Article Model</div><div class="line">*/</div><div class="line">class Article</div><div class="line">&#123;</div><div class="line">  public static function first()</div><div class="line">  &#123;</div><div class="line">    $connection = mysql_connect(&quot;127.0.0.1&quot;,&quot;root&quot;,&quot;root&quot;);</div><div class="line">    if (!$connection) &#123;</div><div class="line">      die(&apos;Could not connect: &apos; . mysql_error());</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    mysql_set_charset(&quot;UTF8&quot;, $connection);</div><div class="line"></div><div class="line">    mysql_select_db(&quot;meng&quot;, $connection);</div><div class="line"></div><div class="line">    $result = mysql_query(&quot;SELECT * FROM articles limit 0,1&quot;);</div><div class="line"></div><div class="line">    if ($row = mysql_fetch_array($result)) &#123;</div><div class="line">      return $row;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    mysql_close($connection);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>将包含查询结果的数组返回。修改 IndexController：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">/**</div><div class="line">* IndexController</div><div class="line">*/</div><div class="line">class IndexController extends BaseController</div><div class="line">&#123;</div><div class="line">  </div><div class="line">  public function index()</div><div class="line">  &#123;</div><div class="line">    $article = Article::first();</div><div class="line">    require dirname(__FILE__).&apos;/../views/home.php&apos;;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>保存，刷新，你将得到跟上面一模一样的页面，视图调用成功！</p>
+<p>几乎所有人都是通过学习某个框架来了解 MVC 的，这样可能框架用的很熟，一旦离了框架一个简单的页面都写不了，更不要说自己设计 MVC 架构了，其实这里面也没有那么多门道，原理非常清晰，我说说我的感悟：</p>
+<ul>
+<li><p>1.PHP 框架再牛逼，他也是 PHP，也要遵循 PHP 的运行原理和基本哲学。抓住这一点我们就能很容易地理解很多事情。</p>
+</li>
+<li><p>2.PHP 做的网站从逻辑上说，跟 php test.php 没有任何区别，都只是一段字符串作为参数传递给 PHP 解释器而已。无非就是复杂的网站会根据 URL 来调用需要运行的文件和代码，然后返回相应的结果。</p>
+</li>
+<li><p>3.无论我们看到的是 CodeIgniter 这样 180 个文件组成的“小框架”，还是 Laravel 这样加上 vendor 一共 3700 多个文件的 “大框架”，他们都会在每一个 URL 的驱动下，组装一段可以运行的字符串，传给 PHP 解释器，再把从 PHP 解释器返回的字符串传给访客的浏览器。</p>
+</li>
+<li><p>4.MVC 是一种逻辑架构，本质上是为了让人脑这样的超低 RAM 的计算机能够制造出远超人脑 RAM 的大型软件，其实 MVC 架构在 GUI 软件出现以前就已经成形，命令行输出也是视图嘛。</p>
+</li>
+<li><p>5.在 meng 里，一个 URL 驱动框架做的事情基本是这样的：入口文件 require 控制器，控制器 require 模型，模型和数据库交互得到数据返回给控制器，控制器再 require 视图，把数据填充进视图，返回给访客，流程结束。</p>
+</li>
+</ul>
+<p><a href="https://blog.majiameng.com/meng4.html">下一步：利用 Composer 一步一步构建自己的 PHP 框架（四）——使用 ORM</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/meng3.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-meng2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -813,167 +998,6 @@ var _hmt = _hmt || [];
       
         <p class="article-more-link">
           <a class="article-more-a" href="/vpn.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-php_interview_2017" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/php_interview_2017.html">2017最新PHP经典面试题总结</a>
-    </h1>
-  
-
-        
-        <a href="/php_interview_2017.html" class="archive-article-date">
-  	<time datetime="2017-03-11T12:33:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="2017最新PHP经典面试题总结"><a href="#2017最新PHP经典面试题总结" class="headerlink" title="2017最新PHP经典面试题总结"></a><a href="http://#" target="_blank" rel="external">2017最新PHP经典面试题总结</a></h1><h4 id="1、双引号和单引号的区别"><a href="#1、双引号和单引号的区别" class="headerlink" title="1、双引号和单引号的区别"></a>1、双引号和单引号的区别</h4><ul>
-<li>双引号解释变量，单引号不解释变量</li>
-<li>双引号里插入单引号，其中单引号里如果有变量的话，变量解释</li>
-<li>双引号的变量名后面必须要有一个非数字、字母、下划线的特殊字符，或者用{}讲变量括起来，否则会将变量名后面的部分当做一个整体，引起语法错误</li>
-<li>双引号解释转义字符，单引号不解释转义字符，但是解释’\和\</li>
-<li><p>能使单引号字符尽量使用单引号，单引号的效率比双引号要高（因为双引号要先遍历一遍，判断里面有没有变量，然后再进行操作，而单引号则不需要判断）</p>
-        
-          <a class="article-more-a" href="/php_interview_2017.html#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/php_interview_2017.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-redis" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/redis.html">redis 使用</a>
-    </h1>
-  
-
-        
-        <a href="/redis.html" class="archive-article-date">
-  	<time datetime="2017-03-06T11:18:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="redis是什么"><a href="#redis是什么" class="headerlink" title="redis是什么:"></a>redis是什么:</h4><p>Redis is an open source, BSD licensed, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.<br>redis是开源,BSD许可,高级的key-value存储系统.<br>可以用来存储字符串,哈希结构,链表,集合,因此,常用来提供数据结构服务.</p>
-        
-          <a class="article-more-a" href="/redis.html#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Redis</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/redis.html">展开全文 >></a>
         </p>
       
 

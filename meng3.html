@@ -7,20 +7,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://blog.majiameng.com">
-  <title>ffmpeg-php扩展 | 佳萌博客</title>
+  <title>利用 Composer 一步一步构建自己的 PHP 框架（二）——构建路由 | 佳萌博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="php视频缩略图，较常用的是ffmpeg-php1： 安装 ffmpeg ffmpeg的下载链接  http://ffmpeg.org/download.html 解压安装包 tar -jxvf ffmpeg-x.x.tar.bz2 进入目录 cd ffmpeg-x.x 编译安装 1./configure --enable-shared --disable-yasm  --prefix=/usr/">
-<meta name="keywords" content="PHP,Liunx">
+  <meta name="description" content="回顾 在上一篇教程中，我们使用 codingbean/macaw 这个 Composer 包构建了两条简单路由，第一条是响应 GET ‘/fuck’ 的，另一条会 hold 住所有请求。其实对 PHP 框架来说，有了路由就有了一切。所以接下来我们要做的事情就是让 meng 框架更加规范，更加丰满。这就牵扯到了 PHP 框架另外的价值：确立开发规范以便于多人协作，使用 ORM、模板引擎 等工具以提高">
+<meta name="keywords" content="PHP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ffmpeg-php扩展">
-<meta property="og:url" content="https://blog.majiameng.com/ffmpeg.html">
+<meta property="og:title" content="利用 Composer 一步一步构建自己的 PHP 框架（二）——构建路由">
+<meta property="og:url" content="https://blog.majiameng.com/meng3.html">
 <meta property="og:site_name" content="佳萌博客">
-<meta property="og:description" content="php视频缩略图，较常用的是ffmpeg-php1： 安装 ffmpeg ffmpeg的下载链接  http://ffmpeg.org/download.html 解压安装包 tar -jxvf ffmpeg-x.x.tar.bz2 进入目录 cd ffmpeg-x.x 编译安装 1./configure --enable-shared --disable-yasm  --prefix=/usr/">
+<meta property="og:description" content="回顾 在上一篇教程中，我们使用 codingbean/macaw 这个 Composer 包构建了两条简单路由，第一条是响应 GET ‘/fuck’ 的，另一条会 hold 住所有请求。其实对 PHP 框架来说，有了路由就有了一切。所以接下来我们要做的事情就是让 meng 框架更加规范，更加丰满。这就牵扯到了 PHP 框架另外的价值：确立开发规范以便于多人协作，使用 ORM、模板引擎 等工具以提高">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-29T01:46:03.000Z">
+<meta property="og:image" content="http://jiamengimg.oss-cn-shanghai.aliyuncs.com/blog/meng4.png">
+<meta property="og:updated_time" content="2017-09-30T03:36:29.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ffmpeg-php扩展">
-<meta name="twitter:description" content="php视频缩略图，较常用的是ffmpeg-php1： 安装 ffmpeg ffmpeg的下载链接  http://ffmpeg.org/download.html 解压安装包 tar -jxvf ffmpeg-x.x.tar.bz2 进入目录 cd ffmpeg-x.x 编译安装 1./configure --enable-shared --disable-yasm  --prefix=/usr/">
+<meta name="twitter:title" content="利用 Composer 一步一步构建自己的 PHP 框架（二）——构建路由">
+<meta name="twitter:description" content="回顾 在上一篇教程中，我们使用 codingbean/macaw 这个 Composer 包构建了两条简单路由，第一条是响应 GET ‘/fuck’ 的，另一条会 hold 住所有请求。其实对 PHP 框架来说，有了路由就有了一切。所以接下来我们要做的事情就是让 meng 框架更加规范，更加丰满。这就牵扯到了 PHP 框架另外的价值：确立开发规范以便于多人协作，使用 ORM、模板引擎 等工具以提高">
+<meta name="twitter:image" content="http://jiamengimg.oss-cn-shanghai.aliyuncs.com/blog/meng4.png">
   
     <link rel="alternative" href="/atom.xml" title="佳萌博客" type="application/atom+xml">
   
@@ -169,53 +171,64 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-ffmpeg" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-meng3" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      ffmpeg-php扩展
+      利用 Composer 一步一步构建自己的 PHP 框架（二）——构建路由
     </h1>
   
 
         
-        <a href="/ffmpeg.html" class="archive-article-date">
-  	<time datetime="2017-05-16T15:11:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-16</time>
+        <a href="/meng3.html" class="archive-article-date">
+  	<time datetime="2017-04-22T14:43:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="php视频缩略图，较常用的是ffmpeg-php"><a href="#php视频缩略图，较常用的是ffmpeg-php" class="headerlink" title="php视频缩略图，较常用的是ffmpeg-php"></a>php视频缩略图，较常用的是ffmpeg-php</h3><p>1： 安装 ffmpeg</p>
-<p>ffmpeg的下载链接  <a href="http://ffmpeg.org/download.html" target="_blank" rel="external">http://ffmpeg.org/download.html</a></p>
-<p>解压安装包</p>
-<p>tar -jxvf ffmpeg-x.x.tar.bz2</p>
-<p>进入目录</p>
-<p>cd ffmpeg-x.x</p>
-<p>编译安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./configure --enable-shared --disable-yasm  --prefix=/usr/local/ffmpeg  &amp;&amp; make &amp;&amp; make install</div></pre></td></tr></table></figure>
-<p>安装完成之后 执行 ffmpeg -version</p>
-<p>2 安装ffmpeg-php</p>
-<p>官方的下载链接</p>
-<p><a href="https://sourceforge.net/projects/ffmpeg-php/files/ffmpeg-php/" target="_blank" rel="external">https://sourceforge.net/projects/ffmpeg-php/files/ffmpeg-php/</a></p>
-<p>官方版本已经很久很久不更新了，我在centos 7 + php5.6&amp;php7.1   centos6.5+php5  试了都不行。在configure完 make的时候会报错。</p>
-<p>后来在github上找了一个版本。在centos7.2+php5.5.6 上编译安装成功 （centos7 + php7.1还是不行）</p>
-<p>地址：    git clone <a href="https://github.com/tony2001/ffmpeg-php.git" target="_blank" rel="external">https://github.com/tony2001/ffmpeg-php.git</a> </p>
-<p>也可以访问我的百度云盘进行下载</p>
-<p><a href="https://pan.baidu.com/s/1skQTVlj" target="_blank" rel="external">https://pan.baidu.com/s/1skQTVlj</a></p>
-<p>进入 ffmpeg-php目录 进行编译扩展</p>
-<p>/usr/local/php/bin/phpize   </p>
-<p>./configure –with-php-config=/usr/local/php/bin/php-config</p>
-<p>make &amp;&amp; make install</p>
-<p>注意（如果make之后出现错误，那就是ffmpeg-php版本的问题，别再折腾了，换版本吧（或者降低php版本试试））。</p>
-<p>在php的配置文件 php.ini中 添加  </p>
-<p>1<br>extension=ffmpeg.so<br>重启php。在 phpinfo()中查看有无ffmpeg信息。</p>
-<p>有的话就OK</p>
-<p>或者执行 </p>
-<p>1<br>/usr/local/php/bin/php -i |grep ffmpeg<br>　要是有输出的话OK</p>
+        <h2 id="回顾"><a href="#回顾" class="headerlink" title="回顾"></a>回顾</h2><blockquote>
+<p>在上一篇教程中，我们使用 codingbean/macaw 这个 Composer 包构建了两条简单路由，第一条是响应 GET ‘/fuck’ 的，另一条会 hold 住所有请求。其实对 PHP 框架来说，有了路由就有了一切。所以接下来我们要做的事情就是让 meng 框架更加规范，更加丰满。<br>这就牵扯到了 PHP 框架另外的价值：确立开发规范以便于多人协作，使用 ORM、模板引擎 等工具以提高开发效率。</p>
+</blockquote>
+<h2 id="正式开始"><a href="#正式开始" class="headerlink" title="正式开始"></a>正式开始</h2><h3 id="规划文件夹"><a href="#规划文件夹" class="headerlink" title="规划文件夹"></a>规划文件夹</h3><p>新建 meng/app 文件夹，在 app 中创建 controllers、models、views 三个文件夹，开始正式开始踏上 MVC 的征程。</p>
+<p>（谁说我抄 Laravel 了，我抄的明明是 Rails :-D）</p>
+<h3 id="使用命名空间"><a href="#使用命名空间" class="headerlink" title="使用命名空间"></a>使用命名空间</h3><p>新建 controllers/BaseController.php 文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">/**</div><div class="line">* BaseController</div><div class="line">*/</div><div class="line">class BaseController</div><div class="line">&#123;</div><div class="line">  </div><div class="line">  public function __construct()</div><div class="line">  &#123;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>新建 controllers/IndexController.php 文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line"></div><div class="line">/**</div><div class="line">* IndexController</div><div class="line">*/</div><div class="line">class IndexController extends BaseController</div><div class="line">&#123;</div><div class="line">    public function index()</div><div class="line">    &#123;</div><div class="line">        echo &quot;&lt;h2&gt;Hello Word!!!! &lt;/h2&gt;&lt;br/&gt;&lt;h1&gt;Welcome to the meng framework! &lt;/h1&gt;&quot;;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>增加一条路由：<code> Macaw::get(‘’, ‘IndexController@index’);</code>，打开浏览器直接访问 <a href="http://127.0.0.1:81/，出现以下提示：" target="_blank" rel="external">http://127.0.0.1:81/，出现以下提示：</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Fatal error: Class &apos;IndexController&apos; not found in /Library/WebServer/Documents/wwwroot/meng/vendor/codingbean/macaw/Macaw.php on line 93</div></pre></td></tr></table></figure></p>
+<p>为什么没找到 IndexController 类？因为我们没有让他自动加载，修改 composer.json 为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  &quot;require&quot;: &#123;</div><div class="line">    &quot;codingbean/macaw&quot;: &quot;dev-master&quot;</div><div class="line">  &#125;,</div><div class="line">  &quot;autoload&quot;: &#123;</div><div class="line">    &quot;classmap&quot;: [</div><div class="line">      &quot;app/controllers&quot;,</div><div class="line">      &quot;app/models&quot;</div><div class="line">    ]</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>运行 composer dump-autoload，稍等片刻，刷新，你将看到以下内容（别忘了调节编码哦~）：</p>
+<p><img src="http://jiamengimg.oss-cn-shanghai.aliyuncs.com/blog/meng4.png" alt="https://www.majiameng.com"></p>
+<p>恭喜你，命名空间使用成功！</p>
+<p>连接数据库</p>
+<p>新建 models/Article.php 文件，内容为（数据库密码请自行更改）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">/**</div><div class="line">* Article Model</div><div class="line">*/</div><div class="line">class Article</div><div class="line">&#123;</div><div class="line">  public static function first()</div><div class="line">  &#123;</div><div class="line">    $connection = mysql_connect(&quot;localhost&quot;,&quot;root&quot;,&quot;password&quot;);</div><div class="line">    if (!$connection) &#123;</div><div class="line">      die(&apos;Could not connect: &apos; . mysql_error());</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    mysql_set_charset(&quot;UTF8&quot;, $connection);</div><div class="line"></div><div class="line">    mysql_select_db(&quot;meng&quot;, $connection);</div><div class="line"></div><div class="line">    $result = mysql_query(&quot;SELECT * FROM articles limit 0,1&quot;);</div><div class="line"></div><div class="line">    if ($row = mysql_fetch_array($result)) &#123;</div><div class="line">      echo &apos;&lt;h1&gt;&apos;.$row[&quot;title&quot;].&apos;&lt;/h1&gt;&apos;;</div><div class="line">      echo &apos;&lt;p&gt;&apos;.$row[&quot;content&quot;].&apos;&lt;/p&gt;&apos;;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    mysql_close($connection);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>修改 controllers/IndexController.php 文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line"></div><div class="line">/**</div><div class="line">* \IndexController</div><div class="line">*/</div><div class="line">class IndexController extends BaseController</div><div class="line">&#123;</div><div class="line">  </div><div class="line">  public function index()</div><div class="line">  &#123;</div><div class="line">    Article::first();</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>刷新，这时候会得到 Article 类未找到的信息，因为我们没有更新自动加载配置：</p>
+<p>composer dump-autoload<br>在等待的时间里，我们去建立数据库 meng，在里面建立表 articles，设计两个字段 title、content 用于记录信息，并填充进至少一条数据。你也可以在建立完成 meng 数据库以后运行以下 SQL 语句：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">DROP TABLE IF EXISTS `articles`;</div><div class="line"></div><div class="line">CREATE TABLE `articles` (</div><div class="line">  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,</div><div class="line">  `title` varchar(255) DEFAULT NULL,</div><div class="line">  `content` longtext,</div><div class="line">  PRIMARY KEY (`id`)</div><div class="line">) ENGINE=InnoDB DEFAULT CHARSET=utf8;</div><div class="line"></div><div class="line">LOCK TABLES `articles` WRITE;</div><div class="line">/*!40000 ALTER TABLE `articles` DISABLE KEYS */;</div><div class="line"></div><div class="line">INSERT INTO `articles` (`id`, `title`, `content`)</div><div class="line">VALUES</div><div class="line">	(1,&apos;我是标题&apos;,&apos;&lt;h3&gt;我是内容呀~~&lt;/h3&gt;&lt;p&gt;我真的是内容，不信算了，哼~ O(∩_∩)O&lt;/p&gt;&apos;),</div><div class="line">	(2,&apos;我是标题&apos;,&apos;&lt;h3&gt;我是内容呀~~&lt;/h3&gt;&lt;p&gt;我真的是内容，不信算了，哼~ O(∩_∩)O&lt;/p&gt;&apos;);</div><div class="line"></div><div class="line">/*!40000 ALTER TABLE `articles` ENABLE KEYS */;</div><div class="line">UNLOCK TABLES;</div></pre></td></tr></table></figure></p>
+<p>然后，刷新！你将看到以下页面：</p>
+<p>Image</p>
+<p>恭喜你！MVC 中的 M 和 C 都已经实现！接下来我们开始调用 V (视图)。</p>
+<p>调用视图</p>
+<p>修改 models/Article.php 为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">/**</div><div class="line">* Article Model</div><div class="line">*/</div><div class="line">class Article</div><div class="line">&#123;</div><div class="line">  public static function first()</div><div class="line">  &#123;</div><div class="line">    $connection = mysql_connect(&quot;127.0.0.1&quot;,&quot;root&quot;,&quot;root&quot;);</div><div class="line">    if (!$connection) &#123;</div><div class="line">      die(&apos;Could not connect: &apos; . mysql_error());</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    mysql_set_charset(&quot;UTF8&quot;, $connection);</div><div class="line"></div><div class="line">    mysql_select_db(&quot;meng&quot;, $connection);</div><div class="line"></div><div class="line">    $result = mysql_query(&quot;SELECT * FROM articles limit 0,1&quot;);</div><div class="line"></div><div class="line">    if ($row = mysql_fetch_array($result)) &#123;</div><div class="line">      return $row;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    mysql_close($connection);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>将包含查询结果的数组返回。修改 IndexController：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">/**</div><div class="line">* IndexController</div><div class="line">*/</div><div class="line">class IndexController extends BaseController</div><div class="line">&#123;</div><div class="line">  </div><div class="line">  public function index()</div><div class="line">  &#123;</div><div class="line">    $article = Article::first();</div><div class="line">    require dirname(__FILE__).&apos;/../views/home.php&apos;;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>保存，刷新，你将得到跟上面一模一样的页面，视图调用成功！</p>
+<p>几乎所有人都是通过学习某个框架来了解 MVC 的，这样可能框架用的很熟，一旦离了框架一个简单的页面都写不了，更不要说自己设计 MVC 架构了，其实这里面也没有那么多门道，原理非常清晰，我说说我的感悟：</p>
+<ul>
+<li><p>1.PHP 框架再牛逼，他也是 PHP，也要遵循 PHP 的运行原理和基本哲学。抓住这一点我们就能很容易地理解很多事情。</p>
+</li>
+<li><p>2.PHP 做的网站从逻辑上说，跟 php test.php 没有任何区别，都只是一段字符串作为参数传递给 PHP 解释器而已。无非就是复杂的网站会根据 URL 来调用需要运行的文件和代码，然后返回相应的结果。</p>
+</li>
+<li><p>3.无论我们看到的是 CodeIgniter 这样 180 个文件组成的“小框架”，还是 Laravel 这样加上 vendor 一共 3700 多个文件的 “大框架”，他们都会在每一个 URL 的驱动下，组装一段可以运行的字符串，传给 PHP 解释器，再把从 PHP 解释器返回的字符串传给访客的浏览器。</p>
+</li>
+<li><p>4.MVC 是一种逻辑架构，本质上是为了让人脑这样的超低 RAM 的计算机能够制造出远超人脑 RAM 的大型软件，其实 MVC 架构在 GUI 软件出现以前就已经成形，命令行输出也是视图嘛。</p>
+</li>
+<li><p>5.在 meng 里，一个 URL 驱动框架做的事情基本是这样的：入口文件 require 控制器，控制器 require 模型，模型和数据库交互得到数据返回给控制器，控制器再 require 视图，把数据填充进视图，返回给访客，流程结束。</p>
+</li>
+</ul>
+<p><a href="https://blog.majiameng.com/meng4.html">下一步：利用 Composer 一步一步构建自己的 PHP 框架（四）——使用 ORM</a></p>
 
       
 
@@ -261,10 +274,6 @@ var _hmt = _hmt || [];
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Liunx</a>
         		</li>
       		
 		</ul>
@@ -320,7 +329,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://blog.majiameng.com/ffmpeg.html" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://blog.majiameng.com/meng3.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -334,18 +343,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/mysql_principal.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/meng4.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          mysql主从复制
+          利用 Composer 一步一步构建自己的 PHP 框架（四）——构建路由
         
       </div>
     </a>
   
   
-    <a href="/meng4.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">利用 Composer 一步一步构建自己的 PHP 框架（四）——构建路由</div>
+    <a href="/meng2.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">利用 Composer 一步一步构建自己的 PHP 框架（二）——构建路由</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -372,7 +381,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#php视频缩略图，较常用的是ffmpeg-php"><span class="toc-number">1.</span> <span class="toc-text">php视频缩略图，较常用的是ffmpeg-php</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#回顾"><span class="toc-number">1.</span> <span class="toc-text">回顾</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#正式开始"><span class="toc-number">2.</span> <span class="toc-text">正式开始</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#规划文件夹"><span class="toc-number">2.1.</span> <span class="toc-text">规划文件夹</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用命名空间"><span class="toc-number">2.2.</span> <span class="toc-text">使用命名空间</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -389,11 +398,11 @@ var _hmt = _hmt || [];
 
   
   <!--表情-->
-<div style="margin-left: 40px;"><div id="cyEmoji" role="cylabs" data-use="emoji" sid="ffmpeg"></div></div>
+<div style="margin-left: 40px;"><div id="cyEmoji" role="cylabs" data-use="emoji" sid="meng3"></div></div>
 <script type="text/javascript" charset="utf-8" src="https://changyan.itc.cn/js/lib/jquery.js"></script>
 <script type="text/javascript" charset="utf-8" src="https://changyan.sohu.com/js/changyan.labs.https.js?appid=cytd8GjEU"></script>
 <!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="ffmpeg" ></div>
+<div id="SOHUCS" sid="meng3" ></div>
 <script type="text/javascript">
     (function(){
         var appid = 'cytd8GjEU';

@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.majiameng.com/meng4.html</loc>
+    
+    <lastmod>2017-09-30T03:37:39.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.majiameng.com/meng3.html</loc>
+    
+    <lastmod>2017-09-30T03:36:29.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.majiameng.com/meng2.html</loc>
     
-    <lastmod>2017-09-30T02:19:05.000Z</lastmod>
+    <lastmod>2017-09-30T03:27:26.000Z</lastmod>
     
   </url>
   
@@ -72,14 +86,14 @@
   </url>
   
   <url>
-    <loc>https://blog.majiameng.com/redis.html</loc>
+    <loc>https://blog.majiameng.com/mysql_1.html</loc>
     
     <lastmod>2017-09-18T11:02:31.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.majiameng.com/mysql_1.html</loc>
+    <loc>https://blog.majiameng.com/redis.html</loc>
     
     <lastmod>2017-09-18T11:02:31.000Z</lastmod>
     
