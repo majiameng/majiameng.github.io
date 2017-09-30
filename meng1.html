@@ -7,21 +7,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://blog.majiameng.com">
-  <title>Composer 一步一步构建自己的 PHP 框架（一）——基础准备 | 佳萌博客</title>
+  <title>利用 Composer 一步一步构建自己的 PHP 框架（一）——基础准备 | 佳萌博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="『Composer 一统天下的时代已经到来！』——白岩松  “一个时代结束了，另一个时代开始了。” Framework Interoperability Group（框架可互用性小组），简称 FIG，成立于 2009 年。FIG 最初由几位知名 PHP 框架开发者发起，在吸纳了许多优秀的大脑和强健的体魄后，提出了 PSR-0 到 PSR-4 五套 PHP 非官方规范：">
+  <meta name="description" content="『Composer 一统天下的时代已经到来！』——白岩松  “一个时代结束了，另一个时代开始了。” Framework Interoperability Group（框架可互用性小组），简称 FIG，成立于 2009 年。FIG 最初由几位知名 PHP 框架开发者发起，在吸纳了许多优秀的大脑和强健的体魄后，提出了 PSR-0 到 PSR-4 五套 PHP 非官方规范：   PSR-0 (Auto">
 <meta name="keywords" content="PHP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Composer 一步一步构建自己的 PHP 框架（一）——基础准备">
+<meta property="og:title" content="利用 Composer 一步一步构建自己的 PHP 框架（一）——基础准备">
 <meta property="og:url" content="https://blog.majiameng.com/meng1.html">
 <meta property="og:site_name" content="佳萌博客">
-<meta property="og:description" content="『Composer 一统天下的时代已经到来！』——白岩松  “一个时代结束了，另一个时代开始了。” Framework Interoperability Group（框架可互用性小组），简称 FIG，成立于 2009 年。FIG 最初由几位知名 PHP 框架开发者发起，在吸纳了许多优秀的大脑和强健的体魄后，提出了 PSR-0 到 PSR-4 五套 PHP 非官方规范：">
+<meta property="og:description" content="『Composer 一统天下的时代已经到来！』——白岩松  “一个时代结束了，另一个时代开始了。” Framework Interoperability Group（框架可互用性小组），简称 FIG，成立于 2009 年。FIG 最初由几位知名 PHP 框架开发者发起，在吸纳了许多优秀的大脑和强健的体魄后，提出了 PSR-0 到 PSR-4 五套 PHP 非官方规范：   PSR-0 (Auto">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://jiamengimg.oss-cn-shanghai.aliyuncs.com/blog/meng1.png">
-<meta property="og:updated_time" content="2017-09-29T12:02:00.000Z">
+<meta property="og:updated_time" content="2017-09-30T02:19:05.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Composer 一步一步构建自己的 PHP 框架（一）——基础准备">
-<meta name="twitter:description" content="『Composer 一统天下的时代已经到来！』——白岩松  “一个时代结束了，另一个时代开始了。” Framework Interoperability Group（框架可互用性小组），简称 FIG，成立于 2009 年。FIG 最初由几位知名 PHP 框架开发者发起，在吸纳了许多优秀的大脑和强健的体魄后，提出了 PSR-0 到 PSR-4 五套 PHP 非官方规范：">
+<meta name="twitter:title" content="利用 Composer 一步一步构建自己的 PHP 框架（一）——基础准备">
+<meta name="twitter:description" content="『Composer 一统天下的时代已经到来！』——白岩松  “一个时代结束了，另一个时代开始了。” Framework Interoperability Group（框架可互用性小组），简称 FIG，成立于 2009 年。FIG 最初由几位知名 PHP 框架开发者发起，在吸纳了许多优秀的大脑和强健的体魄后，提出了 PSR-0 到 PSR-4 五套 PHP 非官方规范：   PSR-0 (Auto">
 <meta name="twitter:image" content="http://jiamengimg.oss-cn-shanghai.aliyuncs.com/blog/meng1.png">
   
     <link rel="alternative" href="/atom.xml" title="佳萌博客" type="application/atom+xml">
@@ -178,13 +178,13 @@ var _hmt = _hmt || [];
         
   
     <h1 class="article-title" itemprop="name">
-      Composer 一步一步构建自己的 PHP 框架（一）——基础准备
+      利用 Composer 一步一步构建自己的 PHP 框架（一）——基础准备
     </h1>
   
 
         
         <a href="/meng1.html" class="archive-article-date">
-  	<time datetime="2017-09-21T11:35:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-21</time>
+  	<time datetime="2017-04-21T11:35:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-21</time>
 </a>
         
       </header>
@@ -196,29 +196,27 @@ var _hmt = _hmt || [];
 </blockquote>
 <p>“一个时代结束了，另一个时代开始了。”</p>
 <p>Framework Interoperability Group（框架可互用性小组），简称 FIG，成立于 2009 年。FIG 最初由几位知名 PHP 框架开发者发起，在吸纳了许多优秀的大脑和强健的体魄后，提出了 PSR-0 到 PSR-4 五套 PHP 非官方规范：</p>
-<a id="more"></a>
+<blockquote>
 <ol>
-<li><p>PSR-0 (Autoloading Standard) 自动加载标准</p>
-</li>
-<li><p>PSR-1 (Basic Coding Standard) 基础编码标准</p>
-</li>
-<li><p>PSR-2 (Coding Style Guide) 编码风格向导</p>
-</li>
-<li><p>PSR-3 (Logger Interface) 日志接口</p>
-</li>
-<li><p>PSR-4 (Improved Autoloading) 自动加载优化标准</p>
-</li>
+<li>PSR-0 (Autoloading Standard) 自动加载标准</li>
+<li>PSR-1 (Basic Coding Standard) 基础编码标准</li>
+<li>PSR-2 (Coding Style Guide) 编码风格向导</li>
+<li>PSR-3 (Logger Interface) 日志接口</li>
+<li>PSR-4 (Improved Autoloading) 自动加载优化标准</li>
 </ol>
+</blockquote>
+<a id="more"></a>
 <p>之后，在此标准之上，Composer 横空出世！Composer 利用 PSR-0 和 PSR-4 以及 PHP5.3 的命名空间构造了一个繁荣的 PHP 生态系统。Composer 类似著名的 npm 和 RubyGems，给海量 PHP 包提供了一个异常方便的协作通道，Composer Hub 地址：<a href="https://packagist.org/。Composer" target="_blank" rel="external">https://packagist.org/。Composer</a> 中文网站：<a href="http://www.phpcomposer.com/。" target="_blank" rel="external">http://www.phpcomposer.com/。</a></p>
 <p>目前 PHP 界风头正劲的 Laravel 和 Symfony 均直接基于 Composer，大家耳熟能详著名框架 CI 和 Yii 的正开发版本 CodeIgniter 3 和 Yii 2 也都基于 Composer（更新：北京时间2014年10月13日 Yii 2 已经发布）。Composer 就是 PHP 框架的未来，有了它，让 CI 的路由和 Laravel 的 Eloquent ORM 协作就会变的非常简单。</p>
 <p>PHP 语言本身就带有强大的网络功能、文件管理功能和丰富的系统 API，Composer 也只是一段 PHP 脚本而已。可以使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">php composer.phar update</div></pre></td></tr></table></figure></p>
 <p>直接调用。</p>
-<p>在合适的地方新建一个文件夹，命名为 Meng（My First Framework based on Composer），在文件夹下新建文件 composer.json：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  &quot;require&quot;: &#123;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>在合适的地方新建一个文件夹，命名为 Meng（My First Framework based on Composer），在文件夹下新建文件 composer.json：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  &quot;require&quot;: &#123;</div><div class="line">  &#125;</div></pre></td></tr></table></figure></p>
+<p>}</p>
 <p>命令行切换到 Meng 目录下，运行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">composer update</div></pre></td></tr></table></figure></p>
 <p>稍等片刻，会出现如下文件及文件夹：</p>
 <p><img src="http://jiamengimg.oss-cn-shanghai.aliyuncs.com/blog/meng1.png" alt="https://www.majiameng.com"></p>
 <p>如果以上内容成功出现，恭喜你，Composer 初始化成功！</p>
-<p>下一步：利用 Composer 一步一步构建自己的 PHP 框架（二）——构建路由</p>
+<p><a href="https://blog.majiameng.com/meng2.html">下一步：利用 Composer 一步一步构建自己的 PHP 框架（二）——构建路由</a></p>
 
       
 
@@ -333,9 +331,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
+    <a href="/meng2.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          利用 Composer 一步一步构建自己的 PHP 框架（二）——构建路由
+        
+      </div>
+    </a>
   
-    <a href="/meng2.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">利用 Composer 一步一步构建自己的 PHP 框架（二）——构建路由</div>
+  
+    <a href="/vpn.sh.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Liunx搭建VPN shell 脚本</div>
       <i class="icon-circle-right"></i>
     </a>
   

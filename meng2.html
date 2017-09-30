@@ -18,7 +18,8 @@
 <meta property="og:description" content="上一篇中我们已经建立了一个空的 Composer 项目，本篇将讲述如何构建路由。 久负盛名的 CodeIgniter 框架是很多人的 PHP 开发入门框架，同样也是我开始学习如何从头构建一个网站的框架。在 CI 中我学到了很多，其中对 MVC 的深入理解和对框架本质的理解对我的影响最大。从使用框架是为了提高开发效率的角度来看，框架的本质就是路由。 下面我们就开始自己来构建路由，先去 GitHub">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://jiamengimg.oss-cn-shanghai.aliyuncs.com/blog/meng2.png">
-<meta property="og:updated_time" content="2017-09-29T12:06:30.000Z">
+<meta property="og:image" content="http://jiamengimg.oss-cn-shanghai.aliyuncs.com/blog/meng3.png">
+<meta property="og:updated_time" content="2017-09-30T02:19:05.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用 Composer 一步一步构建自己的 PHP 框架（二）——构建路由">
 <meta name="twitter:description" content="上一篇中我们已经建立了一个空的 Composer 项目，本篇将讲述如何构建路由。 久负盛名的 CodeIgniter 框架是很多人的 PHP 开发入门框架，同样也是我开始学习如何从头构建一个网站的框架。在 CI 中我学到了很多，其中对 MVC 的深入理解和对框架本质的理解对我的影响最大。从使用框架是为了提高开发效率的角度来看，框架的本质就是路由。 下面我们就开始自己来构建路由，先去 GitHub">
@@ -184,7 +185,7 @@ var _hmt = _hmt || [];
 
         
         <a href="/meng2.html" class="archive-article-date">
-  	<time datetime="2017-09-21T11:35:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-21</time>
+  	<time datetime="2017-04-22T01:30:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-22</time>
 </a>
         
       </header>
@@ -194,43 +195,36 @@ var _hmt = _hmt || [];
         <p>上一篇中我们已经建立了一个空的 Composer 项目，本篇将讲述如何构建路由。</p>
 <p>久负盛名的 CodeIgniter 框架是很多人的 PHP 开发入门框架，同样也是我开始学习如何从头构建一个网站的框架。在 CI 中我学到了很多，其中对 MVC 的深入理解和对框架本质的理解对我的影响最大。从使用框架是为了提高开发效率的角度来看，框架的本质就是路由。</p>
 <p>下面我们就开始自己来构建路由，先去 GitHub 搜一下：点此查看搜索结果</p>
-<p>推荐 <a href="https://github.com/NoahBuscher/Macaw，对应的" target="_blank" rel="external">https://github.com/NoahBuscher/Macaw，对应的</a> Composer 包为 noahbuscher/macaw 。</p>
+<p>推荐 <a href="https://github.com/NoahBuscher/Macaw" target="_blank" rel="external">https://github.com/NoahBuscher/Macaw</a>，对应的 Composer 包为 noahbuscher/macaw 。</p>
 <p>下面开始安装它，更改 composer.json：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  &quot;require&quot;: &#123;</div><div class="line">    &quot;noahbuscher/macaw&quot;: &quot;dev-master&quot;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>运行 composer update，成功之后将得到以下目录：</p>
+<a id="more"></a>
+<p>运行<code>composer update</code> ，成功之后将得到以下目录：</p>
 <p><img src="http://jiamengimg.oss-cn-shanghai.aliyuncs.com/blog/meng2.png" alt="https://www.majiameng.com"></p>
 <p>至此，Macaw 包安装成功！</p>
 <p>下面，就是见证奇迹的时刻！我们将赋予 meng 生命力，让它真正地跑起来！</p>
 <p>新建 meng/public 文件夹，这个文件夹将是用户唯一可见的部分。在文件夹下新建 index.php 文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line"></div><div class="line">// Autoload 自动载入</div><div class="line">require &apos;../vendor/autoload.php&apos;;</div><div class="line"></div><div class="line">// 路由配置</div><div class="line">require &apos;../config/routes.php&apos;;</div></pre></td></tr></table></figure></p>
-<p>上面一行表示引入 Composer 的自动载入功能，下面一行表示载入路由配置文件。新建 meng/config 文件夹，在里面新建 routs.php 文件，内容如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line"></div><div class="line">use NoahBuscher\Macaw\Macaw;</div><div class="line"></div><div class="line">Macaw::get(&apos;fuck&apos;, function() &#123;</div><div class="line">  echo &quot;成功！&quot;;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">Macaw::get(&apos;(:all)&apos;, function($fu) &#123;</div><div class="line">  echo &apos;未匹配到路由&lt;br&gt;&apos;.$fu;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">Macaw::dispatch();</div></pre></td></tr></table></figure></p>
-<p>Macaw 的文档位于 <a href="https://github.com/NoahBuscher/Macaw，请按照你的" target="_blank" rel="external">https://github.com/NoahBuscher/Macaw，请按照你的</a> HTTP 服务软件类型自行设置伪静态，其实跟绝大多数框架一样：“将所有非静态文件全部指向 index.php”。</p>
-<p>然后，将某一个端口用 Apache 或 Nginx 分配给 meng/public 目录，这一步十分建议用 Apache 或者 Nginx 做。</p>
-<p>如果使用 PHP 内置 HTTP 服务器：</p>
-<p>cd public &amp;&amp; php -S 127.0.0.1:3000<br>将导致路由的 Macaw::get(‘fuck’ 必须写成 Macaw::get(‘/fuck’ 才能响应。</p>
+<p>上面一行表示引入 Composer 的自动载入功能，下面一行表示载入路由配置文件。新建 meng/config 文件夹，在里面新建 routes.php 文件，内容如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line"></div><div class="line">use NoahBuscher\Macaw\Macaw;</div><div class="line"></div><div class="line">Macaw::get(&apos;fuck&apos;, function() &#123;</div><div class="line">  echo &quot;成功！&quot;;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">Macaw::get(&apos;(:all)&apos;, function($fu) &#123;</div><div class="line">  echo &apos;未匹配到路由&lt;br&gt;&apos;.$fu;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">Macaw::dispatch();</div></pre></td></tr></table></figure></p>
+<p>Macaw 的文档位于 <a href="https://github.com/NoahBuscher/Macaw" target="_blank" rel="external">https://github.com/NoahBuscher/Macaw</a>，请按照你的 HTTP 服务软件类型自行设置伪静态，其实跟绝大多数框架一样：“将所有非静态文件全部指向 index.php”。</p>
+<p>然后，将某一个端口用 Apache 或 Nginx 分配给<code>meng/public </code> 目录，这一步十分建议用 Apache 或者 Nginx 做。</p>
+<p>如果使用 PHP 内置 HTTP 服务器：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd public &amp;&amp; php -S 127.0.0.1:3000</div></pre></td></tr></table></figure></p>
+<p>将导致路由的 Macaw::get(‘fuck’ 必须写成 Macaw::get(‘/fuck’ 才能响应。</p>
 <p>目前的代码使用 Apache + mod_php 和 Nginx + php-fpm 方式均没有问题。</p>
-<p>我在本地绑定了 81 端口，访问 <a href="http://127.0.0.1:81/fuck" target="_blank" rel="external">http://127.0.0.1:81/fuck</a> 可以看到：</p>
-<p>Image</p>
+<p>我在本地绑定了 81 端口，访问 <a href="http://127.0.0.1:81/index.php/fuck" target="_blank" rel="external">http://127.0.0.1:81/index.php/fuck</a> 可以看到：</p>
+<p><img src="http://jiamengimg.oss-cn-shanghai.aliyuncs.com/blog/meng3.png" alt="https://www.majiameng.com"></p>
 <p>如果页面乱码，请调整编码为 UTF-8。如果你成功看到以上页面，那么恭喜你，路由配置成功！</p>
 <p>Macaw 只有一个文件，去除空行总共也就一百行多一点，通过代码我们能直接看明白它是怎么工作的。下面我简略分析一下：</p>
-<ol>
-<li>Composer 的自动加载在每次 URL 驱动 meng/public/index.php 之后会在内存中维护一个全量命名空间类名到文件名的数组，这样当我们在代码中使用某个类的时候，将自动载入该类所在的文件。</li>
-<li><p>我们在路由文件中载入了 Macaw 类：“use NoahBuscher\Macaw\Macaw;”，接着调用了两次静态方法 ::get()，这个方法是不存在的，将由 meng/vendor/codingbean/macaw/Macaw.php 中的 __callstatic() 接管。</p>
+<ul>
+<li>1.Composer 的自动加载在每次 URL 驱动<code> meng/public/index.php </code>之后会在内存中维护一个全量命名空间类名到文件名的数组，这样当我们在代码中使用某个类的时候，将自动载入该类所在的文件。</li>
+<li><p>2.我们在路由文件中载入了 Macaw 类：<code>“use NoahBuscher\Macaw\Macaw;”</code>，接着调用了两次静态方法<code>::get()</code> ，这个方法是不存在的，将由<code> meng/vendor/codingbean/macaw/Macaw.php </code>中的<code> __callstatic() </code>接管。</p>
 </li>
-<li><p>这个函数接受两个参数，$method 和 $params，前者是具体的 function 名称，在这里就是 get，后者是这次调用传递的参数，即 Macaw::get(‘fuck’,function(){…}) 中的两个参数。第一个参数是我们想要监听的 URL 值，第二个参数是一个 PHP 闭包，作为回调，代表 URL 匹配成功后我们想要做的事情。</p>
+<li><p>3.这个函数接受两个参数，$method 和 $params，前者是具体的 function 名称，在这里就是 get，后者是这次调用传递的参数，即<code> Macaw::get(‘fuck’,function(){…}) </code>中的两个参数。第一个参数是我们想要监听的 URL 值，第二个参数是一个 PHP 闭包，作为回调，代表 URL 匹配成功后我们想要做的事情。</p>
 </li>
-<li><p>__callstatic() 做的事情也很简单，分别将目标URL（即 /fuck）、HTTP方法（即 GET）和回调代码压入 $routes、$methods 和 $callbacks 三个 Macaw 类的静态成员变量（数组）中。</p>
+<li><p>4.<code>__callstatic() </code>做的事情也很简单，分别将目标URL（即 /fuck）、HTTP方法（即 GET）和回调代码压入<code> $routes</code>、<code>$methods </code>和<code> $callbacks </code>三个 Macaw 类的静态成员变量（数组）中。</p>
 </li>
-<li><p>路由文件最后一行的 Macaw::dispatch(); 方法才是真正处理当前 URL 的地方。能直接匹配到的会直接调用回调，不能直接匹配到的将利用正则进行匹配。</p>
+<li><p>5.路由文件最后一行的<code> Macaw::dispatch()</code>; 方法才是真正处理当前 URL 的地方。能直接匹配到的会直接调用回调，不能直接匹配到的将利用正则进行匹配。</p>
 </li>
-</ol>
-<p>下一步：利用 Composer 一步一步构建自己的 PHP 框架（三）——设计 MVC</p>
-<p>WRITTEN BY</p>
-<p>avatar<br>JohnLui</p>
-<p>程序员，Swift Contributor，正在写《iOS 可视化编程与 Auto Layout》。<br>相关日志：</p>
-<p>利用 Composer 完善自己的 PHP 框架（二）——发送邮件</p>
-<p>JohnLui/AliyunOSS v2.0 发布，大幅优化了 API 易用性，改进了文件结构</p>
-<p>【完结】利用 Composer 完善自己的 PHP 框架（三）——Redis 缓存</p>
-<p>利用 Composer 完善自己的 PHP 框架（一）——视图装载</p>
-<p>利用 Composer 一步一步构建自己的 PHP 框架（三）——设计 MVC</p>
+</ul>
+<p><a href="https://blog.majiameng.com/meng3.html">下一步：利用 Composer 一步一步构建自己的 PHP 框架（三）——设计 MVC</a></p>
 
       
 
@@ -345,18 +339,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/meng1.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/ffmpeg.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Composer 一步一步构建自己的 PHP 框架（一）——基础准备
+          ffmpeg-php扩展
         
       </div>
     </a>
   
   
-    <a href="/zhanzhang.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">各大网站收录、搜索引擎的提交入口</div>
+    <a href="/meng1.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">利用 Composer 一步一步构建自己的 PHP 框架（一）——基础准备</div>
       <i class="icon-circle-right"></i>
     </a>
   

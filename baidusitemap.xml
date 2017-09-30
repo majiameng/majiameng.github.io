@@ -5,11 +5,11 @@
     
   <url>
     <loc>https://blog.majiameng.com/meng2.html</loc>
-    <lastmod>2017-09-29T12:06:30.000Z</lastmod>
+    <lastmod>2017-09-30T02:19:05.000Z</lastmod>
     <data>
         <display>
         <title>利用 Composer 一步一步构建自己的 PHP 框架（二）——构建路由</title>
-        <pubTime>2017-09-21T11:35:24.000Z</pubTime>
+        <pubTime>2017-04-22T01:30:24.000Z</pubTime>
         
         <tag>PHP</tag>
          
@@ -22,11 +22,11 @@
     
   <url>
     <loc>https://blog.majiameng.com/meng1.html</loc>
-    <lastmod>2017-09-29T12:02:00.000Z</lastmod>
+    <lastmod>2017-09-30T02:19:05.000Z</lastmod>
     <data>
         <display>
-        <title>Composer 一步一步构建自己的 PHP 框架（一）——基础准备</title>
-        <pubTime>2017-09-21T11:35:24.000Z</pubTime>
+        <title>利用 Composer 一步一步构建自己的 PHP 框架（一）——基础准备</title>
+        <pubTime>2017-04-21T11:35:24.000Z</pubTime>
         
         <tag>PHP</tag>
          
@@ -39,7 +39,7 @@
     
   <url>
     <loc>https://blog.majiameng.com/hexo_github.html</loc>
-    <lastmod>2017-09-29T09:07:44.000Z</lastmod>
+    <lastmod>2017-09-29T09:23:44.000Z</lastmod>
     <data>
         <display>
         <title>Hexo安装和配置到GitHub</title>
