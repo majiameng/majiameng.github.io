@@ -4,29 +4,12 @@
 
     
   <url>
-    <loc>https://blog.majiameng.com/meng3.html</loc>
+    <loc>https://blog.majiameng.com/meng1.html</loc>
     <lastmod>2017-09-30T03:45:16.000Z</lastmod>
     <data>
         <display>
-        <title>利用 Composer 构建自己的 PHP 框架（三）——设计 MVC</title>
-        <pubTime>2017-04-22T14:43:15.000Z</pubTime>
-        
-        <tag>PHP</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.majiameng.com/meng4.html</loc>
-    <lastmod>2017-09-30T03:45:16.000Z</lastmod>
-    <data>
-        <display>
-        <title>利用 Composer 构建自己的 PHP 框架（四）——使用 ORM</title>
-        <pubTime>2017-04-22T15:31:44.000Z</pubTime>
+        <title>利用 Composer 构建自己的 PHP 框架（一）——基础准备</title>
+        <pubTime>2017-04-21T11:35:24.000Z</pubTime>
         
         <tag>PHP</tag>
          
@@ -55,12 +38,29 @@
 
     
   <url>
-    <loc>https://blog.majiameng.com/meng1.html</loc>
+    <loc>https://blog.majiameng.com/meng4.html</loc>
     <lastmod>2017-09-30T03:45:16.000Z</lastmod>
     <data>
         <display>
-        <title>利用 Composer 构建自己的 PHP 框架（一）——基础准备</title>
-        <pubTime>2017-04-21T11:35:24.000Z</pubTime>
+        <title>利用 Composer 构建自己的 PHP 框架（四）——使用 ORM</title>
+        <pubTime>2017-04-22T15:31:44.000Z</pubTime>
+        
+        <tag>PHP</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.majiameng.com/meng3.html</loc>
+    <lastmod>2017-09-30T03:45:16.000Z</lastmod>
+    <data>
+        <display>
+        <title>利用 Composer 构建自己的 PHP 框架（三）——设计 MVC</title>
+        <pubTime>2017-04-22T14:43:15.000Z</pubTime>
         
         <tag>PHP</tag>
          
@@ -149,9 +149,9 @@
         <title>ffmpeg-php扩展</title>
         <pubTime>2017-05-16T15:11:11.000Z</pubTime>
         
-        <tag>PHP</tag>
-         
         <tag>Liunx</tag>
+         
+        <tag>PHP</tag>
          
          
            
@@ -212,25 +212,6 @@
 
     
   <url>
-    <loc>https://blog.majiameng.com/redis.html</loc>
-    <lastmod>2017-09-18T11:02:31.000Z</lastmod>
-    <data>
-        <display>
-        <title>redis 使用</title>
-        <pubTime>2017-03-06T11:18:28.000Z</pubTime>
-        
-        <tag>PHP</tag>
-         
-        <tag>Redis</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://blog.majiameng.com/mysql_1.html</loc>
     <lastmod>2017-09-18T11:02:31.000Z</lastmod>
     <data>
@@ -241,6 +222,25 @@
         <tag>PHP</tag>
          
         <tag>Mysql</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.majiameng.com/redis.html</loc>
+    <lastmod>2017-09-18T11:02:31.000Z</lastmod>
+    <data>
+        <display>
+        <title>redis 使用</title>
+        <pubTime>2017-03-06T11:18:28.000Z</pubTime>
+        
+        <tag>PHP</tag>
+         
+        <tag>Redis</tag>
          
          
            
