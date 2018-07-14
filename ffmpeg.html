@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="佳萌博客">
 <meta property="og:description" content="php视频缩略图，较常用的是ffmpeg-php1： 安装 ffmpeg ffmpeg的下载链接  http://ffmpeg.org/download.html 解压安装包 tar -jxvf ffmpeg-x.x.tar.bz2 进入目录 cd ffmpeg-x.x 编译安装 1./configure --enable-shared --disable-yasm  --prefix=/usr/">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-10-25T00:52:06.000Z">
+<meta property="og:updated_time" content="2018-07-14T09:39:25.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ffmpeg-php扩展">
 <meta name="twitter:description" content="php视频缩略图，较常用的是ffmpeg-php1： 安装 ffmpeg ffmpeg的下载链接  http://ffmpeg.org/download.html 解压安装包 tar -jxvf ffmpeg-x.x.tar.bz2 进入目录 cd ffmpeg-x.x 编译安装 1./configure --enable-shared --disable-yasm  --prefix=/usr/">
@@ -203,7 +203,11 @@ var _hmt = _hmt || [];
 <p>cd ffmpeg-x.x</p>
 <p>编译安装</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --enable-shared --disable-yasm  --prefix=/usr/local/ffmpeg  &amp;&amp; make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-<p>安装完成之后 执行 ffmpeg -version<br><a id="more"></a></p>
+<p>1.1动态链接库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/ld.so.conf</span><br></pre></td></tr></table></figure></p>
+<p>加入：<code>/usr/local/ffmpeg/lib</code></p>
+<p>执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ldconfig</span><br></pre></td></tr></table></figure></p>
+<p>安装完成之后 执行 ffmpeg -version</p>
+<a id="more"></a>
 <p>2 安装ffmpeg-php</p>
 <p>官方的下载链接</p>
 <p><a href="https://sourceforge.net/projects/ffmpeg-php/files/ffmpeg-php/" target="_blank" rel="noopener">https://sourceforge.net/projects/ffmpeg-php/files/ffmpeg-php/</a></p>
@@ -218,10 +222,18 @@ var _hmt = _hmt || [];
 <p>make &amp;&amp; make install</p>
 <p>注意（如果make之后出现错误，那就是ffmpeg-php版本的问题，别再折腾了，换版本吧（或者降低php版本试试））。</p>
 <p>在php的配置文件 php.ini中 添加  </p>
-<p>1<br>extension=ffmpeg.so<br>重启php。在 phpinfo()中查看有无ffmpeg信息。</p>
-<p>有的话就OK</p>
-<p>或者执行 </p>
-<p>1<br>/usr/local/php/bin/php -i |grep ffmpeg<br>　要是有输出的话OK</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">extension=ffmpeg.so</span><br></pre></td></tr></table></figure>
+<p>重启php。在 phpinfo()中查看有无ffmpeg信息。</p>
+<p>或者执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/php/bin/php -i |grep ffmpeg</span><br></pre></td></tr></table></figure></p>
+<p>要是有输出的话OK</p>
+<p>在没有的话就没有办法了,没错我就安装不上php的ffmpeg的扩展</p>
+<p>但是不影响我使用,我们可以使用exec命令来操作ffmpeg</p>
+<blockquote>
+<p>1.请看文章<a href="https://blog.majiameng.com/ffmpeg_getinfo.html">获取视频信息</a></p>
+</blockquote>
+<blockquote>
+<p>2.请看文章<a href="https://blog.majiameng.com/ffmpeg_getcover.html">截取视频封面图</a></p>
+</blockquote>
 
       
 

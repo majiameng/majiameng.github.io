@@ -1,7 +1,5 @@
-https://blog.majiameng.com/design_url.html
-https://blog.majiameng.com/shop_url.html
-https://blog.majiameng.com/life_url.html
-https://blog.majiameng.com/movie_url.html
+https://blog.majiameng.com/ffmpeg_getcover.html
+https://blog.majiameng.com/ffmpeg_getinfo.html
 https://blog.majiameng.com/phpStorm_set_svn.html
 https://blog.majiameng.com/mengphp.html
 https://blog.majiameng.com/angular.html
@@ -18,3 +16,5 @@ https://blog.majiameng.com/meng4.html
 https://blog.majiameng.com/meng3.html
 https://blog.majiameng.com/meng2.html
 https://blog.majiameng.com/meng1.html
+https://blog.majiameng.com/vpn.sh.html
+https://blog.majiameng.com/vpn.html

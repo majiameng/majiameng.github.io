@@ -2,30 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.majiameng.com/design_url.html</loc>
+    <loc>https://blog.majiameng.com/ffmpeg_getcover.html</loc>
     
-    <lastmod>2018-03-10T05:08:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.majiameng.com/shop_url.html</loc>
-    
-    <lastmod>2018-03-10T05:08:00.000Z</lastmod>
+    <lastmod>2018-07-14T09:48:03.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.majiameng.com/life_url.html</loc>
+    <loc>https://blog.majiameng.com/ffmpeg_getinfo.html</loc>
     
-    <lastmod>2018-03-09T07:33:41.000Z</lastmod>
+    <lastmod>2018-07-14T09:48:03.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.majiameng.com/ffmpeg.html</loc>
+    
+    <lastmod>2018-07-14T09:39:25.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.majiameng.com/curl.html</loc>
+    
+    <lastmod>2018-07-14T09:26:28.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.majiameng.com/movie_url.html</loc>
     
-    <lastmod>2018-03-09T06:53:56.000Z</lastmod>
+    <lastmod>2018-07-14T09:26:16.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.majiameng.com/life_url.html</loc>
+    
+    <lastmod>2018-07-14T09:26:13.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.majiameng.com/shop_url.html</loc>
+    
+    <lastmod>2018-07-14T09:26:10.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.majiameng.com/design_url.html</loc>
+    
+    <lastmod>2018-07-14T09:26:05.000Z</lastmod>
     
   </url>
   
@@ -75,13 +103,6 @@
     <loc>https://blog.majiameng.com/gradephp.html</loc>
     
     <lastmod>2017-10-25T00:56:22.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.majiameng.com/ffmpeg.html</loc>
-    
-    <lastmod>2017-10-25T00:52:06.000Z</lastmod>
     
   </url>
   
@@ -149,14 +170,14 @@
   </url>
   
   <url>
-    <loc>https://blog.majiameng.com/mysql_proxy.html</loc>
+    <loc>https://blog.majiameng.com/mysql_principal.html</loc>
     
     <lastmod>2017-09-20T11:18:33.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.majiameng.com/mysql_principal.html</loc>
+    <loc>https://blog.majiameng.com/mysql_proxy.html</loc>
     
     <lastmod>2017-09-20T11:18:33.000Z</lastmod>
     
@@ -170,13 +191,6 @@
   </url>
   
   <url>
-    <loc>https://blog.majiameng.com/mysql_1.html</loc>
-    
-    <lastmod>2017-09-18T11:02:31.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://blog.majiameng.com/redis.html</loc>
     
     <lastmod>2017-09-18T11:02:31.000Z</lastmod>
@@ -184,9 +198,9 @@
   </url>
   
   <url>
-    <loc>https://blog.majiameng.com/curl.html</loc>
+    <loc>https://blog.majiameng.com/mysql_1.html</loc>
     
-    <lastmod>2017-09-18T11:01:22.000Z</lastmod>
+    <lastmod>2017-09-18T11:02:31.000Z</lastmod>
     
   </url>
   

@@ -175,40 +175,29 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-design_url" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-ffmpeg_getcover" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/design_url.html">链接资源 -- 美图 设计 摄影</a>
+      <a class="article-title" href="/ffmpeg_getcover.html">ffmpeg生成视频缩略图</a>
     </h1>
   
 
         
-        <a href="/design_url.html" class="archive-article-date">
-  	<time datetime="2018-03-10T05:02:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-10</time>
+        <a href="/ffmpeg_getcover.html" class="archive-article-date">
+  	<time datetime="2018-07-13T09:38:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="美图-设计-摄影"><a href="#美图-设计-摄影" class="headerlink" title="美图 设计 摄影"></a>美图 设计 摄影</h3><blockquote>
-<p>资源整理不易 尊重劳动成果</p>
-</blockquote>
-<h5 id="设计教程：经验，PS"><a href="#设计教程：经验，PS" class="headerlink" title="设计教程：经验，PS"></a>设计教程：经验，PS</h5><p><a href="http://www.uisdc.com/" target="_blank" rel="noopener">优设-UISDC</a>    (优秀网页设计联盟)</p>
-<p><a href="http://www.zcool.com.cn/discover/" target="_blank" rel="noopener">站酷原创设计频道</a>    (原创设计作品编辑精选)</p>
-<p><a href="https://uiiiuiii.com/" target="_blank" rel="noopener">优优教程网</a>    (免费视频设计教程)</p>
-<p><a href="http://www.gogoup.com/" target="_blank" rel="noopener">高高手|站酷</a>    (摄影后期,设计,绘画插画课程)</p>
-<p><a href="http://www.photoshoplady.com/" target="_blank" rel="noopener">Photoshop Lady(EN)</a>    (PHOTOSHOP教程)</p>
-<p><a href="http://www.16xx8.com/" target="_blank" rel="noopener">ps教程自学网</a>    (ps 教程图文教程)</p>
-<p><a href="http://www.68ps.com/" target="_blank" rel="noopener">68PS联盟</a>    (Ps 专业教程网)</p>
-<h5 id="字体相关：教程，设计，下载"><a href="#字体相关：教程，设计，下载" class="headerlink" title="字体相关：教程，设计，下载"></a>字体相关：教程，设计，下载</h5><p><a href="http://textuts.com/" target="_blank" rel="noopener">Textuts(EN)</a>    (Ps 文字特效教程网站)</p>
-<p><a href="https://www.fontsquirrel.com/" target="_blank" rel="noopener">字体松鼠(EN)</a>    (免费: 下载可商用英文字体)</p>
+        <h3 id="php使用ffmpeg生成视频缩略图"><a href="#php使用ffmpeg生成视频缩略图" class="headerlink" title="php使用ffmpeg生成视频缩略图"></a>php使用ffmpeg生成视频缩略图</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Name: ffmpeg.php.</span></span><br><span class="line"><span class="comment"> * Author: JiaMeng &lt;666<span class="doctag">@majiameng</span>.com&gt;</span></span><br><span class="line"><span class="comment"> * Date: 2018/7/12 14:39</span></span><br><span class="line"><span class="comment"> * Description: ffmpeg.php.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ffmpeg</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> FFMPEG_COVER_COMMAND = <span class="string">'/usr/local/ffmpeg/bin/ffmpeg -i "%s" -y -f mjpeg -ss %s -t 0.001 -s "%s" "%s"'</span>;<span class="comment">//获取视频封面</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Description:  获取视频封面</span></span><br><span class="line"><span class="comment">     * Author: JiaMeng &lt;666<span class="doctag">@majiameng</span>.com&gt;</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> string $file 视频文件路径</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> string $videoCoverName 生成的封面文件路径</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> string $resolution    分辨率</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> int $time 截取封面图的开始时间</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> bool</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">getVideoCover</span><span class="params">($file,$videoCoverName,$resolution=<span class="string">'320x240'</span>,$time=<span class="number">1</span>)</span></span>&#123;</span><br><span class="line">        $command = sprintf(<span class="keyword">self</span>::FFMPEG_COVER_COMMAND, $file,$time,$resolution,$videoCoverName);</span><br><span class="line">        exec($command.<span class="string">' 2&gt;&amp;1 '</span>,$output, $status);</span><br><span class="line">        <span class="keyword">if</span>($status == <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;<span class="comment">//生成成功</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">echo</span> <span class="string">'生成视频封面:请检查文件上传目录权限,error:'</span>.implode(<span class="string">','</span>,$output));<span class="comment">//输出异常</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
         
-          <a class="article-more-a" href="/design_url.html#more">more >></a>
+          <a class="article-more-a" href="/ffmpeg_getcover.html#more">more >></a>
         
       
 
@@ -222,7 +211,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">链接资源</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
         		</li>
       		
 		</ul>
@@ -232,7 +221,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/design_url.html">展开全文 >></a>
+          <a class="article-more-a" href="/ffmpeg_getcover.html">展开全文 >></a>
         </p>
       
 
@@ -262,43 +251,32 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-shop_url" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-ffmpeg_getinfo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/shop_url.html">链接资源 -- 购物</a>
+      <a class="article-title" href="/ffmpeg_getinfo.html">ffmpeg获取视频信息</a>
     </h1>
   
 
         
-        <a href="/shop_url.html" class="archive-article-date">
-  	<time datetime="2018-03-10T04:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-10</time>
+        <a href="/ffmpeg_getinfo.html" class="archive-article-date">
+  	<time datetime="2018-07-12T06:39:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="购物"><a href="#购物" class="headerlink" title="购物"></a>购物</h3><blockquote>
-<p>资源整理不易 尊重劳动成果</p>
+        <h3 id="php使用ffmpeg获取视频信息"><a href="#php使用ffmpeg获取视频信息" class="headerlink" title="php使用ffmpeg获取视频信息"></a>php使用ffmpeg获取视频信息</h3><blockquote>
+<p>可以获取到视频的分辨率、文件大小、播放时长、编码格式、视频格式、音频编码、音频采样频率、等…..</p>
 </blockquote>
-<h5 id="购物省钱"><a href="#购物省钱" class="headerlink" title="购物省钱"></a>购物省钱</h5><p><a href="https://www.taobao.com/" target="_blank" rel="noopener">淘宝网</a>    (网络购物)</p>
-<p><a href="https://www.tmall.com/" target="_blank" rel="noopener">天猫</a>    (综合性购物平台)</p>
-<p><a href="https://union-click.jd.com/jdc?d=01FbQ2" target="_blank" rel="noopener">京东</a>    (综合网上购物商城)</p>
-<p><a href="http://book.dangdang.com/" target="_blank" rel="noopener">当当网图书</a>    (中文网上书店)</p>
-<p><a href="https://www.amazon.cn/" target="_blank" rel="noopener">亚马逊中国官网</a>    (网上购物商城)</p>
-<p><a href="https://ju.taobao.com/" target="_blank" rel="noopener">聚划算</a>    (淘宝海量丰富团购商品)</p>
-<p><a href="http://www.smzdm.com/" target="_blank" rel="noopener">什么值得买</a>    (网购优惠信息，原创购物攻略)</p>
-<p><a href="http://www.xitie.com/" target="_blank" rel="noopener">西贴</a>    (历史价格查询|网上价格走势图)</p>
-<p><a href="http://www.boxz.com/" target="_blank" rel="noopener">盒子比价网</a>    (数码电器类购物比价网)</p>
-<p><a href="http://zhushou.huihui.cn/" target="_blank" rel="noopener">惠惠购物助手</a>    (全网比价,价格走势,一键海淘)</p>
-<p><a href="https://a.jd.com/coupons.html" target="_blank" rel="noopener">好券集市</a>    (京东领券中心)</p>
-<p><a href="http://tao.iyangqiong.com/" target="_blank" rel="noopener">淘券网</a>    (淘宝领券中心)</p>
+<p>废话不多说,直接上代码…</p>
         
-          <a class="article-more-a" href="/shop_url.html#more">more >></a>
+          <a class="article-more-a" href="/ffmpeg_getinfo.html#more">more >></a>
         
       
 
@@ -312,7 +290,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">链接资源</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
         		</li>
       		
 		</ul>
@@ -322,192 +300,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/shop_url.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-life_url" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/life_url.html">链接资源 -- 生活学习</a>
-    </h1>
-  
-
-        
-        <a href="/life_url.html" class="archive-article-date">
-  	<time datetime="2018-03-09T04:38:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="生活学习"><a href="#生活学习" class="headerlink" title="生活学习"></a>生活学习</h3><blockquote>
-<p>资源整理不易 尊重劳动成果</p>
-</blockquote>
-<h5 id="音乐电台"><a href="#音乐电台" class="headerlink" title="音乐电台"></a>音乐电台</h5><p><a href="http://www.yinyuetai.com/" target="_blank" rel="noopener">音悦Tai</a>    (高清 MV)</p>
-<p><a href="http://www.170mv.com/tool/jiexi/" target="_blank" rel="noopener">音悦台MV解析</a>    (高清MV免积分下载工具V)</p>
-<p><a href="http://www.170mv.com/" target="_blank" rel="noopener">170MV下载网</a>    (迅雷下载MV)</p>
-<p><a href="http://music.163.com/" target="_blank" rel="noopener">网易云音乐</a>    (网易云音乐)</p>
-<p><a href="http://music.163.com/" target="_blank" rel="noopener">豆瓣FM</a>    (个性化音乐收听工具)</p>
-<p><a href="http://5sing.kugou.com/index.html" target="_blank" rel="noopener">5SING</a>    (中国原创音乐基地)</p>
-<p><a href="http://music.baidu.com/" target="_blank" rel="noopener">百度音乐</a>    (百度音乐音乐门户)</p>
-<p><a href="http://y.qq.com/" target="_blank" rel="noopener">QQ音乐</a>    (企鹅家的音乐)</p>
-<p><a href="http://www.xiami.com/" target="_blank" rel="noopener">虾米音乐</a>    (阿里音乐旗下品牌)</p>
-<p><a href="http://www.app-echo.com/channel/" target="_blank" rel="noopener">echo回声</a>    (3D音乐平台)</p>
-<p><a href="https://www.bandari.net/" target="_blank" rel="noopener">班得瑞全球网</a>    (班得瑞音乐爱好者最佳选择点)</p>
-<p><a href="http://www.ximalaya.com/explore/" target="_blank" rel="noopener">喜马拉雅FM</a>    (在线音频分享平台)</p>
-<p><a href="http://www.qingting.fm/" target="_blank" rel="noopener">蜻蜓FM</a>    (蜻蜓FM广播电台)</p>
-        
-          <a class="article-more-a" href="/life_url.html#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">链接资源</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/life_url.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-movie_url" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/movie_url.html">链接资源 -- 影视视频</a>
-    </h1>
-  
-
-        
-        <a href="/movie_url.html" class="archive-article-date">
-  	<time datetime="2018-03-09T04:34:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="影视视频"><a href="#影视视频" class="headerlink" title="影视视频"></a>影视视频</h3><blockquote>
-<p>资源整理不易 尊重劳动成果</p>
-</blockquote>
-<h5 id="在线视频"><a href="#在线视频" class="headerlink" title="在线视频"></a>在线视频</h5><p><a href="http://www.acfun.cn/" target="_blank" rel="noopener">A站</a>    (二次元基佬站)</p>
-<p><a href="https://www.bilibili.com/" target="_blank" rel="noopener">B站</a>    (二次元弹幕站)</p>
-<p><a href="http://www.tucao.tv/" target="_blank" rel="noopener">C站</a>    (二次元弹幕站)</p>
-<p><a href="http://www.novipnoad.com/" target="_blank" rel="noopener">NO视频</a>    (在线观看视频)</p>
-<p><a href="http://8maple.ru/" target="_blank" rel="noopener">楓林網</a>    (追剧网站必备)</p>
-<p><a href="http://neets.cc/" target="_blank" rel="noopener">N站</a>    (追剧网站必备)</p>
-<p><a href="http://www.1993s.top/" target="_blank" rel="noopener">在线之家</a>    (在线电影电视剧视频)</p>
-<p><a href="http://www.82ke.com/" target="_blank" rel="noopener">94神马电影网</a>    (在线电影电视剧视频)</p>
-<p><a href="http://www.q2002.cn/" target="_blank" rel="noopener">Q2电影</a>    (在线电影电视剧视频)</p>
-<p><a href="http://v.sunbook.cc/" target="_blank" rel="noopener">暖光影视</a>    (在线电影电视剧视频)</p>
-<p><a href="http://www.lol5s.com/" target="_blank" rel="noopener">五杀电影院</a>    (在线电影电视剧视频)</p>
-<p><a href="http://www.halihali.tv/" target="_blank" rel="noopener">哈哩哈哩</a>    (在线电影电视剧视频)</p>
-<p><a href="http://www.byjsj.cn/" target="_blank" rel="noopener">一部影院</a>    (在线电影电视剧视频)</p>
-<p><a href="http://www.7qkp.cc/" target="_blank" rel="noopener">琪琪电影网</a>    (在线电影电视剧视频)</p>
-<p><a href="http://dd.jsmw06.com/" target="_blank" rel="noopener">88k影院</a>    (在线电影电视剧视频)</p>
-<p><a href="http://www.5di.tv/" target="_blank" rel="noopener">无敌电影网</a>    (在线电影电视剧视频)</p>
-        
-          <a class="article-more-a" href="/movie_url.html#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">链接资源</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/movie_url.html">展开全文 >></a>
+          <a class="article-more-a" href="/ffmpeg_getinfo.html">展开全文 >></a>
         </p>
       
 
@@ -998,6 +791,177 @@ var _hmt = _hmt || [];
       
         <p class="article-more-link">
           <a class="article-more-a" href="/btb.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-socket" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/socket.html">Socket现在都很常见了把,但是你会使用吗,你是前端还是后台都得接触把!</a>
+    </h1>
+  
+
+        
+        <a href="/socket.html" class="archive-article-date">
+  	<time datetime="2017-10-01T10:14:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="Socket"><a href="#Socket" class="headerlink" title="Socket"></a>Socket</h4><h2 id="Socket实例"><a href="#Socket实例" class="headerlink" title="Socket实例"></a>Socket实例</h2><blockquote>
+<p>进入<a href="https://www.majiameng.com" target="_blank" rel="noopener">驿站</a></p>
+</blockquote>
+<h5 id="点击左下角登陆按钮就能看到结合layer的即时通讯"><a href="#点击左下角登陆按钮就能看到结合layer的即时通讯" class="headerlink" title="点击左下角登陆按钮就能看到结合layer的即时通讯"></a>点击左下角登陆按钮就能看到结合layer的即时通讯</h5><ul>
+<li>这是我前些天研究拍黄片，喔不 是研究php的时候看见的一个框架,然后</li>
+</ul>
+        
+          <a class="article-more-a" href="/socket.html#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/socket.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-zhanzhang" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/zhanzhang.html">各大网站收录、搜索引擎的提交入口</a>
+    </h1>
+  
+
+        
+        <a href="/zhanzhang.html" class="archive-article-date">
+  	<time datetime="2017-06-20T01:15:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<blockquote>
+<p>搜索引擎网站收录地址大全 【点此提交您的搜索引擎】</p>
+</blockquote>
+</blockquote>
+<p>360搜索引擎登录入口：<a href="http://info.so.360.cn/site_submit.html" target="_blank" rel="noopener">http://info.so.360.cn/site_submit.html</a></p>
+<p>即刻搜索网站提交入口：<a href="http://zz.jike.com/submit/genUrlForm" target="_blank" rel="noopener">http://zz.jike.com/submit/genUrlForm</a></p>
+<p>盘古数据开放平台：<a href="http://open.panguso.com/data/resource/url/new" target="_blank" rel="noopener">http://open.panguso.com/data/resource/url/new</a></p>
+<p>百度搜索网站登录口：<a href="http://zhanzhang.baidu.com/sitesubmit" target="_blank" rel="noopener">http://zhanzhang.baidu.com/sitesubmit</a></p>
+<p>Google网站登录口：<a href="https://www.google.com/webmasters/tools/submit-url" target="_blank" rel="noopener">https://www.google.com/webmasters/tools/submit-url</a></p>
+<p>Google新闻网站内容：<a href="http://www.google.com/support/news_pub/bin/request.py?contact_type=suggest_content&amp;hl=cn" target="_blank" rel="noopener">http://www.google.com/support/news_pub/bin/request.py?contact_type=suggest_content&amp;hl=cn</a></p>
+        
+          <a class="article-more-a" href="/zhanzhang.html#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">收录</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/zhanzhang.html">展开全文 >></a>
         </p>
       
 
