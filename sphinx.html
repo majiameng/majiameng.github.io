@@ -9,18 +9,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://blog.majiameng.com">
-  <title>Tag: Hexo | 佳萌博客</title>
+  <title>sphinx | 佳萌博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="听说股市有人拿五万变成100万，亲眼见自己把10万变成五千.踏踏实实干事,成功离你不远了!佳萌日常整理的博文，希望对你们有用!">
-<meta property="og:type" content="website">
-<meta property="og:title" content="佳萌博客">
-<meta property="og:url" content="https://blog.majiameng.com/tags/Hexo/index.html">
+  <meta name="description" content="sphinx在linux系统的安装本人机器系统： 12[root@izbp153yczpm4pp9pjs0u3z ~]# cat /proc/version Linux version 3.10.0-862.3.2.el7.x86_64 (builder@kbuilder.dev.centos.org) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-28)">
+<meta name="keywords" content="PHP,Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sphinx">
+<meta property="og:url" content="https://blog.majiameng.com/sphinx.html">
 <meta property="og:site_name" content="佳萌博客">
-<meta property="og:description" content="听说股市有人拿五万变成100万，亲眼见自己把10万变成五千.踏踏实实干事,成功离你不远了!佳萌日常整理的博文，希望对你们有用!">
+<meta property="og:description" content="sphinx在linux系统的安装本人机器系统： 12[root@izbp153yczpm4pp9pjs0u3z ~]# cat /proc/version Linux version 3.10.0-862.3.2.el7.x86_64 (builder@kbuilder.dev.centos.org) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-28)">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-07-23T03:36:43.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="佳萌博客">
-<meta name="twitter:description" content="听说股市有人拿五万变成100万，亲眼见自己把10万变成五千.踏踏实实干事,成功离你不远了!佳萌日常整理的博文，希望对你们有用!">
+<meta name="twitter:title" content="sphinx">
+<meta name="twitter:description" content="sphinx在linux系统的安装本人机器系统： 12[root@izbp153yczpm4pp9pjs0u3z ~]# cat /proc/version Linux version 3.10.0-862.3.2.el7.x86_64 (builder@kbuilder.dev.centos.org) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-28)">
   
     <link rel="alternative" href="/atom.xml" title="佳萌博客" type="application/atom+xml">
   
@@ -173,140 +175,232 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-sphinx" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/hexo_zhanzhang.html" class="archive-article-date">
-  	<time datetime="2016-03-14T14:38:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-03-14</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/hexo_zhanzhang.html">Hexo博客收录百度和谷歌!</a>
+    <h1 class="article-title" itemprop="name">
+      sphinx
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/sphinx.html" class="archive-article-date">
+  	<time datetime="2018-07-23T03:36:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="sphinx在linux系统的安装"><a href="#sphinx在linux系统的安装" class="headerlink" title="sphinx在linux系统的安装"></a>sphinx在linux系统的安装</h3><p>本人机器系统：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@izbp153yczpm4pp9pjs0u3z ~]# cat /proc/version </span><br><span class="line">Linux version 3.10.0-862.3.2.el7.x86_64 (builder@kbuilder.dev.centos.org) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-28) (GCC) ) #1 SMP Thu Jul 31 17:20:51 UTC 2014</span><br></pre></td></tr></table></figure>
+<p>1.到官网下载源代码安装，你也可以根据系统直接下载rpm包安装</p>
+<p>我们这里选择源码安装</p>
+<p>下载完之后，放到目录/home 下</p>
+<p>2.解压: <code> tar -xzvf sphinx-2.2.10-release.tar.gz </code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv sphinx-2.2.10-release sphinx</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd sphinx</span><br></pre></td></tr></table></figure>
+<p>编译:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/usr/local/sphinx</span><br></pre></td></tr></table></figure></p>
+<p>安装:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>安装完成之后,我们开始配置sphinx</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/sphinx/etc/</span><br><span class="line"></span><br><span class="line">mv sphinx-min.conf.dist sphinx.conf</span><br><span class="line"></span><br><span class="line">vim sphinx.conf</span><br></pre></td></tr></table></figure>
+<p>下面是里面的内容配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">#</span><br><span class="line"># Minimal Sphinx configuration sample (clean, simple, functional)</span><br><span class="line">#</span><br><span class="line">source src1</span><br><span class="line">&#123;</span><br><span class="line">    type = mysql</span><br><span class="line">    </span><br><span class="line">    sql_host = 127.0.0.1    </span><br><span class="line">    sql_user = root</span><br><span class="line">    sql_pass =</span><br><span class="line">    sql_db = test  //数据库name</span><br><span class="line">    sql_port = 3306 # optional, default is 3306</span><br><span class="line">    </span><br><span class="line">    sql_query = \</span><br><span class="line">    SELECT id, realname,import_id, account, source ,UNIX_TIMESTAMP(import_time) AS import_timestamp \</span><br><span class="line">    FROM contact_list_test</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    sql_attr_uint = id</span><br><span class="line">    sql_attr_timestamp= import_timestamp</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">index test1</span><br><span class="line">&#123;</span><br><span class="line">    source = src1</span><br><span class="line">    path = /usr/local/sphinx/var/data/test1</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">index testrt</span><br><span class="line">&#123;</span><br><span class="line">    type = rt</span><br><span class="line">    rt_mem_limit = 128M</span><br><span class="line">    </span><br><span class="line">    path = /usr/local/sphinx/var/data/testrt</span><br><span class="line">    </span><br><span class="line">    rt_field = title</span><br><span class="line">    rt_field = content</span><br><span class="line">    rt_attr_uint = gid</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">indexer</span><br><span class="line">&#123;</span><br><span class="line">    mem_limit = 128M</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">searchd</span><br><span class="line">&#123;</span><br><span class="line">    listen = 9312</span><br><span class="line">    listen = 9306:mysql41</span><br><span class="line">    log = /usr/local/sphinx/var/log/searchd.log</span><br><span class="line">    query_log = /usr/local/sphinx/var/log/query.log</span><br><span class="line">    read_timeout = 5</span><br><span class="line">    max_children = 30</span><br><span class="line">    pid_file = /usr/local/sphinx/var/log/searchd.pid</span><br><span class="line">    seamless_rotate= 1</span><br><span class="line">    preopen_indexes= 1</span><br><span class="line">    unlink_old = 1</span><br><span class="line">    workers = threads # for RT to work</span><br><span class="line">    binlog_path = /usr/local/sphinx/var/data</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>生成索引:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/sphinx/bin</span><br><span class="line"></span><br><span class="line"> ./indexer -c /usr/local/sphinx/etc/sphinx.conf --all</span><br></pre></td></tr></table></figure></p>
+<p>如果此时出现以下错误，</p>
+<p><code> FATAL: failed to lock /usr/local/sphinx/var/data/test1.spl: Resource temporarily unavailable, will not index. Try –rotate option. </code></p>
+<p>请改用命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./indexer -c /usr/local/sphinx/etc/sphinx.conf --all --rotate</span><br></pre></td></tr></table></figure></p>
+<p>启动spinx搜索服务器:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./searchd -c /usr/local/sphinx/etc/sphinx.conf</span><br></pre></td></tr></table></figure></p>
+<p>使用sphinx php api测试：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line"> </span><br><span class="line">require ( &quot;sphinxapi.php&quot; );   //此文件在sphinx源代码的api文件夹中可以找到</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">$cl = new SphinxClient();</span><br><span class="line"> </span><br><span class="line">$q = &quot;weibo&quot;;</span><br><span class="line">$sql = &quot;test1&quot;;</span><br><span class="line">$mode = SPH_MATCH_ALL;</span><br><span class="line">$host = &quot;localhost&quot;;</span><br><span class="line">$port = 9312;</span><br><span class="line">$index = &quot;*&quot;;</span><br><span class="line">// $groupby = &quot;&quot;;</span><br><span class="line">// $groupsort = &quot;@group desc&quot;;</span><br><span class="line">// $filter = &quot;group_id&quot;;</span><br><span class="line">// $filtervals = array();</span><br><span class="line">// $distinct = &quot;&quot;;</span><br><span class="line">// $sortby = &quot;&quot;;</span><br><span class="line">// $sortexpr = &quot;&quot;;</span><br><span class="line">// $limit = 20;</span><br><span class="line">// $ranker = SPH_RANK_PROXIMITY_BM25;</span><br><span class="line">// $select = &quot;&quot;;</span><br><span class="line"> </span><br><span class="line">$cl-&gt;SetServer ( $host, $port );</span><br><span class="line">$cl-&gt;SetConnectTimeout ( 1 );</span><br><span class="line">$cl-&gt;SetArrayResult ( true );</span><br><span class="line">$cl-&gt;SetMatchMode ( $mode );</span><br><span class="line">// if ( count($filtervals) )	$cl-&gt;SetFilter ( $filter, $filtervals );</span><br><span class="line">// if ( $groupby )				$cl-&gt;SetGroupBy ( $groupby, SPH_GROUPBY_ATTR, $groupsort );</span><br><span class="line">// if ( $sortby )				$cl-&gt;SetSortMode ( SPH_SORT_EXTENDED, $sortby );</span><br><span class="line">// if ( $sortexpr )			$cl-&gt;SetSortMode ( SPH_SORT_EXPR, $sortexpr );</span><br><span class="line">// if ( $distinct )			$cl-&gt;SetGroupDistinct ( $distinct );</span><br><span class="line">// if ( $select )				$cl-&gt;SetSelect ( $select );</span><br><span class="line">// if ( $limit )				$cl-&gt;SetLimits ( 0, $limit, ( $limit&gt;1000 ) ? $limit : 1000 );</span><br><span class="line">//$cl-&gt;SetRankingMode ( $ranker );</span><br><span class="line">$res = $cl-&gt;Query ( $q, $index );</span><br><span class="line"> </span><br><span class="line">////////////////</span><br><span class="line">// print me out</span><br><span class="line">////////////////</span><br><span class="line"> </span><br><span class="line">if ( $res===false )</span><br><span class="line">&#123;</span><br><span class="line">	print &quot;Query failed: &quot; . $cl-&gt;GetLastError() . &quot;.&lt;br/&gt;&quot;;</span><br><span class="line"> </span><br><span class="line">&#125; else</span><br><span class="line">&#123;</span><br><span class="line">	if ( $cl-&gt;GetLastWarning() )</span><br><span class="line">		print &quot;WARNING: &quot; . $cl-&gt;GetLastWarning() . &quot;&lt;br/&gt;&lt;br/&gt;&quot;;</span><br><span class="line"> </span><br><span class="line">	print &quot;Query &apos;$q&apos; retrieved $res[total] of $res[total_found] matches in $res[time] sec.&lt;br/&gt;&quot;;</span><br><span class="line">	print &quot;Query stats:&lt;br/&gt;&quot;;</span><br><span class="line">	if ( is_array($res[&quot;words&quot;]) )</span><br><span class="line">		foreach ( $res[&quot;words&quot;] as $word =&gt; $info )</span><br><span class="line">			print &quot;    &apos;$word&apos; found $info[hits] times in $info[docs] documents\n&quot;;</span><br><span class="line">	print &quot;&lt;br/&gt;&quot;;</span><br><span class="line"> </span><br><span class="line">	if ( is_array($res[&quot;matches&quot;]) )</span><br><span class="line">	&#123;</span><br><span class="line">		$n = 1;</span><br><span class="line">		print &quot;Matches:&lt;br/&gt;&quot;;</span><br><span class="line">		foreach ( $res[&quot;matches&quot;] as $docinfo )</span><br><span class="line">		&#123;</span><br><span class="line">			print &quot;$n. doc_id=$docinfo[id], weight=$docinfo[weight]&quot;;</span><br><span class="line">			foreach ( $res[&quot;attrs&quot;] as $attrname =&gt; $attrtype )</span><br><span class="line">			&#123;</span><br><span class="line">				$value = $docinfo[&quot;attrs&quot;][$attrname];</span><br><span class="line">				if ( $attrtype==SPH_ATTR_MULTI || $attrtype==SPH_ATTR_MULTI64 )</span><br><span class="line">				&#123;</span><br><span class="line">					$value = &quot;(&quot; . join ( &quot;,&quot;, $value ) .&quot;)&quot;;</span><br><span class="line">				&#125; else</span><br><span class="line">				&#123;</span><br><span class="line">					if ( $attrtype==SPH_ATTR_TIMESTAMP )</span><br><span class="line">						$value = date ( &quot;Y-m-d H:i:s&quot;, $value );</span><br><span class="line">				&#125;</span><br><span class="line">				print &quot;, $attrname=$value&quot;;</span><br><span class="line">			&#125;</span><br><span class="line">			print &quot;&lt;br/&gt;&quot;;</span><br><span class="line">			$n++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">//</span><br><span class="line">// $Id$</span><br><span class="line">//</span><br><span class="line"> </span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure></p>
+<p>打印的结果:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Query &apos;weibo&apos; retrieved 1000 of 3873 matches in 0.001 sec.</span><br><span class="line">Query stats:</span><br><span class="line">&apos;weibo&apos; found 3873 times in 3873 documents </span><br><span class="line">Matches:</span><br><span class="line">1. doc_id=1, weight=1, import_timestamp=2015-06-26 16:25:41</span><br><span class="line">2. doc_id=4, weight=1, import_timestamp=2015-06-26 16:25:41</span><br><span class="line">3. doc_id=5, weight=1, import_timestamp=2015-06-26 16:25:41</span><br><span class="line">4. doc_id=6, weight=1, import_timestamp=2015-06-26 16:25:41</span><br><span class="line">5. doc_id=8, weight=1, import_timestamp=2015-06-26 16:25:41</span><br><span class="line">6. doc_id=9, weight=1, import_timestamp=2015-06-26 16:25:41</span><br><span class="line">7. doc_id=10, weight=1, import_timestamp=2015-06-26 16:25:41</span><br><span class="line">8. doc_id=11, weight=1, import_timestamp=2015-06-26 16:25:41</span><br><span class="line">9. doc_id=12, weight=1, import_timestamp=2015-06-26 16:25:41</span><br><span class="line">10. doc_id=13, weight=1, import_timestamp=2015-06-26 16:25:41</span><br><span class="line">11. doc_id=14, weight=1, import_timestamp=2015-06-26 16:25:41</span><br><span class="line">12. doc_id=15, weight=1, import_timestamp=2015-06-26 16:25:41</span><br><span class="line">13. doc_id=16, weight=1, import_timestamp=2015-06-26 16:25:41</span><br><span class="line">14. doc_id=17, weight=1, import_timestamp=2015-06-26 16:25:41</span><br><span class="line">15. doc_id=18, weight=1, import_timestamp=2015-06-26 16:25:41</span><br><span class="line">16. doc_id=19, weight=1, import_timestamp=2015-06-26 16:25:41</span><br><span class="line">17. doc_id=20, weight=1, import_timestamp=2015-06-26 16:25:41</span><br><span class="line">18. doc_id=21, weight=1, import_timestamp=2015-06-26 16:25:41</span><br><span class="line">19. doc_id=22, weight=1, import_timestamp=2015-06-26 16:25:41</span><br><span class="line">20. doc_id=23, weight=1, import_timestamp=2015-06-26 16:25:41</span><br></pre></td></tr></table></figure></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">收录</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://blog.majiameng.com/sphinx.html" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/hexo_github.html" class="archive-article-date">
-  	<time datetime="2016-02-14T02:40:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-02-14</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/ffmpeg_getcover.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ffmpeg生成视频缩略图</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/hexo_github.html">Hexo安装和配置到GitHub</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#sphinx在linux系统的安装"><span class="toc-number">1.</span> <span class="toc-text">sphinx在linux系统的安装</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/hexo.html" class="archive-article-date">
-  	<time datetime="2016-02-14T00:40:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-02-14</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/hexo.html">教你怎么用 Hexo!</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
+  <!--表情-->
+<div style="margin-left: 40px;"><div id="cyEmoji" role="cylabs" data-use="emoji" sid="sphinx"></div></div>
+<script type="text/javascript" charset="utf-8" src="https://changyan.itc.cn/js/lib/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="https://changyan.sohu.com/js/changyan.labs.https.js?appid=cytd8GjEU"></script>
+<!--PC和WAP自适应版-->
+<div id="SOHUCS" sid="sphinx" ></div>
+<script type="text/javascript">
+    (function(){
+        var appid = 'cytd8GjEU';
+        var conf = 'prod_21d854837c6931da20573b9df4aa83f4';
+        var width = window.innerWidth || document.documentElement.clientWidth;
+        if (width < 960) {
+            window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })();
+</script>
+
+
+
   
 
-    
+  
+
+  
 
 
           </div>
@@ -340,9 +434,9 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
