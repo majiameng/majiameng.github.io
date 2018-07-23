@@ -121,6 +121,13 @@
   </url>
   
   <url>
+    <loc>https://blog.majiameng.com/meng2.html</loc>
+    
+    <lastmod>2017-09-30T03:45:16.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.majiameng.com/meng4.html</loc>
     
     <lastmod>2017-09-30T03:45:16.000Z</lastmod>
@@ -129,13 +136,6 @@
   
   <url>
     <loc>https://blog.majiameng.com/meng1.html</loc>
-    
-    <lastmod>2017-09-30T03:45:16.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.majiameng.com/meng2.html</loc>
     
     <lastmod>2017-09-30T03:45:16.000Z</lastmod>
     
@@ -170,14 +170,14 @@
   </url>
   
   <url>
-    <loc>https://blog.majiameng.com/mysql_principal.html</loc>
+    <loc>https://blog.majiameng.com/mysql_proxy.html</loc>
     
     <lastmod>2017-09-20T11:18:33.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.majiameng.com/mysql_proxy.html</loc>
+    <loc>https://blog.majiameng.com/mysql_principal.html</loc>
     
     <lastmod>2017-09-20T11:18:33.000Z</lastmod>
     
