@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.majiameng.com/elasticsearch_install.html</loc>
+    
+    <lastmod>2018-09-18T07:26:58.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.majiameng.com/yii2_mysql_server_has_gone_away.html</loc>
+    
+    <lastmod>2018-09-18T07:26:38.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.majiameng.com/elasticsearch_yii_use.html</loc>
+    
+    <lastmod>2018-09-17T09:24:23.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.majiameng.com/workerman_socket.html</loc>
     
     <lastmod>2018-08-09T01:19:36.000Z</lastmod>
@@ -142,13 +163,6 @@
   </url>
   
   <url>
-    <loc>https://blog.majiameng.com/meng4.html</loc>
-    
-    <lastmod>2017-09-30T03:45:16.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://blog.majiameng.com/meng1.html</loc>
     
     <lastmod>2017-09-30T03:45:16.000Z</lastmod>
@@ -157,6 +171,13 @@
   
   <url>
     <loc>https://blog.majiameng.com/meng2.html</loc>
+    
+    <lastmod>2017-09-30T03:45:16.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.majiameng.com/meng4.html</loc>
     
     <lastmod>2017-09-30T03:45:16.000Z</lastmod>
     

@@ -175,6 +175,268 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-yii2_mysql_server_has_gone_away" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/yii2_mysql_server_has_gone_away.html">yii2 console MySQL server has gone away</a>
+    </h1>
+  
+
+        
+        <a href="/yii2_mysql_server_has_gone_away.html" class="archive-article-date">
+  	<time datetime="2018-09-18T07:26:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="yii2-console-MySQL-server-has-gone-away"><a href="#yii2-console-MySQL-server-has-gone-away" class="headerlink" title="yii2 console MySQL server has gone away"></a>yii2 console MySQL server has gone away</h2><blockquote>
+<p>经过我的不屑努力和研究终于得到解决方案</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">namespace common\lib;</span><br><span class="line">class Command extends \yii\db\Command&#123;</span><br><span class="line">    public function execute()</span><br><span class="line">    &#123;</span><br><span class="line">        try &#123;</span><br><span class="line">            return parent::execute();</span><br><span class="line">        &#125; catch (\yii\db\Exception $e) &#123;</span><br><span class="line">            if ($e-&gt;errorInfo[1] == 2006 || $e-&gt;errorInfo[1] == 2013) &#123;</span><br><span class="line">                $this-&gt;db-&gt;close();</span><br><span class="line">                $this-&gt;db-&gt;open();</span><br><span class="line">                $this-&gt;pdoStatement = null ;</span><br><span class="line">                return parent::execute();</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                throw $e;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    protected function queryInternal($method, $fetchMode = null)&#123;</span><br><span class="line">        try &#123;</span><br><span class="line">            return parent::queryInternal($method, $fetchMode);</span><br><span class="line">        &#125; catch (\yii\db\Exception $e) &#123;</span><br><span class="line">            if ($e-&gt;errorInfo[1] == 2006 || $e-&gt;errorInfo[1] == 2013) &#123;</span><br><span class="line">                $this-&gt;db-&gt;close();</span><br><span class="line">                $this-&gt;db-&gt;open();</span><br><span class="line">                $this-&gt;pdoStatement = null ;</span><br><span class="line"></span><br><span class="line">                return parent::queryInternal($method, $fetchMode);</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                throw $e;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&apos;db&apos; =&gt; [</span><br><span class="line">            &apos;class&apos; =&gt; &apos;yii\db\Connection&apos;,</span><br><span class="line">            &apos;dsn&apos; =&gt; &apos;mysql:host=&apos;.$db_config[&apos;host&apos;].&apos;;dbname=&apos;.$db_config[&apos;dbname&apos;],</span><br><span class="line">            &apos;username&apos; =&gt; $db_config[&apos;username&apos;],</span><br><span class="line">            &apos;password&apos; =&gt; $db_config[&apos;password&apos;],</span><br><span class="line">            &apos;charset&apos; =&gt; &apos;utf8&apos;,</span><br><span class="line">            &apos;commandClass&apos;=&gt;&quot;\\common\\lib\\Command&quot;, //&lt;==注意这里要替换</span><br><span class="line">],</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Mysql</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/yii2_mysql_server_has_gone_away.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-elasticsearch_yii_use" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/elasticsearch_yii_use.html">Yii2 ElasticSearch的使用</a>
+    </h1>
+  
+
+        
+        <a href="/elasticsearch_yii_use.html" class="archive-article-date">
+  	<time datetime="2018-08-17T09:01:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Yii2-ElasticSearch的使用"><a href="#Yii2-ElasticSearch的使用" class="headerlink" title="Yii2 ElasticSearch的使用"></a>Yii2 ElasticSearch的使用</h1><h4 id="Yii2-elasticSearch-–-配置"><a href="#Yii2-elasticSearch-–-配置" class="headerlink" title="Yii2 elasticSearch – 配置"></a>Yii2 elasticSearch – 配置</h4><p>配置部分如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&apos;elasticsearch&apos; =&gt; [</span><br><span class="line">        &apos;class&apos; =&gt; &apos;yii\elasticsearch\Connection&apos;,</span><br><span class="line">        &apos;nodes&apos; =&gt; [</span><br><span class="line">            [&apos;http_address&apos; =&gt; &apos;192.168.0.199:9200&apos;],</span><br><span class="line">            [&apos;http_address&apos; =&gt; &apos;192.168.0.210:9200&apos;],</span><br><span class="line">        ],</span><br><span class="line">    ],</span><br></pre></td></tr></table></figure></p>
+<p>您配置了es的集群，那么需要在http_address中把每一个节点的ip都要配置上，</p>
+<p>我只有两个节点，那么，我只写了两个IP。</p>
+<p>这样就完成了在Yii2中es的配置。</p>
+<h4 id="yii2-elasticSearch-model"><a href="#yii2-elasticSearch-model" class="headerlink" title="yii2 elasticSearch - model"></a>yii2 elasticSearch - model</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">flow</span>\<span class="title">models</span>\<span class="title">elasticsearch</span>;</span><br><span class="line"><span class="keyword">use</span> \<span class="title">yii</span>\<span class="title">elasticsearch</span>\<span class="title">ActiveRecord</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">IndexElasticSearch</span> <span class="keyword">extends</span> <span class="title">ActiveRecord</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> $indexIndex;</span><br><span class="line">    <span class="keyword">public</span> $_dbName;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="function"><span class="keyword">function</span> <span class="title">getDb</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> \Yii::$app-&gt;get(<span class="string">'elasticsearch'</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Description:  定义字段映射的方法</span></span><br><span class="line"><span class="comment">     * Author: JiaMeng &lt;666<span class="doctag">@majiameng</span>.com&gt;</span></span><br><span class="line"><span class="comment">     * Updater:</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> $data</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">map</span><span class="params">($data)</span></span>&#123;</span><br><span class="line">        <span class="keyword">foreach</span>($data <span class="keyword">as</span> $k=&gt;$v)&#123;</span><br><span class="line">            <span class="keyword">if</span>(in_array($k,<span class="keyword">$this</span>-&gt;attributes()))&#123;</span><br><span class="line">                    <span class="keyword">$this</span>-&gt;$k = $v;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">//db</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="function"><span class="keyword">function</span> <span class="title">index</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">'index'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//table</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="function"><span class="keyword">function</span> <span class="title">type</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">'index'</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 属性</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">attributes</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        $mapConfig = <span class="keyword">self</span>::mapConfig();</span><br><span class="line">        <span class="keyword">return</span> array_keys($mapConfig[<span class="string">'properties'</span>]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// mapping配置</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="function"><span class="keyword">function</span> <span class="title">mapConfig</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> [</span><br><span class="line">            <span class="string">'properties'</span> =&gt; [</span><br><span class="line">                <span class="string">'id'</span>  =&gt; [<span class="string">'type'</span> =&gt; <span class="string">'integer'</span>,  <span class="string">"index"</span> =&gt; <span class="keyword">true</span>],</span><br><span class="line">                <span class="string">'title'</span>  =&gt; [<span class="string">'type'</span> =&gt; <span class="string">'text'</span>, <span class="string">"index"</span> =&gt; <span class="keyword">true</span>,<span class="string">"analyzer"</span>=&gt;<span class="string">'ik_max_word'</span>,<span class="string">'search_analyzer'</span>=&gt;<span class="string">'ik_max_word'</span>],<span class="comment">//ik中文分词</span></span><br><span class="line">                <span class="string">'type'</span>      =&gt; [<span class="string">'type'</span> =&gt; <span class="string">'integer'</span>,  <span class="string">"index"</span> =&gt; <span class="keyword">true</span>],</span><br><span class="line">                <span class="string">'inputtime'</span>      =&gt; [<span class="string">'type'</span> =&gt; <span class="string">'integer'</span>,  <span class="string">"index"</span> =&gt; <span class="keyword">true</span>],<span class="comment">//文章创建时间</span></span><br><span class="line">                <span class="string">'updatetime'</span>      =&gt; [<span class="string">'type'</span> =&gt; <span class="string">'integer'</span>,  <span class="string">"index"</span> =&gt; <span class="keyword">true</span>],<span class="comment">//文章更新时间</span></span><br><span class="line">                <span class="string">'content'</span> =&gt; [<span class="string">'type'</span> =&gt; <span class="string">'text'</span>,<span class="string">"index"</span> =&gt; <span class="keyword">true</span>,<span class="string">"analyzer"</span>=&gt;<span class="string">'ik_max_word'</span>,<span class="string">'search_analyzer'</span>=&gt;<span class="string">'ik_max_word'</span>],<span class="comment">//文章内容</span></span><br><span class="line">                <span class="string">'other'</span> =&gt; [<span class="string">'type'</span> =&gt; <span class="string">'text'</span>,<span class="string">"index"</span> =&gt; <span class="keyword">false</span>],<span class="comment">//'"index" =&gt; false' 不进行分词</span></span><br><span class="line">            ]</span><br><span class="line">        ];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="function"><span class="keyword">function</span> <span class="title">mapping</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> [</span><br><span class="line">            <span class="keyword">static</span>::type() =&gt; <span class="keyword">self</span>::mapConfig(),</span><br><span class="line">        ];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set (update) mappings for this model</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="function"><span class="keyword">function</span> <span class="title">updateMapping</span><span class="params">()</span></span>&#123;</span><br><span class="line">        $db = <span class="keyword">self</span>::getDb();</span><br><span class="line">        $command = $db-&gt;createCommand();</span><br><span class="line">        <span class="keyword">if</span>(!$command-&gt;indexExists(<span class="keyword">self</span>::index()))&#123;</span><br><span class="line">            $command-&gt;createIndex(<span class="keyword">self</span>::index());</span><br><span class="line">        &#125;</span><br><span class="line">        $command-&gt;setMapping(<span class="keyword">self</span>::index(), <span class="keyword">self</span>::type(), <span class="keyword">self</span>::mapping());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="function"><span class="keyword">function</span> <span class="title">getMapping</span><span class="params">()</span></span>&#123;</span><br><span class="line">        $db = <span class="keyword">self</span>::getDb();</span><br><span class="line">        $command = $db-&gt;createCommand();</span><br><span class="line">        <span class="keyword">return</span> $command-&gt;getMapping();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Description:  保存数据</span></span><br><span class="line"><span class="comment">     * Author: JiaMeng &lt;666<span class="doctag">@majiameng</span>.com&gt;</span></span><br><span class="line"><span class="comment">     * Updater:</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> $params</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> self</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">edit</span><span class="params">($params)</span></span>&#123;</span><br><span class="line">        <span class="comment">/** 查询当前id是否被被使用 */</span></span><br><span class="line">        $id = $params[<span class="string">'type'</span>].<span class="string">'_'</span>.$params[<span class="string">'id'</span>];</span><br><span class="line">        $query = [</span><br><span class="line">            <span class="string">"match"</span> =&gt; [</span><br><span class="line">                <span class="string">'_id'</span> =&gt; $id</span><br><span class="line">            ]</span><br><span class="line">        ];</span><br><span class="line">        $elastic = <span class="keyword">self</span>::find()-&gt;query($query)-&gt;one();</span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">empty</span>($elastic))&#123;</span><br><span class="line">            <span class="comment">/** 添加数据 */</span></span><br><span class="line">            $elastic = <span class="keyword">new</span> <span class="keyword">self</span>();</span><br><span class="line">            $elastic-&gt;primaryKey = $id;</span><br><span class="line">        &#125;</span><br><span class="line">        $elastic-&gt;map($params);</span><br><span class="line">        <span class="keyword">if</span>(!$elastic-&gt;save())&#123;</span><br><span class="line">            <span class="keyword">echo</span> array_values($askimg-&gt;firstErrors)[<span class="number">0</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> $elastic;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="yii2-elasticSearch-search搜索"><a href="#yii2-elasticSearch-search搜索" class="headerlink" title="yii2 elasticSearch - search搜索"></a>yii2 elasticSearch - search搜索</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$must = [];</span><br><span class="line"></span><br><span class="line">//根据keyword搜索关键词</span><br><span class="line">if(!empty($keyword))&#123;</span><br><span class="line">    $must[] = [</span><br><span class="line">        &quot;multi_match&quot; =&gt; [//分词多字段搜索</span><br><span class="line">            &apos;query&apos; =&gt; $keyword,</span><br><span class="line">            &apos;fields&apos; =&gt; [&apos;title&apos;,&apos;comments&apos;],//搜索的字段</span><br><span class="line">        ],</span><br><span class="line">    ];</span><br><span class="line">&#125;</span><br><span class="line">//根据type精确搜索</span><br><span class="line">if(!empty($type))&#123;</span><br><span class="line">    $must[] = [</span><br><span class="line">        &quot;term&quot; =&gt; [</span><br><span class="line">            &apos;type&apos; =&gt; $type</span><br><span class="line">        ]</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//根据多条id精确搜索(类似于mysql的in)</span><br><span class="line">$ids = [1,2,3,4];</span><br><span class="line">if(!empty($ids))&#123;</span><br><span class="line">    $must[] = [</span><br><span class="line">        &quot;terms&quot; =&gt; [</span><br><span class="line">            &apos;id&apos; =&gt; $ids</span><br><span class="line">        ]</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">$query = [</span><br><span class="line">    &apos;bool&apos;=&gt;[</span><br><span class="line">        &apos;must&apos;=&gt;$must</span><br><span class="line">    ],</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">$this-&gt;page = 1;</span><br><span class="line">$this-&gt;pageSize = 10;</span><br><span class="line">$searchModel = IndexElasticSearch::find()</span><br><span class="line">    -&gt;query($query);</span><br><span class="line">$elastic = $searchModel</span><br><span class="line">    -&gt;orderBy(&apos;id desc&apos;)</span><br><span class="line">    -&gt;offset(($this-&gt;page-1)*$this-&gt;pageSize)</span><br><span class="line">    -&gt;limit($this-&gt;page*$this-&gt;pageSize)</span><br><span class="line">    -&gt;asArray()-&gt;all();</span><br><span class="line">return $elastic;</span><br></pre></td></tr></table></figure>
+<h5 id="1-清除ElasticSearch所有数据"><a href="#1-清除ElasticSearch所有数据" class="headerlink" title="1.清除ElasticSearch所有数据"></a>1.清除ElasticSearch所有数据</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -v -X DELETE  http://127.0.0.1:9200/_all</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ElasticSearch</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/elasticsearch_yii_use.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-elasticsearch_install" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/elasticsearch_install.html">ElasticSearch的安装</a>
+    </h1>
+  
+
+        
+        <a href="/elasticsearch_install.html" class="archive-article-date">
+  	<time datetime="2018-08-15T09:01:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="ElasticSearch的安装"><a href="#ElasticSearch的安装" class="headerlink" title="ElasticSearch的安装"></a>ElasticSearch的安装</h1><blockquote>
+<p>ElasticSearch 是一款优秀的搜索引擎，用java编写，restful接口的方式进行对接。</p>
+</blockquote>
+<h2 id="1-安装ElasticSearch"><a href="#1-安装ElasticSearch" class="headerlink" title="1. 安装ElasticSearch"></a>1. 安装ElasticSearch</h2><p>安装Java环境<br>首先检测是否安装java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">java -version  </span><br><span class="line">echo $JAVA_HOME</span><br></pre></td></tr></table></figure></p>
+<p>如果java的版本过低，建议安装高版本，下面安装的是java 1.8<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cd /opt/    </span><br><span class="line">wget --no-cookies --no-check-certificate --header &quot;Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie&quot; &quot;http://download.oracle.com/otn-pub/java/jdk/8u66-b17/jdk-8u66-linux-x64.tar.gz&quot;    </span><br><span class="line">tar xzf jdk-8u66-linux-x64.tar.gz</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">cd /opt/jdk1.8.0_66/    </span><br><span class="line">alternatives --install /usr/bin/java java /opt/jdk1.8.0_66/bin/java 2    </span><br><span class="line">alternatives --config java</span><br></pre></td></tr></table></figure></p>
+<p>运行了上面的，会初选一个选择的地方，我的机器显示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">There are 3 programs which provide &apos;java&apos;.    </span><br><span class="line">    </span><br><span class="line">  Selection    Command    </span><br><span class="line">-----------------------------------------------    </span><br><span class="line">*  1           /opt/jdk1.7.0_71/bin/java    </span><br><span class="line"> + 2           /opt/jdk1.8.0_45/bin/java    </span><br><span class="line">   3           /opt/jdk1.8.0_51/bin/java    </span><br><span class="line">   4           /opt/jdk1.8.0_66/bin/java    </span><br><span class="line"></span><br><span class="line">Enter to keep the current selection[+], or type selection number: 4</span><br><span class="line">``` </span><br><span class="line">我们安装的是jdk1.8.0.66 所以，我选择的是4，这个看具体情况，jdk1.8.0.66 是第几个，就选择那个数字。</span><br></pre></td></tr></table></figure></p>
+<p>alternatives –install /usr/bin/jar jar /opt/jdk1.8.0_66/bin/jar 2<br>alternatives –install /usr/bin/javac javac /opt/jdk1.8.0_66/bin/javac 2<br>alternatives –set jar /opt/jdk1.8.0_66/bin/jar<br>alternatives –set javac /opt/jdk1.8.0_66/bin/javac<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">安装完成，检查版本</span><br></pre></td></tr></table></figure></p>
+<p>java -version    </p>
+<p>java version “1.8.0_66”<br>Java(TM) SE Runtime Environment (build 1.8.0_66-b17)<br>Java HotSpot(TM) 64-Bit Server VM (build 25.66-b17, mixed mode)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">保存到文件  /etc/environment中，当服务器重启的时候加载：</span><br></pre></td></tr></table></figure></p>
+<p>vi /etc/profile  </p>
+<p>export JAVA_HOME=/opt/jdk1.8.0_66<br>export JRE_HOME=/opt/jdk1.8.0_66/jre<br>export PATH=$PATH:/opt/jdk1.8.0_66/bin:/opt/jdk1.8.0_66/jre/bin<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">重启linux</span><br></pre></td></tr></table></figure></p>
+<p>reboot<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">查看是否安装成功</span><br></pre></td></tr></table></figure></p>
+<p>java -version<br>echo $JAVA_HOME<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line"></span><br><span class="line">#### 2.1安装ElasticSearch</span><br></pre></td></tr></table></figure></p>
+<p>cd /tools<br>wget <a href="https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.1.3.zip" target="_blank" rel="noopener">https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.1.3.zip</a><br>unzip elasticsearch-6.1.3.zip<br>mv ./elasticsearch-6.1.3 /usr/local/elasticsearch<br>cd /usr/local<br>groupadd elasticsearch<br>useradd -g elasticsearch  elasticsearch<br>chown elasticsearch:elasticsearch -R elasticsearch<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">上面安装的是es6.</span><br><span class="line"></span><br><span class="line">#### 2.2 设置开机启动： 我是本地，直接把iptables 关掉了</span><br></pre></td></tr></table></figure></p>
+<p>vim /etc/rc.d/rc.local<br>service iptables stop<br>su elasticsearch  -c “/usr/local/elasticsearch/bin/elasticsearch -d”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">一定要注意，elasticSearch不能用root账户启动，elasticSearch不能用root账户启动，elasticSearch不能用root账户启动，重要的说三遍，我这里用的是我新建的elasticsearch账户开机启动</span><br><span class="line"></span><br><span class="line">报错：</span><br></pre></td></tr></table></figure></p>
+<p>$./bin/elasticsearch<br>Java HotSpot(TM) 64-Bit Server VM warning: INFO: os::commit_memory(0x0000000085330000, 2060255232, 0) failed; error=’Cannot allocate memory’ (errno=12)</p>
+<p>#</p>
+<h1 id="There-is-insufficient-memory-for-the-Java-Runtime-Environment-to-continue"><a href="#There-is-insufficient-memory-for-the-Java-Runtime-Environment-to-continue" class="headerlink" title="There is insufficient memory for the Java Runtime Environment to continue."></a>There is insufficient memory for the Java Runtime Environment to continue.</h1><h1 id="Native-memory-allocation-mmap-failed-to-map-2060255232-bytes-for-committing-reserved-memory"><a href="#Native-memory-allocation-mmap-failed-to-map-2060255232-bytes-for-committing-reserved-memory" class="headerlink" title="Native memory allocation (mmap) failed to map 2060255232 bytes for committing reserved memory."></a>Native memory allocation (mmap) failed to map 2060255232 bytes for committing reserved memory.</h1><h1 id="An-error-report-file-with-more-information-is-saved-as"><a href="#An-error-report-file-with-more-information-is-saved-as" class="headerlink" title="An error report file with more information is saved as:"></a>An error report file with more information is saved as:</h1><h1 id="data-elasticsearch-5-2-2-hs-err-pid26945-log"><a href="#data-elasticsearch-5-2-2-hs-err-pid26945-log" class="headerlink" title="/data/elasticsearch-5.2.2/hs_err_pid26945.log"></a>/data/elasticsearch-5.2.2/hs_err_pid26945.log</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">解决方案：调小启动内存</span><br></pre></td></tr></table></figure>
+<h1 id="vi-usr-local-elasticsearch-config-jvm-options"><a href="#vi-usr-local-elasticsearch-config-jvm-options" class="headerlink" title="vi /usr/local/elasticsearch/config/jvm.options"></a>vi /usr/local/elasticsearch/config/jvm.options</h1><p>#-Xms2g</p>
+<p>#-Xmx2g<br>-Xms256m<br>-Xmx64m<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">上面设置的分配的内存的最大值为256MB和最小值64mb，您可以根据自己的机器情况设置内存大小。</span><br><span class="line"></span><br><span class="line">重新启动即可。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#### 2.3 配置</span><br></pre></td></tr></table></figure></p>
+<p>vim /usr/local/elasticsearch/config/elasticsearch.yml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">修改如下：</span><br></pre></td></tr></table></figure></p>
+<p>cluster.name: TA-application<br>node.name: node-210<br>network.host: 192.168.0.210<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">其中cluster.name 是集群名称，这个不要使用默认的，要修改，去掉注释，如果有多个机器，加入同一个集群，那么这个值必须一样</span><br><span class="line"></span><br><span class="line">noide.name 是集群里面每个节点的值，也就是当前机器的节点的值，这个值，每个节点要不一样。</span><br></pre></td></tr></table></figure></p>
+<p>network host 改成当前的内网ip<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line">下面的部分是elasticsearch 2 部分的插件，在es6中已经不可用，</span><br><span class="line"></span><br><span class="line">es6的可视化GUI，请查看：http://www.fecshop.com/topic/668</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">#### 2.4 查看：</span><br></pre></td></tr></table></figure></p>
+<p><a href="http://192.168.0.210:9200/" target="_blank" rel="noopener">http://192.168.0.210:9200/</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#### 2.5 集群设置</span><br><span class="line"></span><br><span class="line">如果想要建立一个elasticSearch集群，可以按照下面的步骤，非常的简单，首先，想说明的是：对于elasticSearch，他隐藏了分布式的复杂性，分片和复制集，都是他自动完成，你只需要配置好ip就可以了，下面是配置的步骤：</span><br><span class="line"></span><br><span class="line">我有两台机器  192.169.0.210   192.168.0.199</span><br><span class="line"></span><br><span class="line">我的两台机器都按照上面的步骤配置完成，下面配置集群</span><br><span class="line"></span><br><span class="line">首先是192.168.0.210</span><br></pre></td></tr></table></figure></p>
+<p>vim /usr/local/elasticsearch/config/elasticsearch.yml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#找到行 ， 修改如下：</span><br></pre></td></tr></table></figure></p>
+<p>discovery.zen.ping.unicast.hosts: [“192.168.0.199”]<br><code>`</code><br>上面的ip就是其他的节点的ip，如果我有5台机器，那么，这里需要把其他四台机器的ip写上。</p>
+<p>同理，对于其他的节点，需要把其他的节点协商，用逗号隔开</p>
+<p>elasticSearch会找到对应的节点，自动分片和做复制集。</p>
+<h4 id="2-6-安装ik插件-中文分词使用"><a href="#2-6-安装ik插件-中文分词使用" class="headerlink" title="2.6 安装ik插件(中文分词使用)"></a>2.6 安装ik插件(中文分词使用)</h4><hr>
+<p>报错原因<br>我使用的Elasticsearch是6.2.2版本，按照学校文档创建字段时，使用了{“type”:”string”,”index”:”not_analyzed”}。</p>
+<p>原因分析<br>检查拼写无误之后，我决定去查Elasticsearch新版本特性，因为之前也踩过head插件的安装方法的坑，就是因为版本问题。<br>果不其然，Elasticsearch从5.X就引入了text和keyword，其中keyword适用于不分词字段，搜索时只能完全匹配，这时string还保留着。<br>到了6.X就彻底移除string了。<br>另外，”index”的值只能是boolean变量了。</p>
+<p>解决方法<br>{“type”:”text”,”index”:false}</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ElasticSearch</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/elasticsearch_install.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-workerman_socket" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -751,251 +1013,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-gradephp" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/gradephp.html">中高级PHP程序员应该掌握哪些技术?</a>
-    </h1>
-  
-
-        
-        <a href="/gradephp.html" class="archive-article-date">
-  	<time datetime="2017-10-20T11:32:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>本文把php程序员划分为中、高级程序员两大类程序员，并针对这两大程序员应具备的技能进行分类探索。</p>
-</blockquote>
-<h2 id="中级PHP程序员"><a href="#中级PHP程序员" class="headerlink" title="中级PHP程序员"></a>中级PHP程序员</h2><h4 id="1-Linux"><a href="#1-Linux" class="headerlink" title="1.Linux"></a>1.Linux</h4><p> 能够流畅的使用Shell脚本来完成很多自动化的工作；awk/sed/perl 也操作的不错，能够完成很多文本处理和数据统计等工作；基本能够安装大 部分非特殊的Linux程序（包括各种库、包、第三方依赖等等，比如MongoDB/Redis/Sphinx/Luncene/SVN之类的）；了解基 本的Linux服务，知道如何查看Linux的性能指标数据，知道基本的Linux下面的问题跟踪等 </p>
-<h4 id="2-Nginx"><a href="#2-Nginx" class="headerlink" title="2. Nginx:"></a>2. Nginx:</h4><p> 在第一阶段的基础上面，了解复杂一些的Nginx配置；包括多核配置、events、proxy_pass，sendfile/tcp_*配置，知道超 时等相关配置和性能影响；知道nginx除了web server，还能够承担代理服务器、反向静态服务器等配置；知道基本的nginx配置调优；知道如 何配置权限、编译一个nginx扩展到nginx；知道基本的nginx运行原理（master/worker机制，epoll），知道为什么nginx 性能比apache性能好等知识；</p>
-        
-          <a class="article-more-a" href="/gradephp.html#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/gradephp.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-idea" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/idea.html">IntelliJ IDEA 注册码</a>
-    </h1>
-  
-
-        
-        <a href="/idea.html" class="archive-article-date">
-  	<time datetime="2017-10-15T01:06:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>#IntelliJ IDEA 注册码</p>
-<blockquote>
-<p><em>.lanyus.com及</em>.qinxi1992.cn下的全部授权服务器已遭JetBrains封杀<br>请搭建自己的IntelliJ IDEA授权服务器，教程在<a href="http://blog.lanyus.com/archives/174.html" target="_blank" rel="noopener">http://blog.lanyus.com/archives/174.html</a></p>
-</blockquote>
-<h4 id="若资金允许，请点击https-www-jetbrains-com-idea-buy-购买正版，谢谢合作"><a href="#若资金允许，请点击https-www-jetbrains-com-idea-buy-购买正版，谢谢合作" class="headerlink" title="若资金允许，请点击https://www.jetbrains.com/idea/buy/购买正版，谢谢合作"></a>若资金允许，请点击<a href="https://www.jetbrains.com/idea/buy/购买正版，谢谢合作" target="_blank" rel="noopener">https://www.jetbrains.com/idea/buy/购买正版，谢谢合作</a></h4><p>学生凭学生证可<a href="https://sales.jetbrains.com/hc/zh-cn/articles/207154369-%E5%AD%A6%E7%94%9F%E6%8E%88%E6%9D%83%E7%94%B3%E8%AF%B7%E6%96%B9%E5%BC%8F" target="_blank" rel="noopener">免费申请</a>正版授权 | 创业公司可<a href="https://www.jetbrains.com/shop/eform/startup" target="_blank" rel="noopener">5折购买</a>正版授权</p>
-<h4 id="欢迎加入-IntelliJ-IDEA开源社区-QQ群-欢迎加入-企业后台管理基础框架-开源项目"><a href="#欢迎加入-IntelliJ-IDEA开源社区-QQ群-欢迎加入-企业后台管理基础框架-开源项目" class="headerlink" title="欢迎加入 IntelliJ IDEA开源社区 QQ群 | 欢迎加入 企业后台管理基础框架 开源项目"></a>欢迎加入 <a href="https://jq.qq.com/?_wv=1027&amp;k=47fcOxh" target="_blank" rel="noopener">IntelliJ IDEA开源社区</a> QQ群 | 欢迎加入 <a href="http://hsweb.me/" target="_blank" rel="noopener">企业后台管理基础框架</a> 开源项目</h4><p>欢迎使用 极客桌面搜索, 毫秒级响应, 要多快就有多快, 让本地搜索飞起来</p>
-<h4 id="破解补丁无需使用注册码，下载地址：http-idea-lanyus-com-jar-JetbrainsCrack-2-6-10-release-enc-jar"><a href="#破解补丁无需使用注册码，下载地址：http-idea-lanyus-com-jar-JetbrainsCrack-2-6-10-release-enc-jar" class="headerlink" title="破解补丁无需使用注册码，下载地址：http://idea.lanyus.com/jar/JetbrainsCrack-2.6.10-release-enc.jar"></a>破解补丁无需使用注册码，下载地址：<a href="http://idea.lanyus.com/jar/JetbrainsCrack-2.6.10-release-enc.jar" target="_blank" rel="noopener">http://idea.lanyus.com/jar/JetbrainsCrack-2.6.10-release-enc.jar</a></h4><p>idea14 keygen下载地址：<a href="http://idea.lanyus.com/jar/JetbrainsPatchKeygen-1.2.1.jar" target="_blank" rel="noopener">http://idea.lanyus.com/jar/JetbrainsPatchKeygen-1.2.1.jar</a></p>
-<h2 id="注册码有效期为2017年10月15日至2018年10月14日"><a href="#注册码有效期为2017年10月15日至2018年10月14日" class="headerlink" title="注册码有效期为2017年10月15日至2018年10月14日"></a>注册码有效期为2017年10月15日至2018年10月14日</h2><p>使用前请将“<code> 0.0.0.0 account.jetbrains.com </code>”添加到hosts文件中</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">EB101IWSWD-eyJsaWNlbnNlSWQiOiJFQjEwMUlXU1dEIiwibGljZW5zZWVOYW1lIjoibGFuIHl1IiwiYXNzaWduZWVOYW1lIjoiIiwiYXNzaWduZWVFbWFpbCI6IiIsImxpY2Vuc2VSZXN0cmljdGlvbiI6IkZvciBlZHVjYXRpb25hbCB1c2Ugb25seSIsImNoZWNrQ29uY3VycmVudFVzZSI6ZmFsc2UsInByb2R1Y3RzIjpbeyJjb2RlIjoiSUkiLCJwYWlkVXBUbyI6IjIwMTgtMTAtMTQifSx7ImNvZGUiOiJSUzAiLCJwYWlkVXBUbyI6IjIwMTgtMTAtMTQifSx7ImNvZGUiOiJXUyIsInBhaWRVcFRvIjoiMjAxOC0xMC0xNCJ9LHsiY29kZSI6IlJEIiwicGFpZFVwVG8iOiIyMDE4LTEwLTE0In0seyJjb2RlIjoiUkMiLCJwYWlkVXBUbyI6IjIwMTgtMTAtMTQifSx7ImNvZGUiOiJEQyIsInBhaWRVcFRvIjoiMjAxOC0xMC0xNCJ9LHsiY29kZSI6IkRCIiwicGFpZFVwVG8iOiIyMDE4LTEwLTE0In0seyJjb2RlIjoiUk0iLCJwYWlkVXBUbyI6IjIwMTgtMTAtMTQifSx7ImNvZGUiOiJETSIsInBhaWRVcFRvIjoiMjAxOC0xMC0xNCJ9LHsiY29kZSI6IkFDIiwicGFpZFVwVG8iOiIyMDE4LTEwLTE0In0seyJjb2RlIjoiRFBOIiwicGFpZFVwVG8iOiIyMDE4LTEwLTE0In0seyJjb2RlIjoiUFMiLCJwYWlkVXBUbyI6IjIwMTgtMTAtMTQifSx7ImNvZGUiOiJDTCIsInBhaWRVcFRvIjoiMjAxOC0xMC0xNCJ9LHsiY29kZSI6IlBDIiwicGFpZFVwVG8iOiIyMDE4LTEwLTE0In0seyJjb2RlIjoiUlNVIiwicGFpZFVwVG8iOiIyMDE4LTEwLTE0In1dLCJoYXNoIjoiNjk0NDAzMi8wIiwiZ3JhY2VQZXJpb2REYXlzIjowLCJhdXRvUHJvbG9uZ2F0ZWQiOmZhbHNlLCJpc0F1dG9Qcm9sb25nYXRlZCI6ZmFsc2V9-Gbb7jeR8JWOVxdUFaXfJzVU/O7c7xHQyaidCnhYLp7v32zdeXiHUU7vlrrm5y9ZX0lmQk3plCCsW+phrC9gGAPd6WDKhkal10qVNg0larCR2tQ3u8jfv1t2JAvWrMOJfFG9kKsJuw1P4TozZ/E7Qvj1cupf/rldhoOmaXMyABxNN1af1RV3bVhe4FFZe0p7xlIJF/ctZkFK62HYmh8V3AyhUNTzrvK2k+t/tlDJz2LnW7nYttBLHld8LabPlEEjpTHswhzlthzhVqALIgvF0uNbIJ5Uwpb7NqR4U/2ob0Z+FIcRpFUIAHEAw+RLGwkCge5DyZKfx+RoRJ/In4q/UpA==-MIIEPjCCAiagAwIBAgIBBTANBgkqhkiG9w0BAQsFADAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBMB4XDTE1MTEwMjA4MjE0OFoXDTE4MTEwMTA4MjE0OFowETEPMA0GA1UEAwwGcHJvZDN5MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxcQkq+zdxlR2mmRYBPzGbUNdMN6OaXiXzxIWtMEkrJMO/5oUfQJbLLuMSMK0QHFmaI37WShyxZcfRCidwXjot4zmNBKnlyHodDij/78TmVqFl8nOeD5+07B8VEaIu7c3E1N+e1doC6wht4I4+IEmtsPAdoaj5WCQVQbrI8KeT8M9VcBIWX7fD0fhexfg3ZRt0xqwMcXGNp3DdJHiO0rCdU+Itv7EmtnSVq9jBG1usMSFvMowR25mju2JcPFp1+I4ZI+FqgR8gyG8oiNDyNEoAbsR3lOpI7grUYSvkB/xVy/VoklPCK2h0f0GJxFjnye8NT1PAywoyl7RmiAVRE/EKwIDAQABo4GZMIGWMAkGA1UdEwQCMAAwHQYDVR0OBBYEFGEpG9oZGcfLMGNBkY7SgHiMGgTcMEgGA1UdIwRBMD+AFKOetkhnQhI2Qb1t4Lm0oFKLl/GzoRykGjAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBggkA0myxg7KDeeEwEwYDVR0lBAwwCgYIKwYBBQUHAwEwCwYDVR0PBAQDAgWgMA0GCSqGSIb3DQEBCwUAA4ICAQC9WZuYgQedSuOc5TOUSrRigMw4/+wuC5EtZBfvdl4HT/8vzMW/oUlIP4YCvA0XKyBaCJ2iX+ZCDKoPfiYXiaSiH+HxAPV6J79vvouxKrWg2XV6ShFtPLP+0gPdGq3x9R3+kJbmAm8w+FOdlWqAfJrLvpzMGNeDU14YGXiZ9bVzmIQbwrBA+c/F4tlK/DV07dsNExihqFoibnqDiVNTGombaU2dDup2gwKdL81ua8EIcGNExHe82kjF4zwfadHk3bQVvbfdAwxcDy4xBjs3L4raPLU3yenSzr/OEur1+jfOxnQSmEcMXKXgrAQ9U55gwjcOFKrgOxEdek/Sk1VfOjvS+nuM4eyEruFMfaZHzoQiuw4IqgGc45ohFH0UUyjYcuFxxDSU9lMCv8qdHKm+wnPRb0l9l5vXsCBDuhAGYD6ss+Ga+aDY6f/qXZuUCEUOH3QUNbbCUlviSz6+GiRnt1kA9N2Qachl+2yBfaqUqr8h7Z2gsx5LcIf5kYNsqJ0GavXTVyWh7PYiKX4bs354ZQLUwwa/cG++2+wNWP+HtBhVxMRNTdVhSm38AknZlD+PTAsWGu9GyLmhti2EnVwGybSD2Dxmhxk3IPCkhKAK+pl0eWYGZWG3tJ9mZ7SowcXLWDFAk0lRJnKGFMTggrWjV8GYpw5bq23VmIqqDLgkNzuoog==</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">IDEA</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/idea.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-btb" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/btb.html">数字货币与区块链</a>
-    </h1>
-  
-
-        
-        <a href="/btb.html" class="archive-article-date">
-  	<time datetime="2017-10-10T10:18:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近几年，随着比特币的兴起并不断走高的价格，越来越多的投资者和机构开始对数字货币这一新兴概念产生了兴趣。由比特币创建并使用的区块链技术也获得了从创业公司到金融巨头的广泛关注和参与。</p>
-<p>自08年诞生的第一种数字货币——比特币，从一万个币换一个披萨到一个币单价近两万，比特币8年暴涨百万倍，其背后的区块链技术更是被各大金融巨头竞相研究。</p>
-<p><img src="http://img.majiameng.com/blog/btb.jpg" alt="比特币"></p>
-<p>郎咸平教授称比特币是彻头彻尾的金融骗局，各种山寨虚拟币诈骗也层出不穷。比特币究竟是虚拟资产还是庞氏骗局？人民日报发文称比特币成了“数字黄金”，央行更是早就设立了数字货币研究所，并表示正在推进中国自己的数字货币系统。</p>
-<p>到底什么是数字货币？没有中心节点的数字货币却号称不可伪造，数字货币和区块链究竟是如何运行的？又会给未来的互联网金融以及其他行业带来哪些变化？和每个人息息相关的金融服务将来会运行在区块链之上吗？</p>
-<blockquote>
-<p>马云说，对于新兴事物，绝大多数人第一看不见，第二看不起，第三看不懂，第四来不及。</p>
-</blockquote>
-<h5 id="最早我是听一个朋友提起的，因为我对科技驱动的东西一直很感兴趣，所以也做了一些了解。简单讲，区块链就是一个去中心化的信任机制。本技术贴将向你科普区块链。"><a href="#最早我是听一个朋友提起的，因为我对科技驱动的东西一直很感兴趣，所以也做了一些了解。简单讲，区块链就是一个去中心化的信任机制。本技术贴将向你科普区块链。" class="headerlink" title="最早我是听一个朋友提起的，因为我对科技驱动的东西一直很感兴趣，所以也做了一些了解。简单讲，区块链就是一个去中心化的信任机制。本技术贴将向你科普区块链。"></a>最早我是听一个朋友提起的，因为我对科技驱动的东西一直很感兴趣，所以也做了一些了解。简单讲，区块链就是一个去中心化的信任机制。本技术贴将向你科普区块链。</h5>
-        
-          <a class="article-more-a" href="/btb.html#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">社会</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/btb.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1121,11 +1138,19 @@ document.oncontextmenu=new Function("event.returnValue=false");
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">社会</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ElasticSearch</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Angular</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">社会</a>
+                <a href="javascript:void(0)" class="js-tag color5">链接资源</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1134,10 +1159,6 @@ document.oncontextmenu=new Function("event.returnValue=false");
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Curl</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">链接资源</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1169,11 +1190,11 @@ document.oncontextmenu=new Function("event.returnValue=false");
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Redis</a>
+                <a href="javascript:void(0)" class="js-tag color3">JS</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">JS</a>
+                <a href="javascript:void(0)" class="js-tag color1">Redis</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -9,20 +9,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://blog.majiameng.com">
-  <title>ffmpeg-php扩展 | 佳萌博客</title>
+  <title>ElasticSearch的安装 | 佳萌博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="php视频缩略图，较常用的是ffmpeg-php1： 安装 ffmpeg ffmpeg的下载链接  http://ffmpeg.org/download.html 解压安装包 tar -jxvf ffmpeg-x.x.tar.bz2 进入目录 cd ffmpeg-x.x 编译安装 1./configure --enable-shared --disable-yasm  --prefix=/usr/">
-<meta name="keywords" content="PHP,Liunx">
+  <meta name="description" content="ElasticSearch的安装 ElasticSearch 是一款优秀的搜索引擎，用java编写，restful接口的方式进行对接。  1. 安装ElasticSearch安装Java环境首先检测是否安装java12java -version  echo $JAVA_HOME 如果java的版本过低，建议安装高版本，下面安装的是java 1.812345678cd /opt/    wget -">
+<meta name="keywords" content="ElasticSearch">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ffmpeg-php扩展">
-<meta property="og:url" content="https://blog.majiameng.com/ffmpeg.html">
+<meta property="og:title" content="ElasticSearch的安装">
+<meta property="og:url" content="https://blog.majiameng.com/elasticsearch_install.html">
 <meta property="og:site_name" content="佳萌博客">
-<meta property="og:description" content="php视频缩略图，较常用的是ffmpeg-php1： 安装 ffmpeg ffmpeg的下载链接  http://ffmpeg.org/download.html 解压安装包 tar -jxvf ffmpeg-x.x.tar.bz2 进入目录 cd ffmpeg-x.x 编译安装 1./configure --enable-shared --disable-yasm  --prefix=/usr/">
+<meta property="og:description" content="ElasticSearch的安装 ElasticSearch 是一款优秀的搜索引擎，用java编写，restful接口的方式进行对接。  1. 安装ElasticSearch安装Java环境首先检测是否安装java12java -version  echo $JAVA_HOME 如果java的版本过低，建议安装高版本，下面安装的是java 1.812345678cd /opt/    wget -">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-14T09:39:25.000Z">
+<meta property="og:updated_time" content="2018-09-18T07:26:58.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ffmpeg-php扩展">
-<meta name="twitter:description" content="php视频缩略图，较常用的是ffmpeg-php1： 安装 ffmpeg ffmpeg的下载链接  http://ffmpeg.org/download.html 解压安装包 tar -jxvf ffmpeg-x.x.tar.bz2 进入目录 cd ffmpeg-x.x 编译安装 1./configure --enable-shared --disable-yasm  --prefix=/usr/">
+<meta name="twitter:title" content="ElasticSearch的安装">
+<meta name="twitter:description" content="ElasticSearch的安装 ElasticSearch 是一款优秀的搜索引擎，用java编写，restful接口的方式进行对接。  1. 安装ElasticSearch安装Java环境首先检测是否安装java12java -version  echo $JAVA_HOME 如果java的版本过低，建议安装高版本，下面安装的是java 1.812345678cd /opt/    wget -">
   
     <link rel="alternative" href="/atom.xml" title="佳萌博客" type="application/atom+xml">
   
@@ -175,65 +175,58 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-ffmpeg" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-elasticsearch_install" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      ffmpeg-php扩展
+      ElasticSearch的安装
     </h1>
   
 
         
-        <a href="/ffmpeg.html" class="archive-article-date">
-  	<time datetime="2017-05-16T15:11:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-16</time>
+        <a href="/elasticsearch_install.html" class="archive-article-date">
+  	<time datetime="2018-08-15T09:01:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-15</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="php视频缩略图，较常用的是ffmpeg-php"><a href="#php视频缩略图，较常用的是ffmpeg-php" class="headerlink" title="php视频缩略图，较常用的是ffmpeg-php"></a>php视频缩略图，较常用的是ffmpeg-php</h3><p>1： 安装 ffmpeg</p>
-<p>ffmpeg的下载链接  <a href="http://ffmpeg.org/download.html" target="_blank" rel="noopener">http://ffmpeg.org/download.html</a></p>
-<p>解压安装包</p>
-<p>tar -jxvf ffmpeg-x.x.tar.bz2</p>
-<p>进入目录</p>
-<p>cd ffmpeg-x.x</p>
-<p>编译安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --enable-shared --disable-yasm  --prefix=/usr/local/ffmpeg  &amp;&amp; make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-<p>1.1动态链接库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/ld.so.conf</span><br></pre></td></tr></table></figure></p>
-<p>加入：<code>/usr/local/ffmpeg/lib</code></p>
-<p>执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ldconfig</span><br></pre></td></tr></table></figure></p>
-<p>安装完成之后 执行 ffmpeg -version</p>
-<a id="more"></a>
-<p>2 安装ffmpeg-php</p>
-<p>官方的下载链接</p>
-<p><a href="https://sourceforge.net/projects/ffmpeg-php/files/ffmpeg-php/" target="_blank" rel="noopener">https://sourceforge.net/projects/ffmpeg-php/files/ffmpeg-php/</a></p>
-<p>官方版本已经很久很久不更新了，我在centos 7 + php5.6&amp;php7.1   centos6.5+php5  试了都不行。在configure完 make的时候会报错。</p>
-<p>后来在github上找了一个版本。在centos7.2+php5.5.6 上编译安装成功 （centos7 + php7.1还是不行）</p>
-<p>地址：    git clone <a href="https://github.com/tony2001/ffmpeg-php.git" target="_blank" rel="noopener">https://github.com/tony2001/ffmpeg-php.git</a> </p>
-<p>也可以访问我的百度云盘进行下载</p>
-<p><a href="https://pan.baidu.com/s/1skQTVlj" target="_blank" rel="noopener">https://pan.baidu.com/s/1skQTVlj</a></p>
-<p>进入 ffmpeg-php目录 进行编译扩展</p>
-<p>/usr/local/php/bin/phpize   </p>
-<p>./configure –with-php-config=/usr/local/php/bin/php-config</p>
-<p>make &amp;&amp; make install</p>
-<p>注意（如果make之后出现错误，那就是ffmpeg-php版本的问题，别再折腾了，换版本吧（或者降低php版本试试））。</p>
-<p>在php的配置文件 php.ini中 添加  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">extension=ffmpeg.so</span><br></pre></td></tr></table></figure>
-<p>重启php。在 phpinfo()中查看有无ffmpeg信息。</p>
-<p>或者执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/php/bin/php -i |grep ffmpeg</span><br></pre></td></tr></table></figure></p>
-<p>要是有输出的话OK</p>
-<p>在没有的话就没有办法了,没错我就安装不上php的ffmpeg的扩展</p>
-<p>但是不影响我使用,我们可以使用exec命令来操作ffmpeg</p>
-<blockquote>
-<p>1.请看文章<a href="https://blog.majiameng.com/ffmpeg_getinfo.html">获取视频信息</a></p>
+        <h1 id="ElasticSearch的安装"><a href="#ElasticSearch的安装" class="headerlink" title="ElasticSearch的安装"></a>ElasticSearch的安装</h1><blockquote>
+<p>ElasticSearch 是一款优秀的搜索引擎，用java编写，restful接口的方式进行对接。</p>
 </blockquote>
-<blockquote>
-<p>2.请看文章<a href="https://blog.majiameng.com/ffmpeg_getcover.html">截取视频封面图</a></p>
-</blockquote>
+<h2 id="1-安装ElasticSearch"><a href="#1-安装ElasticSearch" class="headerlink" title="1. 安装ElasticSearch"></a>1. 安装ElasticSearch</h2><p>安装Java环境<br>首先检测是否安装java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">java -version  </span><br><span class="line">echo $JAVA_HOME</span><br></pre></td></tr></table></figure></p>
+<p>如果java的版本过低，建议安装高版本，下面安装的是java 1.8<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cd /opt/    </span><br><span class="line">wget --no-cookies --no-check-certificate --header &quot;Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie&quot; &quot;http://download.oracle.com/otn-pub/java/jdk/8u66-b17/jdk-8u66-linux-x64.tar.gz&quot;    </span><br><span class="line">tar xzf jdk-8u66-linux-x64.tar.gz</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">cd /opt/jdk1.8.0_66/    </span><br><span class="line">alternatives --install /usr/bin/java java /opt/jdk1.8.0_66/bin/java 2    </span><br><span class="line">alternatives --config java</span><br></pre></td></tr></table></figure></p>
+<p>运行了上面的，会初选一个选择的地方，我的机器显示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">There are 3 programs which provide &apos;java&apos;.    </span><br><span class="line">    </span><br><span class="line">  Selection    Command    </span><br><span class="line">-----------------------------------------------    </span><br><span class="line">*  1           /opt/jdk1.7.0_71/bin/java    </span><br><span class="line"> + 2           /opt/jdk1.8.0_45/bin/java    </span><br><span class="line">   3           /opt/jdk1.8.0_51/bin/java    </span><br><span class="line">   4           /opt/jdk1.8.0_66/bin/java    </span><br><span class="line"></span><br><span class="line">Enter to keep the current selection[+], or type selection number: 4</span><br><span class="line">``` </span><br><span class="line">我们安装的是jdk1.8.0.66 所以，我选择的是4，这个看具体情况，jdk1.8.0.66 是第几个，就选择那个数字。</span><br></pre></td></tr></table></figure></p>
+<p>alternatives –install /usr/bin/jar jar /opt/jdk1.8.0_66/bin/jar 2<br>alternatives –install /usr/bin/javac javac /opt/jdk1.8.0_66/bin/javac 2<br>alternatives –set jar /opt/jdk1.8.0_66/bin/jar<br>alternatives –set javac /opt/jdk1.8.0_66/bin/javac<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">安装完成，检查版本</span><br></pre></td></tr></table></figure></p>
+<p>java -version    </p>
+<p>java version “1.8.0_66”<br>Java(TM) SE Runtime Environment (build 1.8.0_66-b17)<br>Java HotSpot(TM) 64-Bit Server VM (build 25.66-b17, mixed mode)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">保存到文件  /etc/environment中，当服务器重启的时候加载：</span><br></pre></td></tr></table></figure></p>
+<p>vi /etc/profile  </p>
+<p>export JAVA_HOME=/opt/jdk1.8.0_66<br>export JRE_HOME=/opt/jdk1.8.0_66/jre<br>export PATH=$PATH:/opt/jdk1.8.0_66/bin:/opt/jdk1.8.0_66/jre/bin<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">重启linux</span><br></pre></td></tr></table></figure></p>
+<p>reboot<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">查看是否安装成功</span><br></pre></td></tr></table></figure></p>
+<p>java -version<br>echo $JAVA_HOME<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line"></span><br><span class="line">#### 2.1安装ElasticSearch</span><br></pre></td></tr></table></figure></p>
+<p>cd /tools<br>wget <a href="https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.1.3.zip" target="_blank" rel="noopener">https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.1.3.zip</a><br>unzip elasticsearch-6.1.3.zip<br>mv ./elasticsearch-6.1.3 /usr/local/elasticsearch<br>cd /usr/local<br>groupadd elasticsearch<br>useradd -g elasticsearch  elasticsearch<br>chown elasticsearch:elasticsearch -R elasticsearch<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">上面安装的是es6.</span><br><span class="line"></span><br><span class="line">#### 2.2 设置开机启动： 我是本地，直接把iptables 关掉了</span><br></pre></td></tr></table></figure></p>
+<p>vim /etc/rc.d/rc.local<br>service iptables stop<br>su elasticsearch  -c “/usr/local/elasticsearch/bin/elasticsearch -d”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">一定要注意，elasticSearch不能用root账户启动，elasticSearch不能用root账户启动，elasticSearch不能用root账户启动，重要的说三遍，我这里用的是我新建的elasticsearch账户开机启动</span><br><span class="line"></span><br><span class="line">报错：</span><br></pre></td></tr></table></figure></p>
+<p>$./bin/elasticsearch<br>Java HotSpot(TM) 64-Bit Server VM warning: INFO: os::commit_memory(0x0000000085330000, 2060255232, 0) failed; error=’Cannot allocate memory’ (errno=12)</p>
+<p>#</p>
+<h1 id="There-is-insufficient-memory-for-the-Java-Runtime-Environment-to-continue"><a href="#There-is-insufficient-memory-for-the-Java-Runtime-Environment-to-continue" class="headerlink" title="There is insufficient memory for the Java Runtime Environment to continue."></a>There is insufficient memory for the Java Runtime Environment to continue.</h1><h1 id="Native-memory-allocation-mmap-failed-to-map-2060255232-bytes-for-committing-reserved-memory"><a href="#Native-memory-allocation-mmap-failed-to-map-2060255232-bytes-for-committing-reserved-memory" class="headerlink" title="Native memory allocation (mmap) failed to map 2060255232 bytes for committing reserved memory."></a>Native memory allocation (mmap) failed to map 2060255232 bytes for committing reserved memory.</h1><h1 id="An-error-report-file-with-more-information-is-saved-as"><a href="#An-error-report-file-with-more-information-is-saved-as" class="headerlink" title="An error report file with more information is saved as:"></a>An error report file with more information is saved as:</h1><h1 id="data-elasticsearch-5-2-2-hs-err-pid26945-log"><a href="#data-elasticsearch-5-2-2-hs-err-pid26945-log" class="headerlink" title="/data/elasticsearch-5.2.2/hs_err_pid26945.log"></a>/data/elasticsearch-5.2.2/hs_err_pid26945.log</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">解决方案：调小启动内存</span><br></pre></td></tr></table></figure>
+<h1 id="vi-usr-local-elasticsearch-config-jvm-options"><a href="#vi-usr-local-elasticsearch-config-jvm-options" class="headerlink" title="vi /usr/local/elasticsearch/config/jvm.options"></a>vi /usr/local/elasticsearch/config/jvm.options</h1><p>#-Xms2g</p>
+<p>#-Xmx2g<br>-Xms256m<br>-Xmx64m<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">上面设置的分配的内存的最大值为256MB和最小值64mb，您可以根据自己的机器情况设置内存大小。</span><br><span class="line"></span><br><span class="line">重新启动即可。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#### 2.3 配置</span><br></pre></td></tr></table></figure></p>
+<p>vim /usr/local/elasticsearch/config/elasticsearch.yml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">修改如下：</span><br></pre></td></tr></table></figure></p>
+<p>cluster.name: TA-application<br>node.name: node-210<br>network.host: 192.168.0.210<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">其中cluster.name 是集群名称，这个不要使用默认的，要修改，去掉注释，如果有多个机器，加入同一个集群，那么这个值必须一样</span><br><span class="line"></span><br><span class="line">noide.name 是集群里面每个节点的值，也就是当前机器的节点的值，这个值，每个节点要不一样。</span><br></pre></td></tr></table></figure></p>
+<p>network host 改成当前的内网ip<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line">下面的部分是elasticsearch 2 部分的插件，在es6中已经不可用，</span><br><span class="line"></span><br><span class="line">es6的可视化GUI，请查看：http://www.fecshop.com/topic/668</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">#### 2.4 查看：</span><br></pre></td></tr></table></figure></p>
+<p><a href="http://192.168.0.210:9200/" target="_blank" rel="noopener">http://192.168.0.210:9200/</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#### 2.5 集群设置</span><br><span class="line"></span><br><span class="line">如果想要建立一个elasticSearch集群，可以按照下面的步骤，非常的简单，首先，想说明的是：对于elasticSearch，他隐藏了分布式的复杂性，分片和复制集，都是他自动完成，你只需要配置好ip就可以了，下面是配置的步骤：</span><br><span class="line"></span><br><span class="line">我有两台机器  192.169.0.210   192.168.0.199</span><br><span class="line"></span><br><span class="line">我的两台机器都按照上面的步骤配置完成，下面配置集群</span><br><span class="line"></span><br><span class="line">首先是192.168.0.210</span><br></pre></td></tr></table></figure></p>
+<p>vim /usr/local/elasticsearch/config/elasticsearch.yml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#找到行 ， 修改如下：</span><br></pre></td></tr></table></figure></p>
+<p>discovery.zen.ping.unicast.hosts: [“192.168.0.199”]<br><code>`</code><br>上面的ip就是其他的节点的ip，如果我有5台机器，那么，这里需要把其他四台机器的ip写上。</p>
+<p>同理，对于其他的节点，需要把其他的节点协商，用逗号隔开</p>
+<p>elasticSearch会找到对应的节点，自动分片和做复制集。</p>
+<h4 id="2-6-安装ik插件-中文分词使用"><a href="#2-6-安装ik插件-中文分词使用" class="headerlink" title="2.6 安装ik插件(中文分词使用)"></a>2.6 安装ik插件(中文分词使用)</h4><hr>
+<p>报错原因<br>我使用的Elasticsearch是6.2.2版本，按照学校文档创建字段时，使用了{“type”:”string”,”index”:”not_analyzed”}。</p>
+<p>原因分析<br>检查拼写无误之后，我决定去查Elasticsearch新版本特性，因为之前也踩过head插件的安装方法的坑，就是因为版本问题。<br>果不其然，Elasticsearch从5.X就引入了text和keyword，其中keyword适用于不分词字段，搜索时只能完全匹配，这时string还保留着。<br>到了6.X就彻底移除string了。<br>另外，”index”的值只能是boolean变量了。</p>
+<p>解决方法<br>{“type”:”text”,”index”:false}</p>
 
       
 
@@ -278,11 +271,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Liunx</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ElasticSearch</a>
         		</li>
       		
 		</ul>
@@ -338,7 +327,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://blog.majiameng.com/ffmpeg.html" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://blog.majiameng.com/elasticsearch_install.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -352,18 +341,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/mysql_principal.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/elasticsearch_yii_use.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          mysql主从复制
+          Yii2 ElasticSearch的使用
         
       </div>
     </a>
   
   
-    <a href="/ffmpeg_basic.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">ffmpeg 基本用法(转)</div>
+    <a href="/workerman_socket.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">yii、thinkphp、larverl框架中使用worker-man的socket (使用框架实现回调方法)</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -390,7 +379,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#php视频缩略图，较常用的是ffmpeg-php"><span class="toc-number">1.</span> <span class="toc-text">php视频缩略图，较常用的是ffmpeg-php</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ElasticSearch的安装"><span class="toc-number">1.</span> <span class="toc-text">ElasticSearch的安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-安装ElasticSearch"><span class="toc-number">1.1.</span> <span class="toc-text">1. 安装ElasticSearch</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#There-is-insufficient-memory-for-the-Java-Runtime-Environment-to-continue"><span class="toc-number">2.</span> <span class="toc-text">There is insufficient memory for the Java Runtime Environment to continue.</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Native-memory-allocation-mmap-failed-to-map-2060255232-bytes-for-committing-reserved-memory"><span class="toc-number">3.</span> <span class="toc-text">Native memory allocation (mmap) failed to map 2060255232 bytes for committing reserved memory.</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#An-error-report-file-with-more-information-is-saved-as"><span class="toc-number">4.</span> <span class="toc-text">An error report file with more information is saved as:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#data-elasticsearch-5-2-2-hs-err-pid26945-log"><span class="toc-number">5.</span> <span class="toc-text">/data/elasticsearch-5.2.2/hs_err_pid26945.log</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#vi-usr-local-elasticsearch-config-jvm-options"><span class="toc-number">6.</span> <span class="toc-text">vi /usr/local/elasticsearch/config/jvm.options</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-6-安装ik插件-中文分词使用"><span class="toc-number">6.0.0.1.</span> <span class="toc-text">2.6 安装ik插件(中文分词使用)</span></a></li></ol></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -407,11 +396,11 @@ var _hmt = _hmt || [];
 
   
   <!--表情-->
-<div style="margin-left: 40px;"><div id="cyEmoji" role="cylabs" data-use="emoji" sid="ffmpeg"></div></div>
+<div style="margin-left: 40px;"><div id="cyEmoji" role="cylabs" data-use="emoji" sid="elasticsearch_install"></div></div>
 <script type="text/javascript" charset="utf-8" src="https://changyan.itc.cn/js/lib/jquery.js"></script>
 <script type="text/javascript" charset="utf-8" src="https://changyan.sohu.com/js/changyan.labs.https.js?appid=cytd8GjEU"></script>
 <!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="ffmpeg" ></div>
+<div id="SOHUCS" sid="elasticsearch_install" ></div>
 <script type="text/javascript">
     (function(){
         var appid = 'cytd8GjEU';

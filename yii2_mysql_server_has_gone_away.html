@@ -9,20 +9,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://blog.majiameng.com">
-  <title>ffmpeg-php扩展 | 佳萌博客</title>
+  <title>yii2 console MySQL server has gone away | 佳萌博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="php视频缩略图，较常用的是ffmpeg-php1： 安装 ffmpeg ffmpeg的下载链接  http://ffmpeg.org/download.html 解压安装包 tar -jxvf ffmpeg-x.x.tar.bz2 进入目录 cd ffmpeg-x.x 编译安装 1./configure --enable-shared --disable-yasm  --prefix=/usr/">
-<meta name="keywords" content="PHP,Liunx">
+  <meta name="description" content="yii2 console MySQL server has gone away 经过我的不屑努力和研究终于得到解决方案  12345678910111213141516171819202122232425262728293031323334353637&amp;lt;?phpnamespace common\lib;class Command extends \yii\db\Command&amp;#123;">
+<meta name="keywords" content="Mysql">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ffmpeg-php扩展">
-<meta property="og:url" content="https://blog.majiameng.com/ffmpeg.html">
+<meta property="og:title" content="yii2 console MySQL server has gone away">
+<meta property="og:url" content="https://blog.majiameng.com/yii2_mysql_server_has_gone_away.html">
 <meta property="og:site_name" content="佳萌博客">
-<meta property="og:description" content="php视频缩略图，较常用的是ffmpeg-php1： 安装 ffmpeg ffmpeg的下载链接  http://ffmpeg.org/download.html 解压安装包 tar -jxvf ffmpeg-x.x.tar.bz2 进入目录 cd ffmpeg-x.x 编译安装 1./configure --enable-shared --disable-yasm  --prefix=/usr/">
+<meta property="og:description" content="yii2 console MySQL server has gone away 经过我的不屑努力和研究终于得到解决方案  12345678910111213141516171819202122232425262728293031323334353637&amp;lt;?phpnamespace common\lib;class Command extends \yii\db\Command&amp;#123;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-14T09:39:25.000Z">
+<meta property="og:updated_time" content="2018-09-18T07:26:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ffmpeg-php扩展">
-<meta name="twitter:description" content="php视频缩略图，较常用的是ffmpeg-php1： 安装 ffmpeg ffmpeg的下载链接  http://ffmpeg.org/download.html 解压安装包 tar -jxvf ffmpeg-x.x.tar.bz2 进入目录 cd ffmpeg-x.x 编译安装 1./configure --enable-shared --disable-yasm  --prefix=/usr/">
+<meta name="twitter:title" content="yii2 console MySQL server has gone away">
+<meta name="twitter:description" content="yii2 console MySQL server has gone away 经过我的不屑努力和研究终于得到解决方案  12345678910111213141516171819202122232425262728293031323334353637&amp;lt;?phpnamespace common\lib;class Command extends \yii\db\Command&amp;#123;">
   
     <link rel="alternative" href="/atom.xml" title="佳萌博客" type="application/atom+xml">
   
@@ -175,66 +175,31 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-ffmpeg" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-yii2_mysql_server_has_gone_away" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      ffmpeg-php扩展
+      yii2 console MySQL server has gone away
     </h1>
   
 
         
-        <a href="/ffmpeg.html" class="archive-article-date">
-  	<time datetime="2017-05-16T15:11:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-16</time>
+        <a href="/yii2_mysql_server_has_gone_away.html" class="archive-article-date">
+  	<time datetime="2018-09-18T07:26:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-18</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="php视频缩略图，较常用的是ffmpeg-php"><a href="#php视频缩略图，较常用的是ffmpeg-php" class="headerlink" title="php视频缩略图，较常用的是ffmpeg-php"></a>php视频缩略图，较常用的是ffmpeg-php</h3><p>1： 安装 ffmpeg</p>
-<p>ffmpeg的下载链接  <a href="http://ffmpeg.org/download.html" target="_blank" rel="noopener">http://ffmpeg.org/download.html</a></p>
-<p>解压安装包</p>
-<p>tar -jxvf ffmpeg-x.x.tar.bz2</p>
-<p>进入目录</p>
-<p>cd ffmpeg-x.x</p>
-<p>编译安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --enable-shared --disable-yasm  --prefix=/usr/local/ffmpeg  &amp;&amp; make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-<p>1.1动态链接库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/ld.so.conf</span><br></pre></td></tr></table></figure></p>
-<p>加入：<code>/usr/local/ffmpeg/lib</code></p>
-<p>执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ldconfig</span><br></pre></td></tr></table></figure></p>
-<p>安装完成之后 执行 ffmpeg -version</p>
-<a id="more"></a>
-<p>2 安装ffmpeg-php</p>
-<p>官方的下载链接</p>
-<p><a href="https://sourceforge.net/projects/ffmpeg-php/files/ffmpeg-php/" target="_blank" rel="noopener">https://sourceforge.net/projects/ffmpeg-php/files/ffmpeg-php/</a></p>
-<p>官方版本已经很久很久不更新了，我在centos 7 + php5.6&amp;php7.1   centos6.5+php5  试了都不行。在configure完 make的时候会报错。</p>
-<p>后来在github上找了一个版本。在centos7.2+php5.5.6 上编译安装成功 （centos7 + php7.1还是不行）</p>
-<p>地址：    git clone <a href="https://github.com/tony2001/ffmpeg-php.git" target="_blank" rel="noopener">https://github.com/tony2001/ffmpeg-php.git</a> </p>
-<p>也可以访问我的百度云盘进行下载</p>
-<p><a href="https://pan.baidu.com/s/1skQTVlj" target="_blank" rel="noopener">https://pan.baidu.com/s/1skQTVlj</a></p>
-<p>进入 ffmpeg-php目录 进行编译扩展</p>
-<p>/usr/local/php/bin/phpize   </p>
-<p>./configure –with-php-config=/usr/local/php/bin/php-config</p>
-<p>make &amp;&amp; make install</p>
-<p>注意（如果make之后出现错误，那就是ffmpeg-php版本的问题，别再折腾了，换版本吧（或者降低php版本试试））。</p>
-<p>在php的配置文件 php.ini中 添加  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">extension=ffmpeg.so</span><br></pre></td></tr></table></figure>
-<p>重启php。在 phpinfo()中查看有无ffmpeg信息。</p>
-<p>或者执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/php/bin/php -i |grep ffmpeg</span><br></pre></td></tr></table></figure></p>
-<p>要是有输出的话OK</p>
-<p>在没有的话就没有办法了,没错我就安装不上php的ffmpeg的扩展</p>
-<p>但是不影响我使用,我们可以使用exec命令来操作ffmpeg</p>
-<blockquote>
-<p>1.请看文章<a href="https://blog.majiameng.com/ffmpeg_getinfo.html">获取视频信息</a></p>
+        <h2 id="yii2-console-MySQL-server-has-gone-away"><a href="#yii2-console-MySQL-server-has-gone-away" class="headerlink" title="yii2 console MySQL server has gone away"></a>yii2 console MySQL server has gone away</h2><blockquote>
+<p>经过我的不屑努力和研究终于得到解决方案</p>
 </blockquote>
-<blockquote>
-<p>2.请看文章<a href="https://blog.majiameng.com/ffmpeg_getcover.html">截取视频封面图</a></p>
-</blockquote>
-
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">namespace common\lib;</span><br><span class="line">class Command extends \yii\db\Command&#123;</span><br><span class="line">    public function execute()</span><br><span class="line">    &#123;</span><br><span class="line">        try &#123;</span><br><span class="line">            return parent::execute();</span><br><span class="line">        &#125; catch (\yii\db\Exception $e) &#123;</span><br><span class="line">            if ($e-&gt;errorInfo[1] == 2006 || $e-&gt;errorInfo[1] == 2013) &#123;</span><br><span class="line">                $this-&gt;db-&gt;close();</span><br><span class="line">                $this-&gt;db-&gt;open();</span><br><span class="line">                $this-&gt;pdoStatement = null ;</span><br><span class="line">                return parent::execute();</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                throw $e;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    protected function queryInternal($method, $fetchMode = null)&#123;</span><br><span class="line">        try &#123;</span><br><span class="line">            return parent::queryInternal($method, $fetchMode);</span><br><span class="line">        &#125; catch (\yii\db\Exception $e) &#123;</span><br><span class="line">            if ($e-&gt;errorInfo[1] == 2006 || $e-&gt;errorInfo[1] == 2013) &#123;</span><br><span class="line">                $this-&gt;db-&gt;close();</span><br><span class="line">                $this-&gt;db-&gt;open();</span><br><span class="line">                $this-&gt;pdoStatement = null ;</span><br><span class="line"></span><br><span class="line">                return parent::queryInternal($method, $fetchMode);</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                throw $e;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&apos;db&apos; =&gt; [</span><br><span class="line">            &apos;class&apos; =&gt; &apos;yii\db\Connection&apos;,</span><br><span class="line">            &apos;dsn&apos; =&gt; &apos;mysql:host=&apos;.$db_config[&apos;host&apos;].&apos;;dbname=&apos;.$db_config[&apos;dbname&apos;],</span><br><span class="line">            &apos;username&apos; =&gt; $db_config[&apos;username&apos;],</span><br><span class="line">            &apos;password&apos; =&gt; $db_config[&apos;password&apos;],</span><br><span class="line">            &apos;charset&apos; =&gt; &apos;utf8&apos;,</span><br><span class="line">            &apos;commandClass&apos;=&gt;&quot;\\common\\lib\\Command&quot;, //&lt;==注意这里要替换</span><br><span class="line">],</span><br></pre></td></tr></table></figure>
       
 
       
@@ -278,11 +243,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Liunx</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Mysql</a>
         		</li>
       		
 		</ul>
@@ -338,7 +299,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://blog.majiameng.com/ffmpeg.html" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://blog.majiameng.com/yii2_mysql_server_has_gone_away.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -352,18 +313,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/mysql_principal.html" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          mysql主从复制
-        
-      </div>
-    </a>
   
-  
-    <a href="/ffmpeg_basic.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">ffmpeg 基本用法(转)</div>
+    <a href="/elasticsearch_yii_use.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Yii2 ElasticSearch的使用</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -390,7 +342,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#php视频缩略图，较常用的是ffmpeg-php"><span class="toc-number">1.</span> <span class="toc-text">php视频缩略图，较常用的是ffmpeg-php</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#yii2-console-MySQL-server-has-gone-away"><span class="toc-number">1.</span> <span class="toc-text">yii2 console MySQL server has gone away</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -407,11 +359,11 @@ var _hmt = _hmt || [];
 
   
   <!--表情-->
-<div style="margin-left: 40px;"><div id="cyEmoji" role="cylabs" data-use="emoji" sid="ffmpeg"></div></div>
+<div style="margin-left: 40px;"><div id="cyEmoji" role="cylabs" data-use="emoji" sid="yii2_mysql_server_has_gone_away"></div></div>
 <script type="text/javascript" charset="utf-8" src="https://changyan.itc.cn/js/lib/jquery.js"></script>
 <script type="text/javascript" charset="utf-8" src="https://changyan.sohu.com/js/changyan.labs.https.js?appid=cytd8GjEU"></script>
 <!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="ffmpeg" ></div>
+<div id="SOHUCS" sid="yii2_mysql_server_has_gone_away" ></div>
 <script type="text/javascript">
     (function(){
         var appid = 'cytd8GjEU';
