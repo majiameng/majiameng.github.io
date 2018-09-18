@@ -752,97 +752,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-ffmpeg" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/ffmpeg.html">ffmpeg-php扩展</a>
-    </h1>
-  
-
-        
-        <a href="/ffmpeg.html" class="archive-article-date">
-  	<time datetime="2017-05-16T15:11:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="php视频缩略图，较常用的是ffmpeg-php"><a href="#php视频缩略图，较常用的是ffmpeg-php" class="headerlink" title="php视频缩略图，较常用的是ffmpeg-php"></a>php视频缩略图，较常用的是ffmpeg-php</h3><p>1： 安装 ffmpeg</p>
-<p>ffmpeg的下载链接  <a href="http://ffmpeg.org/download.html" target="_blank" rel="noopener">http://ffmpeg.org/download.html</a></p>
-<p>解压安装包</p>
-<p>tar -jxvf ffmpeg-x.x.tar.bz2</p>
-<p>进入目录</p>
-<p>cd ffmpeg-x.x</p>
-<p>编译安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --enable-shared --disable-yasm  --prefix=/usr/local/ffmpeg  &amp;&amp; make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-<p>1.1动态链接库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/ld.so.conf</span><br></pre></td></tr></table></figure></p>
-<p>加入：<code>/usr/local/ffmpeg/lib</code></p>
-<p>执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ldconfig</span><br></pre></td></tr></table></figure></p>
-<p>安装完成之后 执行 ffmpeg -version</p>
-        
-          <a class="article-more-a" href="/ffmpeg.html#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Liunx</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/ffmpeg.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-ffmpeg_basic" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1272,6 +1181,97 @@ var _hmt = _hmt || [];
 
 
   
+    <article id="post-ffmpeg" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/ffmpeg.html">ffmpeg-php扩展</a>
+    </h1>
+  
+
+        
+        <a href="/ffmpeg.html" class="archive-article-date">
+  	<time datetime="2017-05-16T15:11:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="php视频缩略图，较常用的是ffmpeg-php"><a href="#php视频缩略图，较常用的是ffmpeg-php" class="headerlink" title="php视频缩略图，较常用的是ffmpeg-php"></a>php视频缩略图，较常用的是ffmpeg-php</h3><p>1： 安装 ffmpeg</p>
+<p>ffmpeg的下载链接  <a href="http://ffmpeg.org/download.html" target="_blank" rel="noopener">http://ffmpeg.org/download.html</a></p>
+<p>解压安装包</p>
+<p>tar -jxvf ffmpeg-x.x.tar.bz2</p>
+<p>进入目录</p>
+<p>cd ffmpeg-x.x</p>
+<p>编译安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --enable-shared --disable-yasm  --prefix=/usr/local/ffmpeg  &amp;&amp; make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+<p>1.1动态链接库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/ld.so.conf</span><br></pre></td></tr></table></figure></p>
+<p>加入：<code>/usr/local/ffmpeg/lib</code></p>
+<p>执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ldconfig</span><br></pre></td></tr></table></figure></p>
+<p>安装完成之后 执行 ffmpeg -version</p>
+        
+          <a class="article-more-a" href="/ffmpeg.html#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Liunx</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/ffmpeg.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-phpencryption" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1476,19 +1476,11 @@ document.oncontextmenu=new Function("event.returnValue=false");
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">社会</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ElasticSearch</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Angular</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">链接资源</a>
+                <a href="javascript:void(0)" class="js-tag color3">社会</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1497,6 +1489,14 @@ document.oncontextmenu=new Function("event.returnValue=false");
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Curl</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">链接资源</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ElasticSearch</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1528,11 +1528,11 @@ document.oncontextmenu=new Function("event.returnValue=false");
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">JS</a>
+                <a href="javascript:void(0)" class="js-tag color1">Redis</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Redis</a>
+                <a href="javascript:void(0)" class="js-tag color3">JS</a>
               </li>
              
               <li class="article-tag-list-item">
