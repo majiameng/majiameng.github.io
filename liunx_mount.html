@@ -9,18 +9,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://blog.majiameng.com">
-  <title>Archives: 2017/3 | 佳萌博客</title>
+  <title>Liunx 磁盘扩容踩坑总结 | 佳萌博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="听说股市有人拿五万变成100万，亲眼见自己把10万变成五千.踏踏实实干事,成功离你不远了!佳萌日常整理的博文，希望对你们有用!">
-<meta property="og:type" content="website">
-<meta property="og:title" content="佳萌博客">
-<meta property="og:url" content="https://blog.majiameng.com/archives/2017/03/index.html">
+  <meta name="description" content="Liunx 磁盘扩容踩坑总结查看当前磁盘使用123456[root@iZ2zebzrd1fwcb8kj2g8xiZ ~]# df -hFilesystem            Size  Used Avail Use% Mounted on/dev/xvda1             40G   36G  2.8G  93% /tmpfs                1003M     0 1">
+<meta name="keywords" content="ElasticSearch">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Liunx 磁盘扩容踩坑总结">
+<meta property="og:url" content="https://blog.majiameng.com/liunx_mount.html">
 <meta property="og:site_name" content="佳萌博客">
-<meta property="og:description" content="听说股市有人拿五万变成100万，亲眼见自己把10万变成五千.踏踏实实干事,成功离你不远了!佳萌日常整理的博文，希望对你们有用!">
+<meta property="og:description" content="Liunx 磁盘扩容踩坑总结查看当前磁盘使用123456[root@iZ2zebzrd1fwcb8kj2g8xiZ ~]# df -hFilesystem            Size  Used Avail Use% Mounted on/dev/xvda1             40G   36G  2.8G  93% /tmpfs                1003M     0 1">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-09-21T02:28:57.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="佳萌博客">
-<meta name="twitter:description" content="听说股市有人拿五万变成100万，亲眼见自己把10万变成五千.踏踏实实干事,成功离你不远了!佳萌日常整理的博文，希望对你们有用!">
+<meta name="twitter:title" content="Liunx 磁盘扩容踩坑总结">
+<meta name="twitter:description" content="Liunx 磁盘扩容踩坑总结查看当前磁盘使用123456[root@iZ2zebzrd1fwcb8kj2g8xiZ ~]# df -hFilesystem            Size  Used Avail Use% Mounted on/dev/xvda1             40G   36G  2.8G  93% /tmpfs                1003M     0 1">
   
     <link rel="alternative" href="/atom.xml" title="佳萌博客" type="application/atom+xml">
   
@@ -173,102 +175,213 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-liunx_mount" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/php_interview_2017.html" class="archive-article-date">
-  	<time datetime="2017-03-11T12:33:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-11</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/php_interview_2017.html">2017最新PHP经典面试题总结</a>
+    <h1 class="article-title" itemprop="name">
+      Liunx 磁盘扩容踩坑总结
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/liunx_mount.html" class="archive-article-date">
+  	<time datetime="2018-09-21T02:23:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Liunx-磁盘扩容踩坑总结"><a href="#Liunx-磁盘扩容踩坑总结" class="headerlink" title="Liunx 磁盘扩容踩坑总结"></a>Liunx 磁盘扩容踩坑总结</h1><h5 id="查看当前磁盘使用"><a href="#查看当前磁盘使用" class="headerlink" title="查看当前磁盘使用"></a>查看当前磁盘使用</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@iZ2zebzrd1fwcb8kj2g8xiZ ~]# df -h</span><br><span class="line">Filesystem            Size  Used Avail Use% Mounted on</span><br><span class="line">/dev/xvda1             40G   36G  2.8G  93% /</span><br><span class="line">tmpfs                1003M     0 1003M   0% /dev/shm</span><br><span class="line">/dev/xvdb1             20G   16G  2.8G  86% /home/www</span><br><span class="line">/dev/xvdc              15G   15G     0 100% /home/svn</span><br></pre></td></tr></table></figure>
+<h5 id="我们在阿里云扩容-dev-xvdc-这个盘之后查看磁盘详解"><a href="#我们在阿里云扩容-dev-xvdc-这个盘之后查看磁盘详解" class="headerlink" title="我们在阿里云扩容/dev/xvdc 这个盘之后查看磁盘详解"></a>我们在阿里云扩容/dev/xvdc 这个盘之后查看磁盘详解</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">[root@iZ2zebzrd1fwcb8kj2g8xiZ ~]# fdisk -l</span><br><span class="line"></span><br><span class="line">Disk /dev/xvda: 42.9 GB, 42949672960 bytes</span><br><span class="line">255 heads, 63 sectors/track, 5221 cylinders</span><br><span class="line">Units = cylinders of 16065 * 512 = 8225280 bytes</span><br><span class="line">Sector size (logical/physical): 512 bytes / 512 bytes</span><br><span class="line">I/O size (minimum/optimal): 512 bytes / 512 bytes</span><br><span class="line">Disk identifier: 0x00071419</span><br><span class="line"></span><br><span class="line">    Device Boot      Start         End      Blocks   Id  System</span><br><span class="line">/dev/xvda1   *           1        5222    41940992   83  Linux</span><br><span class="line"></span><br><span class="line">Disk /dev/xvdb: 64.4 GB, 64424509440 bytes</span><br><span class="line">255 heads, 63 sectors/track, 7832 cylinders</span><br><span class="line">Units = cylinders of 16065 * 512 = 8225280 bytes</span><br><span class="line">Sector size (logical/physical): 512 bytes / 512 bytes</span><br><span class="line">I/O size (minimum/optimal): 512 bytes / 512 bytes</span><br><span class="line">Disk identifier: 0x453417b4</span><br><span class="line"></span><br><span class="line">    Device Boot      Start         End      Blocks   Id  System</span><br><span class="line">/dev/xvdb1               1        2610    20964793+  83  Linux</span><br><span class="line"></span><br><span class="line">Disk /dev/xvdc: 32.2 GB, 32212254720 bytes</span><br><span class="line">255 heads, 63 sectors/track, 3916 cylinders</span><br><span class="line">Units = cylinders of 16065 * 512 = 8225280 bytes</span><br><span class="line">Sector size (logical/physical): 512 bytes / 512 bytes</span><br><span class="line">I/O size (minimum/optimal): 512 bytes / 512 bytes</span><br><span class="line">Disk identifier: 0x00000000</span><br><span class="line"></span><br><span class="line">Disk /dev/xvdc doesn&apos;t contain a valid partition table</span><br></pre></td></tr></table></figure>
+<h5 id="强制检查磁盘使用情况"><a href="#强制检查磁盘使用情况" class="headerlink" title="强制检查磁盘使用情况"></a>强制检查磁盘使用情况</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[root@iZ2zebzrd1fwcb8kj2g8xiZ ~]# e2fsck -f /dev/xvdc</span><br><span class="line">e2fsck 1.41.12 (17-May-2010)</span><br><span class="line">Pass 1: Checking inodes, blocks, and sizes</span><br><span class="line">Pass 2: Checking directory structure</span><br><span class="line">Pass 3: Checking directory connectivity</span><br><span class="line">/lost+found not found.  Create&lt;y&gt;? yes</span><br><span class="line"></span><br><span class="line">Pass 4: Checking reference counts</span><br><span class="line">Pass 5: Checking group summary information</span><br><span class="line"></span><br><span class="line">/dev/xvdc: ***** FILE SYSTEM WAS MODIFIED *****</span><br><span class="line">/dev/xvdc: 343096/983040 files (3.1% non-contiguous), 3788579/3932160 blocks</span><br></pre></td></tr></table></figure>
+<h5 id="重定义磁盘大小"><a href="#重定义磁盘大小" class="headerlink" title="重定义磁盘大小"></a>重定义磁盘大小</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@iZ2zebzrd1fwcb8kj2g8xiZ ~]# resize2fs  /dev/xvdc</span><br><span class="line">resize2fs 1.41.12 (17-May-2010)</span><br><span class="line">Resizing the filesystem on /dev/xvdc to 7864320 (4k) blocks.</span><br><span class="line">The filesystem on /dev/xvdc is now 7864320 blocks long.</span><br></pre></td></tr></table></figure>
+<h5 id="重新挂载光驱"><a href="#重新挂载光驱" class="headerlink" title="重新挂载光驱"></a>重新挂载光驱</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@iZ2zebzrd1fwcb8kj2g8xiZ ~]# mount   /dev/xvdc /home/svn</span><br></pre></td></tr></table></figure>
+<h5 id="查询磁盘使用情况"><a href="#查询磁盘使用情况" class="headerlink" title="查询磁盘使用情况"></a>查询磁盘使用情况</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@iZ2zebzrd1fwcb8kj2g8xiZ ~]# df -h</span><br><span class="line">Filesystem            Size  Used Avail Use% Mounted on</span><br><span class="line">/dev/xvda1             40G   36G  2.8G  93% /</span><br><span class="line">tmpfs                1003M     0 1003M   0% /dev/shm</span><br><span class="line">/dev/xvdb1             20G   16G  2.8G  86% /home/www</span><br><span class="line">/dev/xvdc              30G   15G   14G  51% /home/svn</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ElasticSearch</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://blog.majiameng.com/liunx_mount.html" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/redis.html" class="archive-article-date">
-  	<time datetime="2017-03-06T11:18:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-06</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/yii2_mysql_server_has_gone_away.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">yii2 console MySQL server has gone away</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/redis.html">redis 使用</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Redis</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Liunx-磁盘扩容踩坑总结"><span class="toc-number">1.</span> <span class="toc-text">Liunx 磁盘扩容踩坑总结</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#查看当前磁盘使用"><span class="toc-number">1.0.0.0.1.</span> <span class="toc-text">查看当前磁盘使用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#我们在阿里云扩容-dev-xvdc-这个盘之后查看磁盘详解"><span class="toc-number">1.0.0.0.2.</span> <span class="toc-text">我们在阿里云扩容/dev/xvdc 这个盘之后查看磁盘详解</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#强制检查磁盘使用情况"><span class="toc-number">1.0.0.0.3.</span> <span class="toc-text">强制检查磁盘使用情况</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#重定义磁盘大小"><span class="toc-number">1.0.0.0.4.</span> <span class="toc-text">重定义磁盘大小</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#重新挂载光驱"><span class="toc-number">1.0.0.0.5.</span> <span class="toc-text">重新挂载光驱</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#查询磁盘使用情况"><span class="toc-number">1.0.0.0.6.</span> <span class="toc-text">查询磁盘使用情况</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
   
-    </div></section>
   
 
-    
+  
+  <!--表情-->
+<div style="margin-left: 40px;"><div id="cyEmoji" role="cylabs" data-use="emoji" sid="liunx_mount"></div></div>
+<script type="text/javascript" charset="utf-8" src="https://changyan.itc.cn/js/lib/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="https://changyan.sohu.com/js/changyan.labs.https.js?appid=cytd8GjEU"></script>
+<!--PC和WAP自适应版-->
+<div id="SOHUCS" sid="liunx_mount" ></div>
+<script type="text/javascript">
+    (function(){
+        var appid = 'cytd8GjEU';
+        var conf = 'prod_21d854837c6931da20573b9df4aa83f4';
+        var width = window.innerWidth || document.documentElement.clientWidth;
+        if (width < 960) {
+            window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })();
+</script>
+
+
+
+  
+
+  
+
+  
 
 
           </div>
@@ -302,8 +415,8 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
