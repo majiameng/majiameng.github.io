@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.majiameng.com/idea.html</loc>
+    
+    <lastmod>2018-10-18T07:08:44.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.majiameng.com/liunx_mount.html</loc>
     
     <lastmod>2018-09-21T02:28:57.000Z</lastmod>
@@ -121,13 +128,6 @@
   </url>
   
   <url>
-    <loc>https://blog.majiameng.com/idea.html</loc>
-    
-    <lastmod>2017-11-30T01:07:11.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://blog.majiameng.com/socket.html</loc>
     
     <lastmod>2017-11-21T01:19:22.000Z</lastmod>
@@ -177,14 +177,14 @@
   </url>
   
   <url>
-    <loc>https://blog.majiameng.com/meng2.html</loc>
+    <loc>https://blog.majiameng.com/meng1.html</loc>
     
     <lastmod>2017-09-30T03:45:16.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.majiameng.com/meng1.html</loc>
+    <loc>https://blog.majiameng.com/meng2.html</loc>
     
     <lastmod>2017-09-30T03:45:16.000Z</lastmod>
     
@@ -219,14 +219,14 @@
   </url>
   
   <url>
-    <loc>https://blog.majiameng.com/mysql_principal.html</loc>
+    <loc>https://blog.majiameng.com/mysql_proxy.html</loc>
     
     <lastmod>2017-09-20T11:18:33.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.majiameng.com/mysql_proxy.html</loc>
+    <loc>https://blog.majiameng.com/mysql_principal.html</loc>
     
     <lastmod>2017-09-20T11:18:33.000Z</lastmod>
     
@@ -240,14 +240,14 @@
   </url>
   
   <url>
-    <loc>https://blog.majiameng.com/mysql_1.html</loc>
+    <loc>https://blog.majiameng.com/redis.html</loc>
     
     <lastmod>2017-09-18T11:02:31.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.majiameng.com/redis.html</loc>
+    <loc>https://blog.majiameng.com/mysql_1.html</loc>
     
     <lastmod>2017-09-18T11:02:31.000Z</lastmod>
     
