@@ -6,6 +6,8 @@ https://blog.majiameng.com/workerman_socket.html
 https://blog.majiameng.com/sphinx.html
 https://blog.majiameng.com/ffmpeg_getcover.html
 https://blog.majiameng.com/ffmpeg_getinfo.html
+https://blog.majiameng.com/solr.html
+https://blog.majiameng.com/java.html
 https://blog.majiameng.com/phpStorm_set_svn.html
 https://blog.majiameng.com/mengphp.html
 https://blog.majiameng.com/angular.html
@@ -16,5 +18,3 @@ https://blog.majiameng.com/socket.html
 https://blog.majiameng.com/zhanzhang.html
 https://blog.majiameng.com/mysql_proxy.html
 https://blog.majiameng.com/mysql_principal.html
-https://blog.majiameng.com/ffmpeg_basic.html
-https://blog.majiameng.com/ffmpeg.html

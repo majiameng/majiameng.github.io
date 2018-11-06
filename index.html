@@ -836,41 +836,33 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-phpStorm_set_svn" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-solr" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/phpStorm_set_svn.html">phpStrom 配置 svn</a>
+      <a class="article-title" href="/solr.html">solr的安装</a>
     </h1>
   
 
         
-        <a href="/phpStorm_set_svn.html" class="archive-article-date">
-  	<time datetime="2017-12-29T11:40:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-29</time>
+        <a href="/solr.html" class="archive-article-date">
+  	<time datetime="2018-05-09T06:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-09</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="phpStrom-配置-svn"><a href="#phpStrom-配置-svn" class="headerlink" title="phpStrom 配置 svn"></a>phpStrom 配置 svn</h1><h4 id="安装了phpstorm之后，想配置svn，结果在file-gt-settings-gt-Version-Contorl-gt-subversion-gt-with-conmand-line-client配置成"><a href="#安装了phpstorm之后，想配置svn，结果在file-gt-settings-gt-Version-Contorl-gt-subversion-gt-with-conmand-line-client配置成" class="headerlink" title="安装了phpstorm之后，想配置svn，结果在file-&gt;settings-&gt;Version Contorl-&gt;subversion-&gt;with conmand line client配置成"></a>安装了phpstorm之后，想配置svn，结果在file-&gt;settings-&gt;Version Contorl-&gt;subversion-&gt;with conmand line client配置成</h4><p>D:\Program Files\TortoiseSVN\bin\tortoisePro.exe(一般的svn程序文件)<br>　　已经安装的路径地址之后，一直提示</p>
-<blockquote>
-<p>“Can’t use Subversion command line client: ‘D:\Program Files\TortoiseSVN\bin\tortoisePro.exe‘ Probably the path to Subversion executable is wrong. Fix it.”.</p>
-</blockquote>
-<p>然后google search一下，才发现这个tortoisePro.exe是guide操作程序，不支持conmand line操作，需要重新下载一个</p>
-<blockquote>
-<p><a href="http://www.jetbrains.com/phpstorm/webhelp/using-subversion-integration.html" target="_blank" rel="noopener">http://www.jetbrains.com/phpstorm/webhelp/using-subversion-integration.html</a></p>
-</blockquote>
-<p>然后我选择了这个下载slikSVN下载</p>
-<blockquote>
-<p><a href="http://subversion.apache.org/packages.html#windows" target="_blank" rel="noopener">http://subversion.apache.org/packages.html#windows</a></p>
-</blockquote>
-<p>下载完了之后就一直按下一步安装即可，作者安装在了</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">D:\Program Files\SlikSvn</span><br></pre></td></tr></table></figure>
-<p>所以呢，在with conmand line client设置成你的D:\Program Files\SlikSvn\bin\svn.exe即可使用svn了。</p>
+        <p>安装solr</p>
+<h5 id="1-将-solr-压缩包解压，并将solr-5-3-0-server-solr-webap文件夹下有webapp文件夹，将之复制到Tomcat-webapps-目录下，并改成solr"><a href="#1-将-solr-压缩包解压，并将solr-5-3-0-server-solr-webap文件夹下有webapp文件夹，将之复制到Tomcat-webapps-目录下，并改成solr" class="headerlink" title="1.  将 solr 压缩包解压，并将solr-5.3.0\server\solr-webap文件夹下有webapp文件夹，将之复制到Tomcat\webapps\目录下，并改成solr"></a>1.  将 solr 压缩包解压，并将solr-5.3.0\server\solr-webap文件夹下有webapp文件夹，将之复制到Tomcat\webapps\目录下，并改成solr</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp -r solr-5.3.0/server/solr-webap/webapp/ /usr/local/tomcat/webapps/solr</span><br></pre></td></tr></table></figure>
+<h5 id="2-将-solr-压缩包中-solr-5-3-0-server-lib-ext-中的-jar-全部复制到-Tomcat-webapps-solr-WEB-INF-lib-目录中"><a href="#2-将-solr-压缩包中-solr-5-3-0-server-lib-ext-中的-jar-全部复制到-Tomcat-webapps-solr-WEB-INF-lib-目录中" class="headerlink" title="2.  将 solr 压缩包中 solr-5.3.0\server\lib\ext 中的 jar 全部复制到 Tomcat\ webapps\solr\WEB-INF\lib 目录中"></a>2.  将 solr 压缩包中 solr-5.3.0\server\lib\ext 中的 jar 全部复制到 Tomcat\ webapps\solr\WEB-INF\lib 目录中</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp solr-5.3.0/server/lib/ext/* /usr/local/tomcat/webapps/solr/WEB-INF/lib</span><br></pre></td></tr></table></figure>
+<h5 id="3-将-solr-压缩包中-solr-5-3-0-server-resources-log4j-properties-复制到Tomcat-webapps-solr-WEB-INF-lib-目录中"><a href="#3-将-solr-压缩包中-solr-5-3-0-server-resources-log4j-properties-复制到Tomcat-webapps-solr-WEB-INF-lib-目录中" class="headerlink" title="3.  将 solr 压缩包中 solr-5.3.0/server/resources/log4j.properties 复制到Tomcat\ webapps\solr\WEB-INF\lib 目录中"></a>3.  将 solr 压缩包中 solr-5.3.0/server/resources/log4j.properties 复制到Tomcat\ webapps\solr\WEB-INF\lib 目录中</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp solr-5.3.0/server/resources/log4j.properties     /usr/local/tomcat/webapps/solr/WEB-INF/lib</span><br></pre></td></tr></table></figure>
+<h5 id="4-创建一个-usr-local-solr-solrhome-的目录，并将-solr-压缩包中-solr-5-3-0-server-solr-目录所遇文件复制-usr-local-solr-solrhome-目录下"><a href="#4-创建一个-usr-local-solr-solrhome-的目录，并将-solr-压缩包中-solr-5-3-0-server-solr-目录所遇文件复制-usr-local-solr-solrhome-目录下" class="headerlink" title="4.  创建一个 /usr/local/solr/solrhome  的目录，并将 solr 压缩包中 solr-5.3.0/server/solr/ 目录所遇文件复制 /usr/local/solr/solrhome 目录下"></a>4.  创建一个<code> /usr/local/solr/solrhome </code> 的目录，并将 solr 压缩包中<code> solr-5.3.0/server/solr/ </code>目录所遇文件复制<code> /usr/local/solr/solrhome </code>目录下</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp -r solr-5.3.0/server/solr/* /usr/local/solr/solrhome</span><br></pre></td></tr></table></figure>
+<h5 id="5-打开-usr-local-tomcat-webapps-solr-WEB-INF下的web-xml，增加如下配置内容（初始状态下该内容是被注释掉的-第40多行）："><a href="#5-打开-usr-local-tomcat-webapps-solr-WEB-INF下的web-xml，增加如下配置内容（初始状态下该内容是被注释掉的-第40多行）：" class="headerlink" title="5.  打开/usr/local/tomcat/webapps/solr/WEB-INF下的web.xml，增加如下配置内容（初始状态下该内容是被注释掉的,第40多行）："></a>5.  打开/usr/local/tomcat/webapps/solr/WEB-INF下的web.xml，增加如下配置内容（初始状态下该内容是被注释掉的,第40多行）：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;env-entry&gt;</span><br><span class="line"> &lt;env-entry-name&gt;solr/home&lt;/env-entry-name&gt;</span><br><span class="line"> &lt;env-entry-value&gt;/usr/local/solr/solrhome&lt;/env-entry-value&gt;</span><br><span class="line"> &lt;env-entry-type&gt;java.lang.String&lt;/env-entry-type&gt;</span><br><span class="line">&lt;/env-entry&gt;</span><br></pre></td></tr></table></figure>
+<h5 id="6-访问页面-http-localhost-8080-solr-，-查看core-Admin-手动加一个mycore，-‘mycore1’-就显示出来了"><a href="#6-访问页面-http-localhost-8080-solr-，-查看core-Admin-手动加一个mycore，-‘mycore1’-就显示出来了" class="headerlink" title="6.访问页面  http://localhost:8080/solr ， 查看core Admin   手动加一个mycore， ‘mycore1’ 就显示出来了"></a>6.访问页面 <code> <a href="http://localhost:8080/solr" target="_blank" rel="noopener">http://localhost:8080/solr</a> </code>， 查看core Admin   手动加一个mycore， ‘mycore1’ 就显示出来了</h5><h4 id="在-usr-local-solr-solrhome-下创建-index-文件夹"><a href="#在-usr-local-solr-solrhome-下创建-index-文件夹" class="headerlink" title="在/usr/local/solr/solrhome/ 下创建  index 文件夹"></a>在/usr/local/solr/solrhome/ 下创建  index 文件夹</h4><p>将/usr/local/solr/solrhome/configsets/basic_configs/comf 复制到 index文件夹里面</p>
 
       
 
@@ -884,7 +876,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">IDEA</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		
 		</ul>
@@ -894,7 +886,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/phpStorm_set_svn.html">展开全文 >></a>
+          <a class="article-more-a" href="/solr.html">展开全文 >></a>
         </p>
       
 
@@ -924,31 +916,41 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-mengphp" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-java" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/mengphp.html">MengPHP后台管理系统 1.0.0</a>
+      <a class="article-title" href="/java.html">Java的安装</a>
     </h1>
   
 
         
-        <a href="/mengphp.html" class="archive-article-date">
-  	<time datetime="2017-11-01T12:04:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-01</time>
+        <a href="/java.html" class="archive-article-date">
+  	<time datetime="2018-05-09T06:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-09</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="MengPHP后台管理系统-1-0-0"><a href="#MengPHP后台管理系统-1-0-0" class="headerlink" title="MengPHP后台管理系统 1.0.0"></a>MengPHP后台管理系统 1.0.0</h1><p>MengPHP 基于ThinkPHP5+layui开发的一套开源PHP快速开发框架，默认集成了权限管理、模块管理、插件管理、钩子管理、数据库管理等常用功能，以方便开发者快速构建自己的应用，我们在发布第一个版本就为您集成了一键升级框架的功能，扩展的模块、插件、模板均可独立在线升级。为了让您开发的应用获得更多的使用者，MengPHP在发布之初就上线了PHP应用市场(<a href="http://majiameng.com" target="_blank" rel="noopener">http://majiameng.com</a>)，我们诚邀您的加入。</p>
-<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">www  WEB部署目录（或者子目录）</span><br><span class="line">├─app                   应用目录</span><br><span class="line">│   ├─admin             系统模块目录</span><br><span class="line">│   ├─common            系统公共模块目录</span><br><span class="line">│   │   ├─behavior      行为目录</span><br><span class="line">│   │   ├─controller    公共模块控制器目录</span><br><span class="line">│   │   ├─lang          公共模块语言包目录</span><br><span class="line">│   │   ├─model         公共模型目录</span><br><span class="line">│   │   ├─util          扩展类库目录</span><br><span class="line">│   │   ├─validate      公共验证器目录</span><br><span class="line">│   ├─extra             扩展配置目录</span><br><span class="line">│   ├─index             前台默认模块目录（禁止在此目录下开发）</span><br><span class="line">│   ├─install           系统安装目录</span><br><span class="line">│   ├─command.php       命令行工具配置文件</span><br><span class="line">│   ├─common.php        公共（函数）文件</span><br><span class="line">│   ├─function.php      为方便系统升级，二次开发中用到的公共函数请写在此文件</span><br><span class="line">│   ├─config.php        应用（公共）配置文件</span><br><span class="line">│   ├─database.php      数据库配置文件（安装时自动生成）</span><br><span class="line">│   ├─route.php         路由配置文件</span><br><span class="line">│   ├─tags.php          应用行为扩展定义文件</span><br><span class="line">├─extend                扩展类库目录</span><br><span class="line">├─backup                备份目录（数据库、升级文件）</span><br><span class="line">├─static                静态资源目录（后台用）</span><br><span class="line">├─thinkphp              ThinkPHP核心框架目录</span><br><span class="line">├─upload                文件上传目录</span><br><span class="line">├─vendor                第三方类库目录（Composer）</span><br><span class="line">├─composer.json         Composer json文件</span><br><span class="line">├─admin.php             后台管理入口文件</span><br><span class="line">├─index.php             首页入口文件</span><br><span class="line">├─LICENSE.txt           Apache2开源协议</span><br><span class="line">├─.htaccess             伪静态配置文件</span><br><span class="line">├─robots.txt            爬虫协议</span><br><span class="line">├─version.php           系统版本文件</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/mengphp.html#more">more >></a>
-        
+        <h3 id="java-Jdk的安装"><a href="#java-Jdk的安装" class="headerlink" title="java Jdk的安装"></a>java Jdk的安装</h3><p>安装Java环境<br>首先检测是否安装java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">java -version  </span><br><span class="line">echo $JAVA_HOME</span><br></pre></td></tr></table></figure></p>
+<p>如果java的版本过低，建议安装高版本，下面安装的是java 1.8<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cd /opt/    </span><br><span class="line">wget --no-cookies --no-check-certificate --header &quot;Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie&quot; &quot;http://download.oracle.com/otn-pub/java/jdk/8u66-b17/jdk-8u66-linux-x64.tar.gz&quot;    </span><br><span class="line">tar xzf jdk-8u66-linux-x64.tar.gz</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">cd /opt/jdk1.8.0_66/    </span><br><span class="line">alternatives --install /usr/bin/java java /opt/jdk1.8.0_66/bin/java 2    </span><br><span class="line">alternatives --config java</span><br></pre></td></tr></table></figure></p>
+<p>运行了上面的，会初选一个选择的地方，我的机器显示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">There are 3 programs which provide &apos;java&apos;.    </span><br><span class="line">    </span><br><span class="line">  Selection    Command    </span><br><span class="line">-----------------------------------------------    </span><br><span class="line">   1           /opt/jdk1.7.0_71/bin/java    </span><br><span class="line">  +2           /opt/jdk1.8.0_45/bin/java    </span><br><span class="line">   3           /opt/jdk1.8.0_51/bin/java    </span><br><span class="line">   4           /opt/jdk1.8.0_66/bin/java    </span><br><span class="line"></span><br><span class="line">Enter to keep the current selection[+], or type selection number: 4</span><br></pre></td></tr></table></figure>
+<p>我们安装的是jdk1.8.0.66 所以，我选择的是4，这个看具体情况，jdk1.8.0.66 是第几个，就选择那个数字。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">alternatives --install /usr/bin/jar jar /opt/jdk1.8.0_66/bin/jar 2    </span><br><span class="line">alternatives --install /usr/bin/javac javac /opt/jdk1.8.0_66/bin/javac 2    </span><br><span class="line">alternatives --set jar /opt/jdk1.8.0_66/bin/jar    </span><br><span class="line">alternatives --set javac /opt/jdk1.8.0_66/bin/javac</span><br></pre></td></tr></table></figure>
+<p>安装完成，检查版本</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">java -version    </span><br><span class="line"> </span><br><span class="line">java version &quot;1.8.0_66&quot;    </span><br><span class="line">Java(TM) SE Runtime Environment (build 1.8.0_66-b17)    </span><br><span class="line">Java HotSpot(TM) 64-Bit Server VM (build 25.66-b17, mixed mode)</span><br></pre></td></tr></table></figure>
+<p>保存到文件  /etc/environment中，当服务器重启的时候加载：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/profile  </span><br><span class="line">  </span><br><span class="line">export JAVA_HOME=/opt/jdk1.8.0_66    </span><br><span class="line">export JRE_HOME=/opt/jdk1.8.0_66/jre    </span><br><span class="line">export PATH=$PATH:/opt/jdk1.8.0_66/bin:/opt/jdk1.8.0_66/jre/bin</span><br></pre></td></tr></table></figure>
+<p>重启linux</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure>
+<p>查看是否安装成功</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">java -version  </span><br><span class="line">echo $JAVA_HOME</span><br></pre></td></tr></table></figure>
+
       
 
       
@@ -961,7 +963,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		
 		</ul>
@@ -971,7 +973,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/mengphp.html">展开全文 >></a>
+          <a class="article-more-a" href="/java.html">展开全文 >></a>
         </p>
       
 
@@ -1003,7 +1005,7 @@ var _hmt = _hmt || [];
   
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
@@ -1162,11 +1164,15 @@ document.oncontextmenu=new Function("event.returnValue=false");
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">收录</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">IDEA</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">收录</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1178,11 +1184,11 @@ document.oncontextmenu=new Function("event.returnValue=false");
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">JS</a>
+                <a href="javascript:void(0)" class="js-tag color1">Redis</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Redis</a>
+                <a href="javascript:void(0)" class="js-tag color3">JS</a>
               </li>
              
               <li class="article-tag-list-item">
