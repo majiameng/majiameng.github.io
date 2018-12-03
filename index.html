@@ -175,6 +175,83 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-python_char_video" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/python_char_video.html">生成抖音中的像素视频(视频转字符动画)</a>
+    </h1>
+  
+
+        
+        <a href="/python_char_video.html" class="archive-article-date">
+  	<time datetime="2018-11-30T01:25:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="生成抖音中的像素视频-视频转字符动画"><a href="#生成抖音中的像素视频-视频转字符动画" class="headerlink" title="生成抖音中的像素视频(视频转字符动画)"></a>生成抖音中的像素视频(视频转字符动画)</h3><blockquote>
+<p>以下还需要需要ffmpeg视频处理工具合成音频 <a href="https://blog.majiameng.com/ffmpeg.html">安装ffmpeg</a> |<br><a href="https://blog.majiameng.com/ffmpeg_basic.html">ffmpeg基本用法</a></p>
+</blockquote>
+<h6 id="引用类"><a href="#引用类" class="headerlink" title="引用类"></a>引用类</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3.7 install numpy opencv-python Pillow</span><br></pre></td></tr></table></figure>
+<h4 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> os, cv2, subprocess, argparse</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image, ImageFont, ImageDraw</span><br><span class="line"></span><br><span class="line"><span class="comment"># pip3.7 install numpy opencv-python Pillow</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 命令行输入参数处理</span></span><br><span class="line">parser = argparse.ArgumentParser()</span><br><span class="line">parser.add_argument(<span class="string">'file'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'-o'</span>, <span class="string">'--output'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'-f'</span>, <span class="string">'--fps'</span>, type=float, default=<span class="number">24</span>)  <span class="comment"># 帧</span></span><br><span class="line">parser.add_argument(<span class="string">'-s'</span>, <span class="string">'--save'</span>, type=bool, nargs=<span class="string">'?'</span>, default=<span class="keyword">False</span>, const=<span class="keyword">True</span>)  <span class="comment"># 是否保留Cache文件，默认不保存</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取参数</span></span><br><span class="line">args = parser.parse_args()</span><br><span class="line">INPUT = args.file</span><br><span class="line">OUTPUT = args.output</span><br><span class="line">FPS = args.fps</span><br><span class="line">SAVE = args.save</span><br><span class="line"></span><br><span class="line"><span class="comment"># 像素对应ascii码</span></span><br><span class="line">ascii_char = list(<span class="string">"$@B%8&amp;WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1&#123;&#125;[]?-_+~&lt;&gt;i!lI;:oa+&gt;!:+. "</span>)</span><br><span class="line"><span class="comment"># ascii_char = list("MNHQ$OC67+&gt;!:-. ")</span></span><br><span class="line"><span class="comment"># ascii_char = list("MNHQ$OC67)oa+&gt;!:+. ")</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 将像素转换为ascii码</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_char</span><span class="params">(r, g, b, alpha=<span class="number">256</span>)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> alpha == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">''</span></span><br><span class="line">    length = len(ascii_char)</span><br><span class="line">    gray = int(<span class="number">0.2126</span> * r + <span class="number">0.7152</span> * g + <span class="number">0.0722</span> * b)</span><br><span class="line">    unit = (<span class="number">256.0</span> + <span class="number">1</span>) / length</span><br><span class="line">    <span class="keyword">return</span> ascii_char[int(gray / unit)]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 将视频拆分成图片</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">videoSplitJpg</span><span class="params">(file_name)</span>:</span></span><br><span class="line">    vc = cv2.VideoCapture(file_name)</span><br><span class="line">    c = <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> vc.isOpened():</span><br><span class="line">        r, frame = vc.read()</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(<span class="string">'Cache'</span>):</span><br><span class="line">            os.mkdir(<span class="string">'Cache'</span>)</span><br><span class="line">        os.chdir(<span class="string">'Cache'</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        r = <span class="keyword">False</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> r:</span><br><span class="line">        cv2.imwrite(str(c) + <span class="string">'.jpg'</span>, frame)</span><br><span class="line">        <span class="comment"># 将txt转换为图片</span></span><br><span class="line">        txtToImage(str(c) + <span class="string">'.jpg'</span>)</span><br><span class="line">        r, frame = vc.read()</span><br><span class="line">        c += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    os.chdir(<span class="string">'..'</span>)</span><br><span class="line">    <span class="keyword">return</span> vc</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 将txt转换为图片(换为ascii图)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">txtToImage</span><span class="params">(file_name)</span>:</span></span><br><span class="line">    im = Image.open(file_name).convert(<span class="string">'RGB'</span>)</span><br><span class="line">    <span class="comment"># gif拆分后的图像，需要转换，否则报错，由于gif分割后保存的是索引颜色</span></span><br><span class="line">    raw_width = im.width</span><br><span class="line">    raw_height = im.height</span><br><span class="line">    width = int(raw_width / <span class="number">6</span>)</span><br><span class="line">    height = int(raw_height / <span class="number">15</span>)</span><br><span class="line">    im = im.resize((width, height), Image.NEAREST)</span><br><span class="line"></span><br><span class="line">    txt = <span class="string">""</span></span><br><span class="line">    colors = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(height):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(width):</span><br><span class="line">            pixel = im.getpixel((j, i))</span><br><span class="line">            colors.append((pixel[<span class="number">0</span>], pixel[<span class="number">1</span>], pixel[<span class="number">2</span>]))</span><br><span class="line">            <span class="keyword">if</span> (len(pixel) == <span class="number">4</span>):</span><br><span class="line">                txt += get_char(pixel[<span class="number">0</span>], pixel[<span class="number">1</span>], pixel[<span class="number">2</span>], pixel[<span class="number">3</span>])</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                txt += get_char(pixel[<span class="number">0</span>], pixel[<span class="number">1</span>], pixel[<span class="number">2</span>])</span><br><span class="line">        txt += <span class="string">'\n'</span></span><br><span class="line">        colors.append((<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>))</span><br><span class="line"></span><br><span class="line">    im_txt = Image.new(<span class="string">"RGB"</span>, (raw_width, raw_height), (<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>))</span><br><span class="line">    dr = ImageDraw.Draw(im_txt)</span><br><span class="line">    <span class="comment"># font = ImageFont.truetype(os.path.join("fonts","汉仪楷体简.ttf"),18)</span></span><br><span class="line">    font = ImageFont.load_default().font</span><br><span class="line"></span><br><span class="line">    x = y = <span class="number">0</span></span><br><span class="line">    <span class="comment"># 获取字体的宽高</span></span><br><span class="line">    font_w, font_h = font.getsize(txt[<span class="number">1</span>]) <span class="keyword">or</span> (<span class="number">6</span>, <span class="number">11</span>)</span><br><span class="line">    font_h *= <span class="number">1.37</span>  <span class="comment"># 调整后更佳</span></span><br><span class="line">    <span class="comment"># ImageDraw为每个ascii码进行上色</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(txt)):</span><br><span class="line">        <span class="keyword">if</span> (txt[i] == <span class="string">'\n'</span>):</span><br><span class="line">            x += font_h</span><br><span class="line">            y = -font_w</span><br><span class="line">        dr.text((y, x), txt[i], fill=colors[i])</span><br><span class="line">        y += font_w</span><br><span class="line"></span><br><span class="line">    name = file_name</span><br><span class="line">    print(name + <span class="string">' changed'</span>)</span><br><span class="line">    im_txt.save(name)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 将图片合成视频</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">jpgToVideo</span><span class="params">(outfile_name, fps)</span>:</span></span><br><span class="line">    fourcc = cv2.VideoWriter_fourcc(*<span class="string">"MJPG"</span>)</span><br><span class="line"></span><br><span class="line">    images = os.listdir(<span class="string">'Cache'</span>)</span><br><span class="line">    im = Image.open(<span class="string">'Cache/'</span> + images[<span class="number">0</span>])</span><br><span class="line">    vw = cv2.VideoWriter(outfile_name + <span class="string">'.avi'</span>, fourcc, fps, im.size)</span><br><span class="line"></span><br><span class="line">    os.chdir(<span class="string">'Cache'</span>)</span><br><span class="line">    <span class="keyword">for</span> image <span class="keyword">in</span> range(len(images)):</span><br><span class="line">        <span class="comment"># Image.open(str(image)+'.jpg').convert("RGB").save(str(image)+'.jpg')</span></span><br><span class="line">        frame = cv2.imread(str(image + <span class="number">1</span>) + <span class="string">'.jpg'</span>)</span><br><span class="line">        vw.write(frame)</span><br><span class="line">        print(str(image + <span class="number">1</span>) + <span class="string">'.jpg'</span> + <span class="string">' finished'</span>)</span><br><span class="line">    os.chdir(<span class="string">'..'</span>)</span><br><span class="line">    vw.release()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用ffmpeg获取mp3音频文件</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">videoGetVoice</span><span class="params">(file_name, voice_file)</span>:</span></span><br><span class="line">    <span class="comment"># ffmpeg -i 'file_name' -vn -y -acodec copy 'voice_file'     获取视频中的音频文件</span></span><br><span class="line">    subprocess.call(<span class="string">'ffmpeg -i '</span> + file_name + <span class="string">' -vn -y -acodec copy '</span> + voice_file, shell=<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 合成音频和视频文件</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">video_add_mp3</span><span class="params">(file_name, voice_file)</span>:</span></span><br><span class="line">    outfile_name = file_name.split(<span class="string">'.'</span>)[<span class="number">0</span>] + <span class="string">'-txt.mp4'</span></span><br><span class="line">    <span class="comment"># ffmpeg -i 'file_name' -i 'voice_file'  -strict -2 -f mp4  'outfile_name'   合并avi和aac音频生成mp4文件</span></span><br><span class="line">    subprocess.call(<span class="string">'ffmpeg -i '</span> + file_name + <span class="string">' -i '</span> + voice_file + <span class="string">' -strict -2 -f mp4 '</span> + outfile_name, shell=<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 递归删除目录</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">remove_dir</span><span class="params">(path)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> os.path.exists(path):</span><br><span class="line">        <span class="keyword">if</span> os.path.isdir(path):</span><br><span class="line">            dirs = os.listdir(path)</span><br><span class="line">            <span class="keyword">for</span> d <span class="keyword">in</span> dirs:</span><br><span class="line">                <span class="keyword">if</span> os.path.isdir(path + <span class="string">'/'</span> + d):</span><br><span class="line">                    remove_dir(path + <span class="string">'/'</span> + d)</span><br><span class="line">                <span class="keyword">elif</span> os.path.isfile(path + <span class="string">'/'</span> + d):</span><br><span class="line">                    os.remove(path + <span class="string">'/'</span> + d)</span><br><span class="line">            os.rmdir(path)</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        <span class="keyword">elif</span> os.path.isfile(path):</span><br><span class="line">            os.remove(path)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="comment"># 将视频拆分成图片</span></span><br><span class="line">    print(<span class="string">'--------将视频拆分成图片------------------'</span>)</span><br><span class="line">    vc = videoSplitJpg(INPUT)</span><br><span class="line">    FPS = vc.get(cv2.CAP_PROP_FPS)  <span class="comment"># 获取帧率</span></span><br><span class="line">    vc.release()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 将图片合成视频</span></span><br><span class="line">    print(<span class="string">'--------将图片合成视频------------------'</span>)</span><br><span class="line">    jpgToVideo(INPUT.split(<span class="string">'.'</span>)[<span class="number">0</span>], FPS)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 音频文件名</span></span><br><span class="line">    voice_file = INPUT.split(<span class="string">'.'</span>)[<span class="number">0</span>] + <span class="string">'.aac'</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 调用ffmpeg获取mp3音频文件</span></span><br><span class="line">    print(<span class="string">'--------调用ffmpeg获取mp3音频文件------------------'</span>)</span><br><span class="line">    videoGetVoice(INPUT, voice_file)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 合成音频和视频文件</span></span><br><span class="line">    print(<span class="string">'--------合成音频和视频文件------------------'</span>)</span><br><span class="line">    video_add_mp3(INPUT.split(<span class="string">'.'</span>)[<span class="number">0</span>] + <span class="string">'.avi'</span>, voice_file)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">not</span> SAVE):</span><br><span class="line">        print(<span class="string">'--------删除生成的音频视频文件,和cache文件------------------'</span>)</span><br><span class="line">        remove_dir(<span class="string">"Cache"</span>)</span><br><span class="line">        os.remove(voice_file)</span><br><span class="line">        os.remove(INPUT.split(<span class="string">'.'</span>)[<span class="number">0</span>] + <span class="string">'.avi'</span>)</span><br><span class="line">        print(<span class="string">'--------删除成功------------------'</span>)</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/python_char_video.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-liunx_mount" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -916,93 +993,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-java" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/java.html">Java的安装</a>
-    </h1>
-  
-
-        
-        <a href="/java.html" class="archive-article-date">
-  	<time datetime="2018-05-09T06:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="java-Jdk的安装"><a href="#java-Jdk的安装" class="headerlink" title="java Jdk的安装"></a>java Jdk的安装</h3><p>安装Java环境<br>首先检测是否安装java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">java -version  </span><br><span class="line">echo $JAVA_HOME</span><br></pre></td></tr></table></figure></p>
-<p>如果java的版本过低，建议安装高版本，下面安装的是java 1.8<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cd /opt/    </span><br><span class="line">wget --no-cookies --no-check-certificate --header &quot;Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie&quot; &quot;http://download.oracle.com/otn-pub/java/jdk/8u66-b17/jdk-8u66-linux-x64.tar.gz&quot;    </span><br><span class="line">tar xzf jdk-8u66-linux-x64.tar.gz</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">cd /opt/jdk1.8.0_66/    </span><br><span class="line">alternatives --install /usr/bin/java java /opt/jdk1.8.0_66/bin/java 2    </span><br><span class="line">alternatives --config java</span><br></pre></td></tr></table></figure></p>
-<p>运行了上面的，会初选一个选择的地方，我的机器显示：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">There are 3 programs which provide &apos;java&apos;.    </span><br><span class="line">    </span><br><span class="line">  Selection    Command    </span><br><span class="line">-----------------------------------------------    </span><br><span class="line">   1           /opt/jdk1.7.0_71/bin/java    </span><br><span class="line">  +2           /opt/jdk1.8.0_45/bin/java    </span><br><span class="line">   3           /opt/jdk1.8.0_51/bin/java    </span><br><span class="line">   4           /opt/jdk1.8.0_66/bin/java    </span><br><span class="line"></span><br><span class="line">Enter to keep the current selection[+], or type selection number: 4</span><br></pre></td></tr></table></figure>
-<p>我们安装的是jdk1.8.0.66 所以，我选择的是4，这个看具体情况，jdk1.8.0.66 是第几个，就选择那个数字。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">alternatives --install /usr/bin/jar jar /opt/jdk1.8.0_66/bin/jar 2    </span><br><span class="line">alternatives --install /usr/bin/javac javac /opt/jdk1.8.0_66/bin/javac 2    </span><br><span class="line">alternatives --set jar /opt/jdk1.8.0_66/bin/jar    </span><br><span class="line">alternatives --set javac /opt/jdk1.8.0_66/bin/javac</span><br></pre></td></tr></table></figure>
-<p>安装完成，检查版本</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">java -version    </span><br><span class="line"> </span><br><span class="line">java version &quot;1.8.0_66&quot;    </span><br><span class="line">Java(TM) SE Runtime Environment (build 1.8.0_66-b17)    </span><br><span class="line">Java HotSpot(TM) 64-Bit Server VM (build 25.66-b17, mixed mode)</span><br></pre></td></tr></table></figure>
-<p>保存到文件  /etc/environment中，当服务器重启的时候加载：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/profile  </span><br><span class="line">  </span><br><span class="line">export JAVA_HOME=/opt/jdk1.8.0_66    </span><br><span class="line">export JRE_HOME=/opt/jdk1.8.0_66/jre    </span><br><span class="line">export PATH=$PATH:/opt/jdk1.8.0_66/bin:/opt/jdk1.8.0_66/jre/bin</span><br></pre></td></tr></table></figure>
-<p>重启linux</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure>
-<p>查看是否安装成功</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">java -version  </span><br><span class="line">echo $JAVA_HOME</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/java.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1128,7 +1118,15 @@ document.oncontextmenu=new Function("event.returnValue=false");
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">链接资源</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Angular</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">社会</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1140,19 +1138,7 @@ document.oncontextmenu=new Function("event.returnValue=false");
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">链接资源</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">社会</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Liunx</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ElasticSearch</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1172,7 +1158,7 @@ document.oncontextmenu=new Function("event.returnValue=false");
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color4">ElasticSearch</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1181,6 +1167,10 @@ document.oncontextmenu=new Function("event.returnValue=false");
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Node</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1193,6 +1183,10 @@ document.oncontextmenu=new Function("event.returnValue=false");
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
             
             <div class="clearfix"></div>

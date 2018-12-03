@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.majiameng.com/python_char_video.html</loc>
+    
+    <lastmod>2018-12-03T01:30:26.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.majiameng.com/solr.html</loc>
     
     <lastmod>2018-10-24T10:41:57.000Z</lastmod>
@@ -184,14 +191,14 @@
   </url>
   
   <url>
-    <loc>https://blog.majiameng.com/meng1.html</loc>
+    <loc>https://blog.majiameng.com/meng4.html</loc>
     
     <lastmod>2017-09-30T03:45:16.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.majiameng.com/meng4.html</loc>
+    <loc>https://blog.majiameng.com/meng1.html</loc>
     
     <lastmod>2017-09-30T03:45:16.000Z</lastmod>
     
@@ -254,14 +261,14 @@
   </url>
   
   <url>
-    <loc>https://blog.majiameng.com/redis.html</loc>
+    <loc>https://blog.majiameng.com/mysql_1.html</loc>
     
     <lastmod>2017-09-18T11:02:31.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.majiameng.com/mysql_1.html</loc>
+    <loc>https://blog.majiameng.com/redis.html</loc>
     
     <lastmod>2017-09-18T11:02:31.000Z</lastmod>
     
