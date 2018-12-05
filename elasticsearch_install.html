@@ -11,18 +11,18 @@
   <link rel="dns-prefetch" href="https://blog.majiameng.com">
   <title>ElasticSearch的安装 | 佳萌博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ElasticSearch的安装 ElasticSearch 是一款优秀的搜索引擎，用java编写，restful接口的方式进行对接。  1. 安装ElasticSearch安装Java环境首先检测是否安装java12java -version  echo $JAVA_HOME 如果java的版本过低，建议安装高版本，下面安装的是java 1.812345678cd /opt/    wget -">
-<meta name="keywords" content="ElasticSearch">
+  <meta name="description" content="ElasticSearch 是一款优秀的搜索引擎，用java编写，restful接口的方式进行对接。  1.安装java环境java环境的安装">
+<meta name="keywords" content="Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ElasticSearch的安装">
 <meta property="og:url" content="https://blog.majiameng.com/elasticsearch_install.html">
 <meta property="og:site_name" content="佳萌博客">
-<meta property="og:description" content="ElasticSearch的安装 ElasticSearch 是一款优秀的搜索引擎，用java编写，restful接口的方式进行对接。  1. 安装ElasticSearch安装Java环境首先检测是否安装java12java -version  echo $JAVA_HOME 如果java的版本过低，建议安装高版本，下面安装的是java 1.812345678cd /opt/    wget -">
+<meta property="og:description" content="ElasticSearch 是一款优秀的搜索引擎，用java编写，restful接口的方式进行对接。  1.安装java环境java环境的安装">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-09-18T07:35:33.000Z">
+<meta property="og:updated_time" content="2018-09-21T10:04:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ElasticSearch的安装">
-<meta name="twitter:description" content="ElasticSearch的安装 ElasticSearch 是一款优秀的搜索引擎，用java编写，restful接口的方式进行对接。  1. 安装ElasticSearch安装Java环境首先检测是否安装java12java -version  echo $JAVA_HOME 如果java的版本过低，建议安装高版本，下面安装的是java 1.812345678cd /opt/    wget -">
+<meta name="twitter:description" content="ElasticSearch 是一款优秀的搜索引擎，用java编写，restful接口的方式进行对接。  1.安装java环境java环境的安装">
   
     <link rel="alternative" href="/atom.xml" title="佳萌博客" type="application/atom+xml">
   
@@ -195,23 +195,10 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="ElasticSearch的安装"><a href="#ElasticSearch的安装" class="headerlink" title="ElasticSearch的安装"></a>ElasticSearch的安装</h1><blockquote>
+        <blockquote>
 <p>ElasticSearch 是一款优秀的搜索引擎，用java编写，restful接口的方式进行对接。</p>
 </blockquote>
-<h2 id="1-安装ElasticSearch"><a href="#1-安装ElasticSearch" class="headerlink" title="1. 安装ElasticSearch"></a>1. 安装ElasticSearch</h2><p>安装Java环境<br>首先检测是否安装java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">java -version  </span><br><span class="line">echo $JAVA_HOME</span><br></pre></td></tr></table></figure></p>
-<p>如果java的版本过低，建议安装高版本，下面安装的是java 1.8<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cd /opt/    </span><br><span class="line">wget --no-cookies --no-check-certificate --header &quot;Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie&quot; &quot;http://download.oracle.com/otn-pub/java/jdk/8u66-b17/jdk-8u66-linux-x64.tar.gz&quot;    </span><br><span class="line">tar xzf jdk-8u66-linux-x64.tar.gz</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">cd /opt/jdk1.8.0_66/    </span><br><span class="line">alternatives --install /usr/bin/java java /opt/jdk1.8.0_66/bin/java 2    </span><br><span class="line">alternatives --config java</span><br></pre></td></tr></table></figure></p>
-<p>运行了上面的，会初选一个选择的地方，我的机器显示：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">There are 3 programs which provide &apos;java&apos;.    </span><br><span class="line">    </span><br><span class="line">  Selection    Command    </span><br><span class="line">-----------------------------------------------    </span><br><span class="line">   1           /opt/jdk1.7.0_71/bin/java    </span><br><span class="line">  +2           /opt/jdk1.8.0_45/bin/java    </span><br><span class="line">   3           /opt/jdk1.8.0_51/bin/java    </span><br><span class="line">   4           /opt/jdk1.8.0_66/bin/java    </span><br><span class="line"></span><br><span class="line">Enter to keep the current selection[+], or type selection number: 4</span><br></pre></td></tr></table></figure>
-<p>我们安装的是jdk1.8.0.66 所以，我选择的是4，这个看具体情况，jdk1.8.0.66 是第几个，就选择那个数字。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">alternatives --install /usr/bin/jar jar /opt/jdk1.8.0_66/bin/jar 2    </span><br><span class="line">alternatives --install /usr/bin/javac javac /opt/jdk1.8.0_66/bin/javac 2    </span><br><span class="line">alternatives --set jar /opt/jdk1.8.0_66/bin/jar    </span><br><span class="line">alternatives --set javac /opt/jdk1.8.0_66/bin/javac</span><br></pre></td></tr></table></figure>
-<p>安装完成，检查版本</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">java -version    </span><br><span class="line"> </span><br><span class="line">java version &quot;1.8.0_66&quot;    </span><br><span class="line">Java(TM) SE Runtime Environment (build 1.8.0_66-b17)    </span><br><span class="line">Java HotSpot(TM) 64-Bit Server VM (build 25.66-b17, mixed mode)</span><br></pre></td></tr></table></figure>
-<p>保存到文件  /etc/environment中，当服务器重启的时候加载：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/profile  </span><br><span class="line">  </span><br><span class="line">export JAVA_HOME=/opt/jdk1.8.0_66    </span><br><span class="line">export JRE_HOME=/opt/jdk1.8.0_66/jre    </span><br><span class="line">export PATH=$PATH:/opt/jdk1.8.0_66/bin:/opt/jdk1.8.0_66/jre/bin</span><br></pre></td></tr></table></figure>
-<p>重启linux</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure>
-<p>查看是否安装成功</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">java -version  </span><br><span class="line">echo $JAVA_HOME</span><br></pre></td></tr></table></figure>
+<h4 id="1-安装java环境"><a href="#1-安装java环境" class="headerlink" title="1.安装java环境"></a>1.安装java环境</h4><p><a href="https://blog.majiameng.com/java.html">java环境的安装</a></p>
 <a id="more"></a>
 <h4 id="2-1安装ElasticSearch"><a href="#2-1安装ElasticSearch" class="headerlink" title="2.1安装ElasticSearch"></a>2.1安装ElasticSearch</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cd /tools  </span><br><span class="line">wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.1.3.zip </span><br><span class="line">unzip elasticsearch-6.1.3.zip </span><br><span class="line">mv ./elasticsearch-6.1.3 /usr/local/elasticsearch  </span><br><span class="line">cd /usr/local  </span><br><span class="line">groupadd elasticsearch  </span><br><span class="line">useradd -g elasticsearch  elasticsearch  </span><br><span class="line">chown elasticsearch:elasticsearch -R elasticsearch</span><br></pre></td></tr></table></figure>
 <p>上面安装的是es6.</p>
@@ -286,7 +273,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ElasticSearch</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		
 		</ul>
@@ -366,8 +353,8 @@ var _hmt = _hmt || [];
     </a>
   
   
-    <a href="/workerman_socket.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">yii、thinkphp、larverl框架中使用worker-man的socket (使用框架实现回调方法)</div>
+    <a href="/ffmpeg_getcover.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ffmpeg生成视频缩略图</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -394,7 +381,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ElasticSearch的安装"><span class="toc-number">1.</span> <span class="toc-text">ElasticSearch的安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-安装ElasticSearch"><span class="toc-number">1.1.</span> <span class="toc-text">1. 安装ElasticSearch</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1安装ElasticSearch"><span class="toc-number">1.1.0.1.</span> <span class="toc-text">2.1安装ElasticSearch</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-设置开机启动：-我是本地，直接把iptables-关掉了"><span class="toc-number">1.1.0.2.</span> <span class="toc-text">2.2 设置开机启动： 我是本地，直接把iptables 关掉了</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-配置"><span class="toc-number">1.1.0.3.</span> <span class="toc-text">2.3 配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4-查看："><span class="toc-number">1.1.0.4.</span> <span class="toc-text">2.4 查看：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-5-集群设置"><span class="toc-number">1.1.0.5.</span> <span class="toc-text">2.5 集群设置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-6-安装ik插件-中文分词使用"><span class="toc-number">1.1.0.6.</span> <span class="toc-text">2.6 安装ik插件(中文分词使用)</span></a></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-安装java环境"><span class="toc-number">1.</span> <span class="toc-text">1.安装java环境</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1安装ElasticSearch"><span class="toc-number">2.</span> <span class="toc-text">2.1安装ElasticSearch</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-设置开机启动：-我是本地，直接把iptables-关掉了"><span class="toc-number">3.</span> <span class="toc-text">2.2 设置开机启动： 我是本地，直接把iptables 关掉了</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-配置"><span class="toc-number">4.</span> <span class="toc-text">2.3 配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4-查看："><span class="toc-number">5.</span> <span class="toc-text">2.4 查看：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-5-集群设置"><span class="toc-number">6.</span> <span class="toc-text">2.5 集群设置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-6-安装ik插件-中文分词使用"><span class="toc-number">7.</span> <span class="toc-text">2.6 安装ik插件(中文分词使用)</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -552,10 +539,6 @@ document.oncontextmenu=new Function("event.returnValue=false");
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">链接资源</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Angular</a>
               </li>
              
@@ -569,6 +552,18 @@ document.oncontextmenu=new Function("event.returnValue=false");
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Curl</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">链接资源</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Php</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -592,15 +587,15 @@ document.oncontextmenu=new Function("event.returnValue=false");
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ElasticSearch</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Node</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Solr</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -613,14 +608,6 @@ document.oncontextmenu=new Function("event.returnValue=false");
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">JS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
             
             <div class="clearfix"></div>

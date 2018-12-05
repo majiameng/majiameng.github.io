@@ -12,14 +12,14 @@
   <title>Liunx 磁盘扩容踩坑总结 | 佳萌博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Liunx 磁盘扩容踩坑总结查看当前磁盘使用123456[root@iZ2zebzrd1fwcb8kj2g8xiZ ~]# df -hFilesystem            Size  Used Avail Use% Mounted on/dev/xvda1             40G   36G  2.8G  93% /tmpfs                1003M     0 1">
-<meta name="keywords" content="ElasticSearch">
+<meta name="keywords" content="Liunx">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Liunx 磁盘扩容踩坑总结">
 <meta property="og:url" content="https://blog.majiameng.com/liunx_mount.html">
 <meta property="og:site_name" content="佳萌博客">
 <meta property="og:description" content="Liunx 磁盘扩容踩坑总结查看当前磁盘使用123456[root@iZ2zebzrd1fwcb8kj2g8xiZ ~]# df -hFilesystem            Size  Used Avail Use% Mounted on/dev/xvda1             40G   36G  2.8G  93% /tmpfs                1003M     0 1">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-09-21T02:28:57.000Z">
+<meta property="og:updated_time" content="2018-11-13T02:55:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Liunx 磁盘扩容踩坑总结">
 <meta name="twitter:description" content="Liunx 磁盘扩容踩坑总结查看当前磁盘使用123456[root@iZ2zebzrd1fwcb8kj2g8xiZ ~]# df -hFilesystem            Size  Used Avail Use% Mounted on/dev/xvda1             40G   36G  2.8G  93% /tmpfs                1003M     0 1">
@@ -201,6 +201,12 @@ var _hmt = _hmt || [];
 <h5 id="重定义磁盘大小"><a href="#重定义磁盘大小" class="headerlink" title="重定义磁盘大小"></a>重定义磁盘大小</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@iZ2zebzrd1fwcb8kj2g8xiZ ~]# resize2fs  /dev/xvdc</span><br><span class="line">resize2fs 1.41.12 (17-May-2010)</span><br><span class="line">Resizing the filesystem on /dev/xvdc to 7864320 (4k) blocks.</span><br><span class="line">The filesystem on /dev/xvdc is now 7864320 blocks long.</span><br></pre></td></tr></table></figure>
 <h5 id="重新挂载光驱"><a href="#重新挂载光驱" class="headerlink" title="重新挂载光驱"></a>重新挂载光驱</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@iZ2zebzrd1fwcb8kj2g8xiZ ~]# mount   /dev/xvdc /home/svn</span><br></pre></td></tr></table></figure>
 <h5 id="查询磁盘使用情况"><a href="#查询磁盘使用情况" class="headerlink" title="查询磁盘使用情况"></a>查询磁盘使用情况</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@iZ2zebzrd1fwcb8kj2g8xiZ ~]# df -h</span><br><span class="line">Filesystem            Size  Used Avail Use% Mounted on</span><br><span class="line">/dev/xvda1             40G   36G  2.8G  93% /</span><br><span class="line">tmpfs                1003M     0 1003M   0% /dev/shm</span><br><span class="line">/dev/xvdb1             20G   16G  2.8G  86% /home/www</span><br><span class="line">/dev/xvdc              30G   15G   14G  51% /home/svn</span><br></pre></td></tr></table></figure>
+<ul>
+<li>注:磁盘格式一定要用ext4</li>
+</ul>
+<blockquote>
+<p>ext3文件系统一级子目录的个数默认为32000个，去掉.目录（代表当前目录）和..目录（代表上级目录），实际只能建31998个,ext3文件系统下单个目录里的最大文件数无特别的限制，是受限于所在文件系统的inode数</p>
+</blockquote>
 
       
 
@@ -245,7 +251,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ElasticSearch</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Liunx</a>
         		</li>
       		
 		</ul>
@@ -315,11 +321,11 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/python_char_video.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/php_use_solr.md.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          生成抖音中的像素视频(视频转字符动画)
+          php使用solr
         
       </div>
     </a>
@@ -511,10 +517,6 @@ document.oncontextmenu=new Function("event.returnValue=false");
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">链接资源</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Angular</a>
               </li>
              
@@ -528,6 +530,18 @@ document.oncontextmenu=new Function("event.returnValue=false");
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Curl</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">链接资源</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Php</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -551,15 +565,15 @@ document.oncontextmenu=new Function("event.returnValue=false");
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ElasticSearch</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Node</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Solr</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -572,14 +586,6 @@ document.oncontextmenu=new Function("event.returnValue=false");
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">JS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
             
             <div class="clearfix"></div>

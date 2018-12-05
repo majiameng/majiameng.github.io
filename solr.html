@@ -12,14 +12,14 @@
   <title>solr的安装 | 佳萌博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="安装solr 1.  将 solr 压缩包解压，并将solr-5.3.0\server\solr-webap文件夹下有webapp文件夹，将之复制到Tomcat\webapps\目录下，并改成solr1cp -r solr-5.3.0/server/solr-webap/webapp/ /usr/local/tomcat/webapps/solr 2.  将 solr 压缩包中 solr-5.3.">
-<meta name="keywords" content="Java">
+<meta name="keywords" content="Java,Solr">
 <meta property="og:type" content="article">
 <meta property="og:title" content="solr的安装">
 <meta property="og:url" content="https://blog.majiameng.com/solr.html">
 <meta property="og:site_name" content="佳萌博客">
 <meta property="og:description" content="安装solr 1.  将 solr 压缩包解压，并将solr-5.3.0\server\solr-webap文件夹下有webapp文件夹，将之复制到Tomcat\webapps\目录下，并改成solr1cp -r solr-5.3.0/server/solr-webap/webapp/ /usr/local/tomcat/webapps/solr 2.  将 solr 压缩包中 solr-5.3.">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-10-24T10:41:57.000Z">
+<meta property="og:updated_time" content="2018-12-05T10:31:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="solr的安装">
 <meta name="twitter:description" content="安装solr 1.  将 solr 压缩包解压，并将solr-5.3.0\server\solr-webap文件夹下有webapp文件夹，将之复制到Tomcat\webapps\目录下，并改成solr1cp -r solr-5.3.0/server/solr-webap/webapp/ /usr/local/tomcat/webapps/solr 2.  将 solr 压缩包中 solr-5.3.">
@@ -201,7 +201,15 @@ var _hmt = _hmt || [];
 <h5 id="3-将-solr-压缩包中-solr-5-3-0-server-resources-log4j-properties-复制到Tomcat-webapps-solr-WEB-INF-lib-目录中"><a href="#3-将-solr-压缩包中-solr-5-3-0-server-resources-log4j-properties-复制到Tomcat-webapps-solr-WEB-INF-lib-目录中" class="headerlink" title="3.  将 solr 压缩包中 solr-5.3.0/server/resources/log4j.properties 复制到Tomcat\ webapps\solr\WEB-INF\lib 目录中"></a>3.  将 solr 压缩包中 solr-5.3.0/server/resources/log4j.properties 复制到Tomcat\ webapps\solr\WEB-INF\lib 目录中</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp solr-5.3.0/server/resources/log4j.properties     /usr/local/tomcat/webapps/solr/WEB-INF/lib</span><br></pre></td></tr></table></figure>
 <h5 id="4-创建一个-usr-local-solr-solrhome-的目录，并将-solr-压缩包中-solr-5-3-0-server-solr-目录所遇文件复制-usr-local-solr-solrhome-目录下"><a href="#4-创建一个-usr-local-solr-solrhome-的目录，并将-solr-压缩包中-solr-5-3-0-server-solr-目录所遇文件复制-usr-local-solr-solrhome-目录下" class="headerlink" title="4.  创建一个 /usr/local/solr/solrhome  的目录，并将 solr 压缩包中 solr-5.3.0/server/solr/ 目录所遇文件复制 /usr/local/solr/solrhome 目录下"></a>4.  创建一个<code> /usr/local/solr/solrhome </code> 的目录，并将 solr 压缩包中<code> solr-5.3.0/server/solr/ </code>目录所遇文件复制<code> /usr/local/solr/solrhome </code>目录下</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp -r solr-5.3.0/server/solr/* /usr/local/solr/solrhome</span><br></pre></td></tr></table></figure>
 <h5 id="5-打开-usr-local-tomcat-webapps-solr-WEB-INF下的web-xml，增加如下配置内容（初始状态下该内容是被注释掉的-第40多行）："><a href="#5-打开-usr-local-tomcat-webapps-solr-WEB-INF下的web-xml，增加如下配置内容（初始状态下该内容是被注释掉的-第40多行）：" class="headerlink" title="5.  打开/usr/local/tomcat/webapps/solr/WEB-INF下的web.xml，增加如下配置内容（初始状态下该内容是被注释掉的,第40多行）："></a>5.  打开/usr/local/tomcat/webapps/solr/WEB-INF下的web.xml，增加如下配置内容（初始状态下该内容是被注释掉的,第40多行）：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;env-entry&gt;</span><br><span class="line"> &lt;env-entry-name&gt;solr/home&lt;/env-entry-name&gt;</span><br><span class="line"> &lt;env-entry-value&gt;/usr/local/solr/solrhome&lt;/env-entry-value&gt;</span><br><span class="line"> &lt;env-entry-type&gt;java.lang.String&lt;/env-entry-type&gt;</span><br><span class="line">&lt;/env-entry&gt;</span><br></pre></td></tr></table></figure>
-<h5 id="6-访问页面-http-localhost-8080-solr-，-查看core-Admin-手动加一个mycore，-‘mycore1’-就显示出来了"><a href="#6-访问页面-http-localhost-8080-solr-，-查看core-Admin-手动加一个mycore，-‘mycore1’-就显示出来了" class="headerlink" title="6.访问页面  http://localhost:8080/solr ， 查看core Admin   手动加一个mycore， ‘mycore1’ 就显示出来了"></a>6.访问页面 <code> <a href="http://localhost:8080/solr" target="_blank" rel="noopener">http://localhost:8080/solr</a> </code>， 查看core Admin   手动加一个mycore， ‘mycore1’ 就显示出来了</h5><h4 id="在-usr-local-solr-solrhome-下创建-index-文件夹"><a href="#在-usr-local-solr-solrhome-下创建-index-文件夹" class="headerlink" title="在/usr/local/solr/solrhome/ 下创建  index 文件夹"></a>在/usr/local/solr/solrhome/ 下创建  index 文件夹</h4><p>将/usr/local/solr/solrhome/configsets/basic_configs/comf 复制到 index文件夹里面</p>
+<h5 id="6-访问页面-http-localhost-8080-solr-，-查看core-Admin-手动加一个mycore，-‘mycore1’-就显示出来了"><a href="#6-访问页面-http-localhost-8080-solr-，-查看core-Admin-手动加一个mycore，-‘mycore1’-就显示出来了" class="headerlink" title="6.访问页面  http://localhost:8080/solr ， 查看core Admin   手动加一个mycore， ‘mycore1’ 就显示出来了"></a>6.访问页面 <code> <a href="http://localhost:8080/solr" target="_blank" rel="noopener">http://localhost:8080/solr</a> </code>， 查看core Admin   手动加一个mycore， ‘mycore1’ 就显示出来了</h5><h5 id="7-创建mycore库"><a href="#7-创建mycore库" class="headerlink" title="7. 创建mycore库"></a>7. 创建<code>mycore</code>库</h5><p>在<code>/usr/local/solr/solrhome/</code> 下创建  <code>mycore</code> 文件夹</p>
+<p>将<code>/usr/local/solr/solrhome/configsets/basic_configs/comf</code> 复制到 mycore 文件夹里面</p>
+<h5 id="8-Solr-IK-中文分词的配置"><a href="#8-Solr-IK-中文分词的配置" class="headerlink" title="8.Solr IK 中文分词的配置"></a>8.Solr IK 中文分词的配置</h5><p>下载solr ik分词jar包</p>
+<p>移动到<code>solr/WEB-INF/lib</code>目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp ik-analyzer-solr7-7.x.jar /usr/local/tomcat/webapps/solr/WEB-INF/lib</span><br></pre></td></tr></table></figure></p>
+<p>修改配置<code>solrhome/mycore/conf/schema.xml</code>文件</p>
+<p>添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;fieldType name=&quot;text_ik&quot; class=&quot;solr.TextField&quot;&gt;</span><br><span class="line">    &lt;analyzer type=&quot;index&quot;&gt;</span><br><span class="line">        &lt;tokenizer class=&quot;org.wltea.analyzer.lucene.IKTokenizerFactory&quot; useSmart=&quot;false&quot; conf=&quot;ik.conf&quot;/&gt;</span><br><span class="line">        &lt;filter class=&quot;solr.LowerCaseFilterFactory&quot;/&gt;</span><br><span class="line">    &lt;/analyzer&gt;</span><br><span class="line">    &lt;analyzer type=&quot;query&quot;&gt;</span><br><span class="line">        &lt;tokenizer class=&quot;org.wltea.analyzer.lucene.IKTokenizerFactory&quot; useSmart=&quot;true&quot; conf=&quot;ik.conf&quot;/&gt;</span><br><span class="line">        &lt;filter class=&quot;solr.LowerCaseFilterFactory&quot;/&gt;</span><br><span class="line">    &lt;/analyzer&gt;</span><br><span class="line">&lt;/fieldType&gt;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>注: 修改配置文件需要重启服务</p>
+</blockquote>
 
       
 
@@ -247,6 +255,10 @@ var _hmt = _hmt || [];
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Solr</a>
         		</li>
       		
 		</ul>
@@ -316,18 +328,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/ffmpeg_getinfo.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/java.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          ffmpeg获取视频信息
+          Java的安装
         
       </div>
     </a>
   
   
-    <a href="/java.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Java的安装</div>
+    <a href="/phpStorm_set_svn.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">phpStrom 配置 svn</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -354,7 +366,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-将-solr-压缩包解压，并将solr-5-3-0-server-solr-webap文件夹下有webapp文件夹，将之复制到Tomcat-webapps-目录下，并改成solr"><span class="toc-number">1.</span> <span class="toc-text">1.  将 solr 压缩包解压，并将solr-5.3.0\server\solr-webap文件夹下有webapp文件夹，将之复制到Tomcat\webapps\目录下，并改成solr</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-将-solr-压缩包中-solr-5-3-0-server-lib-ext-中的-jar-全部复制到-Tomcat-webapps-solr-WEB-INF-lib-目录中"><span class="toc-number">2.</span> <span class="toc-text">2.  将 solr 压缩包中 solr-5.3.0\server\lib\ext 中的 jar 全部复制到 Tomcat\ webapps\solr\WEB-INF\lib 目录中</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-将-solr-压缩包中-solr-5-3-0-server-resources-log4j-properties-复制到Tomcat-webapps-solr-WEB-INF-lib-目录中"><span class="toc-number">3.</span> <span class="toc-text">3.  将 solr 压缩包中 solr-5.3.0/server/resources/log4j.properties 复制到Tomcat\ webapps\solr\WEB-INF\lib 目录中</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-创建一个-usr-local-solr-solrhome-的目录，并将-solr-压缩包中-solr-5-3-0-server-solr-目录所遇文件复制-usr-local-solr-solrhome-目录下"><span class="toc-number">4.</span> <span class="toc-text">4.  创建一个 /usr/local/solr/solrhome  的目录，并将 solr 压缩包中 solr-5.3.0/server/solr/ 目录所遇文件复制 /usr/local/solr/solrhome 目录下</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-打开-usr-local-tomcat-webapps-solr-WEB-INF下的web-xml，增加如下配置内容（初始状态下该内容是被注释掉的-第40多行）："><span class="toc-number">5.</span> <span class="toc-text">5.  打开/usr/local/tomcat/webapps/solr/WEB-INF下的web.xml，增加如下配置内容（初始状态下该内容是被注释掉的,第40多行）：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-访问页面-http-localhost-8080-solr-，-查看core-Admin-手动加一个mycore，-‘mycore1’-就显示出来了"><span class="toc-number">6.</span> <span class="toc-text">6.访问页面  http://localhost:8080/solr ， 查看core Admin   手动加一个mycore， ‘mycore1’ 就显示出来了</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#在-usr-local-solr-solrhome-下创建-index-文件夹"><span class="toc-number"></span> <span class="toc-text">在/usr/local/solr/solrhome/ 下创建  index 文件夹</span></a>
+                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-将-solr-压缩包解压，并将solr-5-3-0-server-solr-webap文件夹下有webapp文件夹，将之复制到Tomcat-webapps-目录下，并改成solr"><span class="toc-number">1.</span> <span class="toc-text">1.  将 solr 压缩包解压，并将solr-5.3.0\server\solr-webap文件夹下有webapp文件夹，将之复制到Tomcat\webapps\目录下，并改成solr</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-将-solr-压缩包中-solr-5-3-0-server-lib-ext-中的-jar-全部复制到-Tomcat-webapps-solr-WEB-INF-lib-目录中"><span class="toc-number">2.</span> <span class="toc-text">2.  将 solr 压缩包中 solr-5.3.0\server\lib\ext 中的 jar 全部复制到 Tomcat\ webapps\solr\WEB-INF\lib 目录中</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-将-solr-压缩包中-solr-5-3-0-server-resources-log4j-properties-复制到Tomcat-webapps-solr-WEB-INF-lib-目录中"><span class="toc-number">3.</span> <span class="toc-text">3.  将 solr 压缩包中 solr-5.3.0/server/resources/log4j.properties 复制到Tomcat\ webapps\solr\WEB-INF\lib 目录中</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-创建一个-usr-local-solr-solrhome-的目录，并将-solr-压缩包中-solr-5-3-0-server-solr-目录所遇文件复制-usr-local-solr-solrhome-目录下"><span class="toc-number">4.</span> <span class="toc-text">4.  创建一个 /usr/local/solr/solrhome  的目录，并将 solr 压缩包中 solr-5.3.0/server/solr/ 目录所遇文件复制 /usr/local/solr/solrhome 目录下</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-打开-usr-local-tomcat-webapps-solr-WEB-INF下的web-xml，增加如下配置内容（初始状态下该内容是被注释掉的-第40多行）："><span class="toc-number">5.</span> <span class="toc-text">5.  打开/usr/local/tomcat/webapps/solr/WEB-INF下的web.xml，增加如下配置内容（初始状态下该内容是被注释掉的,第40多行）：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-访问页面-http-localhost-8080-solr-，-查看core-Admin-手动加一个mycore，-‘mycore1’-就显示出来了"><span class="toc-number">6.</span> <span class="toc-text">6.访问页面  http://localhost:8080/solr ， 查看core Admin   手动加一个mycore， ‘mycore1’ 就显示出来了</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-创建mycore库"><span class="toc-number">7.</span> <span class="toc-text">7. 创建mycore库</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-Solr-IK-中文分词的配置"><span class="toc-number">8.</span> <span class="toc-text">8.Solr IK 中文分词的配置</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -512,10 +524,6 @@ document.oncontextmenu=new Function("event.returnValue=false");
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">链接资源</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Angular</a>
               </li>
              
@@ -529,6 +537,18 @@ document.oncontextmenu=new Function("event.returnValue=false");
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Curl</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">链接资源</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Php</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -552,15 +572,15 @@ document.oncontextmenu=new Function("event.returnValue=false");
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ElasticSearch</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Node</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Solr</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -573,14 +593,6 @@ document.oncontextmenu=new Function("event.returnValue=false");
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">JS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
             
             <div class="clearfix"></div>

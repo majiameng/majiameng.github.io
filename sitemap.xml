@@ -2,23 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.majiameng.com/python_char_video.html</loc>
+    <loc>https://blog.majiameng.com/solr_schema_xml.md.html</loc>
     
-    <lastmod>2018-12-03T01:30:26.000Z</lastmod>
+    <lastmod>2018-12-05T10:48:41.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.majiameng.com/solr.html</loc>
     
-    <lastmod>2018-10-24T10:41:57.000Z</lastmod>
+    <lastmod>2018-12-05T10:31:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.majiameng.com/python_char_video.html</loc>
+    
+    <lastmod>2018-12-05T09:49:36.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.majiameng.com/php_use_solr.md.html</loc>
+    
+    <lastmod>2018-12-05T09:48:50.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.majiameng.com/elasticsearch_yii_use.html</loc>
+    
+    <lastmod>2018-11-23T06:28:16.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.majiameng.com/liunx_mount.html</loc>
+    
+    <lastmod>2018-11-13T02:55:00.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.majiameng.com/idea.html</loc>
     
-    <lastmod>2018-10-18T07:08:44.000Z</lastmod>
+    <lastmod>2018-10-24T09:58:22.000Z</lastmod>
     
   </url>
   
@@ -30,16 +58,9 @@
   </url>
   
   <url>
-    <loc>https://blog.majiameng.com/liunx_mount.html</loc>
-    
-    <lastmod>2018-09-21T02:28:57.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://blog.majiameng.com/elasticsearch_install.html</loc>
     
-    <lastmod>2018-09-18T07:35:33.000Z</lastmod>
+    <lastmod>2018-09-21T10:04:21.000Z</lastmod>
     
   </url>
   
@@ -51,42 +72,14 @@
   </url>
   
   <url>
-    <loc>https://blog.majiameng.com/elasticsearch_yii_use.html</loc>
+    <loc>https://blog.majiameng.com/ffmpeg_getcover.html</loc>
     
-    <lastmod>2018-09-18T07:29:50.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.majiameng.com/workerman_socket.html</loc>
-    
-    <lastmod>2018-08-09T01:19:36.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.majiameng.com/sphinx.html</loc>
-    
-    <lastmod>2018-07-23T03:36:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.majiameng.com/ffmpeg_basic.html</loc>
-    
-    <lastmod>2018-07-23T01:43:19.000Z</lastmod>
+    <lastmod>2018-07-14T09:48:03.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.majiameng.com/ffmpeg_getinfo.html</loc>
-    
-    <lastmod>2018-07-14T09:51:53.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.majiameng.com/ffmpeg_getcover.html</loc>
     
     <lastmod>2018-07-14T09:48:03.000Z</lastmod>
     

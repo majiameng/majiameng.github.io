@@ -1,14 +1,14 @@
 https://blog.majiameng.com/python_char_video.html
+https://blog.majiameng.com/solr_schema_xml.md.html
+https://blog.majiameng.com/php_use_solr.md.html
 https://blog.majiameng.com/liunx_mount.html
 https://blog.majiameng.com/yii2_mysql_server_has_gone_away.html
 https://blog.majiameng.com/elasticsearch_yii_use.html
 https://blog.majiameng.com/elasticsearch_install.html
-https://blog.majiameng.com/workerman_socket.html
-https://blog.majiameng.com/sphinx.html
 https://blog.majiameng.com/ffmpeg_getcover.html
 https://blog.majiameng.com/ffmpeg_getinfo.html
-https://blog.majiameng.com/solr.html
 https://blog.majiameng.com/java.html
+https://blog.majiameng.com/solr.html
 https://blog.majiameng.com/phpStorm_set_svn.html
 https://blog.majiameng.com/mengphp.html
 https://blog.majiameng.com/angular.html
