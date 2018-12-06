@@ -1,6 +1,6 @@
 https://blog.majiameng.com/python_char_video.html
-https://blog.majiameng.com/solr_schema_xml.md.html
-https://blog.majiameng.com/php_use_solr.md.html
+https://blog.majiameng.com/solr_schema_xml.html
+https://blog.majiameng.com/php_use_solr.html
 https://blog.majiameng.com/liunx_mount.html
 https://blog.majiameng.com/yii2_mysql_server_has_gone_away.html
 https://blog.majiameng.com/elasticsearch_yii_use.html
