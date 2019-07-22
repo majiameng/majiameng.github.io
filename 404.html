@@ -42,3 +42,14 @@ permalink: /404.html
 </div>
 </body>
 </html>
+<script>
+    function sleep(delay) {
+        var start = (new Date()).getTime();
+        while ((new Date()).getTime() - start < delay) {
+            continue;
+        }
+    }
+
+    sleep(2000);
+    window.location.href="http://blog.majiameng.com/article/search.html?referer="+window.location.href;
+</script>
